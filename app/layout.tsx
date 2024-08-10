@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.scss";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { montserrat, openSans, rubik } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Envent",
@@ -16,8 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={`${rubik.variable} ${openSans.variable} ${montserrat.variable}`}
+      >
+        <Header />
         <main className="container">{children}</main>
+        <Footer />
       </body>
     </html>
   );

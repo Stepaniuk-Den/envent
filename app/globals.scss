@@ -1,10 +1,13 @@
 :root {
-  color-scheme: light;
+  color-scheme: normal;
+  --main-accent-yellow: rgba(255, 180, 0, 1);
+  --main-black: rgba(42, 42, 42, 1);
+  --main-text-gray: rgba(102, 102, 102, 1);
   /* --max-width: 1100px;
   --border-radius: 12px; */
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+  /* --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace; */
 
   /* --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -100,18 +103,76 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 a {
   color: inherit;
+  display: block;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* a:focus,
+button:focus {
+  outline: 1px solid transparent;
+} */
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
 }
+
+address {
+  font-style: normal;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   html {
+//     color-scheme: dark;
+//   }
+// }
 
 .container {
   max-width: 1920px;
@@ -121,7 +182,19 @@ a {
 }
 
 main {
-  min-height: calc(100vh - 85px - 22px);
+  height: 150vh;
+  min-height: calc(100vh - 4rem);
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.rubik {
+  font-family: var(--font-rubik);
+}
+
+.open-sands {
+  font-family: var(--font-open-sands);
+}
+.montserrat {
+  font-family: var(--font-montserrat);
 }
