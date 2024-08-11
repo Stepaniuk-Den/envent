@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { motion, useTransform, useScroll } from "framer-motion";
 import Navigation from "../Navigation";
 import styles from "./header.module.scss";
 
@@ -13,38 +13,35 @@ const navItems = [
 ];
 
 export default function Header() {
-  const [header, setHeader] = useState(false);
+  const { scrollY } = useScroll();
+  const offsetY = [0, 200];
+  const heightHeaderSizes = [200, 80];
+  const heightTopSizes = [120, 0];
 
-  const handleScrollHeader = () => {
-    const remInPixels = parseFloat(
-      getComputedStyle(document.documentElement).fontSize
-    );
-    const threshold = 7 * remInPixels;
-    if (window.scrollY >= threshold) {
-      setHeader(true);
-    } else {
-      setHeader(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScrollHeader);
-
-    return () => {
-      window.removeEventListener("scroll", handleScrollHeader);
-    };
-  }, []);
+  const heightHeader = useTransform(scrollY, offsetY, heightHeaderSizes);
+  const opacityTop = useTransform(scrollY, [0, 30], [1, 0]);
+  const heightTop = useTransform(scrollY, [0, 120], heightTopSizes);
 
   return (
-    <header
-      className={`${styles.header} ${header ? styles.fixed : ""} container`}
+    <motion.header
+      style={{
+        height: heightHeader,
+      }}
+      className={`${styles.header} container`}
     >
-      <div className={styles.top}>
+      <motion.div
+        style={{
+          opacity: opacityTop,
+          height: heightTop,
+          padding: opacityTop,
+        }}
+        className={styles.top}
+      >
         <span className={styles.logo}>Envent</span>
-      </div>
+      </motion.div>
       <div className={styles.bottom}>
         <Navigation navLinks={navItems} />
       </div>
-    </header>
+    </motion.header>
   );
 }

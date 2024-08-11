@@ -2,6 +2,7 @@
   color-scheme: normal;
   --main-accent-yellow: rgba(255, 180, 0, 1);
   --main-black: rgba(42, 42, 42, 1);
+  --main-white: rgba(255, 255, 255, 1);
   --main-text-gray: rgba(102, 102, 102, 1);
   /* --max-width: 1100px;
   --border-radius: 12px; */
@@ -176,16 +177,15 @@ address {
 
 .container {
   max-width: 1920px;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  // padding-left: 2rem;
+  // padding-right: 2rem;
   margin: 0 auto;
+  background-color: gainsboro;
 }
 
 main {
   height: 150vh;
-  min-height: calc(100vh - 4rem);
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  // min-height: calc(100vh - 4rem);
 }
 
 .rubik {

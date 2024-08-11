@@ -1,5 +1,5 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -7,20 +7,21 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
+  width: 1096px;
   outline: 2px solid blueviolet;
   font-family: var(--font-rubik);
+  background-color: transparent;
 
-  &.fixed {
-    position: fixed;
-    top: -7rem;
-  }
+  // &.fixed {
+  //   position: fixed;
+  //   top: -7rem;
+  // }
 
   .top {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 7rem;
+    height: 120px;
     padding: 1rem 0;
 
     .logo {
@@ -35,7 +36,8 @@
   .bottom {
     display: flex;
     width: 100%;
-    height: 4.5rem;
-    outline: 1px solid red;
+    height: 80px;
+    background-color: var(--main-white);
+    border-radius: 3px;
   }
 }
