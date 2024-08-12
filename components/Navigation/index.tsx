@@ -2,29 +2,25 @@
 import { motion, LayoutGroup } from "framer-motion";
 import Link from "next/link";
 import styles from "./navigation.module.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import dynamic from "next/dynamic";
+import { navItems } from "../../data/NavItems";
 
-type NavLink = {
-  label: string;
-  href: string;
-};
-type Props = {
-  navLinks: NavLink[];
-};
+// type NavLink = {
+//   label: string;
+//   href: string;
+// };
+// type Props = {
+//   navLinks: NavLink[];
+// };
 
-const Navigation = ({ navLinks }: Props) => {
+const Navigation = () => {
   const pathname = usePathname();
-  const isActive = navLinks.findIndex((item) => pathname === item.href);
-  // console.log("isActive - ", isActive);
+  const isActive = navItems.findIndex((item) => pathname === item.href);
+
   const [activeIndex, setActive] = useState(isActive);
-  useEffect(() => {
-    setActive(isActive);
-  }, [isActive]);
-  // const isActive = pathname === link.href;
-  console.log("pathname - ", pathname);
-  console.log("navLinks - ", navLinks);
+
   const ActiveLine = () => {
     return (
       <motion.div
@@ -43,14 +39,13 @@ const Navigation = ({ navLinks }: Props) => {
   return (
     <ul className={styles.nav}>
       <LayoutGroup>
-        {navLinks.map((link, index) => {
+        {navItems.map((link, index) => {
           const isSelected = activeIndex === index;
 
           return (
             <motion.li
               key={link.label}
               className={styles.link}
-              onClick={() => setActive(index)}
               initial={{ color: "rgba(102, 102, 102, 1)" }}
               animate={{
                 color: isSelected
@@ -70,4 +65,5 @@ const Navigation = ({ navLinks }: Props) => {
   );
 };
 
+// export default Navigation;
 export default dynamic(() => Promise.resolve(Navigation), { ssr: false });

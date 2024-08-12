@@ -20,7 +20,7 @@ export default function RootLayout({
         className={`${rubik.variable} ${openSans.variable} ${montserrat.variable}`}
       >
         <Header />
-        <main className="container">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

@@ -4,15 +4,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import Navigation from "../Navigation";
 import styles from "./header.module.scss";
 
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Projects", href: "/projects" },
-  { label: "Services", href: "/services" },
-  { label: "About", href: "/about" },
-  { label: "Contacts", href: "/contacts" },
-];
-
-export default function Header() {
+const Header = () => {
   const { scrollY } = useScroll();
   const offsetY = [0, 200];
   const heightHeaderSizes = [200, 80];
@@ -40,8 +32,9 @@ export default function Header() {
         <span className={styles.logo}>Envent</span>
       </motion.div>
       <div className={styles.bottom}>
-        <Navigation navLinks={navItems} />
+        <Navigation />
       </div>
     </motion.header>
   );
-}
+};
+export default Header;

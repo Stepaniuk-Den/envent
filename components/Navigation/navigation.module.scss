@@ -1,4 +1,4 @@
-@import "../../app/mixin.scss";
+// @import "../../app/mixin.scss";
 .nav {
   display: flex;
   align-items: center;
@@ -20,8 +20,10 @@
   color: var(--main-text-gray);
   cursor: pointer;
 
-  Link {
-    display: block;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
   }

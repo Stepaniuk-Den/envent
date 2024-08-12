@@ -1,5 +1,6 @@
 import styles from "./footer.module.scss";
 
-export default function Footer() {
+const Footer = () => {
   return <footer className={`${styles.footer} container`}>Footer</footer>;
-}
+};
+export default Footer;
