@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./logoList.module.scss";
-import { logoItems } from "../../data/LogoItems";
+
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { motion, useTransform, useScroll } from "framer-motion";
@@ -26,7 +26,7 @@ const LogoList = () => {
 
   return (
     <ul className={styles.list}>
-      {logoItems.map((item) => {
+      {/* {logoItems.map((item) => {
         const { id, src, alt } = item;
 
         return (
@@ -34,7 +34,7 @@ const LogoList = () => {
             <Image src={src} alt={alt} width={97} height={56} />
           </motion.li>
         );
-      })}
+      })} */}
     </ul>
   );
 };
