@@ -3,6 +3,7 @@ import styles from "./page.module.scss";
 import { HeroMainBG } from "@/helpers/imagesImport";
 import HeroRightSideList from "@/components/HeroRightSideList";
 import { HeroRightSideItems } from "@/data/HeroItems";
+import Description from "@/components/Description";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
           className="main"
         />
       </Hero>
+      <Description/>
     </div>
   );
 }
