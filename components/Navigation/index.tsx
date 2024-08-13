@@ -30,7 +30,8 @@ const Navigation = () => {
           height: "4px",
           position: "absolute",
           bottom: "4px",
-          backgroundColor: "rgba(255, 180, 0, 1)",
+          // backgroundColor: "#2596be",
+          backgroundColor: "#efc11a",
           borderRadius: "2px",
         }}
       ></motion.div>
@@ -46,11 +47,12 @@ const Navigation = () => {
             <motion.li
               key={link.label}
               className={styles.link}
-              initial={{ color: "rgba(102, 102, 102, 1)" }}
+              initial={{ color: "#293241" }}
               animate={{
                 color: isSelected
-                  ? "rgba(255, 180, 0, 1)"
-                  : "rgba(102, 102, 102, 1)",
+                  ? "#2596be"
+                  : // ? "rgba(255, 180, 0, 1)"
+                    "#293241",
               }}
             >
               {isSelected && <ActiveLine />}
