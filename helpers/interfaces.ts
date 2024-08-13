@@ -39,3 +39,12 @@ export interface IHeroRightSideListProps {
   data: ISection<IServiceItem>;
   className: string;
 }
+
+export interface IButtonVariableColor {
+  className: string;
+  children: React.ReactNode;
+}
+
+export interface ILineProps {
+  className: string;
+}
