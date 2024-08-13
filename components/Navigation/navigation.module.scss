@@ -17,7 +17,7 @@
   height: 100%;
   font-family: var(--font-montserrat);
   font-weight: 600;
-  color: var(--main-text-gray);
+  color: var(--color-dark);
   cursor: pointer;
 
   a {
@@ -27,38 +27,8 @@
     width: 100%;
     height: 100%;
   }
-  // @include transition-standart;
-
-  // &::after {
-  //   position: absolute;
-  //   content: "";
-  //   bottom: -0.4rem;
-  //   left: 50%;
-  //   width: 0;
-  //   height: 0.2rem;
-  //   border-radius: 0.1rem;
-  //   background-color: var(--main-accent-yellow);
-  //   @include transition-standart;
-  //   transform: scaleX(0);
-  // }
 
   &:hover {
-    color: var(--main-black);
+    color: var(--color-dark);
   }
-
-  // &.active {
-  //   color: var(--main-black);
-
-  //   &::after {
-  //     position: absolute;
-  //     content: "";
-  //     bottom: -0.4rem;
-  //     left: 0;
-  //     width: 100%;
-  //     height: 0.2rem;
-  //     border-radius: 0.1rem;
-  //     background-color: var(--main-accent-yellow);
-  //     transform: scaleX(1);
-  //   }
-  // }
 }

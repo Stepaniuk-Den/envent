@@ -1,9 +1,10 @@
 :root {
   color-scheme: normal;
-  --main-accent-yellow: rgba(255, 180, 0, 1);
-  --main-black: rgba(42, 42, 42, 1);
-  --main-white: rgba(255, 255, 255, 1);
-  --main-text-gray: rgba(102, 102, 102, 1);
+  --color-accent-blue: #2596be;
+  --color-accent-yellow: #efc11a;
+  --color-dark: #293241;
+  --color-white: rgb(255, 255, 255);
+  // --main-text-dark: #08415C;
   /* --max-width: 1100px;
   --border-radius: 12px; */
   /* --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
@@ -107,6 +108,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  color: var(--color-dark);
 }
 
 h1,
@@ -177,10 +179,8 @@ address {
 
 .container {
   max-width: 1440px;
-  // padding-left: 2rem;
-  // padding-right: 2rem;
   margin: 0 auto;
-  background-color: gainsboro;
+  // background-color: gainsboro;
 }
 
 main {
