@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import styles from "./projectSection.module.scss";
 import { projects } from "@/data/Projects";
@@ -9,23 +10,12 @@ import { useState } from "react";
 import arrowLeft from "../../public/arrow-left.svg";
 import arrowRight from "../../public/arrow-right.svg";
 import close from "../../public/close.svg";
+import Line from "../Line";
+import { IPropsProjectItem } from "@/helpers/interfaces";
 
-interface IPropsProjectItem {
-  id: number;
-  src: StaticImageData;
-  alt: string;
-  title: string;
-  address: string;
-  link: string;
-}
-
-interface IPropsProjectList {
-  projectList: IPropsProjectItem[];
-}
-
-interface IIndex {
-  index: number;
-}
+// interface IPropsProjectList {
+//   projectList: IPropsProjectItem[];
+// }
 
 const ProjectSection = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +25,6 @@ const ProjectSection = () => {
     setCurrentIndex(index);
     setIsOpen(true);
   };
-
   const handleCloseBackdrop = () => {
     setIsOpen(false);
     setCurrentIndex(null);
@@ -46,7 +35,6 @@ const ProjectSection = () => {
       setCurrentIndex((prevIndex) => (prevIndex! + 1) % projects.length);
     }
   };
-
   const handlePrev = () => {
     if (currentIndex !== null) {
       setCurrentIndex((prevIndex) =>
@@ -59,6 +47,7 @@ const ProjectSection = () => {
     <section className={styles.projectSection}>
       <div className={`${styles.projectContainer} container`}>
         <h2 className={styles.sectionTitle}>Recent projects</h2>
+        <Line className="yellow-center" />
         <ul className={styles.projectList}>
           {projects.map((project: IPropsProjectItem, index) => (
             <li className={styles.projectItem} key={project.id}>
@@ -123,16 +112,16 @@ const ProjectSection = () => {
                 <button className={styles.prevButton} onClick={handlePrev}>
                   <Image src={arrowLeft} alt="Swipe to previous" />
                 </button>
-                <div className="scaledImgWrapper">
-                  <Image
-                    src={projects[currentIndex].src}
-                    alt={projects[currentIndex].alt}
-                    // width={800}
-                    // height={500}
-                    style={{ width: "100%", height: "auto" }}
-                    // style={{ objectFit: "cover" }}
-                  />
-                </div>
+
+                <Image
+                  src={projects[currentIndex].src}
+                  alt={projects[currentIndex].alt}
+                  // width={800}
+                  // height={500}
+                  style={{ width: "100%", height: "100%" }}
+                  // style={{ objectFit: "cover" }}
+                />
+
                 <button className={styles.nextButton} onClick={handleNext}>
                   <Image src={arrowRight} alt="Swipe to next" />
                 </button>

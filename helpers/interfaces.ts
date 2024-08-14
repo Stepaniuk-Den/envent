@@ -48,3 +48,12 @@ export interface IButtonVariableColor {
 export interface ILineProps {
   className: string;
 }
+
+export interface IPropsProjectItem {
+  id: number;
+  src: StaticImageData;
+  alt: string;
+  title: string;
+  address: string;
+  link: string;
+}

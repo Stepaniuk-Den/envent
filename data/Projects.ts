@@ -5,7 +5,7 @@ import {
   karavan,
   epicentr,
   altaCentr,
-} from "../app/assets";
+} from "../helpers/imagesImport";
 
 export const projects = [
   {
