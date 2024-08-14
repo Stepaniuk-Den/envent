@@ -3,6 +3,10 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import Navigation from "../Navigation";
 import styles from "./header.module.scss";
+import Logo from "../../public/images/logo-envent-no-bg.png";
+import Image from "next/image";
+import { Clock, Email, Phone } from "@/helpers/imagesImport";
+import Link from "next/link";
 
 const Header = () => {
   const { scrollY } = useScroll();
@@ -29,7 +33,38 @@ const Header = () => {
         }}
         className={styles.top}
       >
-        <span className={styles.logo}>Envent</span>
+        <span className={styles.logo}>
+          <Image
+            priority
+            src={Logo}
+            alt="Envent Logo"
+            width={173}
+            height={100}
+          />
+        </span>
+        <ul className={styles.contacts}>
+          <li className={styles.item}>
+            <Image src={Phone} alt="Call me" className={styles.svg} />
+            <div>
+              <Link href={"tel:+380445038377"} className={styles.link}>
+                call us<span>+38 (044) 503 83 77</span>
+              </Link>
+            </div>
+          </li>
+          <li className={styles.item}>
+            <Image src={Email} alt="Send email" className={styles.svg} />
+            <Link href={"mailto:info@envent.kiev.ua"} className={styles.link}>
+              e-mail<span>info@envent.kiev.ua</span>
+            </Link>
+          </li>
+          <li className={styles.item}>
+            <Image src={Clock} alt="Working time" className={styles.svg} />
+            <div className={styles.link}>
+              <p>working hours</p>
+              <span>Mon. - Fri. 9AM - 18PM</span>
+            </div>
+          </li>
+        </ul>
       </motion.div>
       <div className={styles.bottom}>
         <Navigation />
