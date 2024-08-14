@@ -1,0 +1,46 @@
+@import "../../app/mixin.scss";
+
+.social_list {
+  display: flex;
+  align-items: center;
+
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 100%;
+
+    .link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      @include transition-standart;
+
+      &:hover .svg {
+        color: var(--color-accent-blue);
+      }
+    }
+    .svg {
+      width: 20px;
+      height: 20px;
+      color: var(--color-dark);
+      @include transition-standart;
+    }
+  }
+
+  &.header {
+    .item {
+      border-left: 1px solid rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &.footer {
+    .item {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

@@ -18,7 +18,7 @@ interface IBaseItem {
 }
 
 interface IServiceItem extends IBaseItem {
-  svg: StaticImageData;
+  svg: React.ElementType;
 }
 
 interface ISection<T> {
