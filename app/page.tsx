@@ -4,6 +4,7 @@ import { HeroMainBG } from "@/helpers/imagesImport";
 import HeroRightSideList from "@/components/HeroRightSideList";
 import { HeroRightSideItems } from "@/data/HeroItems";
 import Description from "@/components/Description";
+import ProjectSection from "@/components/ProjectsSection";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
           className="main"
         />
       </Hero>
-      <Description/>
+      <Description />
+      <ProjectSection />
     </div>
   );
 }
