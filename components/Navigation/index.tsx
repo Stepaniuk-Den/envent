@@ -1,8 +1,7 @@
 "use client";
-import { motion, LayoutGroup } from "framer-motion";
 import Link from "next/link";
 import styles from "./navigation.module.scss";
-import { useState } from "react";
+// import { useState } from "react";
 import { usePathname } from "next/navigation";
 import dynamic from "next/dynamic";
 import { navItems } from "../../data/NavItems";
@@ -17,52 +16,29 @@ import { navItems } from "../../data/NavItems";
 
 const Navigation = () => {
   const pathname = usePathname();
-  const isActive = navItems.findIndex((item) => pathname === item.href);
 
-  const [activeIndex, setActive] = useState(isActive);
+  // const isActive = navItems.findIndex((item) => pathname === item.href);
+  // const [activeIndex, setActive] = useState<number>(isActive);
 
-  const ActiveLine = () => {
-    return (
-      <motion.div
-        layoutId="activeLine"
-        style={{
-          width: "100%",
-          height: "4px",
-          position: "absolute",
-          bottom: "4px",
-          // backgroundColor: "#2596be",
-          backgroundColor: "#efc11a",
-          borderRadius: "2px",
-        }}
-      ></motion.div>
-    );
-  };
   return (
     <ul className={styles.nav}>
-      <LayoutGroup>
-        {navItems.map((link, index) => {
-          const isSelected = activeIndex === index;
+      {/* {navItems.map((link, index) => { */}
+      {navItems.map((link) => {
+        const isActive = pathname === link.href;
+        // const isSelected = activeIndex === index;
 
-          return (
-            <motion.li
-              key={link.label}
-              className={styles.link}
-              initial={{ color: "#293241" }}
-              animate={{
-                color: isSelected
-                  ? "#2596be"
-                  : // ? "rgba(255, 180, 0, 1)"
-                    "#293241",
-              }}
-            >
-              {isSelected && <ActiveLine />}
-              <Link href={link.href} onClick={() => setActive(index)}>
-                {link.label}
-              </Link>
-            </motion.li>
-          );
-        })}
-      </LayoutGroup>
+        return (
+          <li
+            key={link.label}
+            className={`${styles.link} ${isActive ? styles.active : ""}`}
+          >
+            <Link href={link.href}>
+              {/* <Link href={link.href} onClick={() => setActive(index)}> */}
+              {link.label}
+            </Link>
+          </li>
+        );
+      })}
     </ul>
   );
 };
