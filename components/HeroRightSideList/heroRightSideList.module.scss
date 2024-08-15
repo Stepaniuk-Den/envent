@@ -1,3 +1,4 @@
+@import "../../app/mixin.scss";
 .hero_wrapper {
   display: flex;
   flex-direction: column;
@@ -25,6 +26,7 @@
       display: flex;
       width: 315px;
       gap: 10px;
+      cursor: pointer;
 
       .item_text {
         font-family: var(--font-open-sands);
@@ -42,6 +44,11 @@
       .svg {
         width: 55px;
         height: 55px;
+        color: var(--color-accent-blue);
+        @include transition-standart;
+      }
+
+      &:hover .svg {
         color: var(--color-accent-yellow);
       }
     }

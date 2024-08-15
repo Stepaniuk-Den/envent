@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useTransform, useScroll, color } from "framer-motion";
+import { motion, useTransform, useScroll } from "framer-motion";
 import Navigation from "../Navigation";
 import styles from "./header.module.scss";
 import Logo from "../../public/images/logo-envent-no-bg.png";

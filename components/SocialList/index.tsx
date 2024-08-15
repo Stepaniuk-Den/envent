@@ -1,37 +1,34 @@
 import Link from "next/link";
 import styles from "./socialList.module.scss";
-import { Facebook, Instagram, Twitter, Youtube } from "@/helpers/imagesImport";
+import { socialFooterItems, socialHeaderItems } from "@/data/SocialItems";
+import { ISocialItem } from "@/helpers/interfaces";
 
 type Props = {
   className: "header" | "footer";
 };
 
 const SocialList = ({ className }: Props) => {
+  const items: ISocialItem[] =
+    className === "header" ? socialHeaderItems : socialFooterItems;
+
   return (
-    <>
-      <ul className={`${styles.social_list} ${styles[className]}`}>
-        <li className={styles.item}>
-          <Link href={"https://twitter.com/"} className={styles.link}>
-            <Twitter className={styles.svg} />
-          </Link>
-        </li>
-        <li className={styles.item}>
-          <Link href={"https://www.facebook.com/"} className={styles.link}>
-            <Facebook className={styles.svg} />
-          </Link>
-        </li>
-        <li className={styles.item}>
-          <Link href={"https://www.instagram.com/"} className={styles.link}>
-            <Instagram className={styles.svg} />
-          </Link>
-        </li>
-        <li className={styles.item}>
-          <Link href={"https://youtube.com/"} className={styles.link}>
-            <Youtube className={styles.svg} />
-          </Link>
-        </li>
-      </ul>
-    </>
+    <ul className={`${styles.social_list} ${styles[className]}`}>
+      {items.map((item) => {
+        return (
+          <li className={styles.item} key={item.id}>
+            <Link
+              href={item.href}
+              className={styles.link}
+              target="_blank"
+              no-opener
+              no-referer
+            >
+              <item.svg className={styles.svg} />
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 

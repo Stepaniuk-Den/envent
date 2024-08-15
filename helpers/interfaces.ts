@@ -57,3 +57,10 @@ export interface IPropsProjectItem {
   address: string;
   link: string;
 }
+
+export interface ISocialItem {
+  id: number;
+  svg: React.ElementType;
+  href: string;
+}
+[];
