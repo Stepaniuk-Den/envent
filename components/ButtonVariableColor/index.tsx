@@ -3,12 +3,14 @@
 import styles from "./buttonVariableColor.module.scss";
 import { IButtonVariableColor } from "@/helpers/interfaces";
 
-const ButtonVariableColor: React.FC<IButtonVariableColor> = ({ className, children }) => {
+const ButtonVariableColor = ({ className, firstChildren, secondChildren }: IButtonVariableColor) => {
  
 
   return (
-    <div className={`${styles.button} ${styles[className]}`}>
-    {children}
+
+    <div className={`${styles[className]} ${styles.button_container} `}>
+       <div className={`${styles.left_btn} ${styles.btn}`}>{firstChildren}</div>
+      <div className={`${styles.right_btn} ${styles.btn}`}>{secondChildren}</div>
     </div>
   );
 };
