@@ -1,10 +1,11 @@
 import Hero from "@/components/Hero";
 import styles from "./page.module.scss";
-import { HeroMainBG } from "@/helpers/imagesImport";
+import { AboutUsCountedBG, HeroMainBG } from "@/helpers/imagesImport";
 import HeroRightSideList from "@/components/HeroRightSideList";
 import { HeroRightSideItems } from "@/data/HeroItems";
 import Description from "@/components/Description";
 import ProjectSection from "@/components/ProjectsSection";
+import AboutUsCounted from "@/components/AboutUsCounted";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       </Hero>
       <Description />
       <ProjectSection />
+      <AboutUsCounted imageSrc={AboutUsCountedBG}/>
     </div>
   );
 }

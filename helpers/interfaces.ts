@@ -41,12 +41,13 @@ export interface IHeroRightSideListProps {
 }
 
 export interface IButtonVariableColor {
-  className: string;
-  children: React.ReactNode;
+  className:"blue_dark"| "blue_white" | "dark_blue";
+  firstChildren: React.ReactNode;
+  secondChildren: React.ReactNode;
 }
 
 export interface ILineProps {
-  className: string;
+  className: "yellow-left" | "yellow-center" | "dark";
 }
 
 export interface IPropsProjectItem {
@@ -64,3 +65,6 @@ export interface ISocialItem {
   href: string;
 }
 [];
+export interface IAboutUsCountedProps {
+  imageSrc: StaticImageData;
+}
