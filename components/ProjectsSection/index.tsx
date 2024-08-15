@@ -79,7 +79,7 @@ const ProjectSection = () => {
         </ul>
 
         <Link className={styles.viewAllBtnLink} href="/projects">
-          <MainButton>View all</MainButton>
+          <MainButton color="black">View all</MainButton>
         </Link>
 
         {/* === SCALED PROJECT IMAGE ===*/}

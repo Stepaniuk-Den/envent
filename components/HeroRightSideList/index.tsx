@@ -1,6 +1,5 @@
 import { IHeroRightSideListProps } from "@/helpers/interfaces";
 import styles from "./heroRightSideList.module.scss";
-import Image from "next/image";
 
 const HeroRightSideList = ({ data, className }: IHeroRightSideListProps) => {
   return (
