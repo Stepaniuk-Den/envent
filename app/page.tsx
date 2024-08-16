@@ -5,6 +5,7 @@ import HeroRightSideList from "@/components/HeroRightSideList";
 import { HeroRightSideItems } from "@/data/HeroItems";
 import Description from "@/components/Description";
 import ProjectSection from "@/components/ProjectsSection";
+import SideBar from "@/components/SideBar";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       </Hero>
       <Description />
       <ProjectSection />
+      <SideBar />
     </div>
   );
 }

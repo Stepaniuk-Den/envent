@@ -16,12 +16,6 @@
   text-align: center;
 }
 
-.line {
-  width: 20px;
-  height: 30px;
-  background-color: red;
-}
-
 .projectList {
   display: flex;
   flex-wrap: wrap;
@@ -33,8 +27,8 @@
 .projectList .projectItem {
   position: relative;
   display: flex;
-  width: 380px;
-  height: 242px;
+  width: 344px;
+  height: 230px;
   font-family: var(--font-open-sands);
   overflow: hidden;
   object-fit: cover;
@@ -59,17 +53,47 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(239, 205, 79, 0.8);
-  color: var(--main-white);
+  background-color: var(--color-yellow-blur);
+  color: var(--color-white);
   opacity: 0;
   transition: opacity 300ms ease-in-out;
 }
 .projectList .projectItem .overlayContent .projectTitle {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 26px;
 }
 .projectList .projectItem .overlayContent .projectLinksWrapper {
   display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.projectList .projectItem .overlayContent .projectLinksWrapper .linkProject,
+.projectList .projectItem .overlayContent .projectLinksWrapper .magnifyingGlassBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  color: var(--color-white);
+  background-color: transparent;
+  border-radius: 100%;
+  transition: all 300ms ease-in-out;
+}
+.projectList .projectItem .overlayContent .projectLinksWrapper .linkProject:hover,
+.projectList .projectItem .overlayContent .projectLinksWrapper .magnifyingGlassBtn:hover {
+  color: var(--color-dark);
+  background-color: var(--color-white);
+}
+.projectList .projectItem .overlayContent .projectLinksWrapper .linkProject .linkIcon,
+.projectList .projectItem .overlayContent .projectLinksWrapper .magnifyingGlassBtn .linkIcon {
+  width: 24px;
+  height: 24px;
+}
+.projectList .projectItem .overlayContent .projectLinksWrapper .linkProject .magnifyingGlassIcon,
+.projectList .projectItem .overlayContent .projectLinksWrapper .magnifyingGlassBtn .magnifyingGlassIcon {
+  width: 34px;
+  height: 34px;
 }
 
 .viewAllBtnLink {
@@ -97,19 +121,6 @@
   height: 500px;
 }
 
-.closeButton,
-.prevButton,
-.nextButton {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 100%;
-  z-index: 1000;
-}
-
 .closeButton {
   top: 20px;
   right: 20px;
@@ -128,7 +139,7 @@
 }
 
 .counter {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-accent-blue);
   margin-top: 15px;
   font-size: 14px;
 }/*# sourceMappingURL=projectSection.module.css.map */

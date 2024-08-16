@@ -7,11 +7,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import MainButton from "../Buttons";
 import { useState } from "react";
-import arrowLeft from "../../public/arrow-left.svg";
-import arrowRight from "../../public/arrow-right.svg";
-import close from "../../public/close.svg";
-import Line from "../Line";
+import LinkIcon from "../../public/icons/link.svg";
+import MagnifyingGlass from "../../public/icons/magnifying-glass.svg";
+import ArrowLeft from "../../public/icons/arrow-left.svg";
+import ArrowRight from "../../public/icons/arrow-right.svg";
+import Close from "../../public/icons/close.svg";
+import Line from "../Line/index";
 import { IPropsProjectItem } from "@/helpers/interfaces";
+import BackdropButton from "../Buttons/BackdropButton";
 
 // interface IPropsProjectList {
 //   projectList: IPropsProjectItem[];
@@ -20,6 +23,7 @@ import { IPropsProjectItem } from "@/helpers/interfaces";
 const ProjectSection = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
+  const [isHovered, setHovered] = useState(false);
 
   const handleOpenBackdrop = (index: number) => {
     setCurrentIndex(index);
@@ -47,7 +51,7 @@ const ProjectSection = () => {
     <section className={styles.projectSection}>
       <div className={`${styles.projectContainer} container`}>
         <h2 className={styles.sectionTitle}>Recent projects</h2>
-        <Line className="yellow-center" />
+        <Line className="line yellow-center" />
         <ul className={styles.projectList}>
           {projects.map((project: IPropsProjectItem, index) => (
             <li className={styles.projectItem} key={project.id}>
@@ -55,34 +59,60 @@ const ProjectSection = () => {
                 className={styles.projectImg}
                 src={project.src}
                 alt={project.alt}
-                // width={260}
-                // height={166}
                 style={{ width: "100%", height: "100%" }}
               />
 
               <div className={styles.overlayContent}>
                 <h3 className={styles.projectTitle}>{project.title}</h3>
                 <div className={styles.projectLinksWrapper}>
-                  <Link href={`/project/${project.id}`}>icon</Link>
-                  <button
-                    // href="#"
-                    // target="_blank"
-                    // rel="noopener noreferrer nofollow"
+                  <Link
+                    className={styles.linkProject}
+                    href={`/projects/${project.id}`}
+                  >
+                    <LinkIcon className={styles.linkIcon} />
+                  </Link>
+                  {/* <motion.button
+                    onHoverStart={() => setHovered(true)}
+                    onHoverEnd={() => setHovered(false)}
+                    initial={{ y: 0 }}
+                    whileHover={{
+                      y: -10,
+                      backgroundColor: "#fff",
+                      transition: { duration: 0.3 },
+                    }}
+                    animate={{
+                      y: isHovered ? 0 : 30,
+                      opacity: isHovered ? 1 : 0,
+                      transition: { duration: 0.3 },
+                    }}
+                    className={styles.magnifyingGlassBtn}
                     onClick={() => handleOpenBackdrop(index)}
                   >
-                    icon search
+                    <motion.span
+                      whileHover={{
+                        color: "#000",
+                        transition: { duration: 0.3 },
+                      }}
+                    > */}
+                  <button
+                    className={styles.magnifyingGlassBtn}
+                    type="button"
+                    onClick={() => handleOpenBackdrop(index)}
+                  >
+                    <MagnifyingGlass className={styles.magnifyingGlassIcon} />
                   </button>
+                  {/* </motion.span>
+                  </motion.button> */}
                 </div>
               </div>
             </li>
           ))}
         </ul>
-
         <Link className={styles.viewAllBtnLink} href="/projects">
           <MainButton>View all</MainButton>
         </Link>
 
-        {/* === SCALED PROJECT IMAGE ===*/}
+        {/* ==== BACKDROP ==== */}
         <AnimatePresence mode="wait">
           {isOpen && currentIndex !== null && (
             <motion.div
@@ -103,28 +133,37 @@ const ProjectSection = () => {
                 }}
                 onClick={(e) => e.stopPropagation()}
               >
-                <button
+                <BackdropButton
                   className={styles.closeButton}
                   onClick={handleCloseBackdrop}
+                  type="button"
+                  aria-label="Close"
                 >
-                  <Image src={close} alt="Close" />
-                </button>
-                <button className={styles.prevButton} onClick={handlePrev}>
-                  <Image src={arrowLeft} alt="Swipe to previous" />
-                </button>
+                  <Close className={styles.closeSVG} />
+                </BackdropButton>
+                <BackdropButton
+                  className={styles.prevButton}
+                  onClick={handlePrev}
+                  type="button"
+                  aria-label="Swipe to previous"
+                >
+                  <ArrowLeft className={styles.ArrowLeftSVG} />
+                </BackdropButton>
 
                 <Image
                   src={projects[currentIndex].src}
                   alt={projects[currentIndex].alt}
-                  // width={800}
-                  // height={500}
                   style={{ width: "100%", height: "100%" }}
-                  // style={{ objectFit: "cover" }}
                 />
 
-                <button className={styles.nextButton} onClick={handleNext}>
-                  <Image src={arrowRight} alt="Swipe to next" />
-                </button>
+                <BackdropButton
+                  className={styles.nextButton}
+                  onClick={handleNext}
+                  type="button"
+                  aria-label="Swipe to next"
+                >
+                  <ArrowRight className={styles.ArrowRightSVG} />
+                </BackdropButton>
                 <p className={styles.counter}>
                   {currentIndex + 1} of {projects.length}
                 </p>
