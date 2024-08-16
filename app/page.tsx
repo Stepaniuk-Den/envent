@@ -6,6 +6,7 @@ import { HeroRightSideItems } from "@/data/HeroItems";
 import Description from "@/components/Description";
 import ProjectSection from "@/components/ProjectsSection";
 import AboutUsCounted from "@/components/AboutUsCounted";
+import SideBar from "@/components/SideBar";
 
 export default function Home() {
   return (
@@ -18,7 +19,8 @@ export default function Home() {
       </Hero>
       <Description />
       <ProjectSection />
-      <AboutUsCounted imageSrc={AboutUsCountedBG}/>
+      <AboutUsCounted imageSrc={AboutUsCountedBG} />
+      <SideBar />
     </div>
   );
 }

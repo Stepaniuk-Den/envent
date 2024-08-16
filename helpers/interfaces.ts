@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import { ReactNode } from "react";
 
 export interface IHeroProps {
   imageSrc: StaticImageData;
@@ -48,6 +49,14 @@ export interface IButtonVariableColor {
 
 export interface ILineProps {
   className: "yellow-left" | "yellow-center" | "dark";
+}
+
+export interface IMainButtonProps {
+  type?: "button" | "submit" | "reset";
+  className?: string;
+  children?: ReactNode;
+  onClick?: () => void;
+  ariaLabel?: string;
 }
 
 export interface IPropsProjectItem {

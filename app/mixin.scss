@@ -12,11 +12,11 @@
   @content;
 }
 
-@mixin text-title-rubik-40px-700w-25lh{
-font-family: var(--font-rubik);
-font-size: 40px;
-font-style: normal;
-font-weight: 700;
-line-height: 25px;
-@content;
+@mixin text-title-rubik-40px-700w-25lh {
+  font-family: var(--font-rubik);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  @content;
 }

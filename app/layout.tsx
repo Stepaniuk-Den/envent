@@ -3,6 +3,7 @@ import "./globals.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { montserrat, openSans, rubik } from "./fonts";
+import TotopButton from "@/components/Buttons/TotopButton";
 
 export const metadata: Metadata = {
   title: "Envent",
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <TotopButton />
       </body>
     </html>
   );
