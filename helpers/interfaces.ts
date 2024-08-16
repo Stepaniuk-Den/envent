@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import { ReactNode } from "react";
 
 export interface IHeroProps {
   imageSrc: StaticImageData;
@@ -41,12 +42,21 @@ export interface IHeroRightSideListProps {
 }
 
 export interface IButtonVariableColor {
-  className: string;
-  children: React.ReactNode;
+  className: "blue_dark" | "blue_white" | "dark_blue";
+  firstChildren: React.ReactNode;
+  secondChildren: React.ReactNode;
 }
 
 export interface ILineProps {
-  className: string;
+  className: "yellow-left" | "yellow-center" | "dark";
+}
+
+export interface IMainButtonProps {
+  type?: "button" | "submit" | "reset";
+  className?: string;
+  children?: ReactNode;
+  onClick?: () => void;
+  ariaLabel?: string;
 }
 
 export interface IPropsProjectItem {
@@ -65,12 +75,6 @@ export interface ISocialItem {
 }
 [];
 
-// export interface IDictionaryItem {
-//   // [key: string]: {
-//   [key: string]: string;
-// }
-// // }
-
 export interface IDictionarySection {
   [key: string]: {
     [key: string]: string;
@@ -81,4 +85,7 @@ export interface IDictionary {
   [key: string]: {
     [key: string]: IDictionarySection;
   };
+}
+export interface IAboutUsCountedProps {
+  imageSrc: StaticImageData;
 }
