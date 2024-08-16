@@ -1,4 +1,4 @@
-@import "../../mixin.scss";
+@import "../../../mixin.scss";
 .mainBtn {
   display: flex;
   align-items: center;
@@ -53,7 +53,7 @@
     }
   }
 
-  &.description{
+  &.description {
     width: 210px;
   }
 }

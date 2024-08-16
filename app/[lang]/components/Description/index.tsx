@@ -3,16 +3,15 @@
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import styles from "./description.module.scss";
 import Image from "next/image";
-import ButtonVariableColor from "../ButtonVariableColor";
+import ButtonVariableColor from "../Buttons/ButtonVariableColor";
 import Line from "../Line";
 import { RiverMall } from "@/helpers/imagesImport";
-import MainButton from "../Buttons";
+import MainButton from "../Buttons/MainButton";
 
 const Description = () => {
   const { scrollYProgress } = useViewportScroll();
   const x = useTransform(scrollYProgress, [0, 1], [-100, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
-
 
   // const imageMotion = {
   //   hidden: { x: -100, opacity: 0 },
@@ -32,15 +31,8 @@ const Description = () => {
           animate="visible"
           variants={imageMotion}
         > */}
-        <motion.div
-          className={styles.thumb}
-          style={{ x, opacity }}
-        >
-          <Image
-            priority
-            src={RiverMall}
-            alt="riverMall image"
-          />
+        <motion.div className={styles.thumb} style={{ x, opacity }}>
+          <Image priority src={RiverMall} alt="riverMall image" />
         </motion.div>
         {/* <div  className={styles.thumb}>
         <Image
@@ -56,15 +48,17 @@ const Description = () => {
             <Line className="yellow-left" />
             <div className={styles.description_text_container}>
               <div className={styles.left_text_container}>
-              <p className={styles.text}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien,
-                dignissim tristique tellus sed faucibus nullam. Tincidunt mauris
-                ut quam sed mauris proin feugiat. Scelerisque lorem posuere
-                iaculis nunc amet phasellus.
-              </p>
-              <p className={styles.text}>Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Sapien, dignissim tristique tellus
-                sed faucibus nullam.</p></div>
+                <p className={styles.text}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Sapien, dignissim tristique tellus sed faucibus nullam.
+                  Tincidunt mauris ut quam sed mauris proin feugiat. Scelerisque
+                  lorem posuere iaculis nunc amet phasellus.
+                </p>
+                <p className={styles.text}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Sapien, dignissim tristique tellus sed faucibus nullam.
+                </p>
+              </div>
               <div className={styles.right_text_container}>
                 <p className={styles.text}>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.

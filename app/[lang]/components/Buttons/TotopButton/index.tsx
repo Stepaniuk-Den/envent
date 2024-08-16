@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import styles from "./totopButton.module.scss";
-import ArrowTotop from "../../../public/icons/arrow-totop.svg";
+import ArrowTotop from "@/public/icons/arrow-totop.svg";
 
 const TotopButton = () => {
   const [isVisible, setIsVisible] = useState(false);

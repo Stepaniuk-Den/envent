@@ -3,7 +3,7 @@ import Link from "next/link";
 import Line from "../Line";
 import SocialList from "../SocialList";
 import styles from "./footer.module.scss";
-import MainButton from "../Buttons";
+import MainButton from "../Buttons/MainButton";
 import { FormEvent } from "react";
 import { contactsItems } from "@/data/ContactsItem";
 

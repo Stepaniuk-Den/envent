@@ -2,14 +2,37 @@
 
 import { useState } from "react";
 import styles from "./sidebar.module.scss";
+import { usePathname, useRouter } from "next/navigation";
+// import Link from "next/link";
+import { i18n, type Locale } from "@/i18n-config";
 
 const SideBar = () => {
-  const languages = ["EN", "UA"];
-  const [selectedLang, setSelectedLang] = useState("EN");
+  const languages = [
+    {
+      lang: "en",
+      label: "EN",
+    },
+    {
+      lang: "uk",
+      label: "UA",
+    },
+  ];
+  const [selectedLang, setSelectedLang] = useState<Locale>("en");
   const [selectedTheme, setSelectedTheme] = useState("light");
+  const pathName = usePathname();
+  const router = useRouter();
 
-  const handleLangChange = (newLang: string) => {
-    setSelectedLang(newLang);
+  const redirectedPathName = (locale: Locale) => {
+    if (!pathName) return "/";
+    const segments = pathName.split("/");
+    segments[1] = locale;
+    return segments.join("/");
+  };
+
+  const handleLangChange = (newLang: { lang: string; label: string }) => {
+    setSelectedLang(newLang.lang as Locale);
+    const newPath = redirectedPathName(newLang.lang as Locale);
+    router.push(newPath);
   };
 
   const handleToggleTheme = (newTheme: string) => {
@@ -22,20 +45,20 @@ const SideBar = () => {
     <div className={styles.sideBarContainer}>
       <div className={styles.sideBarLangBtnsWrapper}>
         {languages
-          .filter((lang) => lang !== selectedLang)
+          .filter((lang) => lang.lang !== selectedLang)
           .map((lang) => (
             <button
-              key={lang}
+              key={lang.lang}
               className={styles.sideBarLangBtn}
               type="button"
               onClick={() => handleLangChange(lang)}
             >
-              {lang}
+              {lang.label}
             </button>
           ))}
 
         <button className={styles.sideBarBtnSelected} type="button">
-          {selectedLang}
+          {languages.find((lang) => lang.lang === selectedLang)?.label}
         </button>
       </div>
       {/* ------------ */}

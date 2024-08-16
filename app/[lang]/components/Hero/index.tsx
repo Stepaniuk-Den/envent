@@ -1,4 +1,4 @@
-import MainButton from "../Buttons";
+import MainButton from "../Buttons/MainButton";
 import styles from "./hero.module.scss";
 import { IHeroProps } from "@/helpers/interfaces";
 

@@ -6,6 +6,7 @@ import { montserrat, openSans, rubik } from "./fonts";
 import { i18n, type Locale } from "@/i18n-config";
 import LocaleSwitcher from "./components/LocaleSwitcher";
 import { getDictionary } from "@/get-dictionary";
+import TotopButton from "./components/Buttons/TotopButton";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
@@ -32,6 +33,7 @@ export default async function RootLayout({
         <LocaleSwitcher />
         <main>{children}</main>
         <Footer />
+        <TotopButton />
       </body>
     </html>
   );

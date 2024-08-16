@@ -1,12 +1,14 @@
 import Hero from "@/app/[lang]/components/Hero";
 import styles from "./page.module.scss";
-import { HeroMainBG } from "@/helpers/imagesImport";
+import { AboutUsCountedBG, HeroMainBG } from "@/helpers/imagesImport";
 import HeroRightSideList from "@/app/[lang]/components/HeroRightSideList";
 import { HeroRightSideItems } from "@/data/HeroItems";
 import Description from "@/app/[lang]/components/Description";
 import ProjectSection from "@/app/[lang]/components/ProjectsSection";
 import { Locale } from "@/i18n-config";
 import { getDictionary } from "@/get-dictionary";
+import SideBar from "./components/SideBar";
+import AboutUsCounted from "./components/AboutUsCounted";
 
 export default async function Home({
   params: { lang },
@@ -24,6 +26,8 @@ export default async function Home({
       </Hero>
       <Description />
       <ProjectSection />
+      <AboutUsCounted imageSrc={AboutUsCountedBG} />
+      <SideBar />
     </div>
   );
 }
