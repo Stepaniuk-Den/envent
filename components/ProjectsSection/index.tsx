@@ -51,7 +51,7 @@ const ProjectSection = () => {
     <section className={styles.projectSection}>
       <div className={`${styles.projectContainer} container`}>
         <h2 className={styles.sectionTitle}>Recent projects</h2>
-        <Line className="line yellow-center" />
+        <Line className="yellow-center" />
         <ul className={styles.projectList}>
           {projects.map((project: IPropsProjectItem, index) => (
             <li className={styles.projectItem} key={project.id}>
