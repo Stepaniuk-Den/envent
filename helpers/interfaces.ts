@@ -19,7 +19,7 @@ interface IBaseItem {
 }
 
 interface IServiceItem extends IBaseItem {
-  svg: StaticImageData;
+  svg: React.ElementType;
 }
 
 interface ISection<T> {
@@ -42,12 +42,13 @@ export interface IHeroRightSideListProps {
 }
 
 export interface IButtonVariableColor {
-  className: string;
-  children: React.ReactNode;
+  className:"blue_dark"| "blue_white" | "dark_blue";
+  firstChildren: React.ReactNode;
+  secondChildren: React.ReactNode;
 }
 
 export interface ILineProps {
-  className: string;
+  className: "yellow-left" | "yellow-center" | "dark";
 }
 
 export interface IMainButtonProps {
@@ -65,4 +66,14 @@ export interface IPropsProjectItem {
   title: string;
   address: string;
   link: string;
+}
+
+export interface ISocialItem {
+  id: number;
+  svg: React.ElementType;
+  href: string;
+}
+[];
+export interface IAboutUsCountedProps {
+  imageSrc: StaticImageData;
 }

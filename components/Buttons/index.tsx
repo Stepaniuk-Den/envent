@@ -1,3 +1,4 @@
+"use client";
 import { ReactNode } from "react";
 import styles from "./mainButton.module.scss";
 
@@ -6,11 +7,22 @@ interface IMainButtonProps {
   className?: string;
   children?: ReactNode;
   onClick?: () => void;
+  color?: "black" | "white" | "yellow" | "";
 }
 
-const MainButton = ({ type, children, onClick }: IMainButtonProps) => {
+const MainButton = ({
+  type,
+  className = "",
+  children,
+  color = "",
+  onClick,
+}: IMainButtonProps) => {
   return (
-    <button type={type} className={styles.mainBtn} onClick={onClick}>
+    <button
+      type={type}
+      className={`${styles.mainBtn} ${styles[className]} ${styles[color]}`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

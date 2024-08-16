@@ -1,3 +1,4 @@
+import MainButton from "../Buttons";
 import styles from "./hero.module.scss";
 import { IHeroProps } from "@/helpers/interfaces";
 
@@ -15,7 +16,7 @@ const Hero = ({ className, imageSrc, children }: IHeroProps) => {
             egestas pellentesque libero dolor in diam consequat ut. Mi nibh amet
             viverra id aliquet neque odio.
           </p>
-          <button className={styles.btn}>view our work</button>
+          <MainButton className="filled">view our work</MainButton>
         </div>
         {children}
       </div>

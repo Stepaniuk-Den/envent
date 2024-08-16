@@ -1,5 +1,4 @@
 import { IHeroRightSideListProps } from "@/helpers/interfaces";
-import Image from "next/image";
 import styles from "./heroRightSideList.module.scss";
 
 const HeroRightSideList = ({ data, className }: IHeroRightSideListProps) => {
@@ -9,13 +8,7 @@ const HeroRightSideList = ({ data, className }: IHeroRightSideListProps) => {
       <ul className={styles.list}>
         {data.item.map((item, index) => (
           <li className={styles.item} key={index}>
-            {item.svg && (
-              <Image
-                className={styles.svg}
-                src={item.svg}
-                alt={item.title.en}
-              />
-            )}
+            {item.svg && <item.svg className={styles.svg} />}
             <div className={styles.item_text}>
               <p>{item.title.en}</p>
               <p>{item.descriptions.en}</p>

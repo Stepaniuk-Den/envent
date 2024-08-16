@@ -1,3 +1,5 @@
+@import "../../app/mixin.scss";
+
 .header {
   position: fixed;
   top: 0;
@@ -43,12 +45,18 @@
         font-family: var(--font-montserrat);
         border-right: 1px solid rgba(255, 255, 255, 0.2);
 
+        &:hover .svg {
+          color: var(--color-accent-yellow);
+        }
         &:last-child {
           border: none;
         }
+
         .svg {
           width: 36px;
           height: 36px;
+          @include transition-standart;
+          color: var(--color-accent-blue);
         }
 
         .link {
@@ -70,9 +78,11 @@
 
   .bottom {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 80px;
     background-color: var(--color-white);
     border-radius: 3px;
+    box-shadow: 0 6px 10px var(--color-box-shadow);
   }
 }
