@@ -51,8 +51,8 @@ const Footer = () => {
                 <Link
                   href={contact.href}
                   target="_blank"
-                  no-referrer
-                  no-opener
+                  no-referrer="true"
+                  no-opener="true"
                   className={styles.link}
                 >
                   <contact.svg className={styles.svg} />

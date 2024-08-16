@@ -64,3 +64,21 @@ export interface ISocialItem {
   href: string;
 }
 [];
+
+// export interface IDictionaryItem {
+//   // [key: string]: {
+//   [key: string]: string;
+// }
+// // }
+
+export interface IDictionarySection {
+  [key: string]: {
+    [key: string]: string;
+  };
+}
+
+export interface IDictionary {
+  [key: string]: {
+    [key: string]: IDictionarySection;
+  };
+}

@@ -4,7 +4,8 @@ import styles from "./navigation.module.scss";
 // import { useState } from "react";
 import { usePathname } from "next/navigation";
 import dynamic from "next/dynamic";
-import { navItems } from "../../data/NavItems";
+import { navItems } from "../../../../data/NavItems";
+import { type Locale } from "@/i18n-config";
 
 // type NavLink = {
 //   label: string;
@@ -16,6 +17,7 @@ import { navItems } from "../../data/NavItems";
 
 const Navigation = () => {
   const pathname = usePathname();
+  //{ params: { lang } }: { params: { lang: Locale } }
 
   // const isActive = navItems.findIndex((item) => pathname === item.href);
   // const [activeIndex, setActive] = useState<number>(isActive);

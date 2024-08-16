@@ -3,14 +3,15 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import Navigation from "../Navigation";
 import styles from "./header.module.scss";
-import Logo from "../../public/images/logo-envent-no-bg.png";
+import Logo from "@/public/images/logo-envent-no-bg.png";
 import Image from "next/image";
 import { Clock, Email, Phone } from "@/helpers/imagesImport";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import SocialList from "../SocialList";
+import { IDictionarySection } from "@/helpers/interfaces";
 
-const Header = () => {
+const Header = ({ d }: IDictionarySection) => {
   const { scrollY } = useScroll();
   const offsetY = [0, 200];
   const heightHeaderSizes = [200, 80];
@@ -51,21 +52,22 @@ const Header = () => {
             </div>
             <div>
               <Link href={"tel:+380445038377"} className={styles.link}>
-                call us<span>+38 (044) 503 83 77</span>
+                {d.call_us} <span>+38 (044) 503 83 77</span>
               </Link>
             </div>
           </li>
           <li className={styles.item}>
             <Email className={styles.svg} />
             <Link href={"mailto:info@envent.kiev.ua"} className={styles.link}>
-              e-mail<span>info@envent.kiev.ua</span>
+              {d.mail}
+              <span>info@envent.kiev.ua</span>
             </Link>
           </li>
           <li className={styles.item}>
             <Clock className={styles.svg} />
             <div className={styles.link}>
-              <p>working hours</p>
-              <span>Mon. - Fri. 9AM - 18PM</span>
+              <p>{d.working_hours}</p>
+              <span>{d.hours}</span>
             </div>
           </li>
         </ul>

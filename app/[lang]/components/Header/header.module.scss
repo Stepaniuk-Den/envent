@@ -1,4 +1,4 @@
-@import "../../app/mixin.scss";
+@import "../../mixin.scss";
 
 .header {
   position: fixed;
@@ -36,9 +36,9 @@
 
       .item {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         gap: 20px;
-        max-width: max-content;
+        width: 230px;
         height: 45px;
         padding-right: 20px;
         color: var(--color-white);

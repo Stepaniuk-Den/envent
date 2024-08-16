@@ -7,9 +7,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import MainButton from "../Buttons";
 import { useState } from "react";
-import arrowLeft from "../../public/arrow-left.svg";
-import arrowRight from "../../public/arrow-right.svg";
-import close from "../../public/close.svg";
+import arrowLeft from "@/public/arrow-left.svg";
+import arrowRight from "@/public/arrow-right.svg";
+import close from "@/public/close.svg";
 import Line from "../Line";
 import { IPropsProjectItem } from "@/helpers/interfaces";
 

@@ -1,4 +1,4 @@
-@import "../../app/mixin.scss";
+@import "../../mixin.scss";
 
 .description {
   background-color: #f7f7f7;
@@ -34,18 +34,16 @@
     margin-bottom: 38px;
   }
 
-
-
-  .description_text{
+  .description_text {
     display: flex;
     flex-direction: row;
-    gap: 80px;  
-    
-    .text{
-    @include text-dark-openSands-15px-27lh-06ls;
-    height: 270px;
-    margin-top: 22px;
-  }
+    gap: 80px;
+
+    .text {
+      @include text-dark-openSands-15px-27lh-06ls;
+      height: 270px;
+      margin-top: 22px;
+    }
   }
 
   .description_items {
@@ -54,7 +52,6 @@
 
     .description_year,
     .description_project {
-      
       @include text-title-rubik-40px-700w-25lh;
       line-height: 50.4px;
     }
@@ -67,9 +64,8 @@
       letter-spacing: 0.24px;
       text-transform: uppercase;
     }
-    .fix_width{
-        width: 130px;
+    .fix_width {
+      width: 130px;
     }
   }
-
 }
