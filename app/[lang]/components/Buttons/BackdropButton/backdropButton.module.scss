@@ -1,0 +1,19 @@
+@import "../../../mixin.scss";
+
+.backdropBtn {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-accent-blue);
+  background: transparent;
+  border: 1px solid var(--color-accent-blue);
+  border-radius: 100%;
+  z-index: 1000;
+  @include transition-standart;
+
+  &:hover {
+    color: var(--color-accent-yellow);
+    border-color: var(--color-accent-yellow);
+  }
+}

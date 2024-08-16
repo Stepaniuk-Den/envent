@@ -42,7 +42,7 @@ export interface IHeroRightSideListProps {
 }
 
 export interface IButtonVariableColor {
-  className:"blue_dark"| "blue_white" | "dark_blue";
+  className: "blue_dark" | "blue_white" | "dark_blue";
   firstChildren: React.ReactNode;
   secondChildren: React.ReactNode;
 }
@@ -74,6 +74,18 @@ export interface ISocialItem {
   href: string;
 }
 [];
+
+export interface IDictionarySection {
+  [key: string]: {
+    [key: string]: string;
+  };
+}
+
+export interface IDictionary {
+  [key: string]: {
+    [key: string]: IDictionarySection;
+  };
+}
 export interface IAboutUsCountedProps {
   imageSrc: StaticImageData;
 }
