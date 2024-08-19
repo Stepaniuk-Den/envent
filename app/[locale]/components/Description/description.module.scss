@@ -1,0 +1,78 @@
+@import "../../mixin.scss";
+
+.description {
+  // background-color: #f7f7f7;
+
+  .description_container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .thumb {
+    object-fit: cover;
+    width: 440px;
+    height: 730px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 116px 134px 113px 74px;
+    gap: 38px;
+    width: 1000px;
+  }
+
+  .title {
+    @include text-title-rubik-40px-700w-25lh;
+  }
+
+  .description_text_container {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+
+    .text {
+      @include text-dark-openSands-15px-27lh-06ls;
+    }
+
+    .left_text_container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .left_text_container > *:not(:last-child) {
+      margin-bottom: 49px;
+    }
+
+    .right_text_container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .right_text_container > *:not(:last-child) {
+      margin-bottom: 68px;
+    }
+  }
+
+  .description_year,
+  .description_project {
+    @include text-title-rubik-40px-700w-25lh;
+    line-height: 50.4px;
+  }
+  .description_text {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 50.4px; /* 420% */
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+  }
+  .fix_width {
+    min-width: max-content;
+  }
+}

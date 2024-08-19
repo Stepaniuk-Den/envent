@@ -1,0 +1,13 @@
+.locale_switcher {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  top: 300px;
+  right: 100px;
+  z-index: 10;
+}

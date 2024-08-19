@@ -5,6 +5,11 @@ export interface IHeroProps {
   imageSrc: StaticImageData;
   children?: React.ReactNode;
   className: string;
+  t: {
+    title: string;
+    description: string;
+    button: string;
+  };
 }
 
 interface IBaseItem {
@@ -75,17 +80,6 @@ export interface ISocialItem {
 }
 [];
 
-export interface IDictionarySection {
-  [key: string]: {
-    [key: string]: string;
-  };
-}
-
-export interface IDictionary {
-  [key: string]: {
-    [key: string]: IDictionarySection;
-  };
-}
 export interface IAboutUsCountedProps {
   imageSrc: StaticImageData;
 }
