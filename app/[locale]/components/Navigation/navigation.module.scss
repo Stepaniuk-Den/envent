@@ -1,0 +1,64 @@
+@import "../../mixin.scss";
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: min-content;
+  height: 100%;
+  padding: 16px;
+  gap: 32px;
+
+  .link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: max-content;
+    height: 100%;
+    font-family: var(--font-montserrat);
+    font-weight: 600;
+    color: var(--color-dark);
+    cursor: pointer;
+    @include transition-standart;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -4px;
+      left: 50%;
+      width: 0;
+      height: 4px;
+      background-color: var(--color-accent-yellow);
+      @include transition-standart;
+      transform: scaleX(0);
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:hover {
+      color: var(--color-dark);
+    }
+
+    &.active {
+      position: relative;
+      color: var(--color-accent-blue);
+
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: var(--color-accent-yellow);
+        transform: scaleX(1);
+      }
+    }
+  }
+}
