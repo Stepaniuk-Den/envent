@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
 export interface IHeroProps {
   imageSrc: StaticImageData;
@@ -83,3 +83,10 @@ export interface ISocialItem {
 export interface IAboutUsCountedProps {
   imageSrc: StaticImageData;
 }
+
+export interface IPartnersItem {
+  title: string;
+  logo: React.ElementType | StaticImageData;
+  href: string;
+}
+[];

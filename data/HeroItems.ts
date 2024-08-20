@@ -1,7 +1,7 @@
 import { Clock } from "@/helpers/imagesImport";
 import { IHeroRightSideItems } from "@/helpers/interfaces";
 
-export const HeroRightSideItems: IHeroRightSideItems = {
+export const heroRightSideItems: IHeroRightSideItems = {
   services: {
     title: { en: "Our Services", ua: "Сервіси" },
     item: [
