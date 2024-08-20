@@ -20,8 +20,7 @@ const SocialList = ({ className }: Props) => {
               href={item.href}
               className={styles.link}
               target="_blank"
-              no-opener="true"
-              no-referer="true"
+              rel="noopener noreferrer"
             >
               <item.svg className={styles.svg} />
             </Link>
