@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import styles from "./projectSection.module.scss";
-import { projects } from "@/data/Projects";
+// import { projects } from "@/data/Projects";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import MainButton from "../Buttons/MainButton";
@@ -13,16 +13,21 @@ import ArrowLeft from "@/public/icons/arrow-left.svg";
 import ArrowRight from "@/public/icons/arrow-right.svg";
 import Close from "@/public/icons/close.svg";
 import Line from "../Line/index";
-import { IPropsProjectItem } from "@/helpers/interfaces";
+import { IProjectsProps, IPropsProjectItem } from "@/helpers/interfaces";
 import BackdropButton from "../Buttons/BackdropButton";
+import { MainPageT } from "@/messages/types/MainPageT";
 
 // interface IPropsProjectList {
 //   projectList: IPropsProjectItem[];
 // }
 
-const ProjectSection = () => {
+const ProjectSection: React.FC<{
+  t: MainPageT["projects"];
+}> = ({ t }) => {
+  //= ({ t }: IProjectsProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
+  const projectsList = Object.values(t.list);
   const [isHovered, setHovered] = useState(false);
 
   const handleOpenBackdrop = (index: number) => {
@@ -36,13 +41,13 @@ const ProjectSection = () => {
 
   const handleNext = () => {
     if (currentIndex !== null) {
-      setCurrentIndex((prevIndex) => (prevIndex! + 1) % projects.length);
+      setCurrentIndex((prevIndex) => (prevIndex! + 1) % projectsList.length);
     }
   };
   const handlePrev = () => {
     if (currentIndex !== null) {
       setCurrentIndex((prevIndex) =>
-        prevIndex! === 0 ? projects.length - 1 : prevIndex! - 1
+        prevIndex! === 0 ? projectsList.length - 1 : prevIndex! - 1
       );
     }
   };
@@ -50,28 +55,40 @@ const ProjectSection = () => {
   return (
     <section className={styles.projectSection}>
       <div className={`${styles.projectContainer} container`}>
-        <h2 className={styles.sectionTitle}>Recent projects</h2>
+        <h2 className={styles.sectionTitle}>{t.title}</h2>
         <Line className="yellow-center" />
         <ul className={styles.projectList}>
-          {projects.map((project: IPropsProjectItem, index) => (
-            <li className={styles.projectItem} key={project.id}>
-              <Image
-                className={styles.projectImg}
-                src={project.src}
-                alt={project.alt}
-                style={{ width: "100%", height: "100%" }}
-              />
+          {/* {projectsList.map((project: IPropsProjectItem, index) => ( */}
+          {/* {Object.keys(projectsList).map((key) => { */}
+          {projectsList.map((projectItem, index) => {
+            // const projectItem = projectsList[Number(key)];
+            // const imgSrc = projects.find(
+            //   (project) => project.title === projectItem.src
+            // );
+            return (
+              <li className={styles.projectItem} key={index}>
+                {/* {imgSrc && ( */}
+                <Image
+                  className={styles.projectImg}
+                  // src={imgSrc.src}
+                  src={projectItem.src}
+                  alt={projectItem.alt}
+                  width={344}
+                  height={230}
+                  // style={{ width: "100%", height: "100%" }}
+                />
+                {/* )} */}
 
-              <div className={styles.overlayContent}>
-                <h3 className={styles.projectTitle}>{project.title}</h3>
-                <div className={styles.projectLinksWrapper}>
-                  <Link
-                    className={styles.linkProject}
-                    href={`/projects/${project.id}`}
-                  >
-                    <LinkIcon className={styles.linkIcon} />
-                  </Link>
-                  {/* <motion.button
+                <div className={styles.overlayContent}>
+                  <h3 className={styles.projectTitle}>{projectItem.title}</h3>
+                  <div className={styles.projectLinksWrapper}>
+                    <Link
+                      className={styles.linkProject}
+                      href={`/projects/${projectItem.id}`}
+                    >
+                      <LinkIcon className={styles.linkIcon} />
+                    </Link>
+                    {/* <motion.button
                     onHoverStart={() => setHovered(true)}
                     onHoverEnd={() => setHovered(false)}
                     initial={{ y: 0 }}
@@ -93,23 +110,29 @@ const ProjectSection = () => {
                         color: "#000",
                         transition: { duration: 0.3 },
                       }}
-                    > */}
-                  <button
-                    className={styles.magnifyingGlassBtn}
-                    type="button"
-                    onClick={() => handleOpenBackdrop(index)}
-                  >
-                    <MagnifyingGlass className={styles.magnifyingGlassIcon} />
-                  </button>
-                  {/* </motion.span>
-                  </motion.button> */}
+                    >  */}
+
+                    <button
+                      className={styles.magnifyingGlassBtn}
+                      type="button"
+                      // onClick={() => handleOpenBackdrop(Number(key))}
+                      onClick={() => handleOpenBackdrop(index)}
+                    >
+                      <MagnifyingGlass className={styles.magnifyingGlassIcon} />
+                    </button>
+                    {/* </motion.span>
+                  </motion.button>  */}
+                  </div>
                 </div>
-              </div>
-            </li>
-          ))}
+              </li>
+              // ))}
+            );
+          })}
         </ul>
         <Link className={styles.viewAllBtnLink} href="/projects">
-          <MainButton color="black">View all</MainButton>
+          <MainButton type="button" color="black">
+            {t.viewAll}
+          </MainButton>
         </Link>
 
         {/* ==== BACKDROP ==== */}
@@ -151,9 +174,11 @@ const ProjectSection = () => {
                 </BackdropButton>
 
                 <Image
-                  src={projects[currentIndex].src}
-                  alt={projects[currentIndex].alt}
-                  style={{ width: "100%", height: "100%" }}
+                  src={projectsList[currentIndex].src}
+                  alt={projectsList[currentIndex].alt}
+                  width={800}
+                  height={500}
+                  // style={{ width: "100%", height: "100%" }}
                 />
 
                 <BackdropButton
@@ -165,7 +190,7 @@ const ProjectSection = () => {
                   <ArrowRight className={styles.ArrowRightSVG} />
                 </BackdropButton>
                 <p className={styles.counter}>
-                  {currentIndex + 1} of {projects.length}
+                  {currentIndex + 1} of {projectsList.length}
                 </p>
               </motion.div>
             </motion.div>
