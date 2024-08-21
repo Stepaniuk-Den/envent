@@ -12,38 +12,30 @@ export interface IHeroProps {
   };
 }
 
-interface IBaseItem {
-  title: {
-    en: string;
-    ua: string;
-  };
-  descriptions: {
-    en: string;
-    ua: string;
-  };
-}
-
-interface IServiceItem extends IBaseItem {
-  svg: React.ElementType;
-}
-
-interface ISection<T> {
-  title: {
-    en: string;
-    ua: string;
-  };
-  item: T[];
-}
-
 export interface IHeroRightSideItems {
-  services: ISection<IServiceItem>;
-  todo: ISection<IServiceItem>;
-  contact: ISection<IBaseItem>;
+  services: {
+    svg: React.ElementType;
+    name: string;
+  }[];
+  todo: {
+    svg: React.ElementType;
+    name: string;
+  }[];
 }
 
-export interface IHeroRightSideListProps {
-  data: ISection<IServiceItem>;
+export interface IServiceItem {
+  list: {
+    [key: string]: { svgName: string; title: string; descriptions: string };
+  };
+}
+
+export interface IHeroRightSideItem extends IServiceItem {
+  title: string;
+}
+
+export interface IHeroRightSideList {
   className: string;
+  t: IHeroRightSideItem;
 }
 
 export interface IButtonVariableColor {

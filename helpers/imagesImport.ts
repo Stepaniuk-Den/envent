@@ -29,7 +29,17 @@ import LogoVents from "../public/icons/partner-vents.svg";
 import LogoEpicentr from "../public/icons/partner-epicentr.svg";
 import LogoDaikin from "../public/icons/partner-daikin-logo.svg";
 import LogoACM from "../public/icons/partner-acm-logo.png";
+import LogoFujitsu from "../public/icons/partner-fujitsu.svg";
+import LogoIntercond from "../public/icons/partner-intercond.svg";
+import LogoOstberg from "../public/icons/partner-ostberg.svg";
 import LogoLennox from "../public/icons/partner-lennox-logo.svg";
+
+import SideServicesDesigning from "../public/icons/IconParkOutlineCompass.svg";
+import SideServicesProduction from "../public/icons/IconParkOutlineRobotTwo.svg";
+import SideServicesAssembling from "../public/icons/IconParkOutlineHelmetOne.svg";
+import SideTodoAutomation from "../public/icons/IconParkOutlineCpu.svg";
+import SideTodoCommissioning from "../public/icons/IconParkOutlineNetworkTree.svg";
+import SideTodoMaintenance from "../public/icons/IconParkOutlineSpanner.svg";
 
 export {
   HeroMainBG,
@@ -63,4 +73,13 @@ export {
   LogoDaikin,
   LogoACM,
   LogoLennox,
+  LogoFujitsu,
+  LogoIntercond,
+  LogoOstberg,
+  SideServicesAssembling,
+  SideServicesDesigning,
+  SideServicesProduction,
+  SideTodoAutomation,
+  SideTodoCommissioning,
+  SideTodoMaintenance,
 };

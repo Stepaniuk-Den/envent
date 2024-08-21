@@ -6,6 +6,9 @@ import {
   LogoDaikin,
   LogoACM,
   LogoLennox,
+  LogoFujitsu,
+  LogoIntercond,
+  LogoOstberg,
 } from "@/helpers/imagesImport";
 
 import { IPartnersItem } from "@/helpers/interfaces";
@@ -44,6 +47,21 @@ export const partners: IPartnersItem[] = [
   {
     title: "EpicentrK",
     logo: LogoEpicentr,
+    href: "#",
+  },
+  {
+    title: "Fujitsu",
+    logo: LogoFujitsu,
+    href: "#",
+  },
+  {
+    title: "Intercond",
+    logo: LogoIntercond,
+    href: "#",
+  },
+  {
+    title: "Ostberg",
+    logo: LogoOstberg,
     href: "#",
   },
 ];
