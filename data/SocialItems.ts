@@ -30,6 +30,7 @@ export const socialHeaderItems = [
     href: "https://telegram.org/",
   },
 ];
+
 export const socialFooterItems = [
   {
     id: 1,

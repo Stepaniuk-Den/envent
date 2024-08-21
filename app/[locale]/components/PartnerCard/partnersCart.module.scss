@@ -1,0 +1,42 @@
+@import "../../mixin.scss";
+
+.item {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  width: 220px;
+  height: 200px;
+  border: none;
+  border-radius: 3px;
+  @include transition-standart;
+
+  &:hover {
+    box-shadow: 0 6px 10px var(--color-box-shadow);
+  }
+
+  .overlay {
+    position: absolute;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background: white;
+  }
+
+  .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    .svg,
+    .png {
+      width: 200px;
+      height: 200px;
+    }
+
+    .png {
+      object-fit: contain;
+    }
+  }
+}

@@ -23,6 +23,14 @@ import epicentr from "../public/images/projects/epicentr.jpg";
 import altaCentr from "../public/images/projects/altaCentr.jpg";
 import AboutUsCountedBG from "../public/images/about_us_counted.jpg";
 
+import LogoMitsubishi from "../public/icons/partner-mitsubishi-heavy-industries.svg";
+import LogoCooperHunter from "../public/icons/partner-cooperhunter.png";
+import LogoVents from "../public/icons/partner-vents.svg";
+import LogoEpicentr from "../public/icons/partner-epicentr.svg";
+import LogoDaikin from "../public/icons/partner-daikin-logo.svg";
+import LogoACM from "../public/icons/partner-acm-logo.png";
+import LogoLennox from "../public/icons/partner-lennox-logo.svg";
+
 export {
   HeroMainBG,
   RiverMall,
@@ -48,4 +56,11 @@ export {
   Telegram,
   LocationsFilled,
   AboutUsCountedBG,
+  LogoMitsubishi,
+  LogoCooperHunter,
+  LogoVents,
+  LogoEpicentr,
+  LogoDaikin,
+  LogoACM,
+  LogoLennox,
 };
