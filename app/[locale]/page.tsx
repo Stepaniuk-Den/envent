@@ -13,6 +13,7 @@ import { MainPageT } from "@/messages/types/MainPageT";
 import { localize } from "@/localize";
 import VideoSection from "./components/VideoSection";
 import Partners from "./components/Partners";
+import Testimonials from "./components/Testimonials";
 
 type Props = {
   params: { locale: string };
@@ -30,9 +31,10 @@ const Home: React.FC<Props> = async ({ params: { locale } }) => {
           className="main"
         />
       </Hero>
-      <Description />
+      <Description t={t.descriptions} language={locale} />
       <ProjectSection t={t.projects} />
-      <AboutUsCounted imageSrc={AboutUsCountedBG} />
+      <AboutUsCounted imageSrc={AboutUsCountedBG} t={t.aboutUsCounted} />
+      <Testimonials t={t.testimonials}/>
       <VideoSection />
       <Partners />
     </div>
