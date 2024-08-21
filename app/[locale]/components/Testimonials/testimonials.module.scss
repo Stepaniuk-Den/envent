@@ -3,7 +3,7 @@
   z-index: 1;
   margin-top: -100px;
   border-radius: 3px;
-  box-shadow: 0 6px 10px var(--color-box-shadow);
+  box-shadow: 0 6px 10px var(--color-dark-box-shadow);
   // height: 300px;
 
   .list {
@@ -65,11 +65,11 @@
           height: 72px;
         }
 
-        .full_name{
-            font-family: var(--font-montserrat);
-            font-size: 16px;  
-            font-weight: 700;
-            text-align: center;
+        .full_name {
+          font-family: var(--font-montserrat);
+          font-size: 16px;
+          font-weight: 700;
+          text-align: center;
         }
       }
     }

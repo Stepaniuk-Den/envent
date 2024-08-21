@@ -17,7 +17,7 @@ export const socialHeaderItems = [
   {
     id: 2,
     svg: Facebook,
-    href: "https://www.facebook.com/",
+    href: "https://www.facebook.com/profile.php?id=100063715463509",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ export const socialFooterItems = [
   {
     id: 1,
     svg: FacebookFilled,
-    href: "https://www.facebook.com/",
+    href: "https://www.facebook.com/profile.php?id=100063715463509",
   },
   {
     id: 2,
