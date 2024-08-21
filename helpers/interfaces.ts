@@ -65,12 +65,21 @@ export interface IMainButtonProps {
 }
 
 export interface IPropsProjectItem {
-  id: number;
-  src: StaticImageData;
+  id: string;
+  src: string;
   alt: string;
   title: string;
   address: string;
   link: string;
+}
+
+export interface IProjectsProps {
+  t: {
+    title?: string;
+    viewAll?: string;
+    // list: IPropsProjectItem[];
+    list: { [key: number]: IPropsProjectItem };
+  };
 }
 
 export interface ISocialItem {

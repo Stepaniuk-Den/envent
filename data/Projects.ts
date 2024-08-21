@@ -12,7 +12,7 @@ export const projects = [
     id: 1,
     src: riverMall,
     alt: "River Mall",
-    title: "River Mall",
+    title: "riverMall",
     address: "...",
     link: "...",
   },

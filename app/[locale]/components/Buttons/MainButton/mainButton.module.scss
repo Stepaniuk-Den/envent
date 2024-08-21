@@ -53,7 +53,17 @@
     }
   }
 
+  &.yellow {
+    color: var(--color-accent-yellow);
+    border-color: var(--color-accent-yellow);
+  }
+
   &.description {
     width: 210px;
+  }
+
+  &.btnPaddingsLR {
+    padding-left: 23px;
+    padding-right: 23px;
   }
 }

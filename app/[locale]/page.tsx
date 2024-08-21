@@ -11,6 +11,7 @@ import AboutUsCounted from "./components/AboutUsCounted";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { MainPageT } from "@/messages/types/MainPageT";
 import { localize } from "@/localize";
+import VideoSection from "./components/VideoSection";
 import Partners from "./components/Partners";
 
 type Props = {
@@ -30,8 +31,9 @@ const Home: React.FC<Props> = async ({ params: { locale } }) => {
         />
       </Hero>
       <Description />
-      <ProjectSection />
+      <ProjectSection t={t.projects} />
       <AboutUsCounted imageSrc={AboutUsCountedBG} />
+      <VideoSection />
       <Partners />
     </div>
   );

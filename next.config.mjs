@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 import createNextIntlPlugin from "next-intl/plugin";
+import { withNextVideo } from "next-video/process";
 
 const withNextIntl = createNextIntlPlugin();
 
@@ -16,6 +17,14 @@ const nextConfig = {
 
     return config;
   },
+
+  // const { withNextVideo } = require('next-video/process')
+
+  // /** @type {import('next').nextConfig} */
+  // const nextConfig = {}
+
+  // module.exports = withNextVideo(nextConfig)
+  // ------------------------------------
   // webpack(config) {
   //   // Знайти існуюче правило, яке обробляє SVG
   //   const fileLoaderRule = config.module.rules.find((rule) =>
@@ -46,4 +55,4 @@ const nextConfig = {
 };
 
 // export default nextConfig;
-export default withNextIntl(nextConfig);
+export default withNextIntl(withNextVideo(nextConfig));
