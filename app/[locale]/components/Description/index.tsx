@@ -8,11 +8,23 @@ import Image from "next/image";
 import ButtonVariableColor from "../Buttons/ButtonVariableColor";
 import Line from "../Line";
 import MainButton from "../Buttons/MainButton";
+import { useRef } from "react";
 
-const Description = ({ t, language }: IDescriptionProps & { language: string }) => {
-  const { scrollYProgress } = useScroll();
-  const x = useTransform(scrollYProgress, [0, 0.2], [-100, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
+const Description = ({
+  t,
+  language,
+}: IDescriptionProps & { language: string }) => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "start start"],
+  });
+
+  const x = useTransform(scrollYProgress, [0.3, 0.8], [-200, 0]);
+  const opacity = useTransform(scrollYProgress, [0.3, 0.8], [0, 1]);
+  // const { scrollY } = useScroll(); // 1 variant (tracking in pixels)
+  // const x = useTransform(scrollY, [200, 500], [-200, 0]); // 1 variant
+  // const opacity = useTransform(scrollY, [200, 500], [0, 1]); // 1 variant
 
   // const imageMotion = {
   //   hidden: { x: -100, opacity: 0 },
@@ -23,10 +35,10 @@ const Description = ({ t, language }: IDescriptionProps & { language: string }) 
   //   },
   // };
 
-  const languageClass = language === 'uk' ? styles.ua_content : "";
+  const languageClass = language === "uk" ? styles.ua_content : "";
 
   return (
-    <section className={`${styles.description} container`}>
+    <section ref={ref} className={`${styles.description} container`}>
       <div className={styles.description_container}>
         {/* <motion.div
           className={styles.thumb}
@@ -47,22 +59,15 @@ const Description = ({ t, language }: IDescriptionProps & { language: string }) 
 
         <div className={styles.description_wrapper}>
           <div className={`${styles.content} ${languageClass}`}>
-            <h2 className={styles.title}>
-              {t.title}</h2>
+            <h2 className={styles.title}>{t.title}</h2>
             <Line className="yellow-left" />
             <div className={styles.description_text_container}>
               <div className={styles.left_text_container}>
-                <p className={styles.text}>
-                 {t.firstDescr}
-                </p>
-                <p className={styles.text}>
-               {t.secondDescr}
-                </p>
+                <p className={styles.text}>{t.firstDescr}</p>
+                <p className={styles.text}>{t.secondDescr}</p>
               </div>
               <div className={styles.right_text_container}>
-                <p className={styles.text}>
-                {t.thirdDescr}
-                </p>
+                <p className={styles.text}>{t.thirdDescr}</p>
                 <MainButton className="description">{t.button}</MainButton>
               </div>
             </div>
