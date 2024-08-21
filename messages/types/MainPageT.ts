@@ -10,7 +10,15 @@ export class MainPageT implements Translation {
     description: "",
     button: "",
   };
-  descriptions = {};
+  descriptions = {
+    title: "",
+    firstDescr: "",
+    secondDescr: "",
+    thirdDescr: "",
+    button: "",
+    years: "",
+    projects: "",
+  };
   projects = {
     title: "",
     viewAll: "",
@@ -66,5 +74,29 @@ export class MainPageT implements Translation {
         link: "",
       },
     },
+  };
+
+  aboutUsCounted ={
+    title:"",
+    finishedProjects:"",
+    ongoingProjects: "",
+    employees:"",
+  };
+
+  testimonials = {
+    title: "",
+    subtitle: "",
+    items:{
+      1:{
+        text: "",
+        fullName: "",
+        image: "",
+      },
+      2:{
+        text: "",
+        fullName: "",
+        image: "",
+      },
+    }
   };
 }
