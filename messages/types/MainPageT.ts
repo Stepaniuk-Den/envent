@@ -1,8 +1,5 @@
 import { Translation } from "./Translation";
 import { FullTranslation } from "./FullTranslation";
-import { IPropsId, IPropsProjectItem } from "@/helpers/interfaces";
-import { blockBaster, riverMall } from "@/helpers/imagesImport";
-import { StaticImageData } from "next/image";
 
 export class MainPageT implements Translation {
   // This takes the key value of the namespace in the translation sheet.
