@@ -12,6 +12,7 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import { MainPageT } from "@/messages/types/MainPageT";
 import { localize } from "@/localize";
 import Partners from "./components/Partners";
+import { HeroRightSideT } from "@/messages/types/HeroRightSideT";
 
 type Props = {
   params: { locale: string };
@@ -19,14 +20,16 @@ type Props = {
 const Home: React.FC<Props> = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
 
-  const t = await localize(MainPageT);
+  const mainT = await localize(MainPageT);
+  const heroRightSideT = await localize(HeroRightSideT);
 
   return (
     <div className={styles.main}>
-      <Hero imageSrc={HeroMainBG} className="main" t={t.hero}>
+      <Hero imageSrc={HeroMainBG} className="main" t={mainT.hero}>
         <HeroRightSideList
-          data={heroRightSideItems.services}
+          // data={heroRightSideItems.services}
           className="main"
+          t={heroRightSideT.services}
         />
       </Hero>
       <Description />

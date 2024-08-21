@@ -32,10 +32,82 @@ const uk: FullTranslation = {
     hero: {
       title: "Енерговентиляція",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis egestas pellentesque libero dolor in diam consequat ut. Mi nibh ame viverra id aliquet neque odio.",
+        "Надійні рішення для енерговентиляції, що забезпечують комфорт та безпеку вашого простору з 1992 року.",
       button: "наші проєкти",
     },
     descriptions: {},
+  },
+  Footer: {
+    formTitle: "Зв'яжіться з нами",
+    placeholderName: "Ім'я",
+    placeholderEmail: "Електронна пошта",
+    placeholderMessage: "Повідомлення",
+    button: "надіслати повідомлення",
+  },
+  HeroRightSide: {
+    services: {
+      title: "Наші послуги",
+      list: {
+        designing: {
+          svgName: "SideServicesDesigning",
+          title: "Проектування",
+          descriptions: "Початкова стадія створення атмосфери комфорту.",
+        },
+        production: {
+          svgName: "SideServicesProduction",
+          title: "Виробництво",
+          descriptions: "Виробництво та реалізація готової продукції.",
+        },
+        assembling: {
+          svgName: "SideServicesAssembling",
+          title: "Монтаж",
+          descriptions: "Монтаж систем вентиляції та кондиціювання повітря.",
+        },
+      },
+    },
+    todo: {
+      title: "Що ми робимо",
+      list: {
+        automation: {
+          svgName: "SideTodoAutomation",
+          title: "Автоматизація",
+          descriptions:
+            "Автоматизація вентиляційних систем і систем кондиціювання повітря.",
+        },
+        works: {
+          svgName: "SideTodoCommissioning",
+          title: "Пуско-налагоджувальні работи",
+          descriptions:
+            "Пускові випробування змонтованих систем вентиляції та кондиціювання.",
+        },
+        services: {
+          svgName: "SideTodoMaintenance",
+          title: "Сервісне обслуговування",
+          descriptions:
+            "Технічне обслуговування систем вентиляції, кондиціювання, холодопостачання та теплопостачання.",
+        },
+      },
+    },
+    contact: {
+      title: "Контактна інформація",
+      list: {
+        office: {
+          title: "Наш офіс",
+          descriptions: "Дарницький бульвар, 12, Київ, 02000",
+        },
+        hours: {
+          title: "Години роботи офісу",
+          descriptions: "Пн-Пт: 9:00 – 18:00 Сб-Нд: Вихідний",
+        },
+        touch: {
+          title: "Зв'яжіться з нами",
+          descriptions: {
+            mail: "info@envent.kiev.ua ",
+            tel: "+ 38(044) 503 83 77",
+          },
+        },
+      },
+    },
   },
 };
 
