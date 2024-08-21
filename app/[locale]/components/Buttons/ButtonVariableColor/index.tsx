@@ -1,7 +1,7 @@
 "use client";
 
-import styles from "./buttonVariableColor.module.scss";
 import { IButtonVariableColor } from "@/helpers/interfaces";
+import styles from "./buttonVariableColor.module.scss";
 
 const ButtonVariableColor = ({ className, firstChildren, secondChildren }: IButtonVariableColor) => {
  

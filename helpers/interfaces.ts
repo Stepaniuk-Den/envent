@@ -57,12 +57,21 @@ export interface IMainButtonProps {
 }
 
 export interface IPropsProjectItem {
-  id: number;
-  src: StaticImageData;
+  id: string;
+  src: string;
   alt: string;
   title: string;
   address: string;
   link: string;
+}
+
+export interface IProjectsProps {
+  t: {
+    title?: string;
+    viewAll?: string;
+    // list: IPropsProjectItem[];
+    list: { [key: number]: IPropsProjectItem };
+  };
 }
 
 export interface ISocialItem {
@@ -74,6 +83,12 @@ export interface ISocialItem {
 
 export interface IAboutUsCountedProps {
   imageSrc: StaticImageData;
+  t:{
+    title: string;
+    finishedProjects: string;
+    ongoingProjects: string;
+    employees:string;
+  }
 }
 
 export interface IPartnersItem {
@@ -82,3 +97,28 @@ export interface IPartnersItem {
   href: string;
 }
 [];
+export interface IDescriptionProps {
+  t: {
+    title: string;
+    firstDescr: string;
+    secondDescr: string;
+    thirdDescr: string;
+    button: string;
+    years: string;
+    projects: string;
+  };
+}
+
+export interface ITestimonialItem {
+  text: string;
+  fullName: string;
+  image: string;
+}
+
+export interface ITestimonialsProps {
+  t: {
+    title: string;
+    subtitle: string;
+    items:  { [key: number]: ITestimonialItem };
+  };
+}

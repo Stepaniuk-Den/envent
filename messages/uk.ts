@@ -1,3 +1,11 @@
+import {
+  altaCentr,
+  blockBaster,
+  epicentr,
+  karavan,
+  odeskiyBulvar,
+  riverMall,
+} from "@/helpers/imagesImport";
 import { FullTranslation } from "./types/FullTranslation";
 
 const uk: FullTranslation = {
@@ -35,7 +43,92 @@ const uk: FullTranslation = {
         "Надійні рішення для енерговентиляції, що забезпечують комфорт та безпеку вашого простору з 1992 року.",
       button: "наші проєкти",
     },
-    descriptions: {},
+    descriptions: {
+      title: "Немає проектів занадто великих або  занадто маленьких",
+      firstDescr: "Наша команда фахівців має багатий досвід у створенні ефективних вентиляційних рішень для житлових будинків, офісних будівель, виробничих приміщень, торгових центрів та інших об’єктів.",
+      secondDescr: "Компанія укомплектована висококласними фахівцями, що дозволяє виконувати всі комплекси робіт.",
+      thirdDescr: "З перших днів існування наше підприємство зайняло одне з провідних місць у галузі створення сучасних кліматичних технологій та надання повного комплексу послуг та інженерних рішень.",
+      button: "Дізнатись більше",
+      years: "років досвіду",
+      projects: "виконаних проєктів",
+    },
+    projects: {
+      title: "Останні проєкти",
+      viewAll: "Переглянути всі",
+      list: {
+        1: {
+          id: "1",
+          src: "/images/projects/riverMall.jpg",
+          alt: "River Mall",
+          title: "River Mall",
+          address: "...",
+          link: "...",
+        },
+        2: {
+          id: "2",
+          src: "/images/projects/blockBaster.jpg",
+          alt: "БлокБастер",
+          title: "BlockБастер",
+          address: "...",
+          link: "...",
+        },
+        3: {
+          id: "3",
+          src: "/images/projects/odeskiyBulvar.jpg",
+          alt: "Одеський бульвар",
+          title: "Одеський бульвар",
+          address: "...",
+          link: "...",
+        },
+        4: {
+          id: "4",
+          src: "/images/projects/epicentr.jpg",
+          alt: "Епіцентр",
+          title: "Епіцентр",
+          address: "...",
+          link: "...",
+        },
+        5: {
+          id: "5",
+          src: "/images/projects/karavan.jpg",
+          alt: "Караван",
+          title: "Караван",
+          address: "...",
+          link: "...",
+        },
+        6: {
+          id: "6",
+          src: "/images/projects/altaCentr.jpg",
+          alt: "Альта центр",
+          title: "Альта центр",
+          address: "...",
+          link: "...",
+        },
+      },
+    },
+    aboutUsCounted: {
+      title: "Система вентиляції преміум-класу",
+      finishedProjects: "Завершених проектів",
+      ongoingProjects: "Поточних проектів",
+      employees: "Співробітників",
+    },
+
+    testimonials: {
+      title: "Клієнтські",
+      subtitle:"відгуки",
+      items: {
+        1:{
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus elit aliquam facilisis pharetra. Aenean consectetur lacinia diam a tincidunt. Vivamus facilisis lacus non velit suscipit pellentesque. Nam ac mauris nec mi lobortis sollicitudin sed at lacus. Fusce volutpat, dolor in suscipit pharetra, lacus sapien sollicitudin quam, non aliquam ex neque eu lectus",
+          fullName: "John Doe",
+          image: "/images/john_Doe.jpg",
+        },
+        2:{
+          text: "Tincidunt mauris ut quam sed mauris proin feugiat. Scelerisque lorem posuere iaculis nunc amet phasellus.",
+          fullName: "Jane Smith",
+          image: "/images/jane_Smith.jpg",
+        },
+      }
+    },
   },
   Footer: {
     formTitle: "Зв'яжіться з нами",
