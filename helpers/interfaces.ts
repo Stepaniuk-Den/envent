@@ -128,3 +128,8 @@ export interface IHandleNavigationProps<T> {
   setCurrentIndex: React.Dispatch<React.SetStateAction<number | null>>,
   array: T[];
 }
+
+export interface AnimatedTitleProps {
+  title: string;
+  className?: string;
+}

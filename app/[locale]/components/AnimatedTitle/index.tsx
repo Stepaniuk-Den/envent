@@ -1,11 +1,8 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import styles from "./animatedTitle.module.scss";
+import { AnimatedTitleProps } from "@/helpers/interfaces";
 
-interface AnimatedTitleProps {
-  title: string;
-  className?: string;
-}
 
 const AnimatedTitle: React.FC<AnimatedTitleProps> = ({ title, className }) => {
   const ref = useRef(null);
