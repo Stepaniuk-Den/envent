@@ -1,7 +1,8 @@
 "use client";
 
 import { IAboutUsCountedProps } from "@/helpers/interfaces";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useInView } from "framer-motion";
 import styles from "./aboutUsCounted.module.scss";
 
 const AboutUsCounted = ({ imageSrc, t }: IAboutUsCountedProps) => {
@@ -9,11 +10,15 @@ const AboutUsCounted = ({ imageSrc, t }: IAboutUsCountedProps) => {
   const [ongoingProjects, setOngoingProjects] = useState(0);
   const [employees, setEmployees] = useState(0);
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+
   useEffect(() => {
+    if (isInView) {
     startCounting(setFinishedProjects, 455);
     startCounting(setOngoingProjects, 120);
     startCounting(setEmployees, 150);
-  }, []);
+  }}, [isInView]);
 
   const startCounting = (setCount: React.Dispatch<React.SetStateAction<number>>, target: number) => {
     let currentCount = 0;
@@ -31,8 +36,9 @@ const AboutUsCounted = ({ imageSrc, t }: IAboutUsCountedProps) => {
 
   return (
     <section
+     ref={ref}
       style={{ backgroundImage: `url(${imageSrc.src})` }}
-      className={`${styles.hero}`}
+      className={styles.hero}
     >
       <div className={`${styles.wrapper} container`}>
         <h2 className={styles.title}>{t.title}</h2>

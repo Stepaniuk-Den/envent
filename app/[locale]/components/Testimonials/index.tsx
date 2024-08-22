@@ -28,7 +28,7 @@ const [currentIndex, setCurrentIndex] = useState<number | null>(0);
   return (
     <motion.section
       ref={ref}
-      className={`${styles.testimonials} container`}
+      className={`${styles.testimonials}`}
       style={{ y, opacity }}
     >
       <ul className={styles.list}>
