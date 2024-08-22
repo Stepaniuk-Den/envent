@@ -122,3 +122,14 @@ export interface ITestimonialsProps {
     items:  { [key: number]: ITestimonialItem };
   };
 }
+
+export interface IHandleNavigationProps<T> {
+  currentIndex: number | null;
+  setCurrentIndex: React.Dispatch<React.SetStateAction<number | null>>,
+  array: T[];
+}
+
+export interface AnimatedTitleProps {
+  title: string;
+  className?: string;
+}

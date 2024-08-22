@@ -1,7 +1,6 @@
 @import "../../mixin.scss";
 
 .description {
-  // background-color: #f7f7f7;
 
   .description_container {
     display: flex;
@@ -22,23 +21,17 @@
   .content {
     display: flex;
     flex-direction: column;
-    // padding: 116px 134px 113px 74px;
     padding: 116px 0 113px 74px;
     gap: 38px;
-    // width: 1000px;
     width: 840px;
 
     &.ua_content {
-      padding: 76px 0 83px 74px;
+      padding: 76px 0 82px 74px;
 
-      .title {
+      .descr_title {
         line-height: normal;
       }
     }
-  }
-
-  .title {
-    @include text-title-rubik-40px-700w-25lh;
   }
 
   .description_text_container {
@@ -92,5 +85,8 @@
   }
   .fix_width {
     min-width: max-content;
+  }
+  .description{
+    z-index: 1;
   }
 }
