@@ -2,20 +2,19 @@
 
 import Link from "next/link";
 import styles from "./projectSection.module.scss";
-// import { projects } from "@/data/Projects";
 import { AnimatePresence, motion } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import MainButton from "../Buttons/MainButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LinkIcon from "@/public/icons/link.svg";
 import MagnifyingGlass from "@/public/icons/magnifying-glass.svg";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
 import ArrowRight from "@/public/icons/arrow-right.svg";
 import Close from "@/public/icons/close.svg";
 import Line from "../Line/index";
-import { IProjectsProps, IPropsProjectItem } from "@/helpers/interfaces";
 import BackdropButton from "../Buttons/BackdropButton";
 import { MainPageT } from "@/messages/types/MainPageT";
+import { useRouter } from "next/navigation";
 import { handleNext, handlePrev } from "@/helpers/useClickPrevAndNext";
 
 // interface IPropsProjectList {
@@ -29,7 +28,8 @@ const ProjectSection: React.FC<{
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
   const projectsList = Object.values(t.list);
-  const [isHovered, setHovered] = useState(false);
+  // const [isHovered, setHovered] = useState(false);
+  const router = useRouter();
 
   const handleOpenBackdrop = (index: number) => {
     setCurrentIndex(index);
@@ -74,8 +74,9 @@ const ProjectSection: React.FC<{
                   // src={imgSrc.src}
                   src={projectItem.src}
                   alt={projectItem.alt}
-                  width={344}
-                  height={230}
+                  fill={true}
+                  // width={344}
+                  // height={230}
                   // style={{ width: "100%", height: "100%" }}
                 />
                 {/* )} */}
@@ -130,11 +131,16 @@ const ProjectSection: React.FC<{
             );
           })}
         </ul>
-        <Link className={styles.viewAllBtnLink} href="/projects">
-          <MainButton type="button" color="black">
-            {t.viewAll}
-          </MainButton>
-        </Link>
+        {/* <Link className={styles.viewAllBtnLink} href="/projects"> */}
+        <MainButton
+          type="button"
+          color="black"
+          onClick={() => router.push("/projects")}
+          className="btnProjectsLink"
+        >
+          {t.viewAll}
+        </MainButton>
+        {/* </Link> */}
 
         {/* ==== BACKDROP ==== */}
         <AnimatePresence mode="wait">
@@ -184,8 +190,9 @@ const ProjectSection: React.FC<{
                 <Image
                   src={projectsList[currentIndex].src}
                   alt={projectsList[currentIndex].alt}
-                  width={800}
-                  height={500}
+                  fill={true}
+                  // width={800}
+                  // height={500}
                   // style={{ width: "100%", height: "100%" }}
                 />
 

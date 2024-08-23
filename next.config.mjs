@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 import createNextIntlPlugin from "next-intl/plugin";
-import { withNextVideo } from "next-video/process";
+// import { withNextVideo } from "next-video/process";
 
 const withNextIntl = createNextIntlPlugin();
 
@@ -55,4 +55,16 @@ const nextConfig = {
 };
 
 // export default nextConfig;
-export default withNextIntl(withNextVideo(nextConfig));
+export default withNextIntl(nextConfig);
+
+// config.module.rules.push({
+//   test: /\.(mp4|webm|ogg)$/,
+//   use: {
+//     loader: "file-loader",
+//     options: {
+//       publicPath: "/_next/static/videos/",
+//       outputPath: "static/videos/",
+//       name: "[name].[hash].[ext]",
+//     },
+//   },
+// });

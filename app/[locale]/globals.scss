@@ -128,3 +128,7 @@ main {
 .montserrat {
   font-family: var(--font-montserrat);
 }
+
+.no-scroll {
+  overflow: hidden;
+}
