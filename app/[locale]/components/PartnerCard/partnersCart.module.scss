@@ -11,7 +11,7 @@
   @include transition-standart;
 
   &:hover {
-    box-shadow: 0 6px 10px var(--color-box-shadow);
+    box-shadow: 0 6px 10px var(--color-dark-box-shadow);
   }
 
   .overlay {
@@ -31,6 +31,9 @@
 
     .svg,
     .png {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 200px;
       height: 200px;
     }

@@ -15,6 +15,7 @@ import Line from "../Line/index";
 import BackdropButton from "../Buttons/BackdropButton";
 import { MainPageT } from "@/messages/types/MainPageT";
 import { useRouter } from "next/navigation";
+import { handleNext, handlePrev } from "@/helpers/useClickPrevAndNext";
 
 // interface IPropsProjectList {
 //   projectList: IPropsProjectItem[];
@@ -39,18 +40,18 @@ const ProjectSection: React.FC<{
     setCurrentIndex(null);
   };
 
-  const handleNext = () => {
-    if (currentIndex !== null) {
-      setCurrentIndex((prevIndex) => (prevIndex! + 1) % projectsList.length);
-    }
-  };
-  const handlePrev = () => {
-    if (currentIndex !== null) {
-      setCurrentIndex((prevIndex) =>
-        prevIndex! === 0 ? projectsList.length - 1 : prevIndex! - 1
-      );
-    }
-  };
+  // const handleNext = () => {
+  //   if (currentIndex !== null) {
+  //     setCurrentIndex((prevIndex) => (prevIndex! + 1) % projectsList.length);
+  //   }
+  // };
+  // const handlePrev = () => {
+  //   if (currentIndex !== null) {
+  //     setCurrentIndex((prevIndex) =>
+  //       prevIndex! === 0 ? projectsList.length - 1 : prevIndex! - 1
+  //     );
+  //   }
+  // };
 
   return (
     <section className={styles.projectSection}>
@@ -172,7 +173,14 @@ const ProjectSection: React.FC<{
                 </BackdropButton>
                 <BackdropButton
                   className={styles.prevButton}
-                  onClick={handlePrev}
+                  // onClick={handlePrev}
+                  onClick={() =>
+                    handlePrev({
+                      currentIndex,
+                      setCurrentIndex,
+                      array: projectsList,
+                    })
+                  }
                   type="button"
                   aria-label="Swipe to previous"
                 >
@@ -190,7 +198,14 @@ const ProjectSection: React.FC<{
 
                 <BackdropButton
                   className={styles.nextButton}
-                  onClick={handleNext}
+                  // onClick={handleNext}
+                  onClick={() =>
+                    handleNext({
+                      currentIndex,
+                      setCurrentIndex,
+                      array: projectsList,
+                    })
+                  }
                   type="button"
                   aria-label="Swipe to next"
                 >

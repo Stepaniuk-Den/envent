@@ -1,4 +1,6 @@
+import { FooterT } from "./FooterT";
 import { HeaderT } from "./HeaderT";
+import { HeroRightSideT } from "./HeroRightSideT";
 import { LocaleLayoutT } from "./LocaleLayoutT";
 import { LocaleSwitcherT } from "./LocaleSwitcherT";
 import { MainPageT } from "./MainPageT";
@@ -11,4 +13,6 @@ export type FullTranslation = {
   LocaleSwitcher: LocaleSwitcherT;
   Manifest: ManifestT;
   MainPage: MainPageT;
+  Footer: FooterT;
+  HeroRightSide: HeroRightSideT;
 };

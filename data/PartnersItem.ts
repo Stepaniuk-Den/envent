@@ -6,6 +6,9 @@ import {
   LogoDaikin,
   LogoACM,
   LogoLennox,
+  LogoFujitsu,
+  LogoIntercond,
+  LogoOstberg,
 } from "@/helpers/imagesImport";
 
 import { IPartnersItem } from "@/helpers/interfaces";
@@ -14,36 +17,51 @@ export const partners: IPartnersItem[] = [
   {
     title: "Mitsubishi",
     logo: LogoMitsubishi,
-    href: "#",
+    href: "https://www.mhi.com/",
   },
   {
     title: "ACM",
     logo: LogoACM,
-    href: "#",
+    href: "https://www.pvz.com.ua/",
   },
   {
     title: "Lennox",
     logo: LogoLennox,
-    href: "#",
+    href: "https://www.linkedin.com/company/lennox/?trk=products_details_guest_organization_image&originalSubdomain=ua",
   },
   {
     title: "Cooper&Hunter",
     logo: LogoCooperHunter,
-    href: "#",
+    href: "https://cooperandhunter.ua/",
   },
   {
     title: "Daikin",
     logo: LogoDaikin,
-    href: "#",
+    href: "https://www.daikin.com/",
   },
   {
     title: "Vents",
     logo: LogoVents,
-    href: "#",
+    href: "https://vents.ua/",
   },
   {
     title: "EpicentrK",
     logo: LogoEpicentr,
-    href: "#",
+    href: "https://epicentrk.ua/",
+  },
+  {
+    title: "Fujitsu",
+    logo: LogoFujitsu,
+    href: "https://www.fujitsu.com/global/",
+  },
+  {
+    title: "Intercond",
+    logo: LogoIntercond,
+    href: "http://intercon.com.ua/",
+  },
+  {
+    title: "Ostberg",
+    logo: LogoOstberg,
+    href: "https://www.ostberg.com.ua/",
   },
 ];

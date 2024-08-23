@@ -1,72 +1,91 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { RiverMall } from "@/helpers/imagesImport";
+import { IDescriptionProps } from "@/helpers/interfaces";
+import { useRef } from "react";
 import styles from "./description.module.scss";
 import Image from "next/image";
 import ButtonVariableColor from "../Buttons/ButtonVariableColor";
 import Line from "../Line";
-import { RiverMall } from "@/helpers/imagesImport";
 import MainButton from "../Buttons/MainButton";
+import Link from "next/link";
+import AnimatedTitle from "../AnimatedTitle";
 
-const Description = () => {
-  const { scrollYProgress } = useScroll();
-  const x = useTransform(scrollYProgress, [0, 1], [-100, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+const Description = ({
+  t,
+  language,
+}: IDescriptionProps & { language: string }) => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "start start"],
+  });
 
-  // const imageMotion = {
-  //   hidden: { x: -100, opacity: 0 },
-  //   visible: {
-  //     x: 0,
-  //     opacity: 1,
-  //     transition: { duration: 2 },
-  //   },
-  // };
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const x = useTransform(scrollYProgress, [0.3, 0.8], [-200, 0]);
+  const opacity = useTransform(scrollYProgress, [0.3, 0.8], [0, 1]);
+  // const { scrollY } = useScroll(); // 1 variant (tracking in pixels)
+  // const x = useTransform(scrollY, [200, 500], [-200, 0]); // 1 variant
+  // const opacity = useTransform(scrollY, [200, 500], [0, 1]); // 1 variant
+
+  const languageClass = language === "uk" ? styles.ua_content : "";
+
+  const titleLetters = t.title.split("");
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05,
+      },
+    },
+  };
+
+  const letterVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
 
   return (
-    <section className={`${styles.description} container`}>
+    <section ref={ref} className={`${styles.description} container`}>
       <div className={styles.description_container}>
-        {/* <motion.div
-          className={styles.thumb}
-          initial="hidden"
-          animate="visible"
-          variants={imageMotion}
-        > */}
         <motion.div className={styles.thumb} style={{ x, opacity }}>
           <Image priority src={RiverMall} alt="riverMall image" />
         </motion.div>
-        {/* <div  className={styles.thumb}>
-        <Image
-            priority
-            src={RiverMall}
-            alt="riverMall image"
-          />
-        </div> */}
 
         <div className={styles.description_wrapper}>
-          <div className={styles.content}>
-            <h2 className={styles.title}>No Project Too Big Or Too Small</h2>
+          <div className={`${styles.content} ${languageClass}`}>
+            {/* <motion.h2
+              className={styles.title}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+              variants={containerVariants}
+            >
+              {titleLetters.map((letter, index) => (
+                <motion.span key={index} variants={letterVariants}>
+                  {letter}
+                </motion.span>
+              ))}
+            </motion.h2> */}
+            <AnimatedTitle title={t.title} className={styles.descr_title} />
             <Line className="yellow-left" />
             <div className={styles.description_text_container}>
               <div className={styles.left_text_container}>
-                <p className={styles.text}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Sapien, dignissim tristique tellus sed faucibus nullam.
-                  Tincidunt mauris ut quam sed mauris proin feugiat. Scelerisque
-                  lorem posuere iaculis nunc amet phasellus.
-                </p>
-                <p className={styles.text}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Sapien, dignissim tristique tellus sed faucibus nullam.
-                </p>
+                <p className={styles.text}>{t.firstDescr}</p>
+                <p className={styles.text}>{t.secondDescr}</p>
               </div>
               <div className={styles.right_text_container}>
-                <p className={styles.text}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Sapien, dignissim tristique tellus sed faucibus nullam.
-                  Tincidunt mauris ut quam sed mauris proin feugiat. Scelerisque
-                  lorem posuere iaculis nunc amet phasellus.
-                </p>
-                <MainButton className="description">Learn More</MainButton>
+                <p className={styles.text}>{t.thirdDescr}</p>
+
+                <MainButton className="description">
+                  <Link  href="/about">{t.button}</Link>
+                </MainButton>
               </div>
             </div>
           </div>
@@ -76,14 +95,14 @@ const Description = () => {
               <>
                 <p className={styles.description_year}>12</p>
                 <p className={`${styles.description_text} ${styles.fix_width}`}>
-                  years established
+                  {t.years}
                 </p>
               </>
             }
             secondChildren={
               <>
                 <p className={styles.description_project}>250</p>
-                <p className={styles.description_text}>completed projects</p>
+                <p className={styles.description_text}>{t.projects}</p>
               </>
             }
           ></ButtonVariableColor>

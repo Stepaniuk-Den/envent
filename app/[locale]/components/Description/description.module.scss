@@ -1,7 +1,6 @@
 @import "../../mixin.scss";
 
 .description {
-  // background-color: #f7f7f7;
 
   .description_container {
     display: flex;
@@ -22,19 +21,23 @@
   .content {
     display: flex;
     flex-direction: column;
-    padding: 116px 134px 113px 74px;
+    padding: 116px 0 113px 74px;
     gap: 38px;
-    width: 1000px;
-  }
+    width: 840px;
 
-  .title {
-    @include text-title-rubik-40px-700w-25lh;
+    &.ua_content {
+      padding: 76px 0 82px 74px;
+
+      .descr_title {
+        line-height: normal;
+      }
+    }
   }
 
   .description_text_container {
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    gap: 70px;
 
     .text {
       @include text-dark-openSands-15px-27lh-06ls;
@@ -43,6 +46,10 @@
     .left_text_container {
       display: flex;
       flex-direction: column;
+
+      .text {
+        width: 346px;
+      }
     }
 
     .left_text_container > *:not(:last-child) {
@@ -52,10 +59,14 @@
     .right_text_container {
       display: flex;
       flex-direction: column;
+      
+      .text {
+        max-width: 350px;
+      }
     }
 
     .right_text_container > *:not(:last-child) {
-      margin-bottom: 68px;
+      margin-bottom: 72px;
     }
   }
 
@@ -74,5 +85,8 @@
   }
   .fix_width {
     min-width: max-content;
+  }
+  .description{
+    z-index: 1;
   }
 }

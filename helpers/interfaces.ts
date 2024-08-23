@@ -12,38 +12,30 @@ export interface IHeroProps {
   };
 }
 
-interface IBaseItem {
-  title: {
-    en: string;
-    ua: string;
-  };
-  descriptions: {
-    en: string;
-    ua: string;
-  };
-}
-
-interface IServiceItem extends IBaseItem {
-  svg: React.ElementType;
-}
-
-interface ISection<T> {
-  title: {
-    en: string;
-    ua: string;
-  };
-  item: T[];
-}
-
 export interface IHeroRightSideItems {
-  services: ISection<IServiceItem>;
-  todo: ISection<IServiceItem>;
-  contact: ISection<IBaseItem>;
+  services: {
+    svg: React.ElementType;
+    name: string;
+  }[];
+  todo: {
+    svg: React.ElementType;
+    name: string;
+  }[];
 }
 
-export interface IHeroRightSideListProps {
-  data: ISection<IServiceItem>;
+export interface IServiceItem {
+  list: {
+    [key: string]: { svgName: string; title: string; descriptions: string };
+  };
+}
+
+export interface IHeroRightSideItem extends IServiceItem {
+  title: string;
+}
+
+export interface IHeroRightSideList {
   className: string;
+  t: IHeroRightSideItem;
 }
 
 export interface IButtonVariableColor {
@@ -91,6 +83,12 @@ export interface ISocialItem {
 
 export interface IAboutUsCountedProps {
   imageSrc: StaticImageData;
+  t:{
+    title: string;
+    finishedProjects: string;
+    ongoingProjects: string;
+    employees:string;
+  }
 }
 
 export interface IPartnersItem {
@@ -99,3 +97,39 @@ export interface IPartnersItem {
   href: string;
 }
 [];
+export interface IDescriptionProps {
+  t: {
+    title: string;
+    firstDescr: string;
+    secondDescr: string;
+    thirdDescr: string;
+    button: string;
+    years: string;
+    projects: string;
+  };
+}
+
+export interface ITestimonialItem {
+  text: string;
+  fullName: string;
+  image: string;
+}
+
+export interface ITestimonialsProps {
+  t: {
+    title: string;
+    subtitle: string;
+    items:  { [key: number]: ITestimonialItem };
+  };
+}
+
+export interface IHandleNavigationProps<T> {
+  currentIndex: number | null;
+  setCurrentIndex: React.Dispatch<React.SetStateAction<number | null>>,
+  array: T[];
+}
+
+export interface AnimatedTitleProps {
+  title: string;
+  className?: string;
+}
