@@ -99,10 +99,14 @@
 }
 
 .blue_white .left_btn {
+  max-width: 430px;
+  width: 100%;
   align-items: flex-start;
 }
 
 .blue_white .right_btn {
+  max-width: 430px;
+  width: 100%;
   background-color: var(--color-white);
   color: var(--color-dark);
 }

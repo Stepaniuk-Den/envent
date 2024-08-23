@@ -1,49 +1,63 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./videoSection.module.scss";
 import Line from "../Line";
 import MainButton from "../Buttons/MainButton";
 import ButtonVariableColor from "../Buttons/ButtonVariableColor";
-import NextVideo from "next-video";
-import ventilationVideo from "@/videos/ventilation.mp4";
-// import testVideo from "https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4";
 
 const VideoSection = () => {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [pausedByUser, setPausedByUser] = useState(false);
 
   useEffect(() => {
+    const videoElement = document.querySelector("video");
+    if (!videoElement) return;
+
+    const handlePause = () => {
+      setPausedByUser(true);
+    };
+
+    const handlePlay = () => {
+      setPausedByUser(false);
+    };
+
+    videoElement.addEventListener("pause", handlePause);
+    videoElement.addEventListener("play", handlePlay);
+
     const videoObserver = new IntersectionObserver(
       ([entry]) => {
-        // console.log(entry);
-        const video = entry.target as HTMLVideoElement;
+        // const video = entry.target as HTMLVideoElement;
 
-        if (video.currentTime === 0) return;
-        if (entry.isIntersecting || entry.intersectionRatio <= 0.2) {
-          video.pause();
+        if (pausedByUser || videoElement.currentTime === 0) return;
+        if (!entry.isIntersecting || entry.intersectionRatio <= 0.2) {
+          videoElement.pause();
         } else {
-          video.play();
+          videoElement.play();
         }
       },
       {
-        threshold: [0.1, 0.8],
+        threshold: [0.5],
       }
     );
 
-    if (videoRef.current) {
-      //   console.log(videoRef.current);
-      videoObserver.observe(videoRef.current);
-    }
+    videoObserver.observe(videoElement);
 
-    // document
-    //   .querySelectorAll("video")
-    //   .forEach((video) => videoObserver.observe(video));
+    // videoElement.addEventListener("pause", () => {
+    //   if (!videoElement.ended) {
+    //     setPausedByUser(true);
+    //     videoObserver.unobserve(videoElement);
+    //   }
+    // });
 
-    //         return () = {
-    //             if(videoRef.current) {
-    //         videoObserver.unobserve(videoRef.current);
-    //     }
-    // };
+    // videoElement.addEventListener("play", () => {
+    //   setPausedByUser(false);
+    // });
+
+    return () => {
+      videoElement.removeEventListener("pause", handlePause);
+      videoElement.removeEventListener("play", handlePlay);
+      videoObserver.unobserve(videoElement);
+    };
   }, []);
 
   return (
@@ -64,18 +78,28 @@ const VideoSection = () => {
             About us
           </MainButton>
         </div>
-        <div className="videoWrapper">
-          <div className="videoBox">
-            <NextVideo
-              ref={videoRef}
-              src={ventilationVideo}
-              //   src={testVideo}
+        <div className={styles.videoWrapper}>
+          <div className={styles.videoBox}>
+            <video
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
+              poster="/images/projects/riverMall.jpg"
+              // muted
+              // autoPlay
+              loop
               controls
-              className={styles.video}
-              style={{ maxWidth: "1000px", height: "600px" }}
-              accentColor="white"
-              autoPlay
-            />
+              preload="none"
+              playsInline
+            >
+              <source
+                width="100%"
+                src="/video/ventilation.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
           </div>
 
           <ButtonVariableColor
@@ -86,20 +110,14 @@ const VideoSection = () => {
                 href="tel:+380445038379"
                 rel="noreferrer noopener nofollow"
               >
-                <span className={styles.phoneTitle}>Call for a Quote</span>
+                Call for a Quote
                 <span className={styles.phoneNumber}>+38 (044) 503 83 79</span>
               </a>
             }
             secondChildren={
-              <div>
-                <MainButton
-                  className="btnPaddingsLR"
-                  color="black"
-                  type="button"
-                >
-                  Online estimate form
-                </MainButton>
-              </div>
+              <MainButton className="btnPaddingsLR" color="black" type="button">
+                Online estimate form
+              </MainButton>
             }
           ></ButtonVariableColor>
         </div>
