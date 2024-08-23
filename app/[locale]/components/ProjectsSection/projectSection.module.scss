@@ -30,8 +30,8 @@
   .projectItem {
     position: relative;
     display: flex;
-    width: 344px;
-    height: 230px;
+    width: 405px;
+    height: 260px;
     font-family: var(--font-open-sands);
     overflow: hidden;
     object-fit: cover;
@@ -109,12 +109,6 @@
       }
     }
   }
-}
-
-.viewAllBtnLink {
-  margin-left: auto;
-  margin-right: auto;
-  width: 210px;
 }
 
 // ==== BACKDROP ====
