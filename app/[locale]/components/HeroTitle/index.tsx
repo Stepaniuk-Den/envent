@@ -16,12 +16,10 @@ const HeroTitle: React.FC<{ t: IHeroTitleProps }> = ({ t }) => {
   const controlsTitle = useAnimation();
   const controlsDescriptions = useAnimation();
 
-  const ySizes = (window.innerHeight / 2 - 192 - 80) * -1;
-
   const containerVariants = {
     hidden: {
       opacity: 0,
-      y: ySizes,
+      y: "-100%",
       transition: {
         when: "afterChildren",
       },
@@ -39,7 +37,7 @@ const HeroTitle: React.FC<{ t: IHeroTitleProps }> = ({ t }) => {
 
   const titleVariants = {
     hidden: {
-      x: "-100%",
+      x: "-200%",
     },
     visible: {
       x: 0,
