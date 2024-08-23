@@ -6,6 +6,7 @@ import {
   Instagram,
   Telegram,
   TelegramFilled,
+  InstagramFilled,
 } from "@/helpers/imagesImport";
 
 export const socialHeaderItems = [
@@ -44,7 +45,7 @@ export const socialFooterItems = [
   },
   {
     id: 3,
-    svg: Instagram,
+    svg: InstagramFilled,
     href: "https://www.instagram.com/",
   },
   {

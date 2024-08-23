@@ -1,4 +1,4 @@
-import MainButton from "../Buttons/MainButton";
+import HeroTitle from "../HeroTitle";
 import styles from "./hero.module.scss";
 import { IHeroProps } from "@/helpers/interfaces";
 
@@ -9,11 +9,7 @@ const Hero = ({ className, imageSrc, children, t }: IHeroProps) => {
       style={{ backgroundImage: `url(${imageSrc.src})` }}
     >
       <div className={`${styles.wrapper} container`}>
-        <div className={styles.text_сontainer}>
-          <h1>{t.title}</h1>
-          <p className={styles.descriptions}>{t.description}</p>
-          <MainButton className="filled">{t.button}</MainButton>
-        </div>
+        <HeroTitle t={t} />
         {children}
       </div>
     </section>

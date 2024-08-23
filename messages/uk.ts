@@ -1,11 +1,3 @@
-import {
-  altaCentr,
-  blockBaster,
-  epicentr,
-  karavan,
-  odeskiyBulvar,
-  riverMall,
-} from "@/helpers/imagesImport";
 import { FullTranslation } from "./types/FullTranslation";
 
 const uk: FullTranslation = {
@@ -45,9 +37,12 @@ const uk: FullTranslation = {
     },
     descriptions: {
       title: "Немає проектів занадто великих або  занадто маленьких",
-      firstDescr: "Наша команда фахівців має багатий досвід у створенні ефективних вентиляційних рішень для житлових будинків, офісних будівель, виробничих приміщень, торгових центрів та інших об’єктів.",
-      secondDescr: "Компанія укомплектована висококласними фахівцями, що дозволяє виконувати всі комплекси робіт.",
-      thirdDescr: "З перших днів існування наше підприємство зайняло одне з провідних місць у галузі створення сучасних кліматичних технологій та надання повного комплексу послуг та інженерних рішень.",
+      firstDescr:
+        "Наша команда фахівців має багатий досвід у створенні ефективних вентиляційних рішень для житлових будинків, офісних будівель, виробничих приміщень, торгових центрів та інших об’єктів.",
+      secondDescr:
+        "Компанія укомплектована висококласними фахівцями, що дозволяє виконувати всі комплекси робіт.",
+      thirdDescr:
+        "З перших днів існування наше підприємство зайняло одне з провідних місць у галузі створення сучасних кліматичних технологій та надання повного комплексу послуг та інженерних рішень.",
       button: "Дізнатись більше",
       years: "років досвіду",
       projects: "виконаних проєктів",
@@ -115,19 +110,19 @@ const uk: FullTranslation = {
 
     testimonials: {
       title: "Клієнтські",
-      subtitle:"відгуки",
+      subtitle: "відгуки",
       items: {
-        1:{
+        1: {
           text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus elit aliquam facilisis pharetra. Aenean consectetur lacinia diam a tincidunt. Vivamus facilisis lacus non velit suscipit pellentesque. Nam ac mauris nec mi lobortis sollicitudin sed at lacus. Fusce volutpat, dolor in suscipit pharetra, lacus sapien sollicitudin quam, non aliquam ex neque eu lectus",
           fullName: "John Doe",
           image: "/images/john_Doe.jpg",
         },
-        2:{
+        2: {
           text: "Tincidunt mauris ut quam sed mauris proin feugiat. Scelerisque lorem posuere iaculis nunc amet phasellus.",
           fullName: "Jane Smith",
           image: "/images/jane_Smith.jpg",
         },
-      }
+      },
     },
   },
   Footer: {
