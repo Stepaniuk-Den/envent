@@ -124,6 +124,10 @@ const en: FullTranslation = {
         },
       },
     },
+    partners: {
+      title: "Our Partners",
+      link: "Link",
+    },
   },
   Footer: {
     formTitle: "Contact Us",

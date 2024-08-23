@@ -7,8 +7,11 @@ import { animate, motion, useMotionValue } from "framer-motion";
 import { useEffect, useState } from "react";
 import PartnerCard from "../PartnerCard";
 import useMeasure from "react-use-measure";
+import AnimatedTitle from "../AnimatedTitle";
+import Line from "../Line";
+import { IPartnersProps } from "@/helpers/interfaces";
 
-const Partners = () => {
+const Partners = ({ t }: IPartnersProps) => {
   const FAST_DURATION = 25;
   const SLOW_DURATION = 110;
 
@@ -50,6 +53,8 @@ const Partners = () => {
   }, [width, xTranslation, duration, rerender]);
   return (
     <section className={`${styles.partners} container`}>
+      <AnimatedTitle title={t.title} />
+      <Line className="yellow-center" />
       <div className={styles.list_wrapper}>
         <motion.ul
           className={styles.list}
@@ -63,7 +68,9 @@ const Partners = () => {
           }}
         >
           {[...partners, ...partners].map((partner, index) => {
-            return <PartnerCard key={index} partner={partner} />;
+            return (
+              <PartnerCard key={index} partner={partner} linkTitle={t.link} />
+            );
           })}
         </motion.ul>
       </div>

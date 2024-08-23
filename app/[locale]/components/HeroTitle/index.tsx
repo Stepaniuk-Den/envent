@@ -19,7 +19,7 @@ const HeroTitle: React.FC<{ t: IHeroTitleProps }> = ({ t }) => {
   const containerVariants = {
     hidden: {
       opacity: 0,
-      y: "-100%",
+      y: "-200%",
       transition: {
         when: "afterChildren",
       },
@@ -37,12 +37,12 @@ const HeroTitle: React.FC<{ t: IHeroTitleProps }> = ({ t }) => {
 
   const titleVariants = {
     hidden: {
-      x: "-200%",
+      x: "-100%",
     },
     visible: {
       x: 0,
       transition: {
-        delay: 0.3,
+        // delay: 0.2,
         duration: 1,
       },
     },
@@ -57,7 +57,7 @@ const HeroTitle: React.FC<{ t: IHeroTitleProps }> = ({ t }) => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 1,
       },
     },
   };
