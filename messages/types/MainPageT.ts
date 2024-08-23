@@ -75,28 +75,30 @@ export class MainPageT implements Translation {
       },
     },
   };
-
-  aboutUsCounted ={
-    title:"",
-    finishedProjects:"",
+  aboutUsCounted = {
+    title: "",
+    finishedProjects: "",
     ongoingProjects: "",
-    employees:"",
+    employees: "",
   };
-
   testimonials = {
     title: "",
     subtitle: "",
-    items:{
-      1:{
+    items: {
+      1: {
         text: "",
         fullName: "",
         image: "",
       },
-      2:{
+      2: {
         text: "",
         fullName: "",
         image: "",
       },
-    }
+    },
+  };
+  partners = {
+    title: "",
+    link: "",
   };
 }

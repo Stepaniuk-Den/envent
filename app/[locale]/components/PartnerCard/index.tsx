@@ -11,9 +11,10 @@ import { ArrowRightLinkIcon } from "@/helpers/imagesImport";
 
 interface IPartnerCardProps {
   partner: IPartnersItem;
+  linkTitle: string;
 }
 
-const PartnerCard: React.FC<IPartnerCardProps> = ({ partner }) => {
+const PartnerCard: React.FC<IPartnerCardProps> = ({ partner, linkTitle }) => {
   const [showCard, setShowCard] = useState(false);
 
   return (
@@ -59,13 +60,7 @@ const PartnerCard: React.FC<IPartnerCardProps> = ({ partner }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <motion.span
-                className={styles.text}
-                initial={{ opacity: 0, x: -100 }}
-                animate={{ opacity: 1, x: 0 }}
-              >
-                Link
-              </motion.span>
+              <span className={styles.text}>{linkTitle}</span>
               <ArrowRightLinkIcon className={styles.icon} />
             </Link>
           </motion.div>

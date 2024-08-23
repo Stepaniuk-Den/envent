@@ -124,6 +124,10 @@ const uk: FullTranslation = {
         },
       },
     },
+    partners: {
+      title: "Наші партнери",
+      link: "Посилання",
+    },
   },
   Footer: {
     formTitle: "Зв'яжіться з нами",
