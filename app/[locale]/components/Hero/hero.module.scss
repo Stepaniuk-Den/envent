@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   width: 100vw;
+  height: 100vh;
   padding-top: 200px;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -11,7 +12,7 @@
   color: var(--color-white);
 
   &.main {
-    height: 691px;
+    // height: 691px;
   }
 
   &::before {
@@ -35,29 +36,5 @@
     justify-content: space-between;
     width: 1280px;
     height: 100%;
-
-    .text_сontainer {
-      display: flex;
-      flex-direction: column;
-      margin: auto 0;
-
-      h1 {
-        font-family: var(--font-rubik);
-        font-size: 64px;
-        font-weight: 700;
-        line-height: 80px;
-        padding-left: 25px;
-
-        border-left: 10px solid var(--color-accent-yellow);
-      }
-
-      .descriptions {
-        width: 700px;
-        margin-top: 28px;
-        font-family: var(--font-open-sands);
-        font-size: 22px;
-        line-height: 32px; /* 145.455% */
-      }
-    }
   }
 }

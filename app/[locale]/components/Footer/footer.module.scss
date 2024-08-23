@@ -40,7 +40,7 @@
       flex-direction: column;
       flex: 0.8;
       gap: 30px;
-      padding: 50px 64px 60px;
+      padding: 50px 64px 50px;
       background-color: var(--color-accent-blue);
 
       .title {
@@ -124,6 +124,8 @@
             line-height: 27px; /* 180% */
 
             .svg {
+              width: 25px;
+              height: 25px;
               @include transition-standart;
               color: var(--color-dark);
             }

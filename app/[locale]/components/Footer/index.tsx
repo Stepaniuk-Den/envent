@@ -4,12 +4,23 @@ import Line from "../Line";
 import SocialList from "../SocialList";
 import styles from "./footer.module.scss";
 import MainButton from "../Buttons/MainButton";
-import { FormEvent } from "react";
+import { FormEvent, useRef } from "react";
 import { contactsItems } from "@/data/ContactsItem";
 import { FooterT } from "@/messages/types/FooterT";
 import { HeroRightSideT } from "@/messages/types/HeroRightSideT";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Footer: React.FC<{ t: FooterT; t2: HeroRightSideT }> = ({ t, t2 }) => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end end"],
+  });
+
+  const formX = useTransform(scrollYProgress, [0.2, 0.8], [-500, 0]);
+  const contactsX = useTransform(scrollYProgress, [0.2, 0.8], [500, 0]);
+  const opacity = useTransform(scrollYProgress, [0.2, 0.8], [0, 1]);
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -23,11 +34,15 @@ const Footer: React.FC<{ t: FooterT; t2: HeroRightSideT }> = ({ t, t2 }) => {
   };
   return (
     <footer
+      ref={ref}
       className={styles.footer}
       style={{ backgroundImage: `url("/images/footer-bg.jpg")` }}
     >
       <div className={`${styles.wrapper} container`}>
-        <div className={styles.form_container}>
+        <motion.div
+          className={styles.form_container}
+          style={{ x: formX, opacity }}
+        >
           <h2 className={styles.title}>{t.formTitle}</h2>
           <Line className="dark" />
           <form className={styles.form} onSubmit={handleSubmit}>
@@ -54,8 +69,11 @@ const Footer: React.FC<{ t: FooterT; t2: HeroRightSideT }> = ({ t, t2 }) => {
               {t.button}
             </MainButton>
           </form>
-        </div>
-        <div className={styles.contacts_container}>
+        </motion.div>
+        <motion.div
+          className={styles.contacts_container}
+          style={{ x: contactsX, opacity }}
+        >
           <div className={styles.social_container}>
             <SocialList className="footer" />
           </div>
@@ -81,7 +99,7 @@ const Footer: React.FC<{ t: FooterT; t2: HeroRightSideT }> = ({ t, t2 }) => {
               );
             })}
           </ul>
-        </div>
+        </motion.div>
       </div>
       <div className={styles.copyright}>
         <Link href={"#"}>Created by IT Company</Link>

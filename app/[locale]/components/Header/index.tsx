@@ -46,27 +46,23 @@ const Header: React.FC<{ t: HeaderT }> = ({ t }) => {
           />
         </span>
         <ul className={styles.contacts}>
-          <li className={styles.item}>
-            <div className={styles.div}>
+          <motion.li className={styles.item}>
+            <Link href={"tel:+380445038377"} className={styles.link}>
               <Phone className={styles.svg} />
-            </div>
-            <div>
-              <Link href={"tel:+380445038377"} className={styles.link}>
-                {t.topList.call_us}
-                <span>+38 (044) 503 83 77</span>
-              </Link>
-            </div>
-          </li>
+              {t.topList.call_us}
+              <span>+38 (044) 503 83 77</span>
+            </Link>
+          </motion.li>
           <li className={styles.item}>
-            <Email className={styles.svg} />
             <Link href={"mailto:info@envent.kiev.ua"} className={styles.link}>
+              <Email className={styles.svg} />
               {t.topList.mail}
               <span>info@envent.kiev.ua</span>
             </Link>
           </li>
           <li className={styles.item}>
-            <Clock className={styles.svg} />
             <div className={styles.link}>
+              <Clock className={styles.svg} />
               <p>{t.topList.working_hours}</p>
               <span>{t.topList.hours}</span>
             </div>

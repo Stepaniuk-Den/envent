@@ -8,12 +8,15 @@ import Facebook from "../public/icons/facebook-social-media.svg";
 import Instagram from "../public/icons/instagram-social-media.svg";
 import Youtube from "../public/icons/youtube.svg";
 import Telegram from "../public/icons/telegram.svg";
+import LinkIcon from "../public/icons/link.svg";
+import ArrowRightLinkIcon from "../public/icons/IconParkOutlineArrowRight.svg";
 import FacebookFilled from "../public/icons/facebook-filled.svg";
 import EmailFilled from "../public/icons/mail-filled.svg";
 import PhoneFilled from "../public/icons/phone-filled.svg";
 import TwitterFilled from "../public/icons/twitter-filled.svg";
 import TelegramFilled from "../public/icons/telegram-filled.svg";
 import LocationsFilled from "../public/icons/locations-filled.svg";
+import InstagramFilled from "../public/icons/IconParkSolidInstagram.svg";
 
 import riverMall from "../public/images/projects/riverMall.jpg";
 import blockBaster from "../public/images/projects/blockBaster.jpg";
@@ -51,7 +54,8 @@ export {
   Facebook,
   Instagram,
   Youtube,
-  // Projects
+  LinkIcon,
+  ArrowRightLinkIcon,
   riverMall,
   blockBaster,
   odeskiyBulvar,
@@ -63,6 +67,7 @@ export {
   PhoneFilled,
   TwitterFilled,
   TelegramFilled,
+  InstagramFilled,
   Telegram,
   LocationsFilled,
   AboutUsCountedBG,
