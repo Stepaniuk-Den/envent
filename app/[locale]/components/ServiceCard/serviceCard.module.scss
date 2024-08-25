@@ -1,0 +1,61 @@
+@import "../../mixin.scss";
+
+.service_card {
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  background-color: #f7f7f7;
+
+  &.right_aligned {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  &.left_aligned {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: auto;
+  }
+
+  .container {
+    padding: 100px 0;
+
+    &.right_padding {
+      padding-left: 134px;
+      padding-right: 62px;
+    }
+
+    &.left_padding {
+      padding-right: 134px;
+      padding-left: 62px;
+    }
+    .text {
+      @include text-dark-openSands-15px-27lh-06ls;
+      margin-bottom: 28px;
+    }
+  }
+
+  .wrapper_title {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    .services_title {
+        line-height: normal;
+      }
+  }
+  .wrapper_img {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    .thumb img {
+      width: 160px;
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+}
