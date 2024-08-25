@@ -137,3 +137,18 @@ export interface AnimatedTitleProps {
 export interface IPartnersProps {
   t: { title: string; link: string };
 }
+
+export interface PropsServiceCard {
+  id: string;
+  title: string;
+  description: string;
+  firstImg: string;
+  secondImg: string;
+  thirdImg: string;
+  alt: string;
+  firstBtn: string;
+  secondBtn: string;
+  address: string;
+  link: string;
+  alignRight?: boolean;
+}
