@@ -1,5 +1,1 @@
-<svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path id="Subtract" fill-rule="evenodd" clip-rule="evenodd"
-    d="M0.814354 10.4062L6.07648 19.9737C6.26586 20.318 6.76063 20.318 6.95001 19.9737L12.2121 10.4062C14.5962 6.0716 11.4602 0.767822 6.51325 0.767822C1.5663 0.767822 -1.56967 6.0716 0.814354 10.4062ZM6.51325 10.7678C8.72239 10.7678 10.5132 8.97696 10.5132 6.76782C10.5132 4.55868 8.72239 2.76782 6.51325 2.76782C4.30411 2.76782 2.51325 4.55868 2.51325 6.76782C2.51325 8.97696 4.30411 10.7678 6.51325 10.7678Z"
-    fill="currentColor" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48"><defs><mask id="ipSLocal0"><g fill="none" stroke-linejoin="round" stroke-width="4"><path stroke="#fff" stroke-linecap="round" d="M9.858 32.757C6.238 33.843 4 35.343 4 37c0 3.314 8.954 6 20 6s20-2.686 20-6c0-1.657-2.239-3.157-5.858-4.243"/><path fill="#fff" stroke="#fff" d="M24 35s13-8.496 13-18.318C37 9.678 31.18 4 24 4S11 9.678 11 16.682C11 26.504 24 35 24 35Z"/><path fill="#000" stroke="#000" d="M24 22a5 5 0 1 0 0-10a5 5 0 0 0 0 10Z"/></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipSLocal0)"/></svg>

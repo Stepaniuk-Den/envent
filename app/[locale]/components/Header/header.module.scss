@@ -13,7 +13,7 @@
   font-family: var(--font-rubik);
 
   background-color: transparent;
-  z-index: 5;
+  z-index: 101;
 
   .top {
     display: flex;
@@ -45,31 +45,37 @@
         font-family: var(--font-montserrat);
         border-right: 1px solid rgba(255, 255, 255, 0.2);
 
-        &:hover .svg {
-          color: var(--color-accent-yellow);
-        }
         &:last-child {
           border: none;
         }
 
-        .svg {
-          width: 36px;
-          height: 36px;
-          @include transition-standart;
-          color: var(--color-accent-blue);
-        }
-
         .link {
+          position: relative;
           display: flex;
           flex-direction: column;
+          padding-left: 46px;
+          width: 230px;
           font-weight: 700;
           font-size: 13px;
           text-transform: uppercase;
           gap: 10px;
 
+          .svg {
+            position: absolute;
+            left: 0;
+            width: 36px;
+            height: 36px;
+            @include transition-standart;
+            color: var(--color-accent-blue);
+          }
+
           span {
             text-transform: none;
             font-weight: 500;
+          }
+
+          &:hover .svg {
+            color: var(--color-accent-yellow);
           }
         }
       }

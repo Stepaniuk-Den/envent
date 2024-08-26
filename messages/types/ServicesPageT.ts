@@ -1,0 +1,121 @@
+import { Translation } from "./Translation";
+import { FullTranslation } from "./FullTranslation";
+
+export class ServicesPageT implements Translation {
+    namespace?: keyof FullTranslation = "ServicesPage"; 
+    constructor(){}
+    hero = {
+
+      };
+
+      services ={
+        service:{
+          1:{
+            id:'',
+            title:"",
+            description:"",
+            firstImg:"",
+            secondImg:"",
+            thirdImg:"",
+            alt: "",
+            firstBtn:"",
+            secondBtn:"",
+            address: "...",
+            link: "...",
+          },
+          2:{
+            id:'',
+            title:"",
+            description:"",
+            firstImg:"",
+            secondImg:"",
+            thirdImg:"",
+            alt: "",
+            firstBtn:"",
+            secondBtn:"",
+            address: "...",
+            link: "...",
+          },
+          3:{
+            id:'',
+            title:"",
+            description:"",
+            firstImg:"",
+            secondImg:"",
+            thirdImg:"",
+            alt: "",
+            firstBtn:"",
+            secondBtn:"",
+            address: "...",
+            link: "...",
+          },
+          4:{
+            id:'',
+            title:"",
+            description:"",
+            firstImg:"",
+            secondImg:"",
+            thirdImg:"",
+            alt: "",
+            firstBtn:"",
+            secondBtn:"",
+            address: "...",
+            link: "...",
+          },
+          5:{
+            id:'',
+            title:"",
+            description:"",
+            firstImg:"",
+            secondImg:"",
+            thirdImg:"",
+            alt: "",
+            firstBtn:"",
+            secondBtn:"",
+            address: "...",
+            link: "...",
+          },
+          6:{
+            id:'',
+            title:"",
+            description:"",
+            firstImg:"",
+            secondImg:"",
+            thirdImg:"",
+            alt: "",
+            firstBtn:"",
+            secondBtn:"",
+            address: "...",
+            link: "...",
+          },
+          7:{
+            id:'',
+            title:"",
+            description:"",
+            firstImg:"",
+            secondImg:"",
+            thirdImg:"",
+            alt: "",
+            firstBtn:"",
+            secondBtn:"",
+            address: "...",
+            link: "...",
+          },
+          8:{
+            id:'',
+            title:"",
+            description:"",
+            firstImg:"",
+            secondImg:"",
+            thirdImg:"",
+            alt: "",
+            firstBtn:"",
+            secondBtn:"",
+            address: "...",
+            link: "...",
+          },
+        }
+      };
+
+      
+}

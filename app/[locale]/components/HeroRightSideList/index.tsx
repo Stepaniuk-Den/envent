@@ -9,9 +9,10 @@ const HeroRightSideList = ({ className, t }: IHeroRightSideList) => {
       <h3 className={styles.list_title}>{t.title}</h3>
       <ul className={styles.list}>
         {tList.map(([key, { svgName, title, descriptions }]) => {
-          const svgCurrent = heroRightSideItems.services.find(
-            (svg) => svg.name === svgName
-          );
+          const svgCurrent = [
+            ...heroRightSideItems.services,
+            ...heroRightSideItems.todo,
+          ].find((svg) => svg.name === svgName);
           return (
             <li className={styles.item} key={key}>
               {svgCurrent && <svgCurrent.svg className={styles.svg} />}

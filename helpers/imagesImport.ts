@@ -1,4 +1,5 @@
-import HeroMainBG from "../public/images/hero-bg.jpg";
+import HeroMainBG from "../public/images/hero-main-bg.jpg";
+import HeroAboutBG from "../public/images/hero-about-bg.jpg";
 import RiverMall from "../public/images/riverMall.png";
 import Phone from "../public/icons/phone-call-communication.svg";
 import Email from "../public/icons/email-essential-letter.svg";
@@ -8,12 +9,17 @@ import Facebook from "../public/icons/facebook-social-media.svg";
 import Instagram from "../public/icons/instagram-social-media.svg";
 import Youtube from "../public/icons/youtube.svg";
 import Telegram from "../public/icons/telegram.svg";
+import LinkIcon from "../public/icons/link.svg";
+import ArrowRightLinkIcon from "../public/icons/IconParkOutlineArrowRight.svg";
+import ArrowRightAboutIcon from "../public/icons/2arrows-right.svg";
+
 import FacebookFilled from "../public/icons/facebook-filled.svg";
 import EmailFilled from "../public/icons/mail-filled.svg";
 import PhoneFilled from "../public/icons/phone-filled.svg";
 import TwitterFilled from "../public/icons/twitter-filled.svg";
 import TelegramFilled from "../public/icons/telegram-filled.svg";
 import LocationsFilled from "../public/icons/locations-filled.svg";
+import InstagramFilled from "../public/icons/IconParkSolidInstagram.svg";
 
 import riverMall from "../public/images/projects/riverMall.jpg";
 import blockBaster from "../public/images/projects/blockBaster.jpg";
@@ -43,6 +49,7 @@ import SideTodoMaintenance from "../public/icons/IconParkOutlineSpanner.svg";
 
 export {
   HeroMainBG,
+  HeroAboutBG,
   RiverMall,
   Phone,
   Email,
@@ -51,7 +58,9 @@ export {
   Facebook,
   Instagram,
   Youtube,
-  // Projects
+  LinkIcon,
+  ArrowRightLinkIcon,
+  ArrowRightAboutIcon,
   riverMall,
   blockBaster,
   odeskiyBulvar,
@@ -63,6 +72,7 @@ export {
   PhoneFilled,
   TwitterFilled,
   TelegramFilled,
+  InstagramFilled,
   Telegram,
   LocationsFilled,
   AboutUsCountedBG,

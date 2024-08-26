@@ -83,7 +83,6 @@ export class MainPageT implements Translation {
     ongoingProjects: "",
     employees: "",
   };
-
   testimonials = {
     title: "",
     subtitle: "",
@@ -107,5 +106,10 @@ export class MainPageT implements Translation {
     aboutUs: "",
     phone: "",
     btnForm: "",
+  };
+
+  partners = {
+    title: "",
+    link: "",
   };
 }

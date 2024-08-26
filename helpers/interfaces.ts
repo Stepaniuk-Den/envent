@@ -84,12 +84,12 @@ export interface ISocialItem {
 
 export interface IAboutUsCountedProps {
   imageSrc: StaticImageData;
-  t:{
+  t: {
     title: string;
     finishedProjects: string;
     ongoingProjects: string;
-    employees:string;
-  }
+    employees: string;
+  };
 }
 
 export interface IPartnersItem {
@@ -120,17 +120,36 @@ export interface ITestimonialsProps {
   t: {
     title: string;
     subtitle: string;
-    items:  { [key: number]: ITestimonialItem };
+    items: { [key: number]: ITestimonialItem };
   };
 }
 
 export interface IHandleNavigationProps<T> {
   currentIndex: number | null;
-  setCurrentIndex: React.Dispatch<React.SetStateAction<number | null>>,
+  setCurrentIndex: React.Dispatch<React.SetStateAction<number | null>>;
   array: T[];
 }
 
 export interface AnimatedTitleProps {
   title: string;
   className?: string;
+}
+
+export interface IPartnersProps {
+  t: { title: string; link: string };
+}
+
+export interface PropsServiceCard {
+  id: string;
+  title: string;
+  description: string;
+  firstImg: string;
+  secondImg: string;
+  thirdImg: string;
+  alt: string;
+  firstBtn: string;
+  secondBtn: string;
+  address: string;
+  link: string;
+  alignRight?: boolean;
 }

@@ -2,27 +2,31 @@
 
 import styles from "./partnersCart.module.scss";
 import { IPartnersItem } from "@/helpers/interfaces";
-import Link from "next/link";
+
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
+import { Link } from "@/navigation";
+import { ArrowRightLinkIcon } from "@/helpers/imagesImport";
 
 interface IPartnerCardProps {
   partner: IPartnersItem;
+  linkTitle: string;
 }
 
-const PartnerCard: React.FC<IPartnerCardProps> = ({ partner }) => {
-  const [showOverlay, setShowOverlay] = useState(false);
+const PartnerCard: React.FC<IPartnerCardProps> = ({ partner, linkTitle }) => {
+  const [showCard, setShowCard] = useState(false);
 
   return (
     <motion.li
       className={styles.item}
-      onHoverStart={() => setShowOverlay(true)}
-      onHoverEnd={() => setShowOverlay(false)}
+      onHoverStart={() => setShowCard(true)}
+      onHoverEnd={() => setShowCard(false)}
     >
       <AnimatePresence>
-        {!showOverlay && (
+        {!showCard && (
           <motion.div
+            key="overlay"
             className={styles.overlay}
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.7 }}
@@ -30,12 +34,7 @@ const PartnerCard: React.FC<IPartnerCardProps> = ({ partner }) => {
           ></motion.div>
         )}
       </AnimatePresence>
-      <Link
-        className={styles.link}
-        href={partner.href}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <div className={styles.logo_wrapper}>
         {typeof partner.logo === "object" ? (
           <Image
             src={partner.logo}
@@ -45,7 +44,28 @@ const PartnerCard: React.FC<IPartnerCardProps> = ({ partner }) => {
         ) : (
           partner.logo && <partner.logo className={styles.svg} />
         )}
-      </Link>
+      </div>
+      <AnimatePresence>
+        {showCard && (
+          <motion.div
+            key="linkWrapper"
+            className={styles.link_wrapper}
+            initial={{ x: 100 }}
+            animate={{ x: 0 }}
+            transition={{ type: "spring" }}
+          >
+            <Link
+              className={styles.overlay_link}
+              href={partner.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className={styles.text}>{linkTitle}</span>
+              <ArrowRightLinkIcon className={styles.icon} />
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.li>
   );
 };

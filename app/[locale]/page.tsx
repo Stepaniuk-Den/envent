@@ -2,7 +2,6 @@ import Hero from "@/app/[locale]/components/Hero";
 import styles from "./page.module.scss";
 import { AboutUsCountedBG, HeroMainBG } from "@/helpers/imagesImport";
 import HeroRightSideList from "@/app/[locale]/components/HeroRightSideList";
-import { heroRightSideItems } from "@/data/HeroItems";
 import Description from "@/app/[locale]/components/Description";
 import ProjectSection from "@/app/[locale]/components/ProjectsSection";
 
@@ -28,18 +27,14 @@ const Home: React.FC<Props> = async ({ params: { locale } }) => {
   return (
     <div className={styles.main}>
       <Hero imageSrc={HeroMainBG} className="main" t={mainT.hero}>
-        <HeroRightSideList
-          // data={heroRightSideItems.services}
-          className="main"
-          t={heroRightSideT.services}
-        />
+        <HeroRightSideList className="main" t={heroRightSideT.services} />
       </Hero>
       <Description t={mainT.descriptions} language={locale} />
       <ProjectSection t={mainT.projects} />
       <AboutUsCounted imageSrc={AboutUsCountedBG} t={mainT.aboutUsCounted} />
       <Testimonials t={mainT.testimonials} />
       <VideoSection t={mainT.videoSection} />
-      <Partners />
+      <Partners t={mainT.partners} />
     </div>
   );
 };
