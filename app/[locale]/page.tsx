@@ -8,7 +8,7 @@ import ProjectSection from "@/app/[locale]/components/ProjectsSection";
 import AboutUsCounted from "./components/AboutUsCounted";
 
 import { unstable_setRequestLocale } from "next-intl/server";
-import { MainPageT } from "@/messages/types/MainPageT";
+import { MainPageT } from "@/navigation";
 import { localize } from "@/localize";
 import VideoSection from "./components/VideoSection";
 import Partners from "./components/Partners";
@@ -33,7 +33,7 @@ const Home: React.FC<Props> = async ({ params: { locale } }) => {
       <ProjectSection t={mainT.projects} />
       <AboutUsCounted imageSrc={AboutUsCountedBG} t={mainT.aboutUsCounted} />
       <Testimonials t={mainT.testimonials} />
-      <VideoSection />
+      <VideoSection t={mainT.videoSection} />
       <Partners t={mainT.partners} />
     </div>
   );

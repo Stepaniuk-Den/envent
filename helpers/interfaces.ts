@@ -61,8 +61,9 @@ export interface IPropsProjectItem {
   src: string;
   alt: string;
   title: string;
-  address: string;
   link: string;
+  address?: string;
+  onClick: () => void;
 }
 
 export interface IProjectsProps {
