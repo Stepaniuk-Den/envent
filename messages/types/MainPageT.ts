@@ -1,5 +1,6 @@
 import { Translation } from "./Translation";
 import { FullTranslation } from "./FullTranslation";
+import { title } from "process";
 
 export class MainPageT implements Translation {
   // This takes the key value of the namespace in the translation sheet.
@@ -76,27 +77,35 @@ export class MainPageT implements Translation {
     },
   };
 
-  aboutUsCounted ={
-    title:"",
-    finishedProjects:"",
+  aboutUsCounted = {
+    title: "",
+    finishedProjects: "",
     ongoingProjects: "",
-    employees:"",
+    employees: "",
   };
 
   testimonials = {
     title: "",
     subtitle: "",
-    items:{
-      1:{
+    items: {
+      1: {
         text: "",
         fullName: "",
         image: "",
       },
-      2:{
+      2: {
         text: "",
         fullName: "",
         image: "",
       },
-    }
+    },
+  };
+
+  videoSection = {
+    title: "",
+    text: "",
+    aboutUs: "",
+    phone: "",
+    btnForm: "",
   };
 }

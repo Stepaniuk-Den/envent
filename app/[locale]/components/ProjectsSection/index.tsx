@@ -1,21 +1,19 @@
 "use client";
 
-import Link from "next/link";
 import styles from "./projectSection.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import MainButton from "../Buttons/MainButton";
 import { useEffect, useState } from "react";
-import LinkIcon from "@/public/icons/link.svg";
-import MagnifyingGlass from "@/public/icons/magnifying-glass.svg";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
 import ArrowRight from "@/public/icons/arrow-right.svg";
 import Close from "@/public/icons/close.svg";
-import Line from "../Line/index";
 import BackdropButton from "../Buttons/BackdropButton";
-import { MainPageT } from "@/messages/types/MainPageT";
+import { MainPageT } from "@/navigation";
 import { useRouter } from "next/navigation";
 import { handleNext, handlePrev } from "@/helpers/useClickPrevAndNext";
+import ProjectItem from "../ProjectItem";
+import AnimatedTitle from "../AnimatedTitle";
 
 // interface IPropsProjectList {
 //   projectList: IPropsProjectItem[];
@@ -30,6 +28,28 @@ const ProjectSection: React.FC<{
   const projectsList = Object.values(t.list);
   // const [isHovered, setHovered] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    if (isOpen) {
+      // document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      // document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
+    }
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.code === "Escape") {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   const handleOpenBackdrop = (index: number) => {
     setCurrentIndex(index);
@@ -56,8 +76,9 @@ const ProjectSection: React.FC<{
   return (
     <section className={styles.projectSection}>
       <div className={`${styles.projectContainer} container`}>
-        <h2 className={styles.sectionTitle}>{t.title}</h2>
-        <Line className="yellow-center" />
+        <AnimatedTitle title={t.title} className={styles.sectionTitle} />
+        {/* <Line className="yellow-center" /> */}
+        <div className={styles.line}></div>
         <ul className={styles.projectList}>
           {/* {projectsList.map((project: IPropsProjectItem, index) => ( */}
           {/* {Object.keys(projectsList).map((key) => { */}
@@ -67,66 +88,12 @@ const ProjectSection: React.FC<{
             //   (project) => project.title === projectItem.src
             // );
             return (
-              <li className={styles.projectItem} key={index}>
-                {/* {imgSrc && ( */}
-                <Image
-                  className={styles.projectImg}
-                  // src={imgSrc.src}
-                  src={projectItem.src}
-                  alt={projectItem.alt}
-                  fill={true}
-                  // width={344}
-                  // height={230}
-                  // style={{ width: "100%", height: "100%" }}
-                />
-                {/* )} */}
+              <ProjectItem
+                key={projectItem.id}
+                {...projectItem}
+                onClick={() => handleOpenBackdrop(index)}
+              />
 
-                <div className={styles.overlayContent}>
-                  <h3 className={styles.projectTitle}>{projectItem.title}</h3>
-                  <div className={styles.projectLinksWrapper}>
-                    <Link
-                      className={styles.linkProject}
-                      href={`/projects/${projectItem.id}`}
-                    >
-                      <LinkIcon className={styles.linkIcon} />
-                    </Link>
-                    {/* <motion.button
-                    onHoverStart={() => setHovered(true)}
-                    onHoverEnd={() => setHovered(false)}
-                    initial={{ y: 0 }}
-                    whileHover={{
-                      y: -10,
-                      backgroundColor: "#fff",
-                      transition: { duration: 0.3 },
-                    }}
-                    animate={{
-                      y: isHovered ? 0 : 30,
-                      opacity: isHovered ? 1 : 0,
-                      transition: { duration: 0.3 },
-                    }}
-                    className={styles.magnifyingGlassBtn}
-                    onClick={() => handleOpenBackdrop(index)}
-                  >
-                    <motion.span
-                      whileHover={{
-                        color: "#000",
-                        transition: { duration: 0.3 },
-                      }}
-                    >  */}
-
-                    <button
-                      className={styles.magnifyingGlassBtn}
-                      type="button"
-                      // onClick={() => handleOpenBackdrop(Number(key))}
-                      onClick={() => handleOpenBackdrop(index)}
-                    >
-                      <MagnifyingGlass className={styles.magnifyingGlassIcon} />
-                    </button>
-                    {/* </motion.span>
-                  </motion.button>  */}
-                  </div>
-                </div>
-              </li>
               // ))}
             );
           })}
@@ -191,9 +158,7 @@ const ProjectSection: React.FC<{
                   src={projectsList[currentIndex].src}
                   alt={projectsList[currentIndex].alt}
                   fill={true}
-                  // width={800}
-                  // height={500}
-                  // style={{ width: "100%", height: "100%" }}
+                  sizes="(max-width: 767.98px) 460px, (max-width: 1023.98px) 660px, 800px"
                 />
 
                 <BackdropButton

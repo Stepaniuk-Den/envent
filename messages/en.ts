@@ -124,6 +124,13 @@ const en: FullTranslation = {
         },
       },
     },
+    videoSection: {
+      title: "We've been building for over 10 years",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, dignissim tristique tellus sed faucibus nullam. Tincidunt mauris ut quam sed mauris proin feugiat. Scelerisque lorem posuere iaculis nunc amet phasellus.",
+      aboutUs: " About us",
+      phone: "Call for a Quote",
+      btnForm: "Online estimate form",
+    },
   },
   Footer: {
     formTitle: "Contact Us",
