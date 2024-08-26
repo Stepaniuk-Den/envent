@@ -107,11 +107,17 @@ export class MainPageT implements Translation {
       },
     },
   };
+
   videoSection = {
     title: "",
     text: "",
     aboutUs: "",
     phone: "",
     btnForm: "",
+  };
+
+  partners = {
+    title: "",
+    link: "",
   };
 }
