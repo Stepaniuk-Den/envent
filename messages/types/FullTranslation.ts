@@ -1,3 +1,4 @@
+import { AboutPageT } from "./AboutPageT";
 import { FooterT } from "./FooterT";
 import { HeaderT } from "./HeaderT";
 import { HeroRightSideT } from "./HeroRightSideT";
@@ -15,4 +16,5 @@ export type FullTranslation = {
   MainPage: MainPageT;
   Footer: FooterT;
   HeroRightSide: HeroRightSideT;
+  AboutPage: AboutPageT;
 };
