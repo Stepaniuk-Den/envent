@@ -6,6 +6,7 @@ import { LocaleLayoutT } from "./LocaleLayoutT";
 import { LocaleSwitcherT } from "./LocaleSwitcherT";
 import { MainPageT } from "./MainPageT";
 import { ManifestT } from "./ManifestT";
+import { ServicesPageT } from "./ServicesPageT";
 
 export type FullTranslation = {
   // Those key names must be identical to the ones in the translation-sheets
@@ -17,4 +18,5 @@ export type FullTranslation = {
   Footer: FooterT;
   HeroRightSide: HeroRightSideT;
   AboutPage: AboutPageT;
+  ServicesPage: ServicesPageT;
 };

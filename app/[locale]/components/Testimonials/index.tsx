@@ -20,6 +20,7 @@ const Testimonials = ({ t }: ITestimonialsProps) => {
   });
 const [currentIndex, setCurrentIndex] = useState<number | null>(0);
 
+
   const y = useTransform(scrollYProgress, [0.2, 0.5], [200, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
