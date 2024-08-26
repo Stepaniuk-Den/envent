@@ -63,6 +63,18 @@
     border-color: var(--color-accent-yellow);
   }
 
+  &.blue {
+    color: var(--color-accent-blue);
+    border-color: var(--color-accent-blue);
+
+    &.about_us {
+      max-width: max-content;
+      padding: 15px 30px;
+      margin-top: auto;
+      align-self: flex-end;
+    }
+  }
+
   &.description {
     padding: 0;
     width: 240px;
@@ -74,7 +86,7 @@
       padding-bottom: 15px;
       justify-content: center;
       align-items: center;
-    }  
+    }
   }
 
   &.btnProjectsLink {

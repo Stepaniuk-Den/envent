@@ -7,7 +7,7 @@ interface IMainButtonProps {
   className?: string;
   children?: ReactNode;
   onClick?: () => void;
-  color?: "black" | "white" | "yellow" | "";
+  color?: "black" | "white" | "yellow" | "blue" | "";
 }
 
 const MainButton = ({

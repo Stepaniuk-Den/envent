@@ -1,4 +1,5 @@
-import HeroMainBG from "../public/images/hero-bg.jpg";
+import HeroMainBG from "../public/images/hero-main-bg.jpg";
+import HeroAboutBG from "../public/images/hero-about-bg.jpg";
 import RiverMall from "../public/images/riverMall.png";
 import Phone from "../public/icons/phone-call-communication.svg";
 import Email from "../public/icons/email-essential-letter.svg";
@@ -10,6 +11,8 @@ import Youtube from "../public/icons/youtube.svg";
 import Telegram from "../public/icons/telegram.svg";
 import LinkIcon from "../public/icons/link.svg";
 import ArrowRightLinkIcon from "../public/icons/IconParkOutlineArrowRight.svg";
+import ArrowRightAboutIcon from "../public/icons/2arrows-right.svg";
+
 import FacebookFilled from "../public/icons/facebook-filled.svg";
 import EmailFilled from "../public/icons/mail-filled.svg";
 import PhoneFilled from "../public/icons/phone-filled.svg";
@@ -46,6 +49,7 @@ import SideTodoMaintenance from "../public/icons/IconParkOutlineSpanner.svg";
 
 export {
   HeroMainBG,
+  HeroAboutBG,
   RiverMall,
   Phone,
   Email,
@@ -56,6 +60,7 @@ export {
   Youtube,
   LinkIcon,
   ArrowRightLinkIcon,
+  ArrowRightAboutIcon,
   riverMall,
   blockBaster,
   odeskiyBulvar,

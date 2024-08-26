@@ -129,6 +129,56 @@ const en: FullTranslation = {
       link: "Link",
     },
   },
+  AboutPage: {
+    hero: {
+      title: "About Our Company",
+      description:
+        "We would be happy to become your permanent partners and take on the solution of your problems in the field of microclimate creation.",
+      button: "get a free quote",
+    },
+    about: {
+      title: "About us",
+      description: {
+        p1: "LLC Energoventilatsia is a professional, energetic and dynamically developing company that has been operating on the Ukrainian market since 1992. From the first days of its existence, our company has taken one of the leading places in the field of creating modern climate technologies and providing a full range of services and engineering solutions for the installation of air conditioning, ventilation, heating and heat supply systems of internal engineering networks.",
+        p2: "The company is staffed by high-class specialists, which allows to perform all complex works from design to maintenance and delivery of objects to customers on a turnkey basis, using equipment of world-famous and recognized manufacturers, such as CARRIER, LENNOX, VTS Clima, DAIKIN, OSTBERG, FUJITSU, PANASONIC, MITSUBISHI, McQuay, LG and many others.",
+        p3: "Having its own production base and workshop, with imported technological equipment for the production of air ducts (about 10,000 m2 per month), pipelines and other elements of ventilation and air conditioning systems, as well as its own freight vehicles, Energoventilatsia LLC has the ability to quickly and qualitatively solve production issues on objects of any complexity.",
+        p4: "Energoventilatsia LLC has a license of the Ministry of Construction, Architecture and Housing and Communal Affairs of Ukraine series AB No. 195346 for the right to perform the entire complex of works from design to commissioning and commissioning of internal engineering networks (ventilation and air conditioning, heating), including such related works as heating and cooling supply, electrical installation works, KVP.",
+        p5: "Energoventilatsia LLC has a permit from the State Committee of Ukraine for Supervision of Labor Protection No. 853.05.32-45.34.9 to start work related to increased danger, as well as a license of the State Department of Fire Safety of the Ministry of Internal Affairs of Ukraine of the AB series No. 399277 for designing, installation, maintenance of fire protection equipment.",
+      },
+    },
+    best: {
+      title: "Only the Best",
+      list: {
+        1: {
+          title: "Eco Friendly Construction",
+          description:
+            "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. ",
+        },
+        2: {
+          title: "The Newest Technology Repairs",
+          description:
+            "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. ",
+        },
+        3: {
+          title: "High Quality Construction Management",
+          description:
+            "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. ",
+        },
+      },
+      buttons: {
+        best: "free quote",
+        years: "years established",
+        projects: "completed projects",
+        workers: "workers",
+        stuff: "office staff",
+      },
+    },
+    ceo: {
+      name: "VYSOVEN MYKOLA - CEO & FOUNDER",
+      quote:
+        "We would be happy to become your permanent partners and take on the solution of your problems in the field of microclimate creation.",
+    },
+  },
   Footer: {
     formTitle: "Contact Us",
     placeholderName: "Name",

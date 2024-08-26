@@ -75,6 +75,7 @@ const ProjectSection: React.FC<{
                   src={projectItem.src}
                   alt={projectItem.alt}
                   fill={true}
+                  sizes="(max-width: 767.98px) 100vw, (max-width: 1279.98px) 50vw, 33vw"
                   // width={344}
                   // height={230}
                   // style={{ width: "100%", height: "100%" }}
@@ -191,6 +192,7 @@ const ProjectSection: React.FC<{
                   src={projectsList[currentIndex].src}
                   alt={projectsList[currentIndex].alt}
                   fill={true}
+                  sizes="80vw"
                   // width={800}
                   // height={500}
                   // style={{ width: "100%", height: "100%" }}

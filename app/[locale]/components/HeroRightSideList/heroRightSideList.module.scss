@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 390px;
+  width: 420px;
   margin: auto 0;
 
   .list_title {
@@ -24,8 +24,8 @@
 
     .item {
       display: flex;
-      width: 315px;
-      gap: 10px;
+      width: 350px;
+      gap: 20px;
       cursor: pointer;
 
       .item_text {
@@ -42,8 +42,8 @@
       }
 
       .svg {
-        width: 55px;
-        height: 55px;
+        min-width: 36px;
+        min-height: 36px;
         color: var(--color-accent-blue);
         @include transition-standart;
       }
@@ -58,5 +58,8 @@
     .list_title {
       color: var(--color-accent-blue);
     }
+  }
+
+  &.about {
   }
 }
