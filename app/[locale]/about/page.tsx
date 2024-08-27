@@ -10,6 +10,8 @@ import AnimatedTitle from "../components/AnimatedTitle";
 import Line from "../components/Line";
 import MainButton from "../components/Buttons/MainButton";
 import ButtonVariableColor from "../components/Buttons/ButtonVariableColor";
+import ImagesCarousel from "../components/ImagesCarousel";
+import { MainPageT } from "@/messages/types/MainPageT";
 
 type Props = {
   params: { locale: string };
@@ -20,6 +22,7 @@ const About: React.FC<Props> = async ({ params: { locale } }) => {
 
   const aboutT = await localize(AboutPageT);
   const heroRightSideT = await localize(HeroRightSideT);
+  const carouselT = await localize(MainPageT);
 
   const aboutList = Object.entries(aboutT.about.description);
   const aboutBest = Object.entries(aboutT.best.list);
@@ -31,7 +34,7 @@ const About: React.FC<Props> = async ({ params: { locale } }) => {
       <div className={`${styles.about_us} container`}>
         <AnimatedTitle title={aboutT.about.title} />
         <Line className="yellow-center" />
-        <div className={styles.descriptions_wrapper}>
+        <section className={styles.descriptions_wrapper}>
           {aboutList.map(([key, value]) => {
             return (
               <p key={key} className={styles[key]}>
@@ -39,8 +42,8 @@ const About: React.FC<Props> = async ({ params: { locale } }) => {
               </p>
             );
           })}
-        </div>
-        <div className={styles.best_wrapper}>
+        </section>
+        <section className={styles.best_wrapper}>
           <div className={styles.list_wrapper}>
             <h3 className={styles.title}>{aboutT.best.title}</h3>
             <ul className={styles.list}>
@@ -61,11 +64,12 @@ const About: React.FC<Props> = async ({ params: { locale } }) => {
               })}
             </ul>
             <MainButton className="about_us" color="blue">
-              free quote
+              {aboutT.best.buttons.best}
             </MainButton>
           </div>
           <div className={styles.image_wrapper}>
-            <div className={styles.image_thumb}></div>
+            <ImagesCarousel t={carouselT.projects} />
+            {/* <div className={styles.image_thumb}></div> */}
             <ButtonVariableColor
               className="blue_dark"
               firstChildren={
@@ -85,11 +89,11 @@ const About: React.FC<Props> = async ({ params: { locale } }) => {
             />
           </div>
           <div className={styles.coworkers_wrapper}></div>
-        </div>
-        <div className={styles.quote_wrapper}>
+        </section>
+        <section className={styles.quote_wrapper}>
           <p className={styles.quote}>{`"${aboutT.ceo.quote}"`}</p>
           <p className={styles.name}>{aboutT.ceo.name}</p>
-        </div>
+        </section>
       </div>
     </div>
   );
