@@ -49,7 +49,7 @@ const Footer: React.FC<{ t: FooterT; t2: HeroRightSideT }> = ({ t, t2 }) => {
           }
         >
           <h2 className={styles.title}>{t.formTitle}</h2>
-          <Line className="dark" />
+          <Line className="yellow-left" />
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.input_container}>
               <input
