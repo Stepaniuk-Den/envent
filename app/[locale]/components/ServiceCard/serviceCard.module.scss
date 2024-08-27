@@ -4,12 +4,13 @@
   display: flex;
   flex-direction: column;
   max-width: 960px;
-  background-color: #f7f7f7;
+  
 
   &.right_aligned {
     display: flex;
     justify-content: flex-end;
     margin-left: auto;
+    background-color: #f7f7f7;
   }
 
   &.left_aligned {
@@ -32,7 +33,7 @@
     }
     .text {
       @include text-dark-openSands-15px-27lh-06ls;
-      margin-bottom: 28px;
+      margin-bottom: 40px;
     }
   }
 
@@ -49,13 +50,20 @@
   .wrapper_img {
     display: flex;
     justify-content: space-between;
-    padding-left: 40px;
-    padding-right: 40px;
+    // padding-left: 40px;
+    // padding-right: 40px;
 
     .thumb img {
-      width: 160px;
-      height: 100px;
+      width: 220px;
+      height: 160px;
       object-fit: cover;
+      box-shadow: 0 6px 10px var(--color-dark-box-shadow);
+      transform: scale(1);
+      transition: transform 800ms ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 }

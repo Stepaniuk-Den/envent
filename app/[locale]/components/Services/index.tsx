@@ -4,6 +4,7 @@ import { ServicesPageT } from "@/messages/types/ServicesPageT";
 import ServiceCard from "../ServiceCard";
 import styles from "./services.module.scss"
 
+
 const Services: React.FC<{t:ServicesPageT["services"];}> = ({t}) => {
 const servicesList = Object.entries(t.service);
 

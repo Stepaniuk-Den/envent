@@ -151,5 +151,12 @@ export interface PropsServiceCard {
   secondBtn: string;
   address: string;
   link: string;
-  alignRight?: boolean;
+  alignRight: boolean;
+}
+
+
+export interface IServices {
+  service: {
+    [key: number]: PropsServiceCard; 
+  };
 }
