@@ -125,7 +125,7 @@ const uk: FullTranslation = {
       },
     },
     videoSection: {
-      title: "Ми будуємо більше 10 років",
+      title: "Ми створюємо системи вентиляції більше 30 років",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, dignissim tristique tellus sed faucibus nullam. Tincidunt mauris ut quam sed mauris proin feugiat. Scelerisque lorem posuere iaculis nunc amet phasellus.",
       aboutUs: "Про нас",
       phone: "Залишити заявку",
@@ -137,6 +137,17 @@ const uk: FullTranslation = {
       link: "Посилання",
     },
   },
+
+  ProjectsPage: {
+    hero: {
+      title: "Реалізовані проєкти",
+      description:
+        "Об'єкти, у будівництві яких брало участь ТОВ Енерговентиляція.",
+      button: "зробити розрахунок",
+    },
+    projects: {}
+  },
+
   AboutPage: {
     hero: {
       title: "Про нашу компанію",

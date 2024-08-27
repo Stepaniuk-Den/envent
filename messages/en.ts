@@ -125,7 +125,7 @@ const en: FullTranslation = {
       },
     },
     videoSection: {
-      title: "We've been building for over 10 years",
+      title: "We've been creating ventilation systems for over 30 years",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, dignissim tristique tellus sed faucibus nullam. Tincidunt mauris ut quam sed mauris proin feugiat. Scelerisque lorem posuere iaculis nunc amet phasellus.",
       aboutUs: " About us",
       phone: "Call for a Quote",
@@ -137,6 +137,17 @@ const en: FullTranslation = {
       link: "Link",
     },
   },
+
+  ProjectsPage: {
+    hero: {
+      title: "Implemented projects",
+      description:
+        "Objects in the construction of which Energoventilyatsiya LLC took part.",
+      button: "Get a Quote",
+    },
+    projects: {},
+  },
+
   AboutPage: {
     hero: {
       title: "About Our Company",
