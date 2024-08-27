@@ -5,9 +5,10 @@ export class ServicesPageT implements Translation {
     namespace?: keyof FullTranslation = "ServicesPage"; 
     constructor(){}
     hero = {
-
-      };
-
+      title: "",
+      description: "",
+      button: "",
+    };
       services ={
         service:{
           1:{

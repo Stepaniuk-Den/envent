@@ -24,7 +24,7 @@ const ServiceCard = ({
   alignRight = false,
 }: PropsServiceCard) => {
 
-    const slug = generateSlug(title);
+    // const slug = generateSlug(title);
 
   return (
     <li
@@ -41,13 +41,13 @@ const ServiceCard = ({
         <div className={styles.wrapper_img}>
           <div className={styles.thumb}>
             <Image src={firstImg} alt={alt} 
-            width={160} height={100} />
+            width={220} height={160} />
           </div>
           <div className={styles.thumb}>
-            <Image src={secondImg} alt={alt} width={160} height={100} />
+            <Image src={secondImg} alt={alt} width={220} height={160} />
           </div>
           <div className={styles.thumb}>
-            <Image src={thirdImg} alt={alt} width={160} height={100} />
+            <Image src={thirdImg} alt={alt} width={220} height={160} />
           </div>
         </div>
       </div>
@@ -59,8 +59,8 @@ const ServiceCard = ({
           </MainButton>
         }
         secondChildren={
-          <MainButton className="description">
-            <Link href={`/services/${slug}`}>{secondBtn}</Link>
+          <MainButton className="white">
+            <Link href={`/services/${id}`}>{secondBtn}</Link>
           </MainButton>
         }
       ></ButtonVariableColor>

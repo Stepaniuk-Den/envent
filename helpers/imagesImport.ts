@@ -1,5 +1,6 @@
 import HeroMainBG from "../public/images/hero-main-bg.jpg";
 import HeroAboutBG from "../public/images/hero-about-bg.jpg";
+import HeroServicesBG from "../public/images/hero-services-bg.jpg";
 import RiverMall from "../public/images/riverMall.png";
 import Phone from "../public/icons/phone-call-communication.svg";
 import Email from "../public/icons/email-essential-letter.svg";
@@ -51,6 +52,7 @@ import SideTodoMaintenance from "../public/icons/IconParkOutlineSpanner.svg";
 export {
   HeroMainBG,
   HeroAboutBG,
+  HeroServicesBG,
   RiverMall,
   Phone,
   Email,
