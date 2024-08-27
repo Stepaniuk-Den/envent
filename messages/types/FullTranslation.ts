@@ -6,6 +6,7 @@ import { LocaleLayoutT } from "./LocaleLayoutT";
 import { LocaleSwitcherT } from "./LocaleSwitcherT";
 import { MainPageT } from "./MainPageT";
 import { ManifestT } from "./ManifestT";
+import { ProjectsPageT } from "./ProjectsPageT";
 import { ServicesPageT } from "./ServicesPageT";
 
 export type FullTranslation = {
@@ -17,6 +18,7 @@ export type FullTranslation = {
   MainPage: MainPageT;
   Footer: FooterT;
   HeroRightSide: HeroRightSideT;
+  ProjectsPage: ProjectsPageT;
   AboutPage: AboutPageT;
   ServicesPage: ServicesPageT;
 };

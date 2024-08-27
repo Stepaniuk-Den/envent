@@ -21,6 +21,7 @@ import TelegramFilled from "../public/icons/telegram-filled.svg";
 import LocationsFilled from "../public/icons/locations-filled.svg";
 import InstagramFilled from "../public/icons/IconParkSolidInstagram.svg";
 
+import heroProjectsPageBG from "../public/images/projects/hero_projects_page_BG.png";
 import riverMall from "../public/images/projects/riverMall.jpg";
 import blockBaster from "../public/images/projects/blockBaster.jpg";
 import odeskiyBulvar from "../public/images/projects/odeskiyBulvar.jpg";
@@ -61,6 +62,7 @@ export {
   LinkIcon,
   ArrowRightLinkIcon,
   ArrowRightAboutIcon,
+  heroProjectsPageBG,
   riverMall,
   blockBaster,
   odeskiyBulvar,

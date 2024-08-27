@@ -28,7 +28,6 @@ const VideoSection: React.FC<{
     <section className={styles.videoSection}>
       <div className={`${styles.videoContainer} container`}>
         <div className={styles.videoDescWrapper}>
-          {/* <h2 className={styles.videoTitle}>{t.title}</h2> */}
           <AnimatedTitle title={t.title} className={styles.videoTitle} />
           <Line className="yellow-left" />
           <p className={styles.videoDesc}>{t.text}</p>

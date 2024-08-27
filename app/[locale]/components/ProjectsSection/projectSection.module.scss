@@ -2,38 +2,38 @@
 
 .projectSection {
   width: 100%;
-}
 
-.projectContainer {
-  padding: 126px 0 100px;
-}
+  .projectContainer {
+    padding: 126px 0 100px;
 
-.sectionTitle {
-  margin-bottom: 38px;
-  font-family: var(--font-rubik);
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 1;
-  text-transform: capitalize;
-  text-align: center;
-}
+    .sectionTitle {
+      margin-bottom: 38px;
+      font-family: var(--font-rubik);
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1;
+      text-transform: capitalize;
+      text-align: center;
+    }
 
-.line {
-  width: 48px;
-  height: 5px;
-  background-color: var(--color-accent-yellow);
-  margin-left: auto;
-  margin-right: auto;
-}
+    .line {
+      width: 48px;
+      height: 5px;
+      background-color: var(--color-accent-yellow);
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.projectList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin: 38px auto;
-  //   width: 1096px;
+    .projectList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin: 38px auto;
+      //   width: 1096px;
+    }
+  }
 }
 
 // ==== BACKDROP ====

@@ -69,7 +69,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = (props: VideoPlayerProps) => {
       if (!observerRef.current) {
         const videoObserver = new IntersectionObserver(
           ([entry]) => {
-            console.log(entry);
+            // console.log(entry);
 
             // if (pausedByUser) return;
             if (!entry.isIntersecting || entry.intersectionRatio <= 0.2) {
