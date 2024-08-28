@@ -9,7 +9,7 @@ import ArrowLeft from "@/public/icons/arrow-left.svg";
 import ArrowRight from "@/public/icons/arrow-right.svg";
 import Close from "@/public/icons/close.svg";
 import BackdropButton from "../Buttons/BackdropButton";
-import { MainPageT } from "@/navigation";
+import { Link, MainPageT } from "@/navigation";
 import { useRouter } from "next/navigation";
 import { handleNext, handlePrev } from "@/helpers/useClickPrevAndNext";
 import ProjectItem from "../ProjectItem";
@@ -24,7 +24,8 @@ const ProjectSection: React.FC<{
 }> = ({ t }) => {
   //= ({ t }: IProjectsProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState<number | null>(null);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  // const [currentIndex, setCurrentIndex] = useState<number | null>(null);
   const projectsList = Object.values(t.list);
   // const [isHovered, setHovered] = useState(false);
   const router = useRouter();
@@ -57,7 +58,7 @@ const ProjectSection: React.FC<{
   };
   const handleCloseBackdrop = () => {
     setIsOpen(false);
-    setCurrentIndex(null);
+    // setCurrentIndex(null);
   };
 
   // const handleNext = () => {
@@ -102,10 +103,12 @@ const ProjectSection: React.FC<{
         <MainButton
           type="button"
           color="black"
-          onClick={() => router.push("/projects")}
+          // onClick={() => router.push("/projects")}
           className="btnProjectsLink"
         >
-          {t.viewAll}
+          <Link className={styles.viewAllBtnLink} href="/projects">
+            {t.viewAll}
+          </Link>
         </MainButton>
         {/* </Link> */}
 

@@ -8,8 +8,10 @@ import styles from "./imagesCarouselPrevNextButtons.module.scss";
 import { Dispatch, SetStateAction } from "react";
 
 interface IPrevNextButtonsProps {
-  currentIndex: number | null;
-  setCurrentIndex: Dispatch<SetStateAction<number | null>>;
+  className?: string;
+  position?: "fixed" | "absolute" | "";
+  currentIndex: number;
+  setCurrentIndex: Dispatch<SetStateAction<number>>;
   list: {
     id: string;
     src: string;
@@ -21,14 +23,16 @@ interface IPrevNextButtonsProps {
 }
 
 const PrevNextButtons = ({
+  className = "",
+  position = "",
   currentIndex,
   setCurrentIndex,
   list,
 }: IPrevNextButtonsProps) => {
   return (
-    <div>
+    <div className={className}>
       <BackdropButton
-        className={styles.prevButton}
+        className={`${styles.prevButton} ${styles[position]}`}
         onClick={() =>
           handlePrev({
             currentIndex,
@@ -42,7 +46,7 @@ const PrevNextButtons = ({
         <ArrowLeft className={styles.ArrowLeftSVG} />
       </BackdropButton>
       <BackdropButton
-        className={styles.nextButton}
+        className={`${styles.nextButton} ${styles[position]}`}
         onClick={() =>
           handleNext({
             currentIndex,

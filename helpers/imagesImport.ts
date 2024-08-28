@@ -1,6 +1,6 @@
-import HeroMainBG from "../public/images/hero-main-bg.jpg";
-import HeroAboutBG from "../public/images/hero-about-bg.jpg";
-import HeroServicesBG from "../public/images/hero-services-bg.jpg";
+import HeroMainBG from "../public/images/hero-main-bg.webp";
+import HeroAboutBG from "../public/images/hero-about-bg.webp";
+import HeroServicesBG from "../public/images/hero-services-bg.webp";
 import RiverMall from "../public/images/riverMall.png";
 import Phone from "../public/icons/phone-call-communication.svg";
 import Email from "../public/icons/email-essential-letter.svg";
@@ -29,7 +29,7 @@ import odeskiyBulvar from "../public/images/projects/odeskiyBulvar.jpg";
 import karavan from "../public/images/projects/karavan.jpg";
 import epicentr from "../public/images/projects/epicentr.jpg";
 import altaCentr from "../public/images/projects/altaCentr.jpg";
-import AboutUsCountedBG from "../public/images/about_us_counted.jpg";
+import AboutUsCountedBG from "../public/images/about_us_counted.webp";
 
 import LogoMitsubishi from "../public/icons/partner-mitsubishi-heavy-industries.svg";
 import LogoCooperHunter from "../public/icons/partner-cooperhunter.png";

@@ -16,6 +16,7 @@
 .left_btn {
   background-color: var(--color-accent-blue);
   color: var(--color-dark);
+  // width: clamp(300px, 100%, 420px);
 }
 
 .right_btn {
@@ -50,4 +51,8 @@
 .dark_blue .right_btn {
   background-color: var(--color-accent-blue);
   color: var(--color-white);
+}
+
+.blue_dark {
+  font-family: var(--font-rubik);
 }

@@ -126,7 +126,7 @@ export interface ITestimonialsProps {
 
 export interface IHandleNavigationProps<T> {
   currentIndex: number | null;
-  setCurrentIndex: React.Dispatch<React.SetStateAction<number | null>>;
+  setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
   array: T[];
 }
 
@@ -154,9 +154,8 @@ export interface PropsServiceCard {
   alignRight: boolean;
 }
 
-
 export interface IServices {
   service: {
-    [key: number]: PropsServiceCard; 
+    [key: number]: PropsServiceCard;
   };
 }
