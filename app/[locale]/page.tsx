@@ -8,12 +8,13 @@ import ProjectSection from "@/app/[locale]/components/ProjectsSection";
 import AboutUsCounted from "./components/AboutUsCounted";
 
 import { unstable_setRequestLocale } from "next-intl/server";
-import { MainPageT } from "@/navigation";
+
 import { localize } from "@/localize";
 import VideoSection from "./components/VideoSection";
 import Partners from "./components/Partners";
 import { HeroRightSideT } from "@/messages/types/HeroRightSideT";
 import Testimonials from "./components/Testimonials";
+import { MainPageT } from "@/messages/types/MainPageT";
 
 type Props = {
   params: { locale: string };
