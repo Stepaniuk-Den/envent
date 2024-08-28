@@ -6,8 +6,9 @@ import Line from "../Line";
 import MainButton from "../Buttons/MainButton";
 import ButtonVariableColor from "../Buttons/ButtonVariableColor";
 import VideoPlayer from "../VideoPlayer";
-import { Link, MainPageT } from "@/navigation";
+import { Link } from "@/navigation";
 import AnimatedTitle from "../AnimatedTitle";
+import { MainPageT } from "@/messages/types/MainPageT";
 
 const VideoSection: React.FC<{
   t: MainPageT["videoSection"];

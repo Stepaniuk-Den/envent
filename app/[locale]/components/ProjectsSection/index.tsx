@@ -9,11 +9,12 @@ import ArrowLeft from "@/public/icons/arrow-left.svg";
 import ArrowRight from "@/public/icons/arrow-right.svg";
 import Close from "@/public/icons/close.svg";
 import BackdropButton from "../Buttons/BackdropButton";
-import { Link, MainPageT } from "@/navigation";
+import { Link } from "@/navigation";
 import { useRouter } from "next/navigation";
 import { handleNext, handlePrev } from "@/helpers/useClickPrevAndNext";
 import ProjectItem from "../ProjectItem";
 import AnimatedTitle from "../AnimatedTitle";
+import { MainPageT } from "@/messages/types/MainPageT";
 
 // interface IPropsProjectList {
 //   projectList: IPropsProjectItem[];

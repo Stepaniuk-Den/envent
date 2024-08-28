@@ -7,7 +7,7 @@ import Hero from "../components/Hero";
 import { HeroServicesBG } from "@/helpers/imagesImport";
 import HeroRightSideList from "../components/HeroRightSideList";
 import ProjectSection from "../components/ProjectsSection";
-import { MainPageT } from "@/navigation";
+import { MainPageT } from "@/messages/types/MainPageT";
 
 type Props = {
   params: { locale: string };
@@ -25,8 +25,8 @@ const ServicesPage: React.FC<Props> = async ({ params: { locale } }) => {
       <Hero imageSrc={HeroServicesBG} className="about" t={servicesT.hero}>
         <HeroRightSideList className="about" t={heroRightSideT.todo} />
       </Hero>
-      <Services t={servicesT.services}/>
-      <ProjectSection t={mainT.projects}/>
+      <Services t={servicesT.services} />
+      <ProjectSection t={mainT.projects} />
     </div>
   );
 };
