@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image";
 import React, { ReactNode } from "react";
 
 export interface IHeroProps {
-  imageSrc: StaticImageData;
+  imageSrc: string | StaticImageData;
   children?: React.ReactNode;
   className: string;
   t: {
@@ -141,21 +141,28 @@ export interface IPartnersProps {
 
 export interface PropsServiceCard {
   id: string;
-  title: string;
-  description: string;
+  hero:{
+    title: string;
+    description:string;
+    button: string;
+  }
   firstImg: string;
   secondImg: string;
   thirdImg: string;
+  heroBg?:string | StaticImageData;
   alt: string;
-  firstBtn: string;
   secondBtn: string;
   address: string;
   link: string;
-  alignRight: boolean;
+  alignRight?: boolean;
+  p1?:string;
+  p2?:string;
+  p3?:string;
+  p4?:string;
 }
 
-export interface IServices {
-  service: {
-    [key: number]: PropsServiceCard;
-  };
+export interface IServiceAboutProps{
+    title:string,
+    phone: string,
+    btnForm: string,
 }
