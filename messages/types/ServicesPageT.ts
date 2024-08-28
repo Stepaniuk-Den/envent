@@ -1,6 +1,5 @@
 import { Translation } from "./Translation";
 import { FullTranslation } from "./FullTranslation";
-import { HeroServiceBG1 } from "@/helpers/imagesImport";
 
 export class ServicesPageT implements Translation {
   namespace?: keyof FullTranslation = "ServicesPage";
