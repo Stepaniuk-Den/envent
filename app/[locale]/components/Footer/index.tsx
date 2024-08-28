@@ -37,7 +37,7 @@ const Footer: React.FC<{ t: FooterT; t2: HeroRightSideT }> = ({ t, t2 }) => {
     <footer
       ref={ref}
       className={styles.footer}
-      style={{ backgroundImage: `url("/images/footer-bg.jpg")` }}
+      style={{ backgroundImage: `url("/images/footer-bg.webp")` }}
     >
       <div className={`${styles.wrapper} container`}>
         <motion.div
@@ -71,7 +71,7 @@ const Footer: React.FC<{ t: FooterT; t2: HeroRightSideT }> = ({ t, t2 }) => {
               placeholder={t.placeholderMessage}
             />
             <MainButton type="submit" className="contact_us" color="white">
-              {t.button}
+              <Link href={"#"}>{t.button}</Link>
             </MainButton>
           </form>
         </motion.div>

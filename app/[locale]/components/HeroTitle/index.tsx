@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import MainButton from "../Buttons/MainButton";
 import styles from "./heroTitle.module.scss";
 import { motion, useAnimation } from "framer-motion";
+import { Link } from "@/navigation";
 
 interface IHeroTitleProps {
   title: string;
@@ -95,7 +96,9 @@ const HeroTitle: React.FC<{ t: IHeroTitleProps }> = ({ t }) => {
         className={styles.descriptions_wrapper}
       >
         <p className={styles.descriptions}>{t.description}</p>
-        <MainButton className="filled">{t.button}</MainButton>
+        <MainButton className="filled">
+          <Link href={"#"}>{t.button}</Link>
+        </MainButton>
       </motion.div>
     </div>
   );

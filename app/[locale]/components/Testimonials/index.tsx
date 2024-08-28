@@ -18,13 +18,13 @@ const Testimonials = ({ t }: ITestimonialsProps) => {
     target: ref,
     offset: ["start end", "start start"],
   });
-const [currentIndex, setCurrentIndex] = useState<number | null>(0);
-
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const y = useTransform(scrollYProgress, [0.2, 0.5], [200, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
-  const currentTestimonial = currentIndex !== null ? itemsList[currentIndex] : null;
+  const currentTestimonial =
+    currentIndex !== null ? itemsList[currentIndex] : null;
 
   return (
     <motion.section
@@ -45,12 +45,12 @@ const [currentIndex, setCurrentIndex] = useState<number | null>(0);
               <BackdropButton
                 className={styles.btn_testimonials}
                 onClick={() =>
-                    handlePrev({
-                      currentIndex,
-                      setCurrentIndex,
-                      array: itemsList,
-                    })
-                  }
+                  handlePrev({
+                    currentIndex,
+                    setCurrentIndex,
+                    array: itemsList,
+                  })
+                }
                 type="button"
                 aria-label="Swipe to previous"
               >
@@ -67,12 +67,12 @@ const [currentIndex, setCurrentIndex] = useState<number | null>(0);
               <BackdropButton
                 className={styles.btn_testimonials}
                 onClick={() =>
-                    handleNext({
-                      currentIndex,
-                      setCurrentIndex,
-                      array: itemsList,
-                    })
-                  }
+                  handleNext({
+                    currentIndex,
+                    setCurrentIndex,
+                    array: itemsList,
+                  })
+                }
                 type="button"
                 aria-label="Swipe to next"
               >
@@ -95,4 +95,3 @@ const [currentIndex, setCurrentIndex] = useState<number | null>(0);
 };
 
 export default Testimonials;
-
