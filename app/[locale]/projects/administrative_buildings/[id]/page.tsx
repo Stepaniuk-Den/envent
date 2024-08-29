@@ -10,7 +10,7 @@ export async function generateMetadata({
   params: { id },
 }: Props): Promise<Metadata> {
   return {
-    title: `Envent | Project ${id}`,
+    title: `Project ${id} | Envent`,
     description: `Project ${id} details`,
   };
 }

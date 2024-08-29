@@ -61,19 +61,35 @@ export interface IPropsProjectItem {
   src: string;
   alt: string;
   title: string;
-  link: string;
+  link?: string;
   address?: string;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
-export interface IProjectsProps {
-  t: {
-    title?: string;
-    viewAll?: string;
-    // list: IPropsProjectItem[];
-    list: { [key: number]: IPropsProjectItem };
+export interface IProjectCategory {
+  category: string;
+  linkCategory: string;
+  projects: {
+    [projectId: string]: IPropsProjectItem;
   };
 }
+
+// export interface IProjectCollection {
+//   administrative_buildings_and_banks: IProjectCategory;
+//   public_facilities_and_office_centers: IProjectCategory;
+//   industry: IProjectCategory;
+//   public_and_trade_complexes: IProjectCategory;
+//   hospitals_schools_kindergartens_churches: IProjectCategory;
+// }
+
+// export interface IProjectsProps {
+//   t: {
+//     title?: string;
+//     viewAll?: string;
+//     // list: IPropsProjectItem[];
+//     list: { [key: number]: IPropsProjectItem };
+//   };
+// }
 
 export interface ISocialItem {
   id: number;
@@ -154,9 +170,8 @@ export interface PropsServiceCard {
   alignRight: boolean;
 }
 
-
 export interface IServices {
   service: {
-    [key: number]: PropsServiceCard; 
+    [key: number]: PropsServiceCard;
   };
 }

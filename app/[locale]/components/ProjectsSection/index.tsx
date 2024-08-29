@@ -73,6 +73,9 @@ const ProjectSection: React.FC<{
   //   }
   // };
 
+  // const text = "";
+  // const textL = text.toLowerCase();
+
   return (
     <section className={styles.projectSection}>
       <div className={`${styles.projectContainer} container`}>
@@ -107,6 +110,11 @@ const ProjectSection: React.FC<{
         >
           {t.viewAll}
         </MainButton>
+
+        {/* ================== */}
+
+        {/* <p>{textL}</p> */}
+        {/* =================== */}
         {/* </Link> */}
 
         {/* ==== BACKDROP ==== */}

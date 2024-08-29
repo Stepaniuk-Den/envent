@@ -136,6 +136,7 @@ const en: FullTranslation = {
       link: "Link",
     },
   },
+
   ProjectsPage: {
     hero: {
       title: "Implemented projects",
@@ -143,7 +144,120 @@ const en: FullTranslation = {
         "Objects in the construction of which Energoventilyatsiya LLC took part.",
       button: "Get a Quote",
     },
-    projects: {},
+    projects: {
+      administrativeBuildings: {
+        category: "Administrative buildings and banks",
+        linkCategory: "/projects/administrative_buildings",
+        projects: {
+          sbu: {
+            id: "1",
+            src: "/images/projects/riverMall.jpg",
+            alt: "Administrative and Economic Department of the Security Service of Ukraine",
+            title:
+              "Administrative and Economic Department of the Security Service of Ukraine",
+            link: "...",
+            address: "...",
+          },
+          presidentAdministration: {
+            id: "2",
+            src: "/images/projects/riverMall.jpg",
+            alt: "Administration of the President of Ukraine",
+            title: "Administration of the President of Ukraine",
+            link: "...",
+            address: "...",
+          },
+        },
+      },
+      publicFacilities: {
+        category: "Ppublic facilities and office centers",
+        linkCategory: "/projects/public_facilities",
+        projects: {
+          dinamo: {
+            id: "3",
+            src: "/images/projects/riverMall.jpg",
+            alt: "Reconstruction of the Dynamo stadium named after Lobanovsky",
+            title:
+              "Reconstruction of the Dynamo stadium named after Lobanovsky",
+            link: "...",
+            address: "...",
+          },
+          hotel: {
+            id: "4",
+            src: "/images/projects/riverMall.jpg",
+            alt: "Hotel",
+            title: "Hotel",
+            link: "...",
+            address: "...",
+          },
+        },
+      },
+      industry: {
+        category: "Industry",
+        linkCategory: "/projects/industry",
+        projects: {
+          kraft: {
+            id: "5",
+            src: "/images/projects/riverMall.jpg",
+            alt: "Confectionery factory Kraft Foods of Ukraine",
+            title: "Confectionery factory Kraft Foods of Ukraine",
+            link: "...",
+            address: "...",
+          },
+          alcoInvest: {
+            id: "6",
+            src: "/images/projects/riverMall.jpg",
+            alt: "Objects of Alco Invest",
+            title: "Objects of Alco Invest",
+            link: "...",
+            address: "...",
+          },
+        },
+      },
+      tradeComplexes: {
+        category: "Public and trade complexes",
+        linkCategory: "/projects/trade_complexes",
+        projects: {
+          epicenter: {
+            id: "7",
+            src: "/images/projects/epicentr.jpg",
+            alt: "Hypermarket chain Epicenter",
+            title: "Hypermarket chain Epicenter",
+            address: "...",
+            link: "...",
+          },
+          amstor: {
+            id: "8",
+            src: "/images/projects/epicentr.jpg",
+            alt: "Network of public and shopping centers Amstor",
+            title: "Network of public and shopping centers Amstor",
+            address: "...",
+            link: "...",
+          },
+        },
+      },
+      hskc: {
+        category: "Hospitals schools kindergartens churches",
+        linkCategory: "/projects/hskc",
+        projects: {
+          yalynka: {
+            id: "9",
+            src: "/images/projects/riverMall.jpg",
+            alt: "Kyiv City Children's Sanatorium Yalynka",
+            title: "Kyiv City Children's Sanatorium Yalynka",
+            link: "...",
+            address: "...",
+          },
+          innovation: {
+            id: "10",
+            src: "/images/projects/riverMall.jpg",
+            alt: "Медична клініка Інновація",
+            title: "Медична клініка Інновація",
+            link: "...",
+            address: "...",
+          },
+        },
+      },
+    },
   },
   AboutPage: {
     hero: {
@@ -269,122 +383,130 @@ const en: FullTranslation = {
       },
     },
   },
-  ServicesPage:{
+  ServicesPage: {
     hero: {
       title: "Our Services",
       description:
         "We work with any types of buildings: administrative, office and production, public centers, shopping and residential complexes, private houses, restaurants, cafes and shops.",
       button: "get a free quote",
     },
-    services:{
-      service:{
-        1:{
-          id:"1",
-          title:"Designing",
-          description:"Designing is the initial stage of creating an atmosphere of comfort.The maximum approach to the final result depends on the quality of the project - a comfortable atmosphere in the room with specified or adjustable air parameters.",
-          firstImg:"/images/services/prgp3.jpg",
-          secondImg:"/images/services/prgp5.jpg",
-          thirdImg:"/images/services/prgp12.jpg",
+    services: {
+      service: {
+        1: {
+          id: "1",
+          title: "Designing",
+          description:
+            "Designing is the initial stage of creating an atmosphere of comfort.The maximum approach to the final result depends on the quality of the project - a comfortable atmosphere in the room with specified or adjustable air parameters.",
+          firstImg: "/images/services/prgp3.jpg",
+          secondImg: "/images/services/prgp5.jpg",
+          thirdImg: "/images/services/prgp12.jpg",
           alt: "",
-          firstBtn:"get a quote",
-          secondBtn:"learn more",
+          firstBtn: "get a quote",
+          secondBtn: "learn more",
           address: "...",
           link: "...",
         },
-        2:{
-          id:"2",
-          title:"Production and sale of finished products",
-          description:"'Energoventilatsia' LLC has its own production base with workshops for the manufacture of air ducts, with warm warehouses of finished products, raw materials and materials, tools and components.",
-          firstImg:"/images/services/prgp3.jpg",
-          secondImg:"/images/services/prgp5.jpg",
-          thirdImg:"/images/services/prgp12.jpg",
+        2: {
+          id: "2",
+          title: "Production and sale of finished products",
+          description:
+            "'Energoventilatsia' LLC has its own production base with workshops for the manufacture of air ducts, with warm warehouses of finished products, raw materials and materials, tools and components.",
+          firstImg: "/images/services/prgp3.jpg",
+          secondImg: "/images/services/prgp5.jpg",
+          thirdImg: "/images/services/prgp12.jpg",
           alt: "",
-          firstBtn:"get a quote",
-          secondBtn:"learn more",
+          firstBtn: "get a quote",
+          secondBtn: "learn more",
           address: "...",
           link: "...",
         },
-        3:{
-          id:"3",
-          title:"Installation of ventilation and air conditioning systems",
-          description:"One of the priority areas of activity of 'Energoventilatsia' LLC is the installation of ventilation and air conditioning systems , which is one of the most responsible stages of work on creating an artificial climate. The results of work on the installation of ventilation systems are practically not amenable to low-cost adjustment.",
-          firstImg:"/images/services/montazh_foto1.jpg",
-          secondImg:"/images/services/montazh_foto2.jpg",
-          thirdImg:"/images/services/montazh_foto3.jpg",
+        3: {
+          id: "3",
+          title: "Installation of ventilation and air conditioning systems",
+          description:
+            "One of the priority areas of activity of 'Energoventilatsia' LLC is the installation of ventilation and air conditioning systems , which is one of the most responsible stages of work on creating an artificial climate. The results of work on the installation of ventilation systems are practically not amenable to low-cost adjustment.",
+          firstImg: "/images/services/montazh_foto1.jpg",
+          secondImg: "/images/services/montazh_foto2.jpg",
+          thirdImg: "/images/services/montazh_foto3.jpg",
           alt: "",
-          firstBtn:"get a quote",
-          secondBtn:"learn more",
+          firstBtn: "get a quote",
+          secondBtn: "learn more",
           address: "...",
           link: "...",
         },
-        4:{
-          id:"4",
-          title:"Control and measuring devices and automation",
-          description:"The main area of activity of the site is not only the production of panels and control panels, but also the performance of the entire complex of works related to the development and implementation of automation systems, starting with the inspection of objects and ending with commissioning and debugging of systems.",
-          firstImg:"/images/services/f1_s.jpg",
-          secondImg:"/images/services/f5_2.jpg",
-          thirdImg:"/images/services/f6_3.jpg",
+        4: {
+          id: "4",
+          title: "Control and measuring devices and automation",
+          description:
+            "The main area of activity of the site is not only the production of panels and control panels, but also the performance of the entire complex of works related to the development and implementation of automation systems, starting with the inspection of objects and ending with commissioning and debugging of systems.",
+          firstImg: "/images/services/f1_s.jpg",
+          secondImg: "/images/services/f5_2.jpg",
+          thirdImg: "/images/services/f6_3.jpg",
           alt: "",
-          firstBtn:"get a quote",
-          secondBtn:"learn more",
+          firstBtn: "get a quote",
+          secondBtn: "learn more",
           address: "...",
           link: "...",
         },
-        5:{
-          id:"5",
-          title:"Supply of equipment",
-          description:"'Energoventilatsia' LLC closely cooperates with world-renowned and recognized companies in the field of ventilation and air conditioning",
-          firstImg:"/images/services/postavka1.jpg",
-          secondImg:"/images/services/postavka2.jpg",
-          thirdImg:"/images/services/postavka3.jpg",
+        5: {
+          id: "5",
+          title: "Supply of equipment",
+          description:
+            "'Energoventilatsia' LLC closely cooperates with world-renowned and recognized companies in the field of ventilation and air conditioning",
+          firstImg: "/images/services/postavka1.jpg",
+          secondImg: "/images/services/postavka2.jpg",
+          thirdImg: "/images/services/postavka3.jpg",
           alt: "",
-          firstBtn:"get a quote",
-          secondBtn:"learn more",
+          firstBtn: "get a quote",
+          secondBtn: "learn more",
           address: "...",
           link: "...",
         },
-        6:{
-          id:"6",
-          title:"Start-up and debugging works",
-          description:"Specialists of 'Energoventilatsia' LLC carry out start-up tests and adjustment of ventilation and air conditioning systems.Commissioning tests of installed ventilation and air conditioning systems are carried out in accordance with the requirements of DBN 'Rules for production and acceptance of works' after mechanical testing of ventilation and related power equipment.",
-          firstImg:"",
-          secondImg:"",
-          thirdImg:"",
+        6: {
+          id: "6",
+          title: "Start-up and debugging works",
+          description:
+            "Specialists of 'Energoventilatsia' LLC carry out start-up tests and adjustment of ventilation and air conditioning systems.Commissioning tests of installed ventilation and air conditioning systems are carried out in accordance with the requirements of DBN 'Rules for production and acceptance of works' after mechanical testing of ventilation and related power equipment.",
+          firstImg: "",
+          secondImg: "",
+          thirdImg: "",
           alt: "",
-          firstBtn:"get a quote",
-          secondBtn:"learn more",
+          firstBtn: "get a quote",
+          secondBtn: "learn more",
           address: "...",
           link: "...",
         },
-        7:{
-          id:"7",
-          title:"Passporting of ventilation systems",
-          description:"If you have doubts about the operation of the air heating or ventilation systems , our specialists will determine the causes of the problems and find the optimal solutions to eliminate the shortcomings.If your installed ventilation or air heating systems are not certified, certification specialists will issue the necessary documents with actual measurements as soon as possible.",
-          firstImg:"",
-          secondImg:"",
-          thirdImg:"",
+        7: {
+          id: "7",
+          title: "Passporting of ventilation systems",
+          description:
+            "If you have doubts about the operation of the air heating or ventilation systems , our specialists will determine the causes of the problems and find the optimal solutions to eliminate the shortcomings.If your installed ventilation or air heating systems are not certified, certification specialists will issue the necessary documents with actual measurements as soon as possible.",
+          firstImg: "",
+          secondImg: "",
+          thirdImg: "",
           alt: "",
-          firstBtn:"get a quote",
-          secondBtn:"learn more",
+          firstBtn: "get a quote",
+          secondBtn: "learn more",
           address: "...",
           link: "...",
         },
-        8:{
-          id:"8",
-          title:"Service maintenance",
-          description:"The service department of 'Energoventilatsia' LLC takes a comprehensive approach to maintenance: from scheduled preventive inspections to prompt responses in emergency situations. Maintenance and repair services are carried out by qualified engineers who have all the necessary tools and equipment at their disposal.",
-          firstImg:"/images/services/servis_foto4.jpg",
-          secondImg:"/images/services/servis_foto3.jpg",
-          thirdImg:"/images/services/servis_foto5.jpg",
+        8: {
+          id: "8",
+          title: "Service maintenance",
+          description:
+            "The service department of 'Energoventilatsia' LLC takes a comprehensive approach to maintenance: from scheduled preventive inspections to prompt responses in emergency situations. Maintenance and repair services are carried out by qualified engineers who have all the necessary tools and equipment at their disposal.",
+          firstImg: "/images/services/servis_foto4.jpg",
+          secondImg: "/images/services/servis_foto3.jpg",
+          thirdImg: "/images/services/servis_foto5.jpg",
           alt: "",
-          firstBtn:"get a quote",
-          secondBtn:"learn more",
+          firstBtn: "get a quote",
+          secondBtn: "learn more",
           address: "...",
           link: "...",
         },
-      }
+      },
     },
-  }
+  },
 };
 
 export default en;

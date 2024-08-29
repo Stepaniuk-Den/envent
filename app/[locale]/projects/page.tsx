@@ -7,10 +7,12 @@ import AnimatedTitle from "../components/AnimatedTitle";
 import Line from "../components/Line";
 import { heroProjectsPageBG } from "@/helpers/imagesImport";
 import Projects from "../components/Projects";
+import ProjectsLayout from "./layout";
 // import Link from "next/link";
+import styles from "./projects.module.scss";
 
 export const metadata: Metadata = {
-  title: "Envent | Projects",
+  title: " Projects | Envent",
   description: "Design and installation of ventilation systems",
 };
 
@@ -21,18 +23,29 @@ type Props = {
 const ProjectsPage: React.FC<Props> = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
 
-  const projectsT = await localize(ProjectsPageT);
+  const t = await localize(ProjectsPageT);
 
   return (
-    <div>
-      <Hero
+    <div className={styles.projectsPageContainer}>
+      {/* <Hero
         imageSrc={heroProjectsPageBG}
         className=""
         t={projectsT.hero}
-      ></Hero>
-      <Projects t={projectsT.projects} />
+      ></Hero> */}
+      {/* <Projects t={projectsT.projects} /> */}
     </div>
   );
 };
 
 export default ProjectsPage;
+
+{
+  /* <h1>Projects</h1>
+      <ul>
+        {projects.map((projectItem: any) => (
+          <li key={projectItem.id}>
+            <Link href={`/projects/${projectItem.id}`}>{projectItem.title}</Link>
+          </li>
+        ))}
+      </ul> */
+}
