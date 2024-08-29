@@ -3,12 +3,13 @@
 import styles from "./imagesCarousel.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MagnifyingGlass from "@/public/icons/magnifying-glass.svg";
 import Close from "@/public/icons/close.svg";
 import BackdropButton from "../Buttons/BackdropButton";
 import useMeasure from "react-use-measure";
 import PrevNextButtons from "../ImagesCarouselPrevNextButtons";
+import { useCarouselStore } from "@/stores/carousel-store";
 
 interface IImagesCarouselProps {
   [key: number]: {
@@ -18,16 +19,26 @@ interface IImagesCarouselProps {
     title?: string;
     address?: string;
     link?: string;
+    aria_label?: string;
+  };
+}
+
+interface IListCarouselProps {
+  [key: number]: {
+    images: IImagesCarouselProps;
   };
 }
 
 const ImagesCarousel: React.FC<{
-  t: IImagesCarouselProps;
+  t: IListCarouselProps;
 }> = ({ t }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const imagesList = Object.values(t);
   let [ref, { width }] = useMeasure();
+
+  const { keyImages } = useCarouselStore();
+  const id = keyImages.id;
+  const imagesList = Object.values(t[id as keyof typeof t].images);
 
   const handleOpenBackdrop = (index: number) => {
     setCurrentIndex(index);
@@ -38,6 +49,29 @@ const ImagesCarousel: React.FC<{
   };
 
   const x = currentIndex ? width * currentIndex * -1 : 0;
+
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [id]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "auto";
+    }
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.code === "Escape") {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.documentElement.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
   return (
     <div className={styles.carousel_container} ref={ref}>
@@ -79,7 +113,7 @@ const ImagesCarousel: React.FC<{
 
       {/* ==== BACKDROP ==== */}
       <AnimatePresence mode="wait">
-        {isOpen && currentIndex !== null && (
+        {isOpen && (
           <motion.div
             className={styles.backdrop}
             initial={{ opacity: 0 }}

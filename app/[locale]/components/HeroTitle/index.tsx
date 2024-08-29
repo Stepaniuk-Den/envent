@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import MainButton from "../Buttons/MainButton";
 import styles from "./heroTitle.module.scss";
 import { motion, useAnimation } from "framer-motion";
@@ -16,6 +16,7 @@ const HeroTitle: React.FC<{ t: IHeroTitleProps }> = ({ t }) => {
   const controlsContainer = useAnimation();
   const controlsTitle = useAnimation();
   const controlsDescriptions = useAnimation();
+  const isMounted = useRef(true);
 
   const containerVariants = {
     hidden: {
@@ -43,7 +44,6 @@ const HeroTitle: React.FC<{ t: IHeroTitleProps }> = ({ t }) => {
     visible: {
       x: 0,
       transition: {
-        // delay: 0.2,
         duration: 1,
       },
     },
@@ -64,12 +64,18 @@ const HeroTitle: React.FC<{ t: IHeroTitleProps }> = ({ t }) => {
   };
 
   useEffect(() => {
+    isMounted.current = true;
+
     const sequence = async () => {
-      await controlsContainer.start("visible");
-      await controlsTitle.start("visible");
-      await controlsDescriptions.start("visible");
+      if (isMounted.current) await controlsContainer.start("visible");
+      if (isMounted.current) await controlsTitle.start("visible");
+      if (isMounted.current) await controlsDescriptions.start("visible");
     };
     sequence();
+
+    return () => {
+      isMounted.current = false;
+    };
   }, [controlsContainer, controlsTitle, controlsDescriptions]);
 
   return (

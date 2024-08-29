@@ -4,14 +4,14 @@ import styles from "./about.module.scss";
 import { HeroRightSideT } from "@/messages/types/HeroRightSideT";
 import Hero from "../components/Hero";
 import HeroRightSideList from "../components/HeroRightSideList";
-import { ArrowRightAboutIcon, HeroAboutBG } from "@/helpers/imagesImport";
+import { HeroAboutBG } from "@/helpers/imagesImport";
 import { AboutPageT } from "@/messages/types/AboutPageT";
 import AnimatedTitle from "../components/AnimatedTitle";
 import Line from "../components/Line";
 import MainButton from "../components/Buttons/MainButton";
 import ButtonVariableColor from "../components/Buttons/ButtonVariableColor";
 import ImagesCarousel from "../components/ImagesCarousel";
-import { MainPageT } from "@/messages/types/MainPageT";
+import AboutBestList from "../components/AboutBestList";
 
 type Props = {
   params: { locale: string };
@@ -22,10 +22,9 @@ const About: React.FC<Props> = async ({ params: { locale } }) => {
 
   const aboutT = await localize(AboutPageT);
   const heroRightSideT = await localize(HeroRightSideT);
-  const carouselT = await localize(MainPageT);
 
   const aboutList = Object.entries(aboutT.about.description);
-  const aboutBest = Object.entries(aboutT.best.list);
+
   return (
     <div>
       <Hero imageSrc={HeroAboutBG} className="about" t={aboutT.hero}>
@@ -47,29 +46,13 @@ const About: React.FC<Props> = async ({ params: { locale } }) => {
           <div style={{ display: "flex" }}>
             <div className={styles.list_wrapper}>
               <h3 className={styles.title}>{aboutT.best.title}</h3>
-              <ul className={styles.list}>
-                {aboutBest.map(([key, value]) => {
-                  return (
-                    <li key={key} className={styles.item}>
-                      <div className={styles.svg_container}>
-                        <ArrowRightAboutIcon className={styles.svg} />
-                      </div>
-                      <p className={styles.content_container}>
-                        <span className={styles.title}>{value.title}</span>
-                        <span className={styles.content}>
-                          {value.description}
-                        </span>
-                      </p>
-                    </li>
-                  );
-                })}
-              </ul>
+              <AboutBestList list={aboutT.best.list} />
               <MainButton className="about_us" color="blue">
                 {aboutT.best.buttons.best}
               </MainButton>
             </div>
             <div className={styles.image_wrapper}>
-              <ImagesCarousel t={carouselT.projects.list} />
+              <ImagesCarousel t={aboutT.best.list} />
               <ButtonVariableColor
                 className="blue_dark"
                 firstChildren={

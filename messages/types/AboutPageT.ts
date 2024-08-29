@@ -1,6 +1,5 @@
 import { Translation } from "./Translation";
 import { FullTranslation } from "./FullTranslation";
-import { ReactNode } from "react";
 
 export class AboutPageT implements Translation {
   // This takes the key value of the namespace in the translation sheet.
@@ -25,14 +24,146 @@ export class AboutPageT implements Translation {
     title: "",
     list: {
       1: {
+        images: {
+          1: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+          2: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+          3: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+          4: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+          5: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+          6: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+        },
         title: "",
         description: "",
       },
       2: {
+        images: {
+          1: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+          2: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+          3: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+          4: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+          5: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+          6: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+        },
         title: "",
         description: "",
       },
       3: {
+        images: {
+          1: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+          2: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+          3: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+          4: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+          5: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+          6: {
+            id: "",
+            src: "",
+            alt: "",
+            title: "",
+            area_label: "",
+          },
+        },
         title: "",
         description: "",
       },
