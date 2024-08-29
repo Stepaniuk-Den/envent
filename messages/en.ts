@@ -166,16 +166,148 @@ const en: FullTranslation = {
       title: "Only the Best",
       list: {
         1: {
+          images: {
+            2: {
+              id: "2",
+              src: "/images/projects/riverMall.jpg",
+              alt: "River Mall",
+              title: "River Mall",
+              area_label: "...",
+            },
+            1: {
+              id: "1",
+              src: "/images/projects/blockBaster.jpg",
+              alt: "BlockBaster",
+              title: "BlockBaster",
+              area_label: "...",
+            },
+            3: {
+              id: "3",
+              src: "/images/projects/odeskiyBulvar.jpg",
+              alt: "OdeskiyBulvar",
+              title: "OdeskiyBulvar",
+              area_label: "...",
+            },
+            4: {
+              id: "4",
+              src: "/images/projects/epicentr.jpg",
+              alt: "Epicentr",
+              title: "Epicentr",
+              area_label: "...",
+            },
+            5: {
+              id: "5",
+              src: "/images/projects/karavan.jpg",
+              alt: "Karavan",
+              title: "Karavan",
+              area_label: "...",
+            },
+            6: {
+              id: "6",
+              src: "/images/projects/altaCentr.jpg",
+              alt: "AltaCentr",
+              title: "AltaCentr",
+              area_label: "...",
+            },
+          },
           title: "Eco Friendly Construction",
           description:
             "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. ",
         },
         2: {
+          images: {
+            1: {
+              id: "1",
+              src: "/images/projects/riverMall.jpg",
+              alt: "River Mall",
+              title: "River Mall",
+              area_label: "...",
+            },
+            3: {
+              id: "3",
+              src: "/images/projects/blockBaster.jpg",
+              alt: "BlockBaster",
+              title: "BlockBaster",
+              area_label: "...",
+            },
+            2: {
+              id: "2",
+              src: "/images/projects/odeskiyBulvar.jpg",
+              alt: "OdeskiyBulvar",
+              title: "OdeskiyBulvar",
+              area_label: "...",
+            },
+            4: {
+              id: "4",
+              src: "/images/projects/epicentr.jpg",
+              alt: "Epicentr",
+              title: "Epicentr",
+              area_label: "...",
+            },
+            5: {
+              id: "5",
+              src: "/images/projects/karavan.jpg",
+              alt: "Karavan",
+              title: "Karavan",
+              area_label: "...",
+            },
+            6: {
+              id: "6",
+              src: "/images/projects/altaCentr.jpg",
+              alt: "AltaCentr",
+              title: "AltaCentr",
+              area_label: "...",
+            },
+          },
           title: "The Newest Technology Repairs",
           description:
             "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. ",
         },
         3: {
+          images: {
+            4: {
+              id: "4",
+              src: "/images/projects/riverMall.jpg",
+              alt: "River Mall",
+              title: "River Mall",
+              area_label: "...",
+            },
+            2: {
+              id: "2",
+              src: "/images/projects/blockBaster.jpg",
+              alt: "BlockBaster",
+              title: "BlockBaster",
+              area_label: "...",
+            },
+            3: {
+              id: "3",
+              src: "/images/projects/odeskiyBulvar.jpg",
+              alt: "OdeskiyBulvar",
+              title: "OdeskiyBulvar",
+              area_label: "...",
+            },
+            1: {
+              id: "1",
+              src: "/images/projects/epicentr.jpg",
+              alt: "Epicentr",
+              title: "Epicentr",
+              area_label: "...",
+            },
+            5: {
+              id: "5",
+              src: "/images/projects/karavan.jpg",
+              alt: "Karavan",
+              title: "Karavan",
+              area_label: "...",
+            },
+            6: {
+              id: "6",
+              src: "/images/projects/altaCentr.jpg",
+              alt: "AltaCentr",
+              title: "AltaCentr",
+              area_label: "...",
+            },
+          },
           title: "High Quality Construction Management",
           description:
             "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. ",
@@ -449,11 +581,11 @@ const en: FullTranslation = {
         },
       },
     },
-    about :{
-      title:"About Process",
+    about: {
+      title: "About Process",
       phone: "Call for a Quote",
       btnForm: "Online estimate form",
-    }
+    },
   },
 };
 
