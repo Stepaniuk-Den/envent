@@ -6,8 +6,9 @@ import Line from "../Line";
 import MainButton from "../Buttons/MainButton";
 import ButtonVariableColor from "../Buttons/ButtonVariableColor";
 import VideoPlayer from "../VideoPlayer";
-import { MainPageT } from "@/navigation";
+import { Link } from "@/navigation";
 import AnimatedTitle from "../AnimatedTitle";
+import { MainPageT } from "@/messages/types/MainPageT";
 
 const VideoSection: React.FC<{
   t: MainPageT["videoSection"];
@@ -31,8 +32,8 @@ const VideoSection: React.FC<{
           <AnimatedTitle title={t.title} className={styles.videoTitle} />
           <Line className="yellow-left" />
           <p className={styles.videoDesc}>{t.text}</p>
-          <MainButton color="yellow" type="button">
-            {t.aboutUs}
+          <MainButton color="blue" type="button">
+            <Link href={"/about"}>{t.aboutUs}</Link>
           </MainButton>
         </div>
         <div className={styles.videoWrapper}>
@@ -58,7 +59,7 @@ const VideoSection: React.FC<{
             }
             secondChildren={
               <MainButton className="btnPaddingsLR" color="black" type="button">
-                {t.btnForm}
+                <Link href={"#"}>{t.btnForm}</Link>
               </MainButton>
             }
           ></ButtonVariableColor>

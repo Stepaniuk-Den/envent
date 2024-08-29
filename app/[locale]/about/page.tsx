@@ -44,51 +44,63 @@ const About: React.FC<Props> = async ({ params: { locale } }) => {
           })}
         </section>
         <section className={styles.best_wrapper}>
-          <div className={styles.list_wrapper}>
-            <h3 className={styles.title}>{aboutT.best.title}</h3>
-            <ul className={styles.list}>
-              {aboutBest.map(([key, value]) => {
-                return (
-                  <li key={key} className={styles.item}>
-                    <div className={styles.svg_container}>
-                      <ArrowRightAboutIcon className={styles.svg} />
-                    </div>
-                    <p className={styles.content_container}>
-                      <span className={styles.title}>{value.title}</span>
-                      <span className={styles.content}>
-                        {value.description}
-                      </span>
+          <div style={{ display: "flex" }}>
+            <div className={styles.list_wrapper}>
+              <h3 className={styles.title}>{aboutT.best.title}</h3>
+              <ul className={styles.list}>
+                {aboutBest.map(([key, value]) => {
+                  return (
+                    <li key={key} className={styles.item}>
+                      <div className={styles.svg_container}>
+                        <ArrowRightAboutIcon className={styles.svg} />
+                      </div>
+                      <p className={styles.content_container}>
+                        <span className={styles.title}>{value.title}</span>
+                        <span className={styles.content}>
+                          {value.description}
+                        </span>
+                      </p>
+                    </li>
+                  );
+                })}
+              </ul>
+              <MainButton className="about_us" color="blue">
+                {aboutT.best.buttons.best}
+              </MainButton>
+            </div>
+            <div className={styles.image_wrapper}>
+              <ImagesCarousel t={carouselT.projects.list} />
+              <ButtonVariableColor
+                className="blue_dark"
+                firstChildren={
+                  <>
+                    <p className={styles.count}>32</p>
+                    <p className={`${styles.text} ${styles.fix_width}`}>
+                      {aboutT.best.buttons.years}
                     </p>
-                  </li>
-                );
-              })}
-            </ul>
-            <MainButton className="about_us" color="blue">
-              {aboutT.best.buttons.best}
-            </MainButton>
+                  </>
+                }
+                secondChildren={
+                  <>
+                    <p className={styles.count}>250</p>
+                    <p className={styles.text}>
+                      {aboutT.best.buttons.projects}
+                    </p>
+                  </>
+                }
+              />
+            </div>
           </div>
-          <div className={styles.image_wrapper}>
-            <ImagesCarousel t={carouselT.projects} />
-            {/* <div className={styles.image_thumb}></div> */}
-            <ButtonVariableColor
-              className="blue_dark"
-              firstChildren={
-                <>
-                  <p className={styles.count}>12</p>
-                  <p className={`${styles.text} ${styles.fix_width}`}>
-                    {aboutT.best.buttons.years}
-                  </p>
-                </>
-              }
-              secondChildren={
-                <>
-                  <p className={styles.count}>250</p>
-                  <p className={styles.text}>{aboutT.best.buttons.projects}</p>
-                </>
-              }
-            />
+          <div className={styles.coworkers_wrapper}>
+            <p>
+              <span>100</span>
+              {aboutT.best.buttons.workers}
+            </p>
+            <p>
+              <span>25</span>
+              {aboutT.best.buttons.stuff}
+            </p>
           </div>
-          <div className={styles.coworkers_wrapper}></div>
         </section>
         <section className={styles.quote_wrapper}>
           <p className={styles.quote}>{`"${aboutT.ceo.quote}"`}</p>

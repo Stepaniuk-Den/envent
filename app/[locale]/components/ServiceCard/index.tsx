@@ -9,22 +9,17 @@ import { generateSlug } from "@/helpers/generateSlug";
 import { PropsServiceCard } from "@/helpers/interfaces";
 
 
-const ServiceCard = ({
-  id,
-  title,
-  description,
-  firstImg,
-  secondImg,
-  thirdImg,
-  alt,
-  firstBtn,
-  secondBtn,
-  address,
-  link,
-  alignRight = false,
-}: PropsServiceCard) => {
-
-    // const slug = generateSlug(title);
+const ServiceCard = ({ t }: { t: PropsServiceCard }) => {
+  const {
+    firstImg,
+    secondImg,
+    thirdImg,
+    alt,
+    secondBtn,
+    alignRight = false,
+    hero,
+  } = t;
+    const slug = generateSlug(hero.title);
 
   return (
     <li
@@ -34,10 +29,10 @@ const ServiceCard = ({
     >
       <div className={`${styles.container} ${alignRight ? styles.right_padding : styles.left_padding}`}>
         <div className={styles.wrapper_title}>
-          <AnimatedTitle title={title} className={styles.services_title}/>
+          <AnimatedTitle title={hero.title} className={styles.services_title}/>
           <Line className="yellow-left" />
         </div>
-        <p className={styles.text}>{description}</p>
+        <p className={styles.text}>{hero.description}</p>
         <div className={styles.wrapper_img}>
           <div className={styles.thumb}>
             <Image src={firstImg} alt={alt} 
@@ -55,12 +50,12 @@ const ServiceCard = ({
         className="dark_blue"
         firstChildren={
           <MainButton className="white">
-            <Link href="/about">{firstBtn}</Link>
+            <Link href="/about">{hero.button}</Link>
           </MainButton>
         }
         secondChildren={
           <MainButton className="white">
-            <Link href={`/services/${id}`}>{secondBtn}</Link>
+            <Link href={`/services/${slug}`}>{secondBtn}</Link>
           </MainButton>
         }
       ></ButtonVariableColor>

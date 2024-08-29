@@ -13,19 +13,11 @@ const servicesList = Object.entries(t.service);
       <ul>
         {servicesList.map(([key, service], idx) => (
           <ServiceCard
-            key={service.id}
-            id={service.id}
-            title={service.title}
-            description={service.description}
-            firstImg={service.firstImg}
-            secondImg={service.secondImg}
-            thirdImg={service.thirdImg}
-            alt={service.alt}
-            firstBtn={service.firstBtn}
-            secondBtn={service.secondBtn}
-            address={service.address}
-            link={service.link}
-            alignRight={idx % 2 === 0}
+          key={key}
+            t={{
+              ...service,
+              alignRight: idx % 2 === 0,
+            }}
           />
         ))}
       </ul>
