@@ -1,11 +1,11 @@
 import { localize } from "@/localize";
 import { unstable_setRequestLocale } from "next-intl/server";
-import styles from "./about.module.scss";
 import { HeroRightSideT } from "@/messages/types/HeroRightSideT";
-import Hero from "../components/Hero";
-import HeroRightSideList from "../components/HeroRightSideList";
 import { HeroAboutBG } from "@/helpers/imagesImport";
 import { AboutPageT } from "@/messages/types/AboutPageT";
+import styles from "./about.module.scss";
+import Hero from "../components/Hero";
+import HeroRightSideList from "../components/HeroRightSideList";
 import AnimatedTitle from "../components/AnimatedTitle";
 import Line from "../components/Line";
 import MainButton from "../components/Buttons/MainButton";
@@ -52,7 +52,7 @@ const About: React.FC<Props> = async ({ params: { locale } }) => {
               </MainButton>
             </div>
             <div className={styles.image_wrapper}>
-              <ImagesCarousel t={aboutT.best.list} />
+              <ImagesCarousel t={aboutT.best.list} page="about" />
               <ButtonVariableColor
                 className="blue_dark"
                 firstChildren={
