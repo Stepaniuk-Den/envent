@@ -146,19 +146,31 @@ export interface PropsServiceCard {
     description:string;
     button: string;
   }
-  firstImg: string;
-  secondImg: string;
-  thirdImg: string;
+  images: {
+    [key: string]: {
+      id: string;
+      src: string;
+      alt: string;
+    };
+  };
+  slug?: string;
   heroBg?:string | StaticImageData;
-  alt: string;
   secondBtn: string;
-  address: string;
-  link: string;
   alignRight?: boolean;
   p1?:string;
   p2?:string;
   p3?:string;
   p4?:string;
+  process?:{
+    text:string;
+    list:{
+      l1:string;
+      l2:string;
+      l3:string;
+      l4:string;
+      l5:string;
+    }
+  }
 }
 
 export interface IServiceAboutProps{

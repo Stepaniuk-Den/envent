@@ -1,9 +1,9 @@
 "use client";
 
 import { ArrowRightAboutIcon } from "@/helpers/imagesImport";
-import styles from "./aboutBestList.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
-import { useCarouselStore } from "@/stores/carousel-store";
+import { useCarouselAboutStore } from "@/stores/carousel-about-store";
+import styles from "./aboutBestList.module.scss";
 
 interface IProps {
   [key: number]: { title: string; description: string };
@@ -12,7 +12,7 @@ interface IProps {
 const AboutBestList: React.FC<{ list: IProps }> = ({ list }) => {
   const aboutBest = Object.entries(list);
 
-  const { keyImages, update } = useCarouselStore();
+  const { keyImagesAbout, update } = useCarouselAboutStore();
 
   const handleClick = (key: number) => {
     const currentKey = {
@@ -24,7 +24,7 @@ const AboutBestList: React.FC<{ list: IProps }> = ({ list }) => {
   return (
     <ul className={styles.list}>
       {aboutBest.map(([key, value], index) => {
-        const isActive = index === keyImages.id - 1;
+        const isActive = index === keyImagesAbout.id - 1;
         return (
           <li
             key={key}

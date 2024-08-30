@@ -2,14 +2,15 @@
 
 import styles from "./imagesCarousel.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
+import { useCarouselAboutStore } from "@/stores/carousel-about-store";
+import { useCarouselServiceStore } from "@/stores/carousel-service-store";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import MagnifyingGlass from "@/public/icons/magnifying-glass.svg";
 import Close from "@/public/icons/close.svg";
 import BackdropButton from "../Buttons/BackdropButton";
 import useMeasure from "react-use-measure";
 import PrevNextButtons from "../ImagesCarouselPrevNextButtons";
-import { useCarouselStore } from "@/stores/carousel-store";
 
 interface IImagesCarouselProps {
   [key: number]: {
@@ -31,13 +32,16 @@ interface IListCarouselProps {
 
 const ImagesCarousel: React.FC<{
   t: IListCarouselProps;
-}> = ({ t }) => {
+  page: "services" | "about" | "";
+}> = ({ t, page }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   let [ref, { width }] = useMeasure();
 
-  const { keyImages } = useCarouselStore();
-  const id = keyImages.id;
+  const { keyImagesAbout } = useCarouselAboutStore();
+  const { keyImagesService } = useCarouselServiceStore();
+
+  const id = page === "about" ? keyImagesAbout.id : keyImagesService.id;
   const imagesList = Object.values(t[id as keyof typeof t].images);
 
   const handleOpenBackdrop = (index: number) => {
@@ -150,6 +154,7 @@ const ImagesCarousel: React.FC<{
                 alt={imagesList[currentIndex].alt}
                 fill={true}
                 sizes="80vw"
+                className={styles.images}
               />
               <p className={styles.counter}>
                 {currentIndex + 1} of {imagesList.length}

@@ -1,5 +1,3 @@
-"use client";
-
 import { ServicesPageT } from "@/messages/types/ServicesPageT";
 import ServiceCard from "../ServiceCard";
 import styles from "./services.module.scss"
@@ -13,6 +11,7 @@ const servicesList = Object.entries(t.service);
       <ul>
         {servicesList.map(([key, service], idx) => (
           <ServiceCard
+          serviceId={Number(key)}
           key={key}
             t={{
               ...service,

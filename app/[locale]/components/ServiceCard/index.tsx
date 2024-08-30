@@ -1,3 +1,8 @@
+"use client";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { PropsServiceCard } from "@/helpers/interfaces";
+import { useCarouselServiceStore } from "@/stores/carousel-service-store";
 import Image from "next/image";
 import ButtonVariableColor from "../Buttons/ButtonVariableColor";
 import MainButton from "../Buttons/MainButton";
@@ -5,26 +10,39 @@ import Link from "next/link";
 import styles from "./serviceCard.module.scss";
 import AnimatedTitle from "../AnimatedTitle";
 import Line from "../Line";
-import { generateSlug } from "@/helpers/generateSlug";
-import { PropsServiceCard } from "@/helpers/interfaces";
 
-const ServiceCard = ({ t }: { t: PropsServiceCard }) => {
+const ServiceCard = ({ t, serviceId }: { t: PropsServiceCard, serviceId: number }) => {
   const {
-    firstImg,
-    secondImg,
-    thirdImg,
-    alt,
+    slug,
     secondBtn,
     alignRight = false,
     hero,
+    images,
   } = t;
-  const slug = generateSlug(hero.title);
+  const { update } = useCarouselServiceStore();
+
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "start start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0.2, 0.5], [300, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
+
+  const imagesList = Object.entries(images);
+
+  const handleClick = () => {
+    update({ id: serviceId });
+  };
 
   return (
-    <li
+    <motion.li
+      ref={ref}
       className={`${styles.service_card} ${
         alignRight ? styles.right_aligned : styles.left_aligned
       }`}
+      style={{ y, opacity }}
     >
       <div
         className={`${styles.container} ${
@@ -37,15 +55,11 @@ const ServiceCard = ({ t }: { t: PropsServiceCard }) => {
         </div>
         <p className={styles.text}>{hero.description}</p>
         <div className={styles.wrapper_img}>
-          <div className={styles.thumb}>
-            <Image src={firstImg} alt={alt} width={220} height={160} />
-          </div>
-          <div className={styles.thumb}>
-            <Image src={secondImg} alt={alt} width={220} height={160} />
-          </div>
-          <div className={styles.thumb}>
-            <Image src={thirdImg} alt={alt} width={220} height={160} />
-          </div>
+        {imagesList.map(([key, image], index) => (
+            <div key={index} className={styles.thumb}>
+              <Image src={image.src} alt={image.alt} width={220} height={160} />
+            </div>
+          ))}
         </div>
       </div>
       <ButtonVariableColor
@@ -56,12 +70,12 @@ const ServiceCard = ({ t }: { t: PropsServiceCard }) => {
           </MainButton>
         }
         secondChildren={
-          <MainButton className="white">
+          <MainButton className="white" onClick={handleClick}>
             <Link href={`/services/${slug}`}>{secondBtn}</Link>
           </MainButton>
         }
       ></ButtonVariableColor>
-    </li>
+    </motion.li>
   );
 };
 
