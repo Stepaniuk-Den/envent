@@ -1,0 +1,11 @@
+@import "../../mixin.scss";
+
+.descriptions_wrapper {
+  display: grid;
+  column-gap: 72px;
+  row-gap: 40px;
+  padding: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  font-family: var(--font-open-sands);
+}
