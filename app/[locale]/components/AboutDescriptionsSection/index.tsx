@@ -13,10 +13,8 @@ const AboutDescriptionsSection: React.FC<{ t: Props }> = ({ t }) => {
       {aboutList.map(([key, value]) => {
         const className = styles[key] || key;
         return (
-          <AnimatedText>
-            <p key={key} className={className}>
-              {value}
-            </p>
+          <AnimatedText key={key}>
+            <p className={className}>{value}</p>
           </AnimatedText>
         );
       })}
