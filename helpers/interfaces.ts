@@ -141,11 +141,11 @@ export interface IPartnersProps {
 
 export interface PropsServiceCard {
   id: string;
-  hero:{
+  hero: {
     title: string;
-    description:string;
+    description: string;
     button: string;
-  }
+  };
   images: {
     [key: string]: {
       id: string;
@@ -154,27 +154,41 @@ export interface PropsServiceCard {
     };
   };
   slug?: string;
-  heroBg?:string | StaticImageData;
+  heroBg?: string | StaticImageData;
   secondBtn: string;
   alignRight?: boolean;
-  p1?:string;
-  p2?:string;
-  p3?:string;
-  p4?:string;
-  process?:{
-    text:string;
-    list:{
-      l1:string;
-      l2:string;
-      l3:string;
-      l4:string;
-      l5:string;
-    }
-  }
+  p1?: string;
+  p2?: string;
+  p3?: string;
+  p4?: string;
+  process?: {
+    text: string;
+    list: {
+      l1: string;
+      l2: string;
+      l3: string;
+      l4: string;
+      l5: string;
+    };
+  };
 }
 
-export interface IServiceAboutProps{
-    title:string,
-    phone: string,
-    btnForm: string,
+export interface IServiceAboutProps {
+  title: string;
+  phone: string;
+  btnForm: string;
+}
+
+export interface IImageItem {
+  id: string;
+  src: string;
+  alt: string;
+  title?: string;
+  area_label?: string;
+  address?: string;
+  link?: string;
+}
+
+export interface IImageList {
+  images: Record<number, IImageItem>;
 }

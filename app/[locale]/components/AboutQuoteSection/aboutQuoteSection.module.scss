@@ -1,0 +1,21 @@
+.quote_wrapper {
+  width: 590px;
+  padding: 100px 0 250px;
+  text-align: center;
+  font-family: var(--font-rubik);
+  font-weight: 500;
+  line-height: 48px; /* 160% */
+
+  .quote {
+    font-size: 30px;
+    letter-spacing: 1.2px;
+  }
+
+  .name {
+    margin-top: 20px;
+    opacity: 0.7;
+    font-size: 16px;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+  }
+}

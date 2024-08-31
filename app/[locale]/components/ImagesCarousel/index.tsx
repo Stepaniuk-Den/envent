@@ -11,22 +11,11 @@ import Close from "@/public/icons/close.svg";
 import BackdropButton from "../Buttons/BackdropButton";
 import useMeasure from "react-use-measure";
 import PrevNextButtons from "../ImagesCarouselPrevNextButtons";
-
-interface IImagesCarouselProps {
-  [key: number]: {
-    id: string;
-    src: string;
-    alt: string;
-    title?: string;
-    address?: string;
-    link?: string;
-    aria_label?: string;
-  };
-}
+import { ImageItem } from "@/helpers/interfaces";
 
 interface IListCarouselProps {
   [key: number]: {
-    images: IImagesCarouselProps;
+    images: Record<number, ImageItem>;
   };
 }
 
