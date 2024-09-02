@@ -153,7 +153,7 @@ export interface PropsServiceCard {
     button: string;
   };
   images: {
-    [key: string]: {
+    [key: number]: {
       id: string;
       src: string;
       alt: string;

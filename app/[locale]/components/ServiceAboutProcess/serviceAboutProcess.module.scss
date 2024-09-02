@@ -1,0 +1,60 @@
+@import "../../mixin.scss";
+
+.about_process {
+  padding-bottom: 350px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+
+  .about_container {
+    display: flex;
+    height: 730px;
+    // flex-direction: row;
+
+    .left_container {
+      padding: 93px 37px 269px 37px;
+      width: 440px;
+
+      .wrapper_title {
+        display: flex;
+        flex-direction: column;
+        gap: 38px;
+        margin-bottom: 62px;
+      }
+
+      .process_text {
+        @include text-dark-openSands-15px-27lh-06ls;
+        color: var(--color-white);
+      }
+
+      .process_list {
+        list-style-type: disc;
+        padding-left: 16px;
+      }
+    }
+
+    .right_container {
+      width: 840px;
+
+      .carousel {
+        height: 600px;
+      }
+      .phoneLink {
+        display: flex;
+        flex-direction: column;
+        padding-left: 24px;
+        font-family: var(--font-rubik);
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.68;
+  
+        .phoneNumber {
+          font-family: var(--font-rubik);
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 2.1;
+          letter-spacing: 0.48px;
+        }
+      }
+    }
+  }
+}

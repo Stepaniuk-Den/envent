@@ -13,7 +13,7 @@ import useMeasure from "react-use-measure";
 import PrevNextButtons from "../ImagesCarouselPrevNextButtons";
 import { IImageItem } from "@/helpers/interfaces";
 
-interface IListCarouselProps {
+export interface IListCarouselProps {
   [key: number]: {
     images: Record<number, IImageItem>;
   };
