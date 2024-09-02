@@ -1,4 +1,5 @@
 import { AboutPageT } from "./AboutPageT";
+import { ContactsPageT } from "./ContactPageT";
 import { FooterT } from "./FooterT";
 import { HeaderT } from "./HeaderT";
 import { HeroRightSideT } from "./HeroRightSideT";
@@ -21,4 +22,5 @@ export type FullTranslation = {
   ProjectsPage: ProjectsPageT;
   AboutPage: AboutPageT;
   ServicesPage: ServicesPageT;
+  ContactsPage: ContactsPageT;
 };

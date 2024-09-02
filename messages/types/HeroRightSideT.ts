@@ -57,10 +57,9 @@ export class HeroRightSideT implements Translation {
       },
       touch: {
         title: "",
-        descriptions: {
-          mail: "",
-          tel: "",
-        },
+        descriptions: "",
+        mail: "",
+        tel: "",
       },
     },
   };
