@@ -9,8 +9,8 @@ import Image from "next/image";
 import ButtonVariableColor from "../Buttons/ButtonVariableColor";
 import Line from "../Line";
 import MainButton from "../Buttons/MainButton";
-import Link from "next/link";
 import AnimatedTitle from "../AnimatedTitle";
+import { Link } from "@/navigation";
 
 const Description = ({
   t,
@@ -31,26 +31,6 @@ const Description = ({
 
   const languageClass = language === "uk" ? styles.ua_content : "";
 
-  const titleLetters = t.title.split("");
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.05,
-      },
-    },
-  };
-
-  const letterVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  };
 
   return (
     <section ref={ref} className={`${styles.description} container`}>
@@ -61,18 +41,6 @@ const Description = ({
 
         <div className={styles.description_wrapper}>
           <div className={`${styles.content} ${languageClass}`}>
-            {/* <motion.h2
-              className={styles.title}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              variants={containerVariants}
-            >
-              {titleLetters.map((letter, index) => (
-                <motion.span key={index} variants={letterVariants}>
-                  {letter}
-                </motion.span>
-              ))}
-            </motion.h2> */}
             <AnimatedTitle title={t.title} className={styles.descr_title} />
             <Line className="yellow-left" />
             <div className={styles.description_text_container}>
@@ -84,7 +52,7 @@ const Description = ({
                 <p className={styles.text}>{t.thirdDescr}</p>
 
                 <MainButton className="description">
-                  <Link  href="/about">{t.button}</Link>
+                  <Link href="/about">{t.button}</Link>
                 </MainButton>
               </div>
             </div>
