@@ -4,7 +4,7 @@ import { localize } from "@/localize";
 import { unstable_setRequestLocale } from "next-intl/server";
 import Hero from "../../components/Hero";
 import ServiceItemDescription from "../../components/ServiceItemDescription";
-import AboutProcess from "../../components/AboutProcess";
+import ServiceAboutProcess from "../../components/ServiceAboutProcess";
 
 type Props = {
   params: {
@@ -30,7 +30,7 @@ const ServiceItemPage = async ({ params: { slug, locale } }: Props) => {
       <Hero imageSrc={service.heroBG} className="about" t={service.hero}>
       </Hero>
       <ServiceItemDescription t={service}/>
-      <AboutProcess t={service} about={servicesT.about}/>
+      <ServiceAboutProcess t={service} about={servicesT.about} service={servicesT.services}/>
     </div>
   );
 };

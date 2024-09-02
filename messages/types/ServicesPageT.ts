@@ -76,6 +76,21 @@ export class ServicesPageT implements Translation {
             src: "",
             alt: "",
           },
+          4: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          5: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          6: {
+            id: "",
+            src: "",
+            alt: "",
+          },
         },
         slug: "",
         heroBG: "",
@@ -114,6 +129,21 @@ export class ServicesPageT implements Translation {
             alt: "",
           },
           3: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          4: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          5: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          6: {
             id: "",
             src: "",
             alt: "",
@@ -160,6 +190,21 @@ export class ServicesPageT implements Translation {
             src: "",
             alt: "",
           },
+          4: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          5: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          6: {
+            id: "",
+            src: "",
+            alt: "",
+          },
         },
         slug: "",
         heroBG: "",
@@ -198,6 +243,21 @@ export class ServicesPageT implements Translation {
             alt: "",
           },
           3: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          4: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          5: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          6: {
             id: "",
             src: "",
             alt: "",
@@ -244,6 +304,21 @@ export class ServicesPageT implements Translation {
             src: "",
             alt: "",
           },
+          4: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          5: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          6: {
+            id: "",
+            src: "",
+            alt: "",
+          },
         },
         slug: "",
         heroBG: "",
@@ -286,6 +361,21 @@ export class ServicesPageT implements Translation {
             src: "",
             alt: "",
           },
+          4: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          5: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          6: {
+            id: "",
+            src: "",
+            alt: "",
+          },
         },
         slug: "",
         heroBG: "",
@@ -324,6 +414,21 @@ export class ServicesPageT implements Translation {
             alt: "",
           },
           3: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          4: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          5: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          6: {
             id: "",
             src: "",
             alt: "",

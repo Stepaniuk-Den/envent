@@ -30,10 +30,18 @@ const ServiceCard = ({ t, serviceId }: { t: PropsServiceCard, serviceId: number 
   const y = useTransform(scrollYProgress, [0.2, 0.5], [300, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
-  const imagesList = Object.entries(images);
+  // const imagesList1 = Object.entries(images);
+  // console.log(imagesList1);
+  // const imagesList = Object.entries(images).slice(0, 3);
+  const imagesList1 = Object.entries(images);
+  console.log("Service ID: ", serviceId);
+  console.log("Images List 1: ", imagesList1);
+  const imagesList = Object.entries(images).slice(0, 3);
+  console.log("Filtered Images List: ", imagesList);
 
   const handleClick = () => {
     update({ id: serviceId });
+    console.log("Updated ID: ", serviceId);
   };
 
   return (
@@ -56,7 +64,8 @@ const ServiceCard = ({ t, serviceId }: { t: PropsServiceCard, serviceId: number 
         <p className={styles.text}>{hero.description}</p>
         <div className={styles.wrapper_img}>
         {imagesList.map(([key, image], index) => (
-            <div key={index} className={styles.thumb}>
+            // <div key={key} className={styles.thumb}>
+            <div key={`${serviceId}-${key}`} className={styles.thumb}>
               <Image src={image.src} alt={image.alt} width={220} height={160} />
             </div>
           ))}
