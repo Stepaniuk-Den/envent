@@ -385,7 +385,7 @@ const en: FullTranslation = {
       list: {
         office: {
           title: "Our Office",
-          descriptions: "Darnytskyi Boulevard, 12, Kyiv, 02000",
+          descriptions: "Darnytskyi Boulevard, 12, <br/>Kyiv, 02000",
         },
         hours: {
           title: "Office Hours",
@@ -493,7 +493,8 @@ const en: FullTranslation = {
             },
           },
           slug: "production-and-sale-of-finished-products",
-          heroBG: "/images/services/production-and-sale-of-finished-products.webp",
+          heroBG:
+            "/images/services/production-and-sale-of-finished-products.webp",
           secondBtn: "learn more",
           p1: "Ducts are one of the most important elements of ventilation and air conditioning systems. Together with other devices, they provide air transportation in the ventilation system.",
           p2: "Classification of air ducts.<br />According to the configuration, there are air ducts of rectangular, square and round sections. They are made from straight and shaped component parts. The dimensions and types of air ducts are established in VSN 353-86 'Design and application of air ducts from unified parts', TU 36-736-93 'Metal ventilation ducts', SNiP 2.04.05-91 'Heating, ventilation systems, air conditioning'.",
@@ -872,7 +873,12 @@ const en: FullTranslation = {
       description: "We are always ready to help — feel free to reach out.",
       button: "send message",
     },
-    questions: {
+    locationBtn: {
+      description: "Make a route",
+    },
+  },
+  Questions: {
+    list: {
       1: {
         title: "What services does the company offer?",
         description:
@@ -899,8 +905,19 @@ const en: FullTranslation = {
           "We provide professional services using equipment from well-known brands, have our own production, and employ highly skilled specialists.",
       },
     },
-    locationBtn: {
-      description: "Make a route",
+  },
+  QuestionCard: {
+    slogan: {
+      title: "Let’s Build Something Together",
+      description:
+        "Partner with us for expert air conditioning, ventilation, and heating solutions. Our team guarantees top-quality service with trusted brands and in-house production.",
+      textBtn: "get in touch",
+    },
+    faq: {
+      title: "F.A.Q.",
+      description:
+        "Here are the answers to the most common questions to help you understand how we work and the services we offer.",
+      textBtn: "ask a question",
     },
   },
 };

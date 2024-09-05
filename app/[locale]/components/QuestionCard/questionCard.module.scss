@@ -1,0 +1,11 @@
+.question_card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 48px 24px 0;
+
+  .question {
+    // width: 70%;
+  }
+}

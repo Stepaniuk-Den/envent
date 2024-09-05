@@ -6,6 +6,10 @@ import { localize } from "@/localize";
 import { HeroAboutBG } from "@/helpers/imagesImport";
 import { HeroRightSideT } from "@/messages/types/HeroRightSideT";
 import HeroRightSideList from "../components/HeroRightSideList";
+import Map from "../components/Map";
+import QuestionsSection from "../components/QuestionsSection";
+
+import MapSection from "../components/MapSection";
 
 type Props = {
   params: { locale: string };
@@ -22,6 +26,11 @@ const Contacts: React.FC<Props> = async ({ params: { locale } }) => {
       <Hero imageSrc={HeroAboutBG} t={contactsT.hero} className="contacts">
         <HeroRightSideList className="contacts" t={heroRightSideT.contact} />
       </Hero>
+      <div className={styles.contacts}>
+        <QuestionsSection params={{ locale }} type="form" />
+        <MapSection locationBtn={contactsT.locationBtn.description} />
+        {/* <Map /> */}
+      </div>
     </div>
   );
 };

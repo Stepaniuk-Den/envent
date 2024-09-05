@@ -1,16 +1,17 @@
 import { Translation } from "./Translation";
 import { FullTranslation } from "./FullTranslation";
-
-export class ContactsPageT implements Translation {
+export class QuestionCardT implements Translation {
   // This takes the key value of the namespace in the translation sheet.
-  namespace?: keyof FullTranslation = "ContactsPage";
+  namespace?: keyof FullTranslation = "QuestionCard";
   constructor() {}
-  hero = {
+  slogan = {
     title: "",
     description: "",
-    button: "",
+    textBtn: "",
   };
-  locationBtn = {
+  faq = {
+    title: "",
     description: "",
+    textBtn: "",
   };
 }

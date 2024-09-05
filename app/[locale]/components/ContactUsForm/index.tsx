@@ -33,7 +33,7 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
 
   const formTouchVariants = {
     hidden: {
-      x: "-100%",
+      x: "0%",
       opacity: 0,
     },
     visible: {
@@ -88,7 +88,11 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
           id="message"
           placeholder={t.placeholderMessage}
         />
-        <MainButton type="submit" className="contact_us" color="white">
+        <MainButton
+          type="submit"
+          className={className === "footer" ? "contact_us" : "contacts"}
+          color={className === "footer" ? "white" : "black"}
+        >
           <Link href={"#"}>{t.button}</Link>
         </MainButton>
       </form>

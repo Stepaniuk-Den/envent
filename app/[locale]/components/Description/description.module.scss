@@ -1,7 +1,6 @@
 @import "../../mixin.scss";
 
 .description {
-
   .description_container {
     display: flex;
     flex-direction: row;
@@ -18,15 +17,22 @@
     }
   }
 
+  .description_wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
   .content {
     display: flex;
     flex-direction: column;
-    padding: 116px 0 113px 74px;
+    // padding: 116px 0 113px 74px;
+    padding: 76px 0 0 74px;
+    margin-bottom: auto;
     gap: 38px;
     width: 840px;
 
     &.ua_content {
-      padding: 76px 0 82px 74px;
+      // padding: 76px 0 82px 74px;
 
       .descr_title {
         line-height: normal;
@@ -46,28 +52,34 @@
     .left_text_container {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      min-height: 250px;
+      gap: 20px;
 
       .text {
         width: 346px;
       }
     }
 
-    .left_text_container > *:not(:last-child) {
-      margin-bottom: 49px;
-    }
+    // .left_text_container > *:not(:last-child) {
+    //   margin-bottom: 49px;
+    // }
 
     .right_text_container {
       display: flex;
       flex-direction: column;
-      
+      justify-content: space-between;
+      min-height: 250px;
+      gap: 20px;
+
       .text {
         max-width: 350px;
       }
     }
 
-    .right_text_container > *:not(:last-child) {
-      margin-bottom: 72px;
-    }
+    // .right_text_container > *:not(:last-child) {
+    //   margin-bottom: 72px;
+    // }
   }
 
   .description_year,
@@ -86,7 +98,7 @@
   .fix_width {
     min-width: max-content;
   }
-  .description{
+  .description {
     z-index: 1;
   }
 }

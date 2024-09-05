@@ -15,6 +15,7 @@ import Partners from "./components/Partners";
 import { HeroRightSideT } from "@/messages/types/HeroRightSideT";
 import Testimonials from "./components/Testimonials";
 import { MainPageT } from "@/messages/types/MainPageT";
+import QuestionsSection from "./components/QuestionsSection";
 
 type Props = {
   params: { locale: string };
@@ -34,6 +35,7 @@ const Home: React.FC<Props> = async ({ params: { locale } }) => {
       <ProjectSection t={mainT.projects} />
       <AboutUsCounted imageSrc={AboutUsCountedBG} t={mainT.aboutUsCounted} />
       <Testimonials t={mainT.testimonials} />
+      <QuestionsSection params={{ locale }} type="slogan" />
       <VideoSection t={mainT.videoSection} />
       <Partners t={mainT.partners} />
     </div>

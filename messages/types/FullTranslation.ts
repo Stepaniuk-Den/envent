@@ -8,6 +8,8 @@ import { LocaleSwitcherT } from "./LocaleSwitcherT";
 import { MainPageT } from "./MainPageT";
 import { ManifestT } from "./ManifestT";
 import { ProjectsPageT } from "./ProjectsPageT";
+import { QuestionCardT } from "./QuestionCardT";
+import { QuestionsT } from "./QuestionsT";
 import { ServicesPageT } from "./ServicesPageT";
 
 export type FullTranslation = {
@@ -23,4 +25,6 @@ export type FullTranslation = {
   AboutPage: AboutPageT;
   ServicesPage: ServicesPageT;
   ContactsPage: ContactsPageT;
+  Questions: QuestionsT;
+  QuestionCard: QuestionCardT;
 };

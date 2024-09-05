@@ -39,10 +39,22 @@
     box-shadow: 0 6px 10px var(--color-dark-box-shadow);
     transform: translateX(0);
 
+    &.locationBtn {
+      margin-top: 0;
+    }
+
     &:hover {
       background-color: var(--color-accent-yellow);
       box-shadow: none;
       transform: scale(0.95);
+    }
+  }
+
+  &.black {
+    max-width: max-content;
+
+    &.contacts {
+      align-self: flex-end;
     }
   }
 
@@ -72,9 +84,12 @@
 
     &.about_us {
       max-width: max-content;
-      padding: 15px 30px;
       margin-top: auto;
       align-self: flex-end;
+    }
+
+    &.question {
+      max-width: max-content;
     }
 
     &:hover {
