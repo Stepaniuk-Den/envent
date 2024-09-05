@@ -7,7 +7,7 @@
   font-family: var(--font-open-sands);
   color: var(--color-dark);
   font-size: 15px;
-  line-height: 27px; /* 180% */
+  line-height: 1.8; /* 180% */
   letter-spacing: 0.6px;
   @content;
 }
@@ -17,6 +17,6 @@
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
-  line-height: 25px;
+  // line-height: 25px;
   @content;
 }

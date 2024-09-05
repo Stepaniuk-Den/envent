@@ -25,7 +25,13 @@ export interface IHeroRightSideItems {
 
 export interface IServiceItem {
   list: {
-    [key: string]: { svgName: string; title: string; descriptions: string };
+    [key: string]: {
+      svgName?: string;
+      title: string;
+      descriptions: string;
+      mail?: string;
+      tel?: string;
+    };
   };
 }
 

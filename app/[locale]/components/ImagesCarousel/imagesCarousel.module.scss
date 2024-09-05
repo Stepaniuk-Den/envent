@@ -93,19 +93,12 @@
 
 .modalContent {
   position: relative;
-  // overflow: hidden;
   width: 60vw;
   height: 80vh;
-  // width: 800px;
-  // height: 500px;
-  
 
-  .images{
+  .images {
     object-fit: cover;
-    // width: 100%;
-    // height: 100%;
   }
-  // aspect-ratio: 16/9;
 }
 
 .closeButton {

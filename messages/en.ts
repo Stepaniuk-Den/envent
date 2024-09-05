@@ -385,18 +385,17 @@ const en: FullTranslation = {
       list: {
         office: {
           title: "Our Office",
-          descriptions: "Darnytskyi Boulevard, 12, Kyiv, 02000",
+          descriptions: "Darnytskyi Boulevard, 12, <br/>Kyiv, 02000",
         },
         hours: {
           title: "Office Hours",
-          descriptions: "Mon-Fri: 9:00 AM – 6:00 PM Sat-Sun: Closed",
+          descriptions: "Mon-Fri: 9:00 AM – 6:00 PM <br/>Sat-Sun: Closed",
         },
         touch: {
           title: "Get in Touch",
-          descriptions: {
-            mail: "info@envent.kiev.ua",
-            tel: "+38(044) 503 83 77",
-          },
+          descriptions: "",
+          mail: "info@envent.kiev.ua",
+          tel: "+38(044) 503 83 77",
         },
       },
     },
@@ -916,6 +915,59 @@ const en: FullTranslation = {
       title: "About Process",
       phone: "Call for a Quote",
       btnForm: "Online estimate form",
+    },
+  },
+  ContactsPage: {
+    hero: {
+      title: "Our Contacts",
+      description: "We are always ready to help — feel free to reach out.",
+      button: "send message",
+    },
+    locationBtn: {
+      description: "Make a route",
+    },
+  },
+  Questions: {
+    list: {
+      1: {
+        title: "What services does the company offer?",
+        description:
+          "The company provides a full range of services, including design, installation, and maintenance of air conditioning, ventilation, heating, and heat supply systems.",
+      },
+      2: {
+        title: "Which brands do you work with?",
+        description:
+          "We collaborate with renowned manufacturers such as CARRIER, LENNOX, DAIKIN, MITSUBISHI, LG, and others.",
+      },
+      3: {
+        title: "Do you have your own production?",
+        description:
+          "Yes, we have our own production facilities and workshop for manufacturing air ducts, pipelines, and other ventilation system components.",
+      },
+      4: {
+        title: "Does the company have licenses?",
+        description:
+          "The company holds a license for the full range of works, including permission to perform high-risk jobs.",
+      },
+      5: {
+        title: "Why choose your company?",
+        description:
+          "We provide professional services using equipment from well-known brands, have our own production, and employ highly skilled specialists.",
+      },
+    },
+  },
+  QuestionCard: {
+    slogan: {
+      title: "Let’s Build Something Together",
+      description:
+        "Partner with us for expert air conditioning, ventilation, and heating solutions. Our team guarantees top-quality service with trusted brands and in-house production.",
+      textBtn: "get in touch",
+    },
+    faq: {
+      title: "F.A.Q.",
+      description:
+        "Here are the answers to the most common questions to help you understand how we work and the services we offer.",
+      textBtn: "ask a question",
     },
   },
 };

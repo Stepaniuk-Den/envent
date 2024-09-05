@@ -11,7 +11,6 @@ interface IProps {
 
 const AboutBestList: React.FC<{ list: IProps }> = ({ list }) => {
   const aboutBest = Object.entries(list);
-
   const { keyImagesAbout, update } = useCarouselAboutStore();
 
   const handleClick = (key: number) => {

@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   max-width: 1280px;
-  background-color: #f7f7f7;
+  background-color: var(--color-bg-light);
 
   .list_wrapper {
     display: flex;

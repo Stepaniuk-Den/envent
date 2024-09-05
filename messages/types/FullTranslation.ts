@@ -1,4 +1,5 @@
 import { AboutPageT } from "./AboutPageT";
+import { ContactsPageT } from "./ContactPageT";
 import { FooterT } from "./FooterT";
 import { HeaderT } from "./HeaderT";
 import { HeroRightSideT } from "./HeroRightSideT";
@@ -7,6 +8,8 @@ import { LocaleSwitcherT } from "./LocaleSwitcherT";
 import { MainPageT } from "./MainPageT";
 import { ManifestT } from "./ManifestT";
 import { ProjectsPageT } from "./ProjectsPageT";
+import { QuestionCardT } from "./QuestionCardT";
+import { QuestionsT } from "./QuestionsT";
 import { ServicesPageT } from "./ServicesPageT";
 
 export type FullTranslation = {
@@ -21,4 +24,7 @@ export type FullTranslation = {
   ProjectsPage: ProjectsPageT;
   AboutPage: AboutPageT;
   ServicesPage: ServicesPageT;
+  ContactsPage: ContactsPageT;
+  Questions: QuestionsT;
+  QuestionCard: QuestionCardT;
 };

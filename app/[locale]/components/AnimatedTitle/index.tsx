@@ -5,7 +5,10 @@ import { motion, useInView } from "framer-motion";
 import styles from "./animatedTitle.module.scss";
 import { AnimatedTitleProps } from "@/helpers/interfaces";
 
-const AnimatedTitle: React.FC<AnimatedTitleProps> = ({ title, className }) => {
+const AnimatedTitle: React.FC<AnimatedTitleProps> = ({
+  title,
+  className = "",
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
