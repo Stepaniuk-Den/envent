@@ -8,6 +8,8 @@ import ServiceItemDescription from "../../components/ServiceItemDescription";
 import ServiceAboutProcess from "../../components/ServiceAboutProcess";
 import { MainPageT } from "@/messages/types/MainPageT";
 import ProjectSection from "../../components/ProjectsSection";
+import QuestionCard from "../../components/QuestionCard";
+import QuestionsSection from "../../components/QuestionsSection";
 
 type Props = {
   params: {
@@ -16,9 +18,11 @@ type Props = {
   };
 };
 
-export async function generateMetadata({ params: { slug, locale } }: Props): Promise<Metadata> {
+export async function generateMetadata({
+  params: { slug, locale },
+}: Props): Promise<Metadata> {
   const servicesT = await localize(ServicesPageT);
-  
+
   const service = Object.values(servicesT.services.service).find(
     (service) => service.slug === slug
   );
@@ -32,7 +36,7 @@ export async function generateMetadata({ params: { slug, locale } }: Props): Pro
 
   return {
     title: service.hero.title,
-    description: service.hero.description || "Опис сервісу", 
+    description: service.hero.description || "Опис сервісу",
     openGraph: {
       title: service.hero.title,
       description: service.hero.description,
@@ -50,7 +54,7 @@ const ServiceItemPage = async ({ params: { slug, locale } }: Props) => {
   unstable_setRequestLocale(locale);
   const servicesT = await localize(ServicesPageT);
   const mainT = await localize(MainPageT);
- 
+
   const service = Object.values(servicesT.services.service).find(
     (service) => service.slug === slug
   );
@@ -61,17 +65,16 @@ const ServiceItemPage = async ({ params: { slug, locale } }: Props) => {
 
   return (
     <div>
-      <Hero imageSrc={service.heroBG} className="about" t={service.hero}>
-      </Hero>
-      <ServiceItemDescription t={service}/>
-      <ServiceAboutProcess t={service} about={servicesT.about} service={servicesT.services}/>
-      <div style={{backgroundColor:"#f7f7f7",paddingBottom:"200px"}}>
-      <ProjectSection t={mainT.projects} />
-      </div>
+      <Hero imageSrc={service.heroBG} className="about" t={service.hero}></Hero>
+      <ServiceItemDescription t={service} />
+      <ServiceAboutProcess
+        t={service}
+        about={servicesT.about}
+        service={servicesT.services}
+      />
+      <QuestionsSection type="faq" params={{ locale }} />
     </div>
   );
 };
 
 export default ServiceItemPage;
-
-

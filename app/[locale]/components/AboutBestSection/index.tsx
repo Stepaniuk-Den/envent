@@ -4,6 +4,7 @@ import MainButton from "../Buttons/MainButton";
 import ImagesCarousel from "../ImagesCarousel";
 import ButtonVariableColor from "../Buttons/ButtonVariableColor";
 import { IImageList } from "@/helpers/interfaces";
+import { Link } from "@/navigation";
 
 interface IListItem extends IImageList {
   title: string;
@@ -31,7 +32,7 @@ const AboutBestSection: React.FC<{ t: Best }> = ({ t }) => {
           <h3 className={styles.title}>{title}</h3>
           <AboutBestList list={list} />
           <MainButton className="about_us" color="blue">
-            {buttons.best}
+            <Link href={"/contacts"}>{buttons.best}</Link>
           </MainButton>
         </div>
         <div className={styles.image_wrapper}>

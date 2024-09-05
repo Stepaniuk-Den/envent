@@ -23,7 +23,7 @@ const AnimatedText: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.8, margin:"10%" });
+  const isInView = useInView(ref, { once: false, amount: 0.8, margin: "10%" });
   return (
     <motion.div
       ref={ref}

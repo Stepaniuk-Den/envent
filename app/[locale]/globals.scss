@@ -5,6 +5,7 @@
   --color-yellow-blur: #efcc4ecc;
   --color-dark: #293241;
   --color-white: rgb(255, 255, 255);
+  --color-bg-light: #f7f7f7;
   --color-dark-box-shadow: rgba(0, 0, 0, 0.25);
   --color-white-box-shadow: rgba(255, 255, 255, 0.25);
 }
@@ -31,7 +32,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 14px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -85,7 +86,7 @@ address {
   font-style: normal;
 }
 
-.visually-hidden {
+.hidden {
   position: absolute;
   width: 1px;
   height: 1px;

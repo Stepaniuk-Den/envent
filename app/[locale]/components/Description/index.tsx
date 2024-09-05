@@ -31,7 +31,6 @@ const Description = ({
 
   const languageClass = language === "uk" ? styles.ua_content : "";
 
-
   return (
     <section ref={ref} className={`${styles.description} container`}>
       <div className={styles.description_container}>
