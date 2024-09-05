@@ -3,7 +3,6 @@
 import { PropsServiceCard } from "@/helpers/interfaces";
 import { Link, usePathname } from "@/navigation";
 import { parseHTMLString } from "@/helpers/parseHTMLString";
-import { ArrowRightAboutIcon } from "@/helpers/imagesImport";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
 import styles from "./serviceItemDescription.module.scss";
 import AnimatedText from "@/helpers/animatedText";
@@ -28,16 +27,6 @@ const ServiceItemDescription = ({ t }: { t: PropsServiceCard }) => {
 
   return (
     <section className={`${styles.service_item} container`}>
-      <MainButton className="black">
-          <ArrowLeft />
-          <Link href="/services">Повернутись назад</Link>
-        </MainButton>
-      <div className={styles.svg_container}>
-        <Link href="/services" className={styles.link}>
-          <ArrowRightAboutIcon className={styles.svg} />
-          <span>Повернутись назад</span>
-        </Link>
-      </div>
       <div className={styles.service_container}>
         <AnimatedText>
           <p className={styles.text}>{parseHTMLString(p1)}</p>
@@ -58,9 +47,6 @@ const ServiceItemDescription = ({ t }: { t: PropsServiceCard }) => {
             </>
           ) : isSpecialPathEquipment ? (
             <ul className={styles.list_companies}>
-              {/* <li className={`${styles.text} `}>{parseHTMLString(p2)}</li>
-              <li className={`${styles.text}`}>{parseHTMLString(p5)}</li>
-              <li className={`${styles.text} `}>{parseHTMLString(p6)}</li> */}
               {equipmentList.map(([key, value]) => (
                 <li key={key} className={styles.text}>
                   {parseHTMLString(value)}
