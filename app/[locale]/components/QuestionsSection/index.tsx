@@ -27,7 +27,11 @@ const QuestionsSection: React.FC<Props> = async ({
     type === "faq" ? questionCardT.faq : questionCardT.slogan;
   const { title, description, textBtn } = questionType;
   return (
-    <section className={styles.questions_section}>
+    <section
+      className={`${styles.questions_section} ${
+        type === "faq" ? styles.faq : ""
+      }`}
+    >
       <div className={`${styles.wrapper} container`}>
         {type === "form" && <ContactUsForm className="touch" t={footerT} />}
         {type !== "form" && (
