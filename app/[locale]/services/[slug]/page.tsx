@@ -2,9 +2,12 @@ import { ServicesPageT } from "@/messages/types/ServicesPageT";
 import { notFound } from "next/navigation";
 import { localize } from "@/localize";
 import { unstable_setRequestLocale } from "next-intl/server";
+import { Metadata } from "next";
 import Hero from "../../components/Hero";
 import ServiceItemDescription from "../../components/ServiceItemDescription";
 import ServiceAboutProcess from "../../components/ServiceAboutProcess";
+import { MainPageT } from "@/messages/types/MainPageT";
+import ProjectSection from "../../components/ProjectsSection";
 
 type Props = {
   params: {
@@ -13,9 +16,40 @@ type Props = {
   };
 };
 
+export async function generateMetadata({ params: { slug, locale } }: Props): Promise<Metadata> {
+  const servicesT = await localize(ServicesPageT);
+  
+  const service = Object.values(servicesT.services.service).find(
+    (service) => service.slug === slug
+  );
+
+  if (!service) {
+    return {
+      title: "Сервіс не знайдено",
+      description: "Цей сервіс недоступний.",
+    };
+  }
+
+  return {
+    title: service.hero.title,
+    description: service.hero.description || "Опис сервісу", 
+    openGraph: {
+      title: service.hero.title,
+      description: service.hero.description,
+      images: [
+        {
+          url: service.heroBG, // зображення для метаданих (OG-image)
+          alt: service.hero.title,
+        },
+      ],
+    },
+  };
+}
+
 const ServiceItemPage = async ({ params: { slug, locale } }: Props) => {
   unstable_setRequestLocale(locale);
   const servicesT = await localize(ServicesPageT);
+  const mainT = await localize(MainPageT);
  
   const service = Object.values(servicesT.services.service).find(
     (service) => service.slug === slug
@@ -31,6 +65,9 @@ const ServiceItemPage = async ({ params: { slug, locale } }: Props) => {
       </Hero>
       <ServiceItemDescription t={service}/>
       <ServiceAboutProcess t={service} about={servicesT.about} service={servicesT.services}/>
+      <div style={{backgroundColor:"#f7f7f7",paddingBottom:"200px"}}>
+      <ProjectSection t={mainT.projects} />
+      </div>
     </div>
   );
 };

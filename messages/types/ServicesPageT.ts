@@ -35,6 +35,23 @@ export class ServicesPageT implements Translation {
             alt: "",
           },
         },
+        imgCard: {
+          1: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          2: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          3: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+  },
         slug: "",
         heroBG: "",
         secondBtn: "",
@@ -76,22 +93,24 @@ export class ServicesPageT implements Translation {
             src: "",
             alt: "",
           },
-          4: {
-            id: "",
-            src: "",
-            alt: "",
-          },
-          5: {
-            id: "",
-            src: "",
-            alt: "",
-          },
-          6: {
-            id: "",
-            src: "",
-            alt: "",
-          },
         },
+        imgCard: {
+          1: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          2: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          3: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+  },
         slug: "",
         heroBG: "",
         secondBtn: "",
@@ -133,22 +152,24 @@ export class ServicesPageT implements Translation {
             src: "",
             alt: "",
           },
-          4: {
-            id: "",
-            src: "",
-            alt: "",
-          },
-          5: {
-            id: "",
-            src: "",
-            alt: "",
-          },
-          6: {
-            id: "",
-            src: "",
-            alt: "",
-          },
         },
+        imgCard: {
+          1: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          2: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          3: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+  },
         slug: "",
         heroBG: "",
         secondBtn: "",
@@ -190,22 +211,24 @@ export class ServicesPageT implements Translation {
             src: "",
             alt: "",
           },
-          4: {
-            id: "",
-            src: "",
-            alt: "",
-          },
-          5: {
-            id: "",
-            src: "",
-            alt: "",
-          },
-          6: {
-            id: "",
-            src: "",
-            alt: "",
-          },
         },
+        imgCard: {
+          1: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          2: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          3: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+  },
         slug: "",
         heroBG: "",
         secondBtn: "",
@@ -247,29 +270,35 @@ export class ServicesPageT implements Translation {
             src: "",
             alt: "",
           },
-          4: {
-            id: "",
-            src: "",
-            alt: "",
-          },
-          5: {
-            id: "",
-            src: "",
-            alt: "",
-          },
-          6: {
-            id: "",
-            src: "",
-            alt: "",
-          },
         },
+        imgCard: {
+          1: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          2: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          3: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+  },
         slug: "",
         heroBG: "",
         secondBtn: "",
         p1: "",
-        p2: "",
         p3: "",
         p4: "",
+        list: {
+          l1: "",
+          l2: "",
+          l3: "",
+        },
         process: {
           text: "",
           list: {
@@ -304,22 +333,24 @@ export class ServicesPageT implements Translation {
             src: "",
             alt: "",
           },
-          4: {
-            id: "",
-            src: "",
-            alt: "",
-          },
-          5: {
-            id: "",
-            src: "",
-            alt: "",
-          },
-          6: {
-            id: "",
-            src: "",
-            alt: "",
-          },
         },
+        imgCard: {
+          1: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          2: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          3: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+  },
         slug: "",
         heroBG: "",
         secondBtn: "",
@@ -327,6 +358,11 @@ export class ServicesPageT implements Translation {
         p2: "",
         p3: "",
         p4: "",
+        list: {
+          l1: "",
+          l2: "",
+          l3: "",
+        },
         process: {
           text: "",
           list: {
@@ -361,22 +397,24 @@ export class ServicesPageT implements Translation {
             src: "",
             alt: "",
           },
-          4: {
-            id: "",
-            src: "",
-            alt: "",
-          },
-          5: {
-            id: "",
-            src: "",
-            alt: "",
-          },
-          6: {
-            id: "",
-            src: "",
-            alt: "",
-          },
         },
+        imgCard: {
+          1: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          2: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          3: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+  },
         slug: "",
         heroBG: "",
         secondBtn: "",
@@ -418,22 +456,24 @@ export class ServicesPageT implements Translation {
             src: "",
             alt: "",
           },
-          4: {
-            id: "",
-            src: "",
-            alt: "",
-          },
-          5: {
-            id: "",
-            src: "",
-            alt: "",
-          },
-          6: {
-            id: "",
-            src: "",
-            alt: "",
-          },
         },
+        imgCard: {
+          1: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          2: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+          3: {
+            id: "",
+            src: "",
+            alt: "",
+          },
+  },
         slug: "",
         heroBG: "",
         secondBtn: "",
@@ -441,6 +481,16 @@ export class ServicesPageT implements Translation {
         p2: "",
         p3: "",
         p4: "",
+        list: {
+          l1: "",
+          l2: "",
+          l3: "",
+          l4: "",
+          l5: "",
+          l6: "",
+          l7: "",
+          l8: "",
+        },
         process:{
           text:"",
           list:{

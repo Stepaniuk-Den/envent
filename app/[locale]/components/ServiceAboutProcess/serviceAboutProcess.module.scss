@@ -1,13 +1,12 @@
 @import "../../mixin.scss";
 
 .about_process {
-  padding-bottom: 350px;
-  background-color: var(--color-dark);
   color: var(--color-white);
 
   .about_container {
     display: flex;
     height: 730px;
+    background-color: var(--color-dark);
     // flex-direction: row;
 
     .left_container {

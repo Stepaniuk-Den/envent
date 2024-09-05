@@ -3,16 +3,62 @@
 .service_item {
   padding: 100px 0;
 
+  .svg_container {
+    height: 88px;
+    @include transition-standart;
+
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      span {
+        @include text-dark-openSands-15px-27lh-06ls;
+        // text-decoration: underline;
+        font-weight: bold;
+
+        &:hover {
+          color: var(--color-accent-yellow);
+        }
+      }
+    }
+
+    .svg {
+      width: 18px;
+      height: 18px;
+      color: var(--color-accent-blue);
+      transform: rotateZ(180deg);
+      @include transition-standart;
+
+      &:hover {
+        color: var(--color-accent-yellow);
+      }
+    }
+  }
+
   .service_container {
-    display: grid;
-    column-gap: 72px;
-    row-gap: 40px;
-    padding: 10px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 
     .text {
       @include text-dark-openSands-15px-27lh-06ls;
+      // text-indent: 20px;
+      // margin-bottom: 10px;
+
+      &.bold_text {
+        font-weight: bold;
+      }
+    }
+
+    .list_companies {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+    }
+    .list {
+      list-style-type: disc;
+      padding-left: 24px;
     }
   }
 }
