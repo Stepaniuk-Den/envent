@@ -18,30 +18,25 @@ const ServiceCard = ({ t, serviceId }: { t: PropsServiceCard, serviceId: number 
     alignRight = false,
     hero,
     images,
+    imgCard,
   } = t;
   const { update } = useCarouselServiceStore();
 
+  
+  
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "start start"],
+    offset: ["start end", "start center"],
   });
 
-  const y = useTransform(scrollYProgress, [0.2, 0.5], [300, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [300, 0]);
   const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
-  // const imagesList1 = Object.entries(images);
-  // console.log(imagesList1);
-  // const imagesList = Object.entries(images).slice(0, 3);
-  const imagesList1 = Object.entries(images);
-  console.log("Service ID: ", serviceId);
-  console.log("Images List 1: ", imagesList1);
-  const imagesList = Object.entries(images).slice(0, 3);
-  console.log("Filtered Images List: ", imagesList);
+  const imagesList = Object.entries(imgCard)
 
   const handleClick = () => {
     update({ id: serviceId });
-    console.log("Updated ID: ", serviceId);
   };
 
   return (
@@ -63,10 +58,10 @@ const ServiceCard = ({ t, serviceId }: { t: PropsServiceCard, serviceId: number 
         </div>
         <p className={styles.text}>{hero.description}</p>
         <div className={styles.wrapper_img}>
-        {imagesList.map(([key, image], index) => (
-            // <div key={key} className={styles.thumb}>
-            <div key={`${serviceId}-${key}`} className={styles.thumb}>
-              <Image src={image.src} alt={image.alt} width={220} height={160} />
+        {imagesList.map(([key, image],index) => (
+            // <div key={`${serviceId}-${key}`} className=
+            <div key={`${serviceId}-${image.id}`} className={styles.thumb}>
+              <Image src={`${image.src}?v=1`} alt={image.alt} width={220} height={160} />
             </div>
           ))}
         </div>
@@ -79,7 +74,9 @@ const ServiceCard = ({ t, serviceId }: { t: PropsServiceCard, serviceId: number 
           </MainButton>
         }
         secondChildren={
-          <MainButton className="white" onClick={handleClick}>
+          <MainButton className="white" 
+          onClick={handleClick}
+          >
             <Link href={`/services/${slug}`}>{secondBtn}</Link>
           </MainButton>
         }
