@@ -26,23 +26,23 @@ const ServiceAboutProcess: React.FC<{
 
   const processList = process ? Object.entries(process.list) : [];
 
-  const filteredServices = Object.entries(service.service).reduce(
-    (acc, [key, serviceData]) => {
-      const imagesArray = Object.values(serviceData.images);
-      const filteredImagesArray = imagesArray.slice(3);
+  // const filteredServices = Object.entries(service.service).reduce(
+  //   (acc, [key, serviceData]) => {
+  //     const imagesArray = Object.values(serviceData.images);
+  //     const filteredImagesArray = imagesArray.slice(3);
 
-      const filteredImagesObject = Object.fromEntries(
-        filteredImagesArray.map((image, index) => [index, image])
-      );
+  //     const filteredImagesObject = Object.fromEntries(
+  //       filteredImagesArray.map((image, index) => [index, image])
+  //     );
 
-      acc[Number(key)] = {
-        ...serviceData,
-        images: filteredImagesObject,
-      };
-      return acc;
-    },
-    {} as Record<number, IImageList>
-  );
+  //     acc[Number(key)] = {
+  //       ...serviceData,
+  //       images: filteredImagesObject,
+  //     };
+  //     return acc;
+  //   },
+  //   {} as Record<number, IImageList>
+  // );
 
   return (
     <section className={`${styles.about_process} container`}>
@@ -65,7 +65,7 @@ const ServiceAboutProcess: React.FC<{
         </div>
         <div className={styles.right_container}>
           <div className={styles.carousel}>
-            <ImagesCarousel t={filteredServices} page="services" />
+            <ImagesCarousel t={service.service} page="services" />
           </div>
           <ButtonVariableColor
             className="blue_white"

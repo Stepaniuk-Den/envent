@@ -159,14 +159,31 @@ export interface PropsServiceCard {
       alt: string;
     };
   };
+  imgCard: {
+    [key: number]: {
+      id: string;
+      src: string;
+      alt: string;
+    };
+  };
   slug?: string;
   heroBg?: string | StaticImageData;
   secondBtn: string;
   alignRight?: boolean;
-  p1?: string;
+  p1: string;
   p2?: string;
-  p3?: string;
-  p4?: string;
+  p3: string;
+  p4: string;
+  list?:{
+    l1: string,
+    l2: string,
+    l3: string,
+    l4?: string,
+    l5?: string,
+    l6?: string,
+    l7?:string,
+    l8?: string,
+  };
   process?: {
     text: string;
     list: {
