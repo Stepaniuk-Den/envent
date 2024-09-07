@@ -15,9 +15,7 @@
     font-family: var(--font-rubik);
 
     .title {
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 50.4px; /* 157.5% */
+      @include text-title-h3-rubik;
     }
   }
 
@@ -29,7 +27,7 @@
 
     .count,
     .description_project {
-      @include text-title-rubik-40px-700w-25lh;
+      @include text-title-h2-rubik;
       line-height: 50.4px;
     }
 

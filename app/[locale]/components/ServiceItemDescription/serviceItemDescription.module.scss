@@ -13,7 +13,7 @@
       gap: 10px;
 
       span {
-        @include text-dark-openSands-15px-27lh-06ls;
+        @include text-main-openSands;
         // text-decoration: underline;
         font-weight: bold;
 
@@ -42,7 +42,7 @@
     gap: 18px;
 
     .text {
-      @include text-dark-openSands-15px-27lh-06ls;
+      @include text-main-openSands;
       // text-indent: 20px;
       // margin-bottom: 10px;
 

@@ -35,15 +35,11 @@
     flex-direction: column;
 
     .title {
-      font-family: var(--font-rubik);
-      font-weight: 700;
-      letter-spacing: 0.64px;
+      @include text-title-item-rubik;
       height: 40px;
     }
     .content {
-      font-family: var(--font-open-sands);
-      line-height: 27px; /* 180% */
-      letter-spacing: 0.6px;
+      @include text-main-openSands;
     }
   }
 }

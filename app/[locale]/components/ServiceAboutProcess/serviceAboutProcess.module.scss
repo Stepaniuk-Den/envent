@@ -21,7 +21,7 @@
       }
 
       .process_text {
-        @include text-dark-openSands-15px-27lh-06ls;
+        @include text-main-openSands;
         color: var(--color-white);
       }
 
@@ -45,7 +45,7 @@
         font-size: 30px;
         font-weight: 700;
         line-height: 1.68;
-  
+
         .phoneNumber {
           font-family: var(--font-rubik);
           font-size: 24px;

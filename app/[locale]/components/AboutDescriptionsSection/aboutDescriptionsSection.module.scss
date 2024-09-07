@@ -7,5 +7,5 @@
   padding: 10px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  font-family: var(--font-open-sands);
+  @include text-main-openSands;
 }
