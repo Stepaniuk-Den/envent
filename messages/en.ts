@@ -339,17 +339,20 @@ const en: FullTranslation = {
       title: "Our Services",
       list: {
         designing: {
+          href: "/services/designing",
           svgName: "SideServicesDesigning",
           title: "Designing",
           descriptions:
             "The initial stage of creating a comfortable atmosphere.",
         },
         production: {
+          href: "/services/production-and-sale-of-finished-products",
           svgName: "SideServicesProduction",
           title: "Production",
           descriptions: "Manufacturing and delivery of finished products.",
         },
         assembling: {
+          href: "/services/installation-of-ventilation-and-air-conditioning-systems",
           svgName: "SideServicesAssembling",
           title: "Installation",
           descriptions:
@@ -361,18 +364,21 @@ const en: FullTranslation = {
       title: "What We Do",
       list: {
         automation: {
+          href: "/services/control-and-measuring-devices-and-automation",
           svgName: "SideTodoAutomation",
           title: "Automation",
           descriptions:
             "Automation of ventilation and air conditioning systems.",
         },
         works: {
+          href: "/services/start-up-and-debugging-works",
           svgName: "SideTodoCommissioning",
           title: "Commissioning",
           descriptions:
             "Initial testing of installed ventilation and air conditioning systems.",
         },
         services: {
+          href: "/services/service-maintenance",
           svgName: "SideTodoMaintenance",
           title: "Maintenance",
           descriptions:
@@ -849,14 +855,14 @@ const en: FullTranslation = {
           },
           images: {
             1: {
-            id: "1",
-            src: "/images/services/servis_foto1.jpg",
-            alt: "Hitachi cooling equipment on the roof of a building",
+              id: "1",
+              src: "/images/services/servis_foto1.jpg",
+              alt: "Hitachi cooling equipment on the roof of a building",
             },
             2: {
-            id: "2",
-            src: "/images/services/servis_foto2.webp",
-            alt: "LG and Multi V.5 cooling systems on the roof of the building.",
+              id: "2",
+              src: "/images/services/servis_foto2.webp",
+              alt: "LG and Multi V.5 cooling systems on the roof of the building.",
             },
             3: {
               id: "3",
@@ -866,21 +872,21 @@ const en: FullTranslation = {
           },
           imgCard: {
             1: {
-            id: "1",
-            src: "/images/services/servis_foto4.jpg",
-            alt: "External units of the cooling system on the roof of an industrial building",
+              id: "1",
+              src: "/images/services/servis_foto4.jpg",
+              alt: "External units of the cooling system on the roof of an industrial building",
             },
             2: {
-            id: "2",
-            src: "/images/services/servis_foto3.jpg",
-            alt: "Large unit of ventilation equipment",
+              id: "2",
+              src: "/images/services/servis_foto3.jpg",
+              alt: "Large unit of ventilation equipment",
             },
             3: {
-            id: "3",
-            src: "/images/services/servis_foto5.jpg",
-            alt: "An engineer is servicing the ventilation system in the ceiling",
+              id: "3",
+              src: "/images/services/servis_foto5.jpg",
+              alt: "An engineer is servicing the ventilation system in the ceiling",
             },
-            },
+          },
           slug: "service-maintenance",
           heroBG: "/images/services/servis_foto2.webp",
           secondBtn: "learn more",

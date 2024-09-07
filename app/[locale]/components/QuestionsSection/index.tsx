@@ -28,6 +28,7 @@ const QuestionsSection: React.FC<Props> = async ({
   const { title, description, textBtn } = questionType;
   return (
     <section
+      id={type === "form" ? "form" : ""}
       className={`${styles.questions_section} ${
         type === "faq" ? styles.faq : ""
       }`}

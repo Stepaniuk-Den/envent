@@ -5,15 +5,10 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  padding-top: 200px;
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--color-white);
-
-  &.main {
-    // height: 691px;
-  }
 
   &::before {
     content: "";
@@ -32,9 +27,10 @@
   }
 
   .wrapper {
+    position: absolute;
+    top: 40%;
     display: flex;
     justify-content: space-between;
     width: 1280px;
-    height: 100%;
   }
 }

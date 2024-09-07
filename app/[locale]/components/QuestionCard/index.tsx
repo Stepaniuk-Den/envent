@@ -15,9 +15,9 @@ const QuestionCard = ({ title, description, textBtn }: IQuestionCard) => {
     <div className={styles.question_card}>
       <AnimatedTitle title={title} className={styles.question} />
       <Line className="yellow-left" />
-      <p>{description}</p>
+      <p className={styles.description}>{description}</p>
       <MainButton color="blue" className="question">
-        <Link href={"#"}>{textBtn}</Link>
+        <Link href={"/contacts/#form"}>{textBtn}</Link>
       </MainButton>
     </div>
   );
