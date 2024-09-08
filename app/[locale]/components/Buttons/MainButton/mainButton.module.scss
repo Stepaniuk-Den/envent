@@ -97,6 +97,11 @@
     }
   }
 
+  &.modal {
+    max-width: max-content;
+    padding: 15px;
+  }
+
   &.description {
     padding: 0;
     width: 240px;

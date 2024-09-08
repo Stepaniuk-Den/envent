@@ -69,3 +69,16 @@
     }
   }
 }
+
+// ===== MODAL ======
+.p1 {
+  @include text-title-h3-rubik;
+}
+
+.p2 {
+  @include text-main-openSands;
+}
+
+.p3 {
+  color: red;
+}

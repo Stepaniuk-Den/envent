@@ -108,7 +108,7 @@ const ImagesCarousel: React.FC<{
       <AnimatePresence mode="wait">
         {isOpen && (
           <motion.div
-            className={styles.backdrop}
+            className={`${styles.backdrop}  overlay`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

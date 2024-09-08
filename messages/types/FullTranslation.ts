@@ -1,6 +1,6 @@
 import { AboutPageT } from "./AboutPageT";
 import { ContactsPageT } from "./ContactPageT";
-import { FooterT } from "./FooterT";
+import { ContactUsT } from "./ContactUsT";
 import { HeaderT } from "./HeaderT";
 import { HeroRightSideT } from "./HeroRightSideT";
 import { LocaleLayoutT } from "./LocaleLayoutT";
@@ -19,7 +19,7 @@ export type FullTranslation = {
   LocaleSwitcher: LocaleSwitcherT;
   Manifest: ManifestT;
   MainPage: MainPageT;
-  Footer: FooterT;
+  ContactUs: ContactUsT;
   HeroRightSide: HeroRightSideT;
   ProjectsPage: ProjectsPageT;
   AboutPage: AboutPageT;
