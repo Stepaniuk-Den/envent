@@ -11,8 +11,8 @@ import { localize } from "@/localize";
 import { HeaderT } from "@/messages/types/HeaderT";
 import { LocaleLayoutT } from "@/messages/types/LocaleLayoutT";
 import SideBar from "./components/SideBar";
-import { FooterT } from "@/messages/types/FooterT";
 import { HeroRightSideT } from "@/messages/types/HeroRightSideT";
+import { ContactUsT } from "@/messages/types/ContactUsT";
 
 type Props = {
   children: React.ReactNode;
@@ -38,7 +38,7 @@ export default async function LocaleLayout({
 }: Props) {
   unstable_setRequestLocale(locale);
   const headerT = await localize(HeaderT);
-  const footerT = await localize(FooterT);
+  const footerT = await localize(ContactUsT);
   const contactT = await localize(HeroRightSideT);
   return (
     <html lang={locale}>

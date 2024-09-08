@@ -28,6 +28,13 @@ export async function POST(request: NextRequest) {
     cc: email, //(uncomment this line if you want to send a copy to the sender)
     subject: `Message from ${name} (${email})`,
     text: message,
+    html: `
+    <p>This message was sent from the website ${process.env.SITE_DOMAIN}</p>
+    <p>sender: <b>${name}</b></p>
+    <p>email: ${email}</p>
+    <p>to: ${process.env.EMAIL}</p>
+    <p>${message}</p>
+    `,
   };
 
   const sendMailPromise = () =>
@@ -43,7 +50,6 @@ export async function POST(request: NextRequest) {
 
   try {
     await sendMailPromise();
-    // await transport.sendMail(mailOptions);
     return NextResponse.json({ message: "Email sent" });
   } catch (err) {
     return NextResponse.json({ error: err }, { status: 500 });

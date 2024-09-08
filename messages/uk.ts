@@ -331,12 +331,15 @@ const uk: FullTranslation = {
         "Ми будемо раді стати вашими постійними партнерами та взяти на себе вирішення ваших завдань у сфері створення мікроклімату.",
     },
   },
-  Footer: {
+  ContactUs: {
     formTitle: "Зв'яжіться з нами",
     placeholderName: "Ім'я",
     placeholderEmail: "Електронна пошта",
     placeholderMessage: "Повідомлення",
     button: "надіслати повідомлення",
+    msg_success: "Вітаємо!!<br/>Електронний лист успішно надіслано!",
+    msg_error: "Вибачте!!<br/>Виникла помилка при відправці листа<br/>",
+    msg_btn: "закрити",
   },
   HeroRightSide: {
     services: {

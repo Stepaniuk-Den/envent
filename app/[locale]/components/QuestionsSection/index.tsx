@@ -2,12 +2,13 @@ import React from "react";
 import QuestionsList from "../QuestionsList";
 import styles from "./questionsSection.module.scss";
 import ContactUsForm from "../ContactUsForm";
-import { FooterT } from "@/messages/types/FooterT";
+
 import { unstable_setRequestLocale } from "next-intl/server";
 import { localize } from "@/localize";
 import { QuestionsT } from "@/messages/types/QuestionsT";
 import { QuestionCardT } from "@/messages/types/QuestionCardT";
 import QuestionCard from "../QuestionCard";
+import { ContactUsT } from "@/messages/types/ContactUsT";
 
 type Props = {
   params: { locale: string };
@@ -20,7 +21,7 @@ const QuestionsSection: React.FC<Props> = async ({
 }) => {
   unstable_setRequestLocale(locale);
 
-  const footerT = await localize(FooterT);
+  const footerT = await localize(ContactUsT);
   const questionsT = await localize(QuestionsT);
   const questionCardT = await localize(QuestionCardT);
   const questionType =

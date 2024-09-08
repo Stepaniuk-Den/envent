@@ -327,12 +327,15 @@ const en: FullTranslation = {
         "We would be happy to become your permanent partners and take on the solution of your problems in the field of microclimate creation.",
     },
   },
-  Footer: {
+  ContactUs: {
     formTitle: "Contact Us",
     placeholderName: "Name",
     placeholderEmail: "Email",
     placeholderMessage: "Message",
-    button: " send message",
+    button: "send message",
+    msg_success: "Congratulations!!<br/>Email sent successfully!",
+    msg_error: "Oops!!<br/>Error sending email<br/>",
+    msg_btn: "Close",
   },
   HeroRightSide: {
     services: {
