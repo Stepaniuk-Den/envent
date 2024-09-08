@@ -4,9 +4,11 @@ import { useState, useTransition } from "react";
 import styles from "./sidebar.module.scss";
 import { usePathname, useRouter } from "@/navigation";
 import { useLocale } from "next-intl";
-import { Locale } from "@/types";
+import { locales } from "@/config";
 import { useParams } from "next/navigation";
 import { useClickOutside } from "@/helpers/useClickOutside";
+
+type Locale = (typeof locales)[number];
 
 const SideBar = () => {
   const languages = [
