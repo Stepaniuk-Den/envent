@@ -93,11 +93,22 @@ address {
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 // @media (prefers-color-scheme: dark) {
@@ -106,17 +117,31 @@ address {
 //   }
 // }
 
+@import "./responsive.scss";
+
 .container {
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  // background-color: gainsboro;
-}
+  padding: 0 30px;
 
-// $footerHeight: 385px;
+  @include lg {
+    max-width: 1024px;
+    padding: 0 20px;
+  }
+
+  @include md {
+    max-width: 768px;
+  }
+
+  @include sm {
+    max-width: 375px;
+    padding: 0 10px;
+  }
+}
 
 main {
   min-height: 100vh;
-  // min-height: calc(100vh - $footerHeight);
 }
 
 .rubik {

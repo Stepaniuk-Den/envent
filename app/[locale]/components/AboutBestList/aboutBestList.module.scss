@@ -31,16 +31,11 @@
 
       .title {
         height: 50px;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 25px; /* 138.889% */
+        @include text-title-item-rubik;
       }
 
       .content {
-        font-family: var(--font-open-sands);
-        font-size: 15px;
-        line-height: 27px; /* 180% */
-        letter-spacing: 0.6px;
+        @include text-main-openSands;
         height: max-content;
       }
     }

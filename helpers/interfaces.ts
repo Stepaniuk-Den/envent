@@ -26,6 +26,7 @@ export interface IHeroRightSideItems {
 export interface IServiceItem {
   list: {
     [key: string]: {
+      href?: string;
       svgName?: string;
       title: string;
       descriptions: string;
@@ -174,15 +175,15 @@ export interface PropsServiceCard {
   p2?: string;
   p3: string;
   p4: string;
-  list?:{
-    l1: string,
-    l2: string,
-    l3: string,
-    l4?: string,
-    l5?: string,
-    l6?: string,
-    l7?:string,
-    l8?: string,
+  list?: {
+    l1: string;
+    l2: string;
+    l3: string;
+    l4?: string;
+    l5?: string;
+    l6?: string;
+    l7?: string;
+    l8?: string;
   };
   process?: {
     text: string;

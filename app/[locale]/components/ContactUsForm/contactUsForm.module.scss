@@ -8,9 +8,7 @@
   padding: 50px 64px 50px;
 
   .title {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 25px; /* 62.5% */
+    @include text-title-h2-rubik;
   }
 
   .form {
@@ -20,14 +18,14 @@
     font-family: var(--font-open-sands);
     gap: 20px;
     ::placeholder {
-      @include text-dark-openSands-15px-27lh-06ls;
+      @include text-main-openSands;
     }
 
     input,
     textarea {
       padding: 10px 15px;
       border: none;
-      @include text-dark-openSands-15px-27lh-06ls;
+      @include text-main-openSands;
 
       &:focus {
         outline: 2px solid var(--color-accent-yellow);
@@ -70,4 +68,17 @@
       gap: 24px;
     }
   }
+}
+
+// ===== MODAL ======
+.p1 {
+  @include text-title-h3-rubik;
+}
+
+.p2 {
+  @include text-main-openSands;
+}
+
+.p3 {
+  color: red;
 }

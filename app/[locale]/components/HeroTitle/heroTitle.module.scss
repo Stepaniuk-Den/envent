@@ -1,3 +1,5 @@
+@import "../../mixin.scss";
+
 .text_сontainer {
   display: flex;
   flex-direction: column;
@@ -9,10 +11,7 @@
     overflow: hidden;
 
     .title {
-      font-family: var(--font-rubik);
-      font-size: 64px;
-      font-weight: 700;
-      line-height: 80px;
+      @include text-title-h1-rubik;
       padding-left: 25px;
     }
   }
@@ -25,7 +24,7 @@
       margin-top: 28px;
       font-family: var(--font-open-sands);
       font-size: 22px;
-      line-height: 32px; /* 145.455% */
+      line-height: 1.45; /* 145% */
     }
   }
 }

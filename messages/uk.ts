@@ -331,28 +331,34 @@ const uk: FullTranslation = {
         "Ми будемо раді стати вашими постійними партнерами та взяти на себе вирішення ваших завдань у сфері створення мікроклімату.",
     },
   },
-  Footer: {
+  ContactUs: {
     formTitle: "Зв'яжіться з нами",
     placeholderName: "Ім'я",
     placeholderEmail: "Електронна пошта",
     placeholderMessage: "Повідомлення",
     button: "надіслати повідомлення",
+    msg_success: "Вітаємо!!<br/>Електронний лист успішно надіслано!",
+    msg_error: "Вибачте!!<br/>Виникла помилка при відправці листа<br/>",
+    msg_btn: "закрити",
   },
   HeroRightSide: {
     services: {
       title: "Наші послуги",
       list: {
         designing: {
+          href: "/services/designing",
           svgName: "SideServicesDesigning",
           title: "Проектування",
           descriptions: "Початкова стадія створення атмосфери комфорту.",
         },
         production: {
+          href: "/services/production-and-sale-of-finished-products",
           svgName: "SideServicesProduction",
           title: "Виробництво",
           descriptions: "Виробництво та реалізація готової продукції.",
         },
         assembling: {
+          href: "/services/installation-of-ventilation-and-air-conditioning-systems",
           svgName: "SideServicesAssembling",
           title: "Монтаж",
           descriptions: "Монтаж систем вентиляції та кондиціювання повітря.",
@@ -363,18 +369,21 @@ const uk: FullTranslation = {
       title: "Що ми робимо",
       list: {
         automation: {
+          href: "/services/control-and-measuring-devices-and-automation",
           svgName: "SideTodoAutomation",
           title: "Автоматизація",
           descriptions:
             "Автоматизація вентиляційних систем і систем кондиціювання повітря.",
         },
         works: {
+          href: "/services/start-up-and-debugging-works",
           svgName: "SideTodoCommissioning",
           title: "Пуско-налагоджувальні работи",
           descriptions:
             "Пускові випробування змонтованих систем вентиляції та кондиціювання.",
         },
         services: {
+          href: "/services/service-maintenance",
           svgName: "SideTodoMaintenance",
           title: "Сервісне обслуговування",
           descriptions:

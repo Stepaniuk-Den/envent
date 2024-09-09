@@ -4,14 +4,14 @@ import SocialList from "../SocialList";
 import styles from "./footer.module.scss";
 import { useRef } from "react";
 import { contactsItems } from "@/data/ContactsItem";
-import { FooterT } from "@/messages/types/FooterT";
 import { HeroRightSideT } from "@/messages/types/HeroRightSideT";
 import { motion, useInView } from "framer-motion";
 import { Link, usePathname } from "@/navigation";
 import ContactUsForm from "../ContactUsForm";
 import { parseHTMLString } from "@/helpers/parseHTMLString";
+import { ContactUsT } from "@/messages/types/ContactUsT";
 
-const Footer: React.FC<{ t: FooterT; t2: HeroRightSideT }> = ({ t, t2 }) => {
+const Footer: React.FC<{ t: ContactUsT; t2: HeroRightSideT }> = ({ t, t2 }) => {
   const ref = useRef(null);
 
   const isInView = useInView(ref, { once: false, amount: 0.1 });

@@ -1,4 +1,5 @@
 @import "../../mixin.scss";
+
 .hero_wrapper {
   display: flex;
   flex-direction: column;
@@ -7,11 +8,8 @@
   margin: auto 0;
 
   .list_title {
+    @include text-title-h3-rubik;
     display: flex;
-    font-family: var(--font-rubik);
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 50.4px; /* 157.5% */
     margin-bottom: 20px;
     color: var(--color-accent-blue);
   }
@@ -30,15 +28,13 @@
       cursor: pointer;
 
       .item_text {
-        font-family: var(--font-open-sands);
-        font-size: 15px;
-        line-height: 27px; /* 180% */
+        @include text-main-openSands;
+        color: var(--color-white);
+        line-height: 1.8;
 
         :first-child {
-          font-family: var(--font-rubik);
-          font-size: 16px;
-          font-weight: 700;
-          line-height: 24px;
+          @include text-title-item-rubik;
+          @include transition-standart;
         }
       }
 
@@ -49,18 +45,23 @@
         @include transition-standart;
       }
 
-      &:hover .svg {
-        color: var(--color-accent-yellow);
+      &:hover {
+        .svg,
+        :first-child {
+          color: var(--color-accent-yellow);
+          @include transition-standart;
+        }
       }
     }
   }
 
-  &.main {
-    .list_title {
-      // color: var(--color-accent-blue);
+  &.contacts {
+    .item,
+    a {
+      cursor: auto;
+      &:hover :first-child {
+        color: var(--color-white);
+      }
     }
-  }
-
-  &.about {
   }
 }

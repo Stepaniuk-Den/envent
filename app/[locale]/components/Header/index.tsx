@@ -36,7 +36,7 @@ const Header: React.FC<{ t: HeaderT }> = ({ t }) => {
         }}
         className={styles.top}
       >
-        <span className={styles.logo}>
+        <Link href={"/"} className={styles.logo}>
           <Image
             priority
             src={Logo}
@@ -44,7 +44,7 @@ const Header: React.FC<{ t: HeaderT }> = ({ t }) => {
             width={173}
             height={100}
           />
-        </span>
+        </Link>
         <ul className={styles.contacts}>
           <motion.li className={styles.item}>
             <Link href={"tel:+380445038377"} className={styles.link}>
