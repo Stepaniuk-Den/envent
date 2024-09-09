@@ -201,6 +201,7 @@ export interface IServiceAboutProps {
   title: string;
   phone: string;
   btnForm: string;
+  btnBack?:string;
 }
 
 export interface IImageItem {
