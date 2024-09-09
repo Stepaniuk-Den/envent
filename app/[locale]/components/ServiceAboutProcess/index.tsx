@@ -19,30 +19,13 @@ const ServiceAboutProcess: React.FC<{
   t: PropsServiceCard;
   about: IServiceAboutProps;
   service: Service;
-}> = ({ t, about, service }) => {
+  id:number;
+}> = ({ t, about, service,id }) => {
 
   const { process } = t;
   const { title, phone, btnForm } = about;
 
   const processList = process ? Object.entries(process.list) : [];
-
-  // const filteredServices = Object.entries(service.service).reduce(
-  //   (acc, [key, serviceData]) => {
-  //     const imagesArray = Object.values(serviceData.images);
-  //     const filteredImagesArray = imagesArray.slice(3);
-
-  //     const filteredImagesObject = Object.fromEntries(
-  //       filteredImagesArray.map((image, index) => [index, image])
-  //     );
-
-  //     acc[Number(key)] = {
-  //       ...serviceData,
-  //       images: filteredImagesObject,
-  //     };
-  //     return acc;
-  //   },
-  //   {} as Record<number, IImageList>
-  // );
 
   return (
     <section className={`${styles.about_process} container`}>
@@ -65,7 +48,7 @@ const ServiceAboutProcess: React.FC<{
         </div>
         <div className={styles.right_container}>
           <div className={styles.carousel}>
-            <ImagesCarousel t={service.service} page="services" />
+            <ImagesCarousel t={service.service} page="services" id={id} />
           </div>
           <ButtonVariableColor
             className="blue_white"

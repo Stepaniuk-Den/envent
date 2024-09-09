@@ -1,6 +1,6 @@
 "use client";
 
-import { PropsServiceCard } from "@/helpers/interfaces";
+import { IServiceAboutProps, PropsServiceCard } from "@/helpers/interfaces";
 import { Link, usePathname } from "@/navigation";
 import { parseHTMLString } from "@/helpers/parseHTMLString";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
@@ -8,7 +8,7 @@ import styles from "./serviceItemDescription.module.scss";
 import AnimatedText from "@/helpers/animatedText";
 import MainButton from "../Buttons/MainButton";
 
-const ServiceItemDescription = ({ t }: { t: PropsServiceCard }) => {
+const ServiceItemDescription:React.FC<{t: PropsServiceCard,about:IServiceAboutProps}> = ({t,about} ) => {
   const { p1, p2 ="", p3, p4, list } = t;
 
   const pathname = usePathname();
@@ -78,7 +78,7 @@ const ServiceItemDescription = ({ t }: { t: PropsServiceCard }) => {
         </AnimatedText>
         <MainButton className="filled">
           <ArrowLeft />
-          <Link href="/services">Повернутись назад</Link>
+          <Link href="/services">{about.btnBack}</Link>
         </MainButton>
       </div>
     </section>

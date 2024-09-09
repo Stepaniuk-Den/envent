@@ -22,16 +22,38 @@ export interface IListCarouselProps {
 const ImagesCarousel: React.FC<{
   t: IListCarouselProps;
   page: "services" | "about" | "";
-}> = ({ t, page }) => {
+  //Додано id як необов'язковий пропс
+  id?: number;
+}> = ({ t, page, id }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  //Додано додатковий стейт для відстеження стану зображень
+  const [imagesList, setImagesList] = useState<IImageItem[]>([]);
   let [ref, { width }] = useMeasure();
 
   const { keyImagesAbout } = useCarouselAboutStore();
   const { keyImagesService } = useCarouselServiceStore();
 
-  const id = page === "about" ? keyImagesAbout.id : keyImagesService.id;
-  const imagesList = Object.values(t[id as keyof typeof t].images);
+  // const id = page === "about" ? keyImagesAbout.id : keyImagesService.id;
+  // const imagesList = Object.values(t[id as keyof typeof t].images);
+
+  //Додано useEffect для відстеження зображень на різних сторінках 
+
+  useEffect(() => {
+    const fetchImagesList = () => {
+      if (page === "about") {
+        if (keyImagesAbout.id !== undefined) {
+          const id = keyImagesAbout.id;
+          setImagesList(Object.values(t[id]?.images || {}));
+        }
+      } else if (page === "services" && id !== undefined) {
+        const images = t[id]?.images ? Object.values(t[id]?.images) : [];
+        setImagesList(images);
+      }
+    };
+
+    fetchImagesList();
+  }, [page, id, keyImagesAbout, t]);
 
   const handleOpenBackdrop = (index: number) => {
     setCurrentIndex(index);

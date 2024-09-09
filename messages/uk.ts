@@ -490,17 +490,17 @@ const uk: FullTranslation = {
           },
           images: {
             1: {
-              id: "1",
+              id: "1754",
               src: "/images/services/3baza_n.jpg",
               alt: "Виробничий цех з металевими листами на станку для різання",
             },
             2: {
-              id: "2",
+              id: "29567",
               src: "/images/services/4baza_n.jpg",
               alt: "Складська зона з великими рулонами металу, підвішеними на кран",
             },
             3: {
-              id: "3",
+              id: "3234",
               src: "/images/services/5baza_n.jpg",
               alt: "Робітники на виробничій лінії, що працюють з металевими деталями в цеху",
             },
@@ -551,17 +551,17 @@ const uk: FullTranslation = {
           },
           images: {
             1: {
-              id: "1",
+              id: "12148",
               src: "/images/services/montazh_foto4.webp",
               alt: "Офісний простір з встановленою системою вентиляції",
             },
             2: {
-              id: "2",
+              id: "20000",
               src: "/images/services/montazh_foto5.jpg",
               alt: "A warehouse area with large rolls of metal suspended from a crane",
             },
             3: {
-              id: "3",
+              id: "311111",
               src: "/images/services/5baza_n.jpg",
               alt: "Workers on a production line working with metal parts in a workshop",
             },
@@ -611,17 +611,17 @@ const uk: FullTranslation = {
           },
           images: {
             1: {
-              id: "1",
+              id: "19456",
               src: "/images/services/kvpia.jpg",
               alt: "Відкрита панель керування готова до експлуатації",
             },
             2: {
-              id: "2",
+              id: "2025436",
               src: "/images/services/kvpia1.webp",
               alt: " Стінна інсталяція з шести електричних панелей керування",
             },
             3: {
-              id: "3",
+              id: "30236",
               src: "/images/services/kvpia2.jpg",
               alt: "Дві VLT Micro Drive інвертори, встановлені в панелі керування ",
             },
@@ -671,17 +671,17 @@ const uk: FullTranslation = {
           },
           images: {
             1: {
-              id: "1",
+              id: "10191",
               src: "/images/services/postavka4.jpg",
               alt: "Технічне приміщення з вентиляційним обладнанням VTS,",
             },
             2: {
-              id: "2",
+              id: "20606",
               src: "/images/services/postavka5.jpg",
               alt: "Охолоджувальний пристрій Lennox, розташований на даху будівлі",
             },
             3: {
-              id: "3",
+              id: "304040",
               src: "/images/services/postavka3.jpg",
               alt: "Охолоджувальний пристрій, встановлений на даху будівлі.",
             },
@@ -735,18 +735,18 @@ const uk: FullTranslation = {
           },
           images: {
             1: {
-              id: "1",
-              src: "/images/services/f6_3.jpg",
+              id: "1656565",
+              src: "/images/services/debugging-works1.jpg",
               alt: "Повітропровід підвішений під стелею промислового приміщення.",
             },
             2: {
-              id: "2",
-              src: "/images/services/f6_3.jpg",
+              id: "2879876",
+              src: "/images/services/debugging-works1.jpg",
               alt: "Повітропровід підвішений під стелею промислового приміщення.",
             },
             3: {
-              id: "3",
-              src: "/images/services/f6_3.jpg",
+              id: "301245",
+              src: "/images/services/debugging-works1.jpg",
               alt: "Повітропровід підвішений під стелею промислового приміщення.",
             },
           },
@@ -800,17 +800,17 @@ const uk: FullTranslation = {
           },
           images: {
             1: {
-              id: "1",
+              id: "182222",
               src: "/images/services/passporting-of-ventilation-systems.jpg",
               alt: "Сучасна вентиляційна система на зовнішній стіні будівлі.",
             },
             2: {
-              id: "2",
+              id: "2077777",
               src: "/images/services/passporting-of-ventilation-systems.jpg",
               alt: "Сучасна вентиляційна система на зовнішній стіні будівлі.",
             },
             3: {
-              id: "3",
+              id: "3887878",
               src: "/images/services/passporting-of-ventilation-systems.jpg",
               alt: "Сучасна вентиляційна система на зовнішній стіні будівлі.",
             },
@@ -860,17 +860,17 @@ const uk: FullTranslation = {
           },
           images: {
             1: {
-              id: "1",
+              id: "170002",
               src: "/images/services/servis_foto1.jpg",
               alt: "Охолоджувальне обладнання Hitachi на даху будівлі",
             },
             2: {
-              id: "2",
+              id: "2055553",
               src: "/images/services/servis_foto2.webp",
               alt: "Охолоджувальні системи LG та Multi V.5 на даху будівлі.",
             },
             3: {
-              id: "3",
+              id: "3182019",
               src: "/images/services/servis_foto6.jpg",
               alt: "",
             },
@@ -926,6 +926,7 @@ const uk: FullTranslation = {
       title: "Про процесс",
       phone: "Залишити заявку",
       btnForm: "зробити розрахунок",
+      btnBack:"повернутись назад"
     },
   },
   ContactsPage: {
