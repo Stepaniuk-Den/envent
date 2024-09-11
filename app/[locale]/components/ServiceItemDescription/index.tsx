@@ -26,8 +26,8 @@ const ServiceItemDescription:React.FC<{t: PropsServiceCard,about:IServiceAboutPr
   const isSpecialPathService = pathname === "/services/service-maintenance";
 
   return (
-    <section className={`${styles.service_item} container`}>
-      <div className={styles.service_container}>
+    <section>
+      <div className={`${styles.service_container} container`}>
         <AnimatedText>
           <p className={styles.text}>{parseHTMLString(p1)}</p>
         </AnimatedText>

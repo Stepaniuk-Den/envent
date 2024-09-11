@@ -6,12 +6,13 @@
   .about_container {
     display: flex;
     height: 730px;
-    background-color: var(--color-dark);
+    
     // flex-direction: row;
 
     .left_container {
       padding: 93px 37px 269px 37px;
       width: 440px;
+      background-color: var(--color-dark);
 
       .wrapper_title {
         display: flex;

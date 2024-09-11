@@ -17,13 +17,11 @@ const ServiceCard = ({ t, serviceId }: { t: PropsServiceCard, serviceId: number 
     secondBtn,
     alignRight = false,
     hero,
-    images,
     imgCard,
   } = t;
+
   const { update } = useCarouselServiceStore();
 
-  
-  
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -58,8 +56,7 @@ const ServiceCard = ({ t, serviceId }: { t: PropsServiceCard, serviceId: number 
         </div>
         <p className={styles.text}>{hero.description}</p>
         <div className={styles.wrapper_img}>
-        {imagesList.map(([key, image],index) => (
-            // <div key={`${serviceId}-${key}`} className=
+        {imagesList.map(([key, image]) => (
             <div key={`${serviceId}-${image.id}`} className={styles.thumb}>
               <Image src={`${image.src}?v=1`} alt={image.alt} width={220} height={160} />
             </div>
