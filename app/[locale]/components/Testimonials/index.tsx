@@ -27,11 +27,10 @@ const Testimonials = ({ t }: ITestimonialsProps) => {
     currentIndex !== null ? itemsList[currentIndex] : null;
 
   return (
-    <motion.section
-      ref={ref}
-      className={`${styles.testimonials}`}
-      style={{ y, opacity }}
+    <section   
+      className={`${styles.testimonials} container`}
     >
+      <motion.div className={`${styles.wrapper}`} ref={ref} style={{ y, opacity }}>
       <ul className={styles.list}>
         <li className={styles.item}>
           <h3 className={styles.title}>
@@ -90,7 +89,8 @@ const Testimonials = ({ t }: ITestimonialsProps) => {
           </div>
         </li>
       </ul>
-    </motion.section>
+      </motion.div>
+    </section>
   );
 };
 

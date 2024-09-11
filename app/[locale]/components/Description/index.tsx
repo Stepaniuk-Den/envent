@@ -19,11 +19,11 @@ const Description = ({
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "start start"],
+    offset: ["start end", "end start"],
   });
 
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
-  const x = useTransform(scrollYProgress, [0.3, 0.8], [-200, 0]);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const x = useTransform(scrollYProgress, [0.2, 0.8], [-200, 0]);
   const opacity = useTransform(scrollYProgress, [0.3, 0.8], [0, 1]);
   // const { scrollY } = useScroll(); // 1 variant (tracking in pixels)
   // const x = useTransform(scrollY, [200, 500], [-200, 0]); // 1 variant
@@ -34,7 +34,13 @@ const Description = ({
   return (
     <section ref={ref} className={`${styles.description} container`}>
       <div className={styles.description_container}>
-        <motion.div className={styles.thumb} style={{ x, opacity }}>
+        <motion.div 
+        className={styles.thumb} 
+        // style={{ x, opacity }}
+        initial={{ x: -200, opacity: 0 }}
+          animate={isInView ? { x: 0, opacity: 1 } : {}}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+        >
           <Image priority src={RiverMall} alt="riverMall image" />
         </motion.div>
 
