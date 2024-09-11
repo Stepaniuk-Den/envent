@@ -12,7 +12,7 @@ const QuestionsList: React.FC<{ t: IProps }> = ({ t }) => {
   const { keyQuestionsContacts } = useQuestionsContactsStore();
 
   return (
-    <div>
+    <div className={styles.list_wrapper}>
       <ul className={styles.list}>
         {questionList.map((value, index) => {
           const { title, description } = value;

@@ -7,9 +7,11 @@ type Props = {
 
 const AboutQuoteSection: React.FC<{ t: Props }> = ({ t }) => {
   return (
-    <section className={styles.quote_wrapper}>
-      <p className={styles.quote}>{`"${t.quote}"`}</p>
-      <p className={styles.name}>{t.name}</p>
+    <section>
+      <div className={`${styles.quote_wrapper} container`}>
+        <p className={styles.quote}>{`"${t.quote}"`}</p>
+        <p className={styles.name}>{t.name}</p>
+      </div>
     </section>
   );
 };

@@ -7,6 +7,14 @@
   width: 420px;
   margin: auto 0;
 
+  @include lg {
+    width: 350px;
+  }
+
+  @include md {
+    display: none;
+  }
+
   .list_title {
     @include text-title-h3-rubik;
     display: flex;

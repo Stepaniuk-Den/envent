@@ -21,7 +21,7 @@ const QuestionsSection: React.FC<Props> = async ({
 }) => {
   unstable_setRequestLocale(locale);
 
-  const footerT = await localize(ContactUsT);
+  const contactUsT = await localize(ContactUsT);
   const questionsT = await localize(QuestionsT);
   const questionCardT = await localize(QuestionCardT);
   const questionType =
@@ -35,7 +35,7 @@ const QuestionsSection: React.FC<Props> = async ({
       }`}
     >
       <div className={`${styles.wrapper} container`}>
-        {type === "form" && <ContactUsForm className="touch" t={footerT} />}
+        {type === "form" && <ContactUsForm className="touch" t={contactUsT} />}
         {type !== "form" && (
           <QuestionCard
             title={title}

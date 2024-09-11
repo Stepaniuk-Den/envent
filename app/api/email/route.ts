@@ -1,6 +1,9 @@
+// import { render } from "@react-email/components";
 import { type NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
+import { EmailMessage } from "../../[locale]/components/EmailMessage";
+import { render } from "@react-email/render";
 
 export async function POST(request: NextRequest) {
   const { email, name, message } = await request.json();
@@ -21,6 +24,8 @@ export async function POST(request: NextRequest) {
       pass: process.env.PASSWORD,
     },
   });
+
+  // const emailHtml = render();
 
   const mailOptions: Mail.Options = {
     from: process.env.EMAIL,

@@ -44,7 +44,7 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
       setIsModalOpen(true);
       reset();
     } catch (err: any) {
-      setModalMessage(`${t.msg_error} ${(<br />)} ${err.message}`);
+      setModalMessage(`${t.msg_error} ${err.message}`);
       setIsModalOpen(true);
       setIsError(true);
     }

@@ -1,65 +1,74 @@
 @import "../../mixin.scss";
-
-.best_wrapper {
+.best_container {
   display: flex;
   flex-direction: column;
-  max-width: 1280px;
-  background-color: var(--color-bg-light);
 
-  .list_wrapper {
+  .best_wrapper {
     display: flex;
-    flex-direction: column;
-    width: 440px;
-    height: 870px;
-    padding: 86px 68px 36px;
-    font-family: var(--font-rubik);
+    background-color: var(--color-bg-light);
+    @include lg {
+      // flex-direction: column;
+    }
 
-    .title {
-      @include text-title-h3-rubik;
+    .list_wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 440px;
+      // height: 870px;
+      padding: 86px 68px 36px;
+      font-family: var(--font-rubik);
+      @include lg {
+        padding: 86px 20px 36px;
+        width: 350px;
+      }
+
+      .title {
+        @include text-title-h3-rubik;
+      }
+    }
+
+    .image_wrapper {
+      display: flex;
+      flex-direction: column;
+      // max-width: 840px;
+      height: 870px;
+
+      .count,
+      .description_project {
+        @include text-title-h2-rubik;
+        line-height: 50.4px;
+      }
+
+      .text {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 50.4px; /* 420% */
+        letter-spacing: 0.24px;
+        text-transform: uppercase;
+      }
+
+      .fix_width {
+        min-width: max-content;
+      }
+
+      .description {
+        z-index: 1;
+      }
     }
   }
-
-  .image_wrapper {
-    display: flex;
-    flex-direction: column;
-    max-width: 840px;
-    height: 870px;
-
-    .count,
-    .description_project {
-      @include text-title-h2-rubik;
-      line-height: 50.4px;
-    }
-
-    .text {
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 50.4px; /* 420% */
-      letter-spacing: 0.24px;
-      text-transform: uppercase;
-    }
-
-    .fix_width {
-      min-width: max-content;
-    }
-
-    .description {
-      z-index: 1;
-    }
-  }
-
   .coworkers_wrapper {
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    background-color: var(--color-bg-light);
 
     p {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: clamp(300px, 100%, 420px);
+      width: 420px;
       height: 130px;
 
       font-family: var(--font-rubik);

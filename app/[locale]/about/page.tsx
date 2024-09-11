@@ -27,7 +27,7 @@ const About: React.FC<Props> = async ({ params: { locale } }) => {
       <Hero imageSrc={HeroAboutBG} className="about" t={aboutT.hero}>
         <HeroRightSideList className="about" t={heroRightSideT.todo} />
       </Hero>
-      <div className={`${styles.about_us} container`}>
+      <div className={styles.about_us}>
         <AnimatedTitle title={aboutT.about.title} />
         <Line className="yellow-center" />
         <AboutDescriptionsSection t={aboutT.about.description} />

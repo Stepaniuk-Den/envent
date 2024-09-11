@@ -12,6 +12,7 @@ import BackdropButton from "../Buttons/BackdropButton";
 import useMeasure from "react-use-measure";
 import PrevNextButtons from "../ImagesCarouselPrevNextButtons";
 import { IImageItem } from "@/helpers/interfaces";
+import { useModal } from "@/helpers/useModal";
 
 export interface IListCarouselProps {
   [key: number]: {
@@ -47,24 +48,7 @@ const ImagesCarousel: React.FC<{
     setCurrentIndex(0);
   }, [id]);
 
-  useEffect(() => {
-    if (isOpen) {
-      document.documentElement.style.overflow = "hidden";
-    } else {
-      document.documentElement.style.overflow = "auto";
-    }
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.code === "Escape") {
-        setIsOpen(false);
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-      document.documentElement.style.overflow = "auto";
-    };
-  }, [isOpen]);
+  useModal(isOpen, setIsOpen);
 
   return (
     <div className={styles.carousel_container} ref={ref}>
