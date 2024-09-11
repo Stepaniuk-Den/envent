@@ -1,6 +1,9 @@
+// import { render } from "@react-email/components";
 import { type NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 import Mail from "nodemailer/lib/mailer";
+import { EmailMessage } from "../../[locale]/components/EmailMessage";
+// import { render } from "@react-email/render";
 
 export async function POST(request: NextRequest) {
   const { email, name, message } = await request.json();
@@ -22,12 +25,17 @@ export async function POST(request: NextRequest) {
     },
   });
 
+  // const emailHtml = render(
+  //   <EmailMessage name={name} email={email} message={message} />
+  // );
+
   const mailOptions: Mail.Options = {
     from: process.env.EMAIL,
     to: process.env.EMAIL,
     cc: email, //(uncomment this line if you want to send a copy to the sender)
     subject: `Message from ${name} (${email})`,
     text: message,
+    // html: emailHtml,
     html: `
     <p>This message was sent from the website ${process.env.SITE_DOMAIN}</p>
     <p>sender: <b>${name}</b></p>
@@ -50,6 +58,7 @@ export async function POST(request: NextRequest) {
 
   try {
     await sendMailPromise();
+    // transporter.sendMail(mailOptions);
     return NextResponse.json({ message: "Email sent" });
   } catch (err) {
     return NextResponse.json({ error: err }, { status: 500 });

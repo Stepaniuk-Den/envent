@@ -55,4 +55,8 @@
 
 .blue_dark {
   font-family: var(--font-rubik);
+  .btn {
+    max-width: 420px;
+    width: 100%;
+  }
 }

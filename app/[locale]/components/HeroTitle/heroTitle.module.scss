@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // margin: auto 0;
 
   .title_сontainer {
     border-left: 10px solid var(--color-accent-yellow);
@@ -25,6 +24,14 @@
       font-family: var(--font-open-sands);
       font-size: 22px;
       line-height: 1.45; /* 145% */
+
+      @include lg {
+        width: 600px;
+      }
+
+      @include sm {
+        width: 100%;
+      }
     }
   }
 }
