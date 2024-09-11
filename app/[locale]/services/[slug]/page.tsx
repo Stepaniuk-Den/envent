@@ -6,10 +6,8 @@ import { Metadata } from "next";
 import Hero from "../../components/Hero";
 import ServiceItemDescription from "../../components/ServiceItemDescription";
 import ServiceAboutProcess from "../../components/ServiceAboutProcess";
-import { MainPageT } from "@/messages/types/MainPageT";
-import ProjectSection from "../../components/ProjectsSection";
-import QuestionCard from "../../components/QuestionCard";
 import QuestionsSection from "../../components/QuestionsSection";
+import ImagesCarousel from "../../components/ImagesCarousel";
 
 type Props = {
   params: {
@@ -17,6 +15,8 @@ type Props = {
     locale: string;
   };
 };
+
+
 
 export async function generateMetadata({
   params: { slug, locale },
@@ -26,6 +26,7 @@ export async function generateMetadata({
   const service = Object.values(servicesT.services.service).find(
     (service) => service.slug === slug
   );
+  
 
   if (!service) {
     return {
@@ -50,15 +51,28 @@ export async function generateMetadata({
   };
 }
 
+
+
 const ServiceItemPage = async ({ params: { slug, locale } }: Props) => {
   unstable_setRequestLocale(locale);
   const servicesT = await localize(ServicesPageT);
-  const mainT = await localize(MainPageT);
 
   const service = Object.values(servicesT.services.service).find(
     (service) => service.slug === slug
   );
 
+  const findIdBySlug = (slug: string) => {
+    const service = Object.values(servicesT.services.service).find(
+      (service) => service.slug === slug
+    );
+    return service ? service.id : null;
+  };
+
+  const id = findIdBySlug(slug);
+  if (id === null) {
+    return notFound();
+  }
+  
   if (!service) {
     return notFound();
   }
@@ -66,11 +80,12 @@ const ServiceItemPage = async ({ params: { slug, locale } }: Props) => {
   return (
     <div>
       <Hero imageSrc={service.heroBG} className="about" t={service.hero}></Hero>
-      <ServiceItemDescription t={service} />
+      <ServiceItemDescription t={service} about={servicesT.about} />
       <ServiceAboutProcess
         t={service}
         about={servicesT.about}
         service={servicesT.services}
+        id={Number(id)}
       />
       <QuestionsSection type="faq" params={{ locale }} />
     </div>

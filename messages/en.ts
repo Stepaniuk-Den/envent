@@ -488,17 +488,17 @@ const en: FullTranslation = {
           },
           images: {
             1: {
-              id: "1",
+              id: "1754",
               src: "/images/services/3baza_n.jpg",
               alt: "A production shop with metal sheets on a cutting machine.",
             },
             2: {
-              id: "2",
+              id: "29567",
               src: "/images/services/4baza_n.jpg",
               alt: "A warehouse area with large rolls of metal suspended from a crane",
             },
             3: {
-              id: "3",
+              id: "3234",
               src: "/images/services/5baza_n.jpg",
               alt: "Workers on a production line working with metal parts in a workshop",
             },
@@ -525,9 +525,9 @@ const en: FullTranslation = {
             "/images/services/production-and-sale-of-finished-products.webp",
           secondBtn: "learn more",
           p1: "Air ducts are one of the most important elements of ventilation and air conditioning systems. Together with other devices, they ensure air transportation in the ventilation system.",
-          p2: "Classification of air ducts.<br /> According to the configuration, there are air ducts of rectangular, square and round sections. They are made of straight and shaped component parts. The dimensions and types of air ducts are established in BSN 353-86 'Design and application of air ducts from unified parts', TU 36-736-93 'Metal ventilation ducts', SNiP 2.04.05-91 'Heating, ventilation, air conditioning systems'. without flange and welded.",
-          p3: "Metal air ducts.<br />Normal air ducts of round and rectangular section are made of sheet galvanized or stainless steel. Air ducts of round section can be made of tape with a width of 125 to 135 mm (spiral-wound) or, in the same way as rectangular, - from a sheet (straight-seam). Round air ducts are more economical in terms of metal consumption and labor costs in comparison with rectangular ones.",
-          p4: "Manufacturing air ducts.<br /> The company's products are round straight-seam, spirally wound and rectangular metal air ducts that comply with GOST 24 751-81 and SNiP 2.04.05-91 (the entire size range), shaped parts for air ducts and non-standard ventilation products. The material is galvanized or stainless steel with a thickness of up to 0.9 mm. The production of air ducts is substantially automated. a bending machine, a profiling machine and much more - ensures high labor productivity and high quality of air ducts and other ventilation products.",
+          p2: "Classification of  air ducts<s/>.<br /> According to the configuration, there are air ducts of rectangular, square and round sections. They are made of straight and shaped component parts. The dimensions and types of air ducts are established in BSN 353-86 'Design and application of air ducts from unified parts', TU 36-736-93 'Metal ventilation ducts', SNiP 2.04.05-91 'Heating, ventilation, air conditioning systems'. without flange and welded.",
+          p3: "Metal air ducts.<s/><br />Normal air ducts of round and rectangular section are made of sheet galvanized or stainless steel. Air ducts of round section can be made of tape with a width of 125 to 135 mm (spiral-wound) or, in the same way as rectangular, - from a sheet (straight-seam). Round air ducts are more economical in terms of metal consumption and labor costs in comparison with rectangular ones.",
+          p4: "Manufacturing air ducts.<s/><br /> The company's products are round straight-seam, spirally wound and rectangular metal air ducts that comply with GOST 24 751-81 and SNiP 2.04.05-91 (the entire size range), shaped parts for air ducts and non-standard ventilation products. The material is galvanized or stainless steel with a thickness of up to 0.9 mm. The production of air ducts is substantially automated. a bending machine, a profiling machine and much more - ensures high labor productivity and high quality of air ducts and other ventilation products.",
           process: {
             text: "'Energoventilatsia' LLC automated the production of air ducts using:",
             list: {
@@ -549,17 +549,17 @@ const en: FullTranslation = {
           },
           images: {
             1: {
-              id: "1",
+              id: "12148",
               src: "/images/services/montazh_foto4.webp",
               alt: "Office space with installed ventilation system",
             },
             2: {
-              id: "2",
+              id: "20000",
               src: "/images/services/montazh_foto5.jpg",
               alt: "A warehouse area with large rolls of metal suspended from a crane",
             },
             3: {
-              id: "3",
+              id: "311111",
               src: "/images/services/5baza_n.jpg",
               alt: "Workers on a production line working with metal parts in a workshop",
             },
@@ -609,17 +609,17 @@ const en: FullTranslation = {
           },
           images: {
             1: {
-              id: "1",
+              id: "19456",
               src: "/images/services/kvpia.jpg",
               alt: "The open control panel is ready for use",
             },
             2: {
-              id: "2",
+              id: "2025436",
               src: "/images/services/kvpia1.webp",
               alt: "Wall installation of six electrical control panels",
             },
             3: {
-              id: "3",
+              id: "30236",
               src: "/images/services/kvpia2.jpg",
               alt: "Two VLT Micro Drive inverters installed in the control panel ",
             },
@@ -669,17 +669,17 @@ const en: FullTranslation = {
           },
           images: {
             1: {
-              id: "1",
+              id: "10191",
               src: "/images/services/postavka4.jpg",
               alt: "Technical room with VTS ventilation equipment,",
             },
             2: {
-              id: "2",
+              id: "20606",
               src: "/images/services/postavka5.jpg",
               alt: "Lenox cooling unit located on the roof of the building",
             },
             3: {
-              id: "3",
+              id: "304040",
               src: "/images/services/postavka3.jpg",
               alt: "A cooling device mounted on the roof of a building.",
             },
@@ -733,17 +733,17 @@ const en: FullTranslation = {
           },
           images: {
             1: {
-              id: "1",
+              id: "1656565",
               src: "/images/services/debugging-works1.jpg",
               alt: "The air duct is suspended under the ceiling of the industrial premises.",
             },
             2: {
-              id: "2",
+              id: "2879876",
               src: "/images/services/debugging-works1.jpg",
               alt: "The air duct is suspended under the ceiling of the industrial premises.",
             },
             3: {
-              id: "3",
+              id: "301245",
               src: "/images/services/debugging-works1.jpg",
               alt: "The air duct is suspended under the ceiling of the industrial premises.",
             },
@@ -798,17 +798,17 @@ const en: FullTranslation = {
           },
           images: {
             1: {
-              id: "1",
+              id: "182222",
               src: "/images/services/passporting-of-ventilation-systems.jpg",
               alt: "Modern ventilation system on the outer wall of the building.",
             },
             2: {
-              id: "2",
+              id: "2077777",
               src: "/images/services/passporting-of-ventilation-systems.jpg",
               alt: "Modern ventilation system on the outer wall of the building.",
             },
             3: {
-              id: "3",
+              id: "3887878",
               src: "/images/services/passporting-of-ventilation-systems.jpg",
               alt: "Modern ventilation system on the outer wall of the building.",
             },
@@ -858,17 +858,17 @@ const en: FullTranslation = {
           },
           images: {
             1: {
-              id: "1",
+              id: "170002",
               src: "/images/services/servis_foto1.jpg",
               alt: "Hitachi cooling equipment on the roof of a building",
             },
             2: {
-              id: "2",
+              id: "2055553",
               src: "/images/services/servis_foto2.webp",
               alt: "LG and Multi V.5 cooling systems on the roof of the building.",
             },
             3: {
-              id: "3",
+              id: "3182019",
               src: "/images/services/servis_foto6.jpg",
               alt: "",
             },
@@ -924,6 +924,7 @@ const en: FullTranslation = {
       title: "About Process",
       phone: "Call for a Quote",
       btnForm: "Online estimate form",
+      btnBack:"back",
     },
   },
   ContactsPage: {
