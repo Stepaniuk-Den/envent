@@ -1,0 +1,5 @@
+@import "../../mixin.scss";
+
+.name {
+  @include text-title-h3-rubik;
+}

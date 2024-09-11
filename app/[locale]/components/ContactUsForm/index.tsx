@@ -33,6 +33,9 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
 
   useModal(isModalOpen, setIsModalOpen);
 
+  // const onSubmit = (data: FormData) => {
+  //   sendEmail(data);
+  // };
   const onSubmit = async (data: FormData) => {
     try {
       const response = await sendEmail(data);

@@ -13,13 +13,14 @@
     .list_wrapper {
       display: flex;
       flex-direction: column;
-      width: 440px;
+      // width: 440px;
       // height: 870px;
-      padding: 86px 68px 36px;
+      padding: 86px 68px 170px;
       font-family: var(--font-rubik);
+      flex: 1;
       @include lg {
-        padding: 86px 20px 36px;
-        width: 350px;
+        padding: 86px 20px 170px;
+        // width: 350px;
       }
 
       .title {
@@ -31,7 +32,13 @@
       display: flex;
       flex-direction: column;
       // max-width: 840px;
+      // width: 100%;
       height: 870px;
+      flex: 2;
+
+      @include lg {
+        height: 750px;
+      }
 
       .count,
       .description_project {
@@ -48,10 +55,6 @@
         text-transform: uppercase;
       }
 
-      .fix_width {
-        min-width: max-content;
-      }
-
       .description {
         z-index: 1;
       }
@@ -62,13 +65,15 @@
     justify-content: flex-end;
     width: 100%;
     background-color: var(--color-bg-light);
+    flex: 2;
 
     p {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 420px;
+      max-width: 420px;
+      width: 100%;
       height: 130px;
 
       font-family: var(--font-rubik);
@@ -77,6 +82,10 @@
       line-height: 50.4px; /* 420% */
       letter-spacing: 0.24px;
       text-transform: uppercase;
+
+      @include lg {
+        flex: 1;
+      }
 
       span {
         font-size: 40px;

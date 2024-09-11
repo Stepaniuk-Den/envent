@@ -55,17 +55,17 @@ const AboutBestSection: React.FC<{ t: Best }> = ({ t }) => {
                 </>
               }
             />
+            <div className={styles.coworkers_wrapper}>
+              <p>
+                <span>100</span>
+                {buttons.workers}
+              </p>
+              <p>
+                <span>25</span>
+                {buttons.stuff}
+              </p>
+            </div>
           </div>
-        </div>
-        <div className={styles.coworkers_wrapper}>
-          <p>
-            <span>100</span>
-            {buttons.workers}
-          </p>
-          <p>
-            <span>25</span>
-            {buttons.stuff}
-          </p>
         </div>
       </div>
     </section>
