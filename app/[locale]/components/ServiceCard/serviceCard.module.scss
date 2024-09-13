@@ -21,14 +21,28 @@
   .container {
     padding: 100px 0;
 
+    @include sm {
+      padding: 50px 0;
+    }
+
     &.right_padding {
       padding-left: 134px;
       padding-right: 62px;
+
+      @include sm {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
 
     &.left_padding {
       padding-right: 134px;
       padding-left: 62px;
+
+      @include sm {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
     .text {
       @include text-main-openSands;
@@ -57,6 +71,11 @@
       box-shadow: 0 6px 10px var(--color-dark-box-shadow);
       transform: scale(1);
       transition: transform 800ms ease-in-out;
+
+      @include sm {
+        width: 100px;
+        height: 60px;
+      }
 
       &:hover {
         transform: scale(1.2);

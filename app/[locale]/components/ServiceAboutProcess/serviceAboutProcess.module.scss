@@ -7,12 +7,19 @@
     display: flex;
     height: 730px;
     
-    // flex-direction: row;
+    @include sm {
+      flex-direction: column;
+    }
 
     .left_container {
       padding: 93px 37px 269px 37px;
       width: 440px;
       background-color: var(--color-dark);
+
+      @include sm {
+        width: 100%;
+        padding: 50px 20px;
+      }
 
       .wrapper_title {
         display: flex;
