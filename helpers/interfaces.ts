@@ -52,7 +52,7 @@ export interface IButtonVariableColor {
 }
 
 export interface ILineProps {
-  className: "yellow-left" | "yellow-center" | "dark";
+  className: "yellow-left" | "yellow-center";
 }
 
 export interface IMainButtonProps {
@@ -201,7 +201,7 @@ export interface IServiceAboutProps {
   title: string;
   phone: string;
   btnForm: string;
-  btnBack?:string;
+  btnBack?: string;
 }
 
 export interface IImageItem {

@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const textVariants = {
   initial: {
@@ -22,8 +23,13 @@ const textVariants = {
 const AnimatedText: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
+  const isMobile = useMediaQuery({ maxWidth: 767.98 });
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.8, margin: "10%" });
+  const isInView = useInView(ref, {
+    once: false,
+    amount: 0.8,
+    margin: isMobile ? "30%" : "10%",
+  });
   return (
     <motion.div
       ref={ref}

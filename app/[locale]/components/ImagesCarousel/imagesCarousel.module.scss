@@ -85,10 +85,20 @@
 .modalContent {
   position: relative;
   width: 60vw;
-  height: 80vh;
+  height: inherit;
+
+  @include md {
+    width: 90vw;
+    height: 90%;
+  }
 
   .images {
     object-fit: cover;
+
+    @include md {
+      object-fit: contain;
+      // margin: 20px 0;
+    }
   }
 }
 
@@ -103,4 +113,8 @@
   bottom: -30px;
   color: var(--color-accent-blue);
   font-size: 16px;
+
+  @include md {
+    bottom: 30px;
+  }
 }
