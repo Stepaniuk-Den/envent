@@ -1,3 +1,5 @@
+@import "../../mixin.scss";
+
 .quote_wrapper {
   width: 590px;
   padding: 100px 0 250px;
@@ -5,6 +7,10 @@
   font-family: var(--font-rubik);
   font-weight: 500;
   line-height: 48px; /* 160% */
+
+  @include sm {
+    width: 100%;
+  }
 
   .quote {
     font-size: 30px;
