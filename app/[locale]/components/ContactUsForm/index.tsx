@@ -13,6 +13,7 @@ import { sendEmail } from "@/utils/send-email";
 import { useModal } from "@/helpers/useModal";
 import { ContactUsT } from "@/messages/types/ContactUsT";
 import { parseHTMLString } from "@/helpers/parseHTMLString";
+import dynamic from "next/dynamic";
 
 interface Props {
   t: ContactUsT;
@@ -24,6 +25,10 @@ export type FormData = {
   email: string;
   message: string;
 };
+
+const MediaQuery = dynamic(() => import("react-responsive"), {
+  ssr: false,
+});
 
 const ContactUsForm: React.FC<Props> = ({ className, t }) => {
   const { register, handleSubmit, reset } = useForm<FormData>();
