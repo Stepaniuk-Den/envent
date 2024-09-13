@@ -120,8 +120,8 @@ address {
 @import "./responsive.scss";
 
 .container {
-  max-width: 1280px;
-  width: 100%;
+  width: 1280px;
+  // width: 100%;
   margin: 0 auto;
   padding: 0 30px;
 
@@ -131,11 +131,11 @@ address {
   }
 
   @include md {
-    max-width: 768px;
+    width: 768px;
   }
 
   @include sm {
-    max-width: 375px;
+    width: 375px;
     padding: 0 10px;
   }
 }

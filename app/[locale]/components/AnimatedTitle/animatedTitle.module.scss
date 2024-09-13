@@ -2,4 +2,8 @@
 
 .title {
   @include text-title-h2-rubik;
+
+  @include md {
+    text-align: center;
+  }
 }

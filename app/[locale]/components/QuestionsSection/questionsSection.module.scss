@@ -10,10 +10,10 @@
   &.faq {
     padding-bottom: 250px;
   }
+
   .wrapper {
     display: flex;
     justify-content: space-between;
-    width: 100%;
 
     @include md {
       flex-direction: column;
