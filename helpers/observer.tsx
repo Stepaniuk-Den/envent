@@ -8,17 +8,19 @@ const Observer = ({
   duration,
   x,
   y,
+  once = false,
 }: {
   children: React.ReactNode;
   threshold: number;
   duration: string;
   x?: number;
   y?: number;
+  once?: boolean;
 }) => {
   x = x || 0;
   y = y || 0;
 
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const [intersecting, setIntersecting] = useState(false);
 
   useEffect(() => {
@@ -27,8 +29,13 @@ const Observer = ({
         (entries) => {
           if (entries[0].isIntersecting) {
             setIntersecting(true);
+            if (once) {
+              observer.unobserve(ref.current!);
+            }
           } else {
-            setIntersecting(false);
+            if (!once) {
+              setIntersecting(false);
+            }
           }
         },
         {
@@ -43,7 +50,7 @@ const Observer = ({
         }
       };
     }
-  }, []);
+  }, [threshold, once]);
   return (
     <div
       style={{
