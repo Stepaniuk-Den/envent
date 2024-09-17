@@ -91,7 +91,39 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
 
   return (
     <>
-      <motion.div
+      <div className={`${styles.form_container} ${styles[className]}`}>
+        <h2 className={styles.title}>{t.formTitle}</h2>
+        <Line className="yellow-left" />
+        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+          <div className={styles.input_container}>
+            <input
+              type="text"
+              id="name"
+              placeholder={t.placeholderName}
+              {...register("name", { required: true })}
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder={t.placeholderEmail}
+              {...register("email", { required: true })}
+            />
+          </div>
+          <textarea
+            id="message"
+            placeholder={t.placeholderMessage}
+            {...register("message", { required: true })}
+          />
+          <MainButton
+            type="submit"
+            className={className === "footer" ? "contact_us" : "contacts"}
+            color={className === "footer" ? "white" : "black"}
+          >
+            {t.button}
+          </MainButton>
+        </form>
+      </div>
+      {/* <motion.div
         className={`${styles.form_container} ${styles[className]}`}
         initial="hidden"
         animate="visible"
@@ -127,7 +159,7 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
             {t.button}
           </MainButton>
         </form>
-      </motion.div>
+      </motion.div> */}
       {isModalOpen && (
         <Modal className="message">
           <p className={styles.p1}>{parseHTMLString(modalMessage)[0]}</p>
