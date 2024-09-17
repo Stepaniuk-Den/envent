@@ -1,11 +1,11 @@
 @import "../../mixin.scss";
 
 .footer {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 500px;
-  position: relative;
   width: 100vw;
   background-repeat: no-repeat;
   background-position: center;
@@ -36,12 +36,21 @@
     display: flex;
     height: 500px;
     margin-top: -150px;
+
     font-family: var(--font-rubik);
 
     @include md {
-      // flex-direction: column;
-      height: max-content;
+      height: 595px;
     }
+    @include sm {
+      flex-direction: column;
+    }
+
+    // &.scrolled {
+    //   opacity: 1;
+    //   transform: translateY(0);
+    //   // animation: fade-in 3s forwards;
+    // }
 
     .contacts_container {
       display: flex;
@@ -49,13 +58,9 @@
       flex: 1;
       background-color: var(--color-white);
 
-      // @include md {
-      //   // flex-direction: row;
-      //   background-color: transparent;
-
-      //   margin-top: 50px;
-      //   margin-bottom: 50px;
-      // }
+      @include sm {
+        display: none;
+      }
 
       .social_container {
         display: flex;
@@ -128,5 +133,22 @@
     align-items: center;
     color: var(--color-white);
     background-color: var(--color-accent-blue);
+  }
+}
+
+.scrolled {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fade-in 3s forwards;
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

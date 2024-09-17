@@ -6,10 +6,10 @@ import Logo from "@/public/images/logo-envent-no-bg.png";
 import Image from "next/image";
 import { Link } from "@/navigation";
 import { Clock, Email, Phone } from "@/helpers/imagesImport";
-// import dynamic from "next/dynamic";
 import Navigation from "../Navigation";
 import SocialList from "../SocialList";
 import { HeaderT } from "@/messages/types/HeaderT";
+// import dynamic from "next/dynamic";
 
 const Header: React.FC<{ t: HeaderT }> = ({ t }) => {
   const { scrollY } = useScroll();
@@ -46,13 +46,13 @@ const Header: React.FC<{ t: HeaderT }> = ({ t }) => {
           />
         </Link>
         <ul className={styles.contacts}>
-          <motion.li className={styles.item}>
+          <li className={styles.item}>
             <Link href={"tel:+380445038377"} className={styles.link}>
               <Phone className={styles.svg} />
               {t.topList.call_us}
               <span>+38 (044) 503 83 77</span>
             </Link>
-          </motion.li>
+          </li>
           <li className={styles.item}>
             <Link href={"mailto:info@envent.kiev.ua"} className={styles.link}>
               <Email className={styles.svg} />

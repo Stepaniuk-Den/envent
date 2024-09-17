@@ -1,3 +1,5 @@
+@import "../../mixin.scss";
+
 .hero {
   position: relative;
   display: flex;
@@ -7,8 +9,13 @@
   height: 100vh;
   overflow: hidden;
   background-repeat: no-repeat;
+  // background-attachment: fixed;
   background-size: cover;
   color: var(--color-white);
+
+  // @include md {
+  //   height: 600px;
+  // }
 
   &::before {
     content: "";
