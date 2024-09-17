@@ -3,7 +3,7 @@ import ServiceCard from "../ServiceCard";
 import styles from "./services.module.scss"
 
 
-const Services: React.FC<{t:ServicesPageT["services"];}> = ({t}) => {
+const Services: React.FC<{t:ServicesPageT["services"],language:string}> = ({t,language}) => {
 const servicesList = Object.entries(t.service);
 
     return(
@@ -13,6 +13,7 @@ const servicesList = Object.entries(t.service);
           <ServiceCard
           serviceId={Number(key)}
           key={key}
+          language={language}
             t={{
               ...service,
               alignRight: idx % 2 === 0,

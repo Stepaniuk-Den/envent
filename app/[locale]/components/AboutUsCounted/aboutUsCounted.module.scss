@@ -1,23 +1,65 @@
 @import "../../mixin.scss";
 
-.hero {
-  position: relative;
-  display: flex;
-  width: 100vw;
-  height: 570px;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 120px;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  row-gap: 4rem;
 
+
+.parallax_section {
+  position: relative;
+  width: 100%;
+  height:650px;
+  padding-top: 120px;
+
+  
   @include sm {
+    height: 100%;
     padding-top: 70px;
     padding-bottom: 50px;
-    height: 100%;
   }
+}
+
+.parallax_child_section {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:700px;
+}
+
+
+.hero {
+  // position: relative;
+  // display: flex;
+  // width: 100vw;
+  // height: 570px;
+  // flex-direction: column;
+  // align-items: center;
+  // padding-top: 120px;
+  // background-attachment: fixed;
+  // background-position: center;
+  // background-size: cover;
+  // row-gap: 4rem;
+
+  // @include sm {
+  //   padding-top: 70px;
+  //   padding-bottom: 50px;
+  //   height: 100%;  
+  // }
+
+  background-attachment:scroll;
+  background-position: center center;
+  // background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(0);
+  will-change: transform;
+  z-index: -1;
+}
+
 
   .wrapper {
     display: flex;
@@ -81,4 +123,4 @@
       }
     }
   }
-}
+

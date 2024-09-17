@@ -64,6 +64,14 @@
     display: flex;
     justify-content: space-between;
 
+    @include sm {
+      // justify-content: center;
+      // :nth-child(2),
+      :nth-child(3) {
+        display: none;
+      }
+    }
+
     .thumb img {
       width: 220px;
       height: 160px;
@@ -73,8 +81,8 @@
       transition: transform 800ms ease-in-out;
 
       @include sm {
-        width: 100px;
-        height: 60px;
+        width: 160px;
+        height: 100px;
       }
 
       &:hover {

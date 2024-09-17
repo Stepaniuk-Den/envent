@@ -70,6 +70,12 @@
         border-color: var(--color-accent-yellow);
       }
     }
+
+    &.services{
+      @include sm {
+        min-width: 292px;
+      }
+    }
   }
 
   &.yellow {

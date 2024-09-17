@@ -35,11 +35,17 @@ const AboutUsCounted = ({ imageSrc, t }: IAboutUsCountedProps) => {
   };
 
   return (
-    <section
+    <div className={styles.parallax_section}>
+      <div className={styles.parallax_child_section}>
+        <section ref={ref}
+      style={{ backgroundImage: `url(${imageSrc.src})` }}
+      className={`${styles.hero} frontlashID`}></section>
+      </div>
+    {/* <section
      ref={ref}
       style={{ backgroundImage: `url(${imageSrc.src})` }}
       className={styles.hero}
-    >
+    > */}
       <div className={`${styles.wrapper} container`}>
         <h2 className={styles.title}>{t.title}</h2>
         <div className={styles.content}>
@@ -57,7 +63,8 @@ const AboutUsCounted = ({ imageSrc, t }: IAboutUsCountedProps) => {
           </div>
         </div>
       </div>
-    </section>
+    {/* </section> */}
+    </div>
   );
 };
 
