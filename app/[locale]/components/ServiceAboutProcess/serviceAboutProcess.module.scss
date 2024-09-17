@@ -5,7 +5,7 @@
 
   .about_container {
     display: flex;
-    height: 730px;
+    // height: 730px;
     
     @include sm {
       flex-direction: column;
@@ -13,7 +13,7 @@
 
     .left_container {
       padding: 93px 37px 269px 37px;
-      width: 440px;
+      // min-width: 440px;
       background-color: var(--color-dark);
 
       @include sm {
@@ -40,11 +40,18 @@
     }
 
     .right_container {
-      width: 840px;
+      // width: 840px;
+      width: 100%;
 
       .carousel {
         height: 600px;
+
+        @include sm {
+          height: 300px;
+        }
+  
       }
+
       .phoneLink {
         display: flex;
         flex-direction: column;

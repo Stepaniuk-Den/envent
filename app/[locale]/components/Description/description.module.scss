@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: row;
 
-    @include sm{
+    @include md{
       flex-direction: column;
     }
   }
@@ -20,7 +20,13 @@
       min-width: 340px;
     }
 
-    @include sm{
+    @include md {
+      max-width: 440px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @include sm {
       min-width: 355px;
     }
 
@@ -44,7 +50,11 @@
     gap: 38px;
     // width: 840px;
 
-    @include sm{
+    @include md {
+      padding: 76px 0 24px 54px;
+    }
+
+    @include sm {
       padding: 54px 0 24px 0;
     }
 
@@ -78,6 +88,7 @@ grid-template-rows: auto;
 
 @include sm{
   grid-template-columns: 1fr;
+  justify-items: center;
 }
 
     
@@ -139,10 +150,3 @@ grid-template-rows: auto;
     z-index: 1;
   }
 }
-
-// display: grid;
-// column-gap: 72px;
-// row-gap: 40px;
-// padding: 10px;
-// grid-template-columns: repeat(2, 1fr);
-// grid-template-rows: auto;

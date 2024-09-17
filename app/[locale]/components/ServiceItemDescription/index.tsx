@@ -7,6 +7,7 @@ import ArrowLeft from "@/public/icons/arrow-left.svg";
 import styles from "./serviceItemDescription.module.scss";
 import AnimatedText from "@/helpers/animatedText";
 import MainButton from "../Buttons/MainButton";
+import Line from "../Line";
 
 const ServiceItemDescription:React.FC<{t: PropsServiceCard,about:IServiceAboutProps}> = ({t,about} ) => {
   const { p1, p2 ="", p3, p4, list } = t;
@@ -28,6 +29,7 @@ const ServiceItemDescription:React.FC<{t: PropsServiceCard,about:IServiceAboutPr
   return (
     <section>
       <div className={`${styles.service_container} container`}>
+      <Line className="yellow-center" />
         <AnimatedText>
           <p className={styles.text}>{parseHTMLString(p1)}</p>
         </AnimatedText>

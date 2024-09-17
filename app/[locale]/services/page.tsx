@@ -25,7 +25,7 @@ const ServicesPage: React.FC<Props> = async ({ params: { locale } }) => {
       <Hero imageSrc={HeroServicesBG} className="about" t={servicesT.hero}>
         <HeroRightSideList className="about" t={heroRightSideT.todo} />
       </Hero>
-      <Services t={servicesT.services} />
+      <Services t={servicesT.services} language={locale} />
       <ProjectSection t={mainT.projects} />
     </div>
   );

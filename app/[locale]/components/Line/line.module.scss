@@ -1,5 +1,6 @@
 @import "../../mixin.scss";
 .line {
+  display: flex;
   width: 48px;
   height: 5px;
   background-color: var(--color-accent-yellow);

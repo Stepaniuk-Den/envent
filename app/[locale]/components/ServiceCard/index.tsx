@@ -11,7 +11,7 @@ import styles from "./serviceCard.module.scss";
 import AnimatedTitle from "../AnimatedTitle";
 import Line from "../Line";
 
-const ServiceCard = ({ t, serviceId }: { t: PropsServiceCard, serviceId: number }) => {
+const ServiceCard = ({ t, serviceId,language }: { t: PropsServiceCard, serviceId: number,language: string }) => {
   const {
     slug,
     secondBtn,
@@ -66,12 +66,12 @@ const ServiceCard = ({ t, serviceId }: { t: PropsServiceCard, serviceId: number 
       <ButtonVariableColor
         className="dark_blue"
         firstChildren={
-          <MainButton className="white">
+          <MainButton className={language === "uk" ? "services" : ""} color="white">
             <Link href="/about">{hero.button}</Link>
           </MainButton>
         }
         secondChildren={
-          <MainButton className="white" 
+          <MainButton className={language === "uk" ? "services" : ""} color="white" 
           onClick={handleClick}
           >
             <Link href={`/services/${slug}`}>{secondBtn}</Link>

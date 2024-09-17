@@ -4,8 +4,13 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+
+  @include sm {
+  padding-top: 52px !important;
+  padding-bottom: 60px !important;
+  }
 
   .svg_container {
     height: 88px;

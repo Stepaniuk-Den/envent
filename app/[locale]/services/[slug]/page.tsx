@@ -7,7 +7,6 @@ import Hero from "../../components/Hero";
 import ServiceItemDescription from "../../components/ServiceItemDescription";
 import ServiceAboutProcess from "../../components/ServiceAboutProcess";
 import QuestionsSection from "../../components/QuestionsSection";
-import ImagesCarousel from "../../components/ImagesCarousel";
 
 type Props = {
   params: {
@@ -80,6 +79,7 @@ const ServiceItemPage = async ({ params: { slug, locale } }: Props) => {
   return (
     <div>
       <Hero imageSrc={service.heroBG} className="about" t={service.hero}></Hero>
+
       <ServiceItemDescription t={service} about={servicesT.about} />
       <ServiceAboutProcess
         t={service}

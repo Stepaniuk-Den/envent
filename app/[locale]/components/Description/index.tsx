@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { RiverMall } from "@/helpers/imagesImport";
 import { IDescriptionProps } from "@/helpers/interfaces";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./description.module.scss";
 import Image from "next/image";
 import ButtonVariableColor from "../Buttons/ButtonVariableColor";
@@ -31,12 +31,17 @@ const Description = ({
   // const opacity = useTransform(scrollY, [200, 500], [0, 1]); // 1 variant
 
   const isMobile = useMediaQuery({ maxWidth: 767.98 });
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const languageClass = language === "uk" ? styles.ua_content : "";
 
   return (
-    <section ref={ref} className={`${styles.description} container`}>
-      <div className={styles.description_container}>
+    <section ref={ref} className={`${styles.description} `}>
+      <div className={`${styles.description_container} container`}>
         <motion.div
           className={styles.thumb}
           style={{
@@ -68,7 +73,7 @@ const Description = ({
               {/* </div> */}
             </div>
           </div>
-          {!isMobile && (
+          {isClient && !isMobile && (
              <ButtonVariableColor
              className="blue_dark"
              firstChildren={
