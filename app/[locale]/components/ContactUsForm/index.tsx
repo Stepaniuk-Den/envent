@@ -5,7 +5,6 @@ import MainButton from "../Buttons/MainButton";
 import Line from "../Line";
 import Modal from "../Modal";
 
-import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 
@@ -14,6 +13,7 @@ import { useModal } from "@/helpers/useModal";
 import { ContactUsT } from "@/messages/types/ContactUsT";
 import { parseHTMLString } from "@/helpers/parseHTMLString";
 import dynamic from "next/dynamic";
+import AnimatedTitle from "../AnimatedTitle";
 
 interface Props {
   t: ContactUsT;
@@ -58,41 +58,10 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
     }
   };
 
-  const formFooterVariants = {
-    hidden: {
-      x: "-100%",
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-      },
-    },
-  };
-
-  const formTouchVariants = {
-    hidden: {
-      x: "0%",
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-      },
-    },
-  };
-
-  const formVariants =
-    className === "footer" ? formFooterVariants : formTouchVariants;
-
   return (
     <>
       <div className={`${styles.form_container} ${styles[className]}`}>
-        <h2 className={styles.title}>{t.formTitle}</h2>
+        <AnimatedTitle title={t.formTitle} />
         <Line className="yellow-left" />
         <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.input_container}>
@@ -123,43 +92,6 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
           </MainButton>
         </form>
       </div>
-      {/* <motion.div
-        className={`${styles.form_container} ${styles[className]}`}
-        initial="hidden"
-        animate="visible"
-        variants={formVariants}
-      >
-        <h2 className={styles.title}>{t.formTitle}</h2>
-        <Line className="yellow-left" />
-        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-          <div className={styles.input_container}>
-            <input
-              type="text"
-              id="name"
-              placeholder={t.placeholderName}
-              {...register("name", { required: true })}
-            />
-            <input
-              type="email"
-              id="email"
-              placeholder={t.placeholderEmail}
-              {...register("email", { required: true })}
-            />
-          </div>
-          <textarea
-            id="message"
-            placeholder={t.placeholderMessage}
-            {...register("message", { required: true })}
-          />
-          <MainButton
-            type="submit"
-            className={className === "footer" ? "contact_us" : "contacts"}
-            color={className === "footer" ? "white" : "black"}
-          >
-            {t.button}
-          </MainButton>
-        </form>
-      </motion.div> */}
       {isModalOpen && (
         <Modal className="message">
           <p className={styles.p1}>{parseHTMLString(modalMessage)[0]}</p>

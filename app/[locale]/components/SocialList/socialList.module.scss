@@ -34,6 +34,13 @@
   &.header {
     .item {
       border-left: 1px solid rgba(0, 0, 0, 0.15);
+
+      @include md {
+        border: none;
+        &:not(:first-child) {
+          border-left: 1px solid rgba(0, 0, 0, 0.15);
+        }
+      }
     }
   }
 

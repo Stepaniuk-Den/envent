@@ -5,9 +5,10 @@ import { ISocialItem } from "@/helpers/interfaces";
 
 type Props = {
   className: "header" | "footer";
+  onClick?: () => void;
 };
 
-const SocialList = ({ className }: Props) => {
+const SocialList = ({ className, onClick }: Props) => {
   const items: ISocialItem[] =
     className === "header" ? socialHeaderItems : socialFooterItems;
 
@@ -15,7 +16,7 @@ const SocialList = ({ className }: Props) => {
     <ul className={`${styles.social_list} ${styles[className]}`}>
       {items.map((item) => {
         return (
-          <li className={styles.item} key={item.id}>
+          <li className={styles.item} key={item.id} onClick={onClick}>
             <Link
               href={item.href}
               className={styles.link}

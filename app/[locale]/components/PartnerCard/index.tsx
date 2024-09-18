@@ -9,6 +9,7 @@ import Image from "next/image";
 import { Link } from "@/navigation";
 import { ArrowRightLinkIcon } from "@/helpers/imagesImport";
 import { useMediaQuery } from "react-responsive";
+import { useAfterLoad } from "@/helpers/useAfterLoad";
 
 interface IPartnerCardProps {
   partner: IPartnersItem;
@@ -17,16 +18,13 @@ interface IPartnerCardProps {
 
 const PartnerCard: React.FC<IPartnerCardProps> = ({ partner, linkTitle }) => {
   const [showCard, setShowCard] = useState(false);
-  const [isClient, setIsClient] = useState(false);
   const isTabletOrMobile = useMediaQuery({ maxWidth: 1023.98 });
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  const isPageLoaded = useAfterLoad();
 
   return (
     <>
-      {isClient && !isTabletOrMobile && (
+      {isPageLoaded && !isTabletOrMobile && (
         <motion.li
           className={styles.item}
           onHoverStart={() => setShowCard(true)}

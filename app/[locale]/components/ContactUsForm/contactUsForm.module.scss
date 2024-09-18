@@ -7,10 +7,6 @@
   gap: 30px;
   padding: 50px 64px 50px;
 
-  .title {
-    @include text-title-h2-rubik;
-  }
-
   .form {
     display: flex;
     flex-direction: column;
@@ -70,6 +66,7 @@
 
     @include sm {
       width: 100%;
+      padding: 50px 20px;
     }
   }
 

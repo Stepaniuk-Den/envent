@@ -21,7 +21,7 @@ const Footer: React.FC<{ t: ContactUsT; t2: HeroRightSideT }> = ({ t, t2 }) => {
         className={`${styles.footer} ${currentPath! ? "" : "hidden"}`}
         style={{ backgroundImage: `url("/images/footer-bg.webp")` }}
       >
-        <Observer y={50} duration="500ms" threshold={0.5} once={true}>
+        <Observer y={50} duration="500ms" threshold={0.2} once={true}>
           <div className={`${styles.wrapper} container`}>
             <ContactUsForm t={t} className="footer" />
             <div className={styles.contacts_container}>

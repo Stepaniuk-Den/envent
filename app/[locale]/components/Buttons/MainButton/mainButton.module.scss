@@ -53,6 +53,10 @@
     &.contacts {
       align-self: flex-end;
       padding: 15px;
+
+      @include sm {
+        align-self: center;
+      }
     }
   }
 
@@ -65,13 +69,17 @@
       align-self: flex-end;
       padding: 15px;
 
+      @include sm {
+        align-self: center;
+      }
+
       &:hover {
         color: var(--color-accent-yellow);
         border-color: var(--color-accent-yellow);
       }
     }
 
-    &.services{
+    &.services {
       @include sm {
         min-width: 292px;
       }
