@@ -79,7 +79,8 @@
 
 .backdrop {
   background-color: var(--color-dark);
-  // backdrop-filter: blur(10px);
+  align-items: center;
+  justify-content: center;
 }
 
 .modalContent {

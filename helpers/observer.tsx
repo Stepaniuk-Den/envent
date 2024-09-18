@@ -8,6 +8,8 @@ const Observer = ({
   duration,
   x,
   y,
+  opacity,
+  scale,
   once = false,
 }: {
   children: React.ReactNode;
@@ -15,10 +17,14 @@ const Observer = ({
   duration: string;
   x?: number;
   y?: number;
+  opacity?: number;
+  scale?: number;
   once?: boolean;
 }) => {
   x = x || 0;
   y = y || 0;
+  opacity = opacity || 0;
+  scale = scale || 0.5;
 
   const ref = useRef<HTMLDivElement | null>(null);
   const [intersecting, setIntersecting] = useState(false);
@@ -50,7 +56,7 @@ const Observer = ({
         }
       };
     }
-  }, [threshold, once]);
+  }, [once]);
   return (
     <div
       style={{
@@ -58,8 +64,8 @@ const Observer = ({
         transform: !intersecting
           ? `translate(${x}px, ${y}px)`
           : `translate(0px, 0px)`,
-        opacity: !intersecting ? 0 : 1,
-        scale: !intersecting ? 0.7 : 1,
+        opacity: !intersecting ? opacity : 1,
+        scale: !intersecting ? scale : 1,
       }}
       // className={`transition ${intersecting ? "opacity-100" : "opacity-0"}`}  // for tailwind css
       ref={ref}

@@ -50,6 +50,9 @@ import SideTodoAutomation from "../public/icons/IconParkOutlineCpu.svg";
 import SideTodoCommissioning from "../public/icons/IconParkOutlineNetworkTree.svg";
 import SideTodoMaintenance from "../public/icons/IconParkOutlineSpanner.svg";
 
+import BurgerMenuBtn from "../public/icons/IconParkOutlineHamburgerButton.svg";
+import BurgerCloseBtn from "../public/icons/IconParkOutlineClose.svg";
+
 export {
   HeroMainBG,
   HeroAboutBG,
@@ -97,4 +100,6 @@ export {
   SideTodoAutomation,
   SideTodoCommissioning,
   SideTodoMaintenance,
+  BurgerMenuBtn,
+  BurgerCloseBtn,
 };

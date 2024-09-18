@@ -50,6 +50,7 @@ export default async function LocaleLayout({
         <Footer t={footerT} t2={contactT} />
         <SideBar />
         <TotopButton />
+        <div id="modal"></div>
       </body>
     </html>
   );

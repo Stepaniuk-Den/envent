@@ -10,6 +10,9 @@
   --color-white-box-shadow: rgba(255, 255, 255, 0.25);
 }
 
+@import "./mixin.scss";
+@import "./responsive.scss";
+
 @media (prefers-color-scheme: dark) {
 }
 
@@ -106,8 +109,6 @@ address {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1000;
 }
 
@@ -117,11 +118,8 @@ address {
 //   }
 // }
 
-@import "./responsive.scss";
-
 .container {
   width: 1280px;
-  // width: 100%;
   margin: 0 auto;
   padding: 0 30px;
 
