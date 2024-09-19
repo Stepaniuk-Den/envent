@@ -15,6 +15,7 @@ import Partners from "./components/Partners";
 import { HeroRightSideT } from "@/messages/types/HeroRightSideT";
 import Testimonials from "./components/Testimonials";
 import { MainPageT } from "@/messages/types/MainPageT";
+import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
 import QuestionsSection from "./components/QuestionsSection";
 import ContactUsSection from "./components/ContactUsSection";
 
@@ -26,6 +27,7 @@ const Home: React.FC<Props> = async ({ params: { locale } }) => {
 
   const mainT = await localize(MainPageT);
   const heroRightSideT = await localize(HeroRightSideT);
+  const projectsT = await localize(ProjectsPageT);
 
   return (
     <div className={styles.main}>
@@ -33,7 +35,7 @@ const Home: React.FC<Props> = async ({ params: { locale } }) => {
         <HeroRightSideList className="main" t={heroRightSideT.services} />
       </Hero>
       <Description t={mainT.descriptions} language={locale} />
-      <ProjectSection t={mainT.projects} />
+      <ProjectSection t={mainT.projects} t2={projectsT.projects} />
       <AboutUsCounted imageSrc={AboutUsCountedBG} t={mainT.aboutUsCounted} />
       <Testimonials t={mainT.testimonials} />
       <QuestionsSection params={{ locale }} type="slogan" />

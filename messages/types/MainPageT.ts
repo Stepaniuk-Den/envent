@@ -24,56 +24,6 @@ export class MainPageT implements Translation {
     viewAll: "",
     // list: [] as IPropsProjectItem[],
     // list: {} as { [key: string]: IPropsProjectItem },
-    list: {
-      1: {
-        id: "",
-        src: "",
-        alt: "",
-        title: "",
-        address: "",
-        link: "",
-      },
-      2: {
-        id: "",
-        src: "",
-        alt: "",
-        title: "",
-        address: "",
-        link: "",
-      },
-      3: {
-        id: "",
-        src: "",
-        alt: "",
-        title: "",
-        address: "",
-        link: "",
-      },
-      4: {
-        id: "",
-        src: "",
-        alt: "",
-        title: "",
-        address: "",
-        link: "",
-      },
-      5: {
-        id: "",
-        src: "",
-        alt: "",
-        title: "",
-        address: "",
-        link: "",
-      },
-      6: {
-        id: "",
-        src: "",
-        alt: "",
-        title: "",
-        address: "",
-        link: "",
-      },
-    },
   };
 
   aboutUsCounted = {
