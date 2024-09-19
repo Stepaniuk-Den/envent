@@ -39,7 +39,7 @@ const AboutUsCounted = ({ imageSrc, t }: IAboutUsCountedProps) => {
       <div className={styles.parallax_child_section}>
         <section ref={ref}
       style={{ backgroundImage: `url(${imageSrc.src})` }}
-      className={`${styles.hero} frontlashID`}></section>
+      className={styles.hero}></section>
       </div>
     {/* <section
      ref={ref}

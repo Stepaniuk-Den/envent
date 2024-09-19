@@ -5,9 +5,9 @@ import { Link, usePathname } from "@/navigation";
 import { parseHTMLString } from "@/helpers/parseHTMLString";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
 import styles from "./serviceItemDescription.module.scss";
-import AnimatedText from "@/helpers/animatedText";
 import MainButton from "../Buttons/MainButton";
 import Line from "../Line";
+import Observer from "@/helpers/observer";
 
 const ServiceItemDescription:React.FC<{t: PropsServiceCard,about:IServiceAboutProps}> = ({t,about} ) => {
   const { p1, p2 ="", p3, p4, list } = t;
@@ -30,12 +30,11 @@ const ServiceItemDescription:React.FC<{t: PropsServiceCard,about:IServiceAboutPr
     <section>
       <div className={`${styles.service_container} container`}>
       <Line className="yellow-center" />
-        <AnimatedText>
-          <p className={styles.text}>{parseHTMLString(p1)}</p>
-        </AnimatedText>
-        <AnimatedText>
+          <Observer y={50} duration="300ms" threshold={0.5}> <p className={styles.text}>{parseHTMLString(p1)}</p></Observer>
+        <Observer y={50} duration="300ms" threshold={0.5}>
           {isSpecialPathStartUp ? (
             <>
+            
               <p className={`${styles.text} ${styles.bold_text}`}>
                 {parseHTMLString(p2)}
               </p>
@@ -71,14 +70,16 @@ const ServiceItemDescription:React.FC<{t: PropsServiceCard,about:IServiceAboutPr
           ) : (
             <p className={styles.text}>{parseHTMLString(p2)}</p>
           )}
-        </AnimatedText>
-        <AnimatedText>
+        </Observer>
+         <Observer y={50} duration="300ms" threshold={0.5}>
           <p className={styles.text}>{parseHTMLString(p3)}</p>
-        </AnimatedText>
-        <AnimatedText>
+          </Observer>
+          
+          <Observer y={50} duration="300ms" threshold={0.5}>
           <p className={styles.text}>{parseHTMLString(p4)}</p>
-        </AnimatedText>
-        <MainButton className="filled">
+          </Observer>
+        {/* <MainButton className="filled"> */}
+          <MainButton type="button" color="filled" className="services">
           <ArrowLeft />
           <Link href="/services">{about.btnBack}</Link>
         </MainButton>

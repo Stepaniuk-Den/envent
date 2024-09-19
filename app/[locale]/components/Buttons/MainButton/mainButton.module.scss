@@ -45,6 +45,14 @@
       box-shadow: none;
       transform: scale(0.95);
     }
+
+    &.services {
+      margin-top: 20px;
+
+      a {
+        padding-left: 0;
+      }
+    }
   }
 
   &.black {

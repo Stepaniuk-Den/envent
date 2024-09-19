@@ -558,12 +558,12 @@ const uk: FullTranslation = {
             2: {
               id: "20000",
               src: "/images/services/montazh_foto5.jpg",
-              alt: "A warehouse area with large rolls of metal suspended from a crane",
+              alt: "Складська зона з великими рулонами металу, підвішеними до крана",
             },
             3: {
               id: "311111",
-              src: "/images/services/5baza_n.jpg",
-              alt: "Workers on a production line working with metal parts in a workshop",
+              src: "/images/services/montazh_foto6.jpg",
+              alt: "Стеля з великими вентиляційними трубами і освітлювальними конструкціями в індустріальному місці."
             },
           },
           imgCard: {
@@ -728,7 +728,7 @@ const uk: FullTranslation = {
         6: {
           id: "6",
           hero: {
-            title: "Пуско-налагоджувальні работи",
+            title: "Пуско-налагоджувальні роботи",
             description:
               "Фахівцями ТОВ «Енерговентиляція» проводяться пускові випробування та регулювання систем вентиляції та кондиціювання.",
             button: "безкоштовна консультація",

@@ -3,29 +3,43 @@
 .about_process {
   color: var(--color-white);
 
+  .tablet_wrapper {
+    display: flex;
+    flex-direction: column;
+  
+  }
+
   .about_container {
     display: flex;
-    // height: 730px;
-    
+
     @include sm {
       flex-direction: column;
     }
 
     .left_container {
       padding: 93px 37px 269px 37px;
-      // min-width: 440px;
       background-color: var(--color-dark);
 
+      @include lg {
+        padding: 50px 20px 80px 20px;
+        max-width: 370px;
+      }
+
+      @include md {
+        padding: 50px 20px 80px 20px;
+        max-width: 320px;
+      }
+
       @include sm {
-        width: 100%;
+        max-width: 355px;
         padding: 50px 20px;
       }
 
       .wrapper_title {
         display: flex;
         flex-direction: column;
-        gap: 38px;
-        margin-bottom: 62px;
+        gap: 30px;
+        margin-bottom: 30px;
       }
 
       .process_text {
@@ -45,6 +59,10 @@
 
       .carousel {
         height: 600px;
+
+        @include md {
+          height: 100%;
+        }
 
         @include sm {
           height: 300px;
@@ -71,4 +89,5 @@
       }
     }
   }
+
 }

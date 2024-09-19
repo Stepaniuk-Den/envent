@@ -560,8 +560,8 @@ const en: FullTranslation = {
             },
             3: {
               id: "311111",
-              src: "/images/services/5baza_n.jpg",
-              alt: "Workers on a production line working with metal parts in a workshop",
+              src: "/images/services/montazh_foto6.jpg",
+              alt: "Ceiling with large ventilation pipes and lighting structures in an industrial location",
             },
           },
           imgCard: {
