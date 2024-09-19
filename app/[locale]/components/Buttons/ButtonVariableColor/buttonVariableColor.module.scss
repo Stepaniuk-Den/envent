@@ -9,14 +9,20 @@
     flex-direction: column;
   }
   }
+
+  &.blue_white{
+    @include sm {
+      flex-direction: column;
+    }
+  }
 }
 
 .btn {
+  font-family: var(--font-rubik);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // width: 500px;
   width: 420px;
   height: 130px;
 }
@@ -36,6 +42,31 @@
   max-width: 430px;
   width: 100%;
   align-items: flex-start;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.68;
+
+    @include sm {
+      padding-left: 0;
+    }
+
+    span {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 2.1;
+      letter-spacing: 0.48px;
+    }
+  
+  }
+
+  @include sm {
+    align-items: center;
+  }
 }
 
 .blue_white .right_btn {
@@ -71,7 +102,7 @@
 }
 
 .blue_dark {
-  font-family: var(--font-rubik);
+  // font-family: var(--font-rubik);
   .btn {
     max-width: 420px;
     width: 100%;

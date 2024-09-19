@@ -5,6 +5,14 @@
   flex-direction: column;
   max-width: 960px;
 
+  @include lg {
+    max-width: 860px;
+  }
+  
+  @include md {
+    max-width: 660px;
+  }
+
   &.right_aligned {
     display: flex;
     justify-content: flex-end;
@@ -16,18 +24,29 @@
     display: flex;
     justify-content: flex-start;
     margin-right: auto;
+    // box-shadow: 0 6px 10px var(--color-dark-box-shadow);
   }
 
   .container {
     padding: 100px 0;
 
-    @include sm {
+    @include md {
       padding: 50px 0;
     }
 
     &.right_padding {
       padding-left: 134px;
       padding-right: 62px;
+
+      @include lg {
+      padding-left: 114px;
+      padding-right: 42px;
+      }
+
+      @include md {
+      padding-left: 94px;
+      padding-right: 32px;
+      }
 
       @include sm {
         padding-left: 10px;
@@ -39,9 +58,19 @@
       padding-right: 134px;
       padding-left: 62px;
 
+      @include lg {
+      padding-right: 114px;
+      padding-left: 42px;
+      }
+
+      @include md {
+      padding-right: 94px;
+      padding-left: 32px;
+      }
+
       @include sm {
-        padding-left: 10px;
         padding-right: 10px;
+        padding-left: 10px;
       }
     }
     .text {
@@ -65,8 +94,6 @@
     justify-content: space-between;
 
     @include sm {
-      // justify-content: center;
-      // :nth-child(2),
       :nth-child(3) {
         display: none;
       }
@@ -80,6 +107,16 @@
       transform: scale(1);
       transition: transform 800ms ease-in-out;
 
+      @include lg {
+        width: 200px;
+        height: 140px;
+      }
+
+      @include md {
+        width: 160px;
+        height: 100px;
+      }
+
       @include sm {
         width: 160px;
         height: 100px;
@@ -87,6 +124,10 @@
 
       &:hover {
         transform: scale(1.2);
+
+        @include md {
+         transform: none;
+        }
       }
     }
   }
