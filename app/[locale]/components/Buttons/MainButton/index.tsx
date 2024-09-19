@@ -6,6 +6,7 @@ interface IMainButtonProps {
   type?: "button" | "submit" | "reset";
   className?: string;
   children?: ReactNode;
+  isActive?: string;
   onClick?: () => void;
   color?: "black" | "white" | "yellow" | "blue" | "";
 }
@@ -15,12 +16,13 @@ const MainButton = ({
   className = "",
   children,
   color = "",
+  isActive = "",
   onClick,
 }: IMainButtonProps) => {
   return (
     <button
       type={type}
-      className={`${styles.mainBtn} ${styles[className]} ${styles[color]}`}
+      className={`${styles.mainBtn} ${styles[className]} ${styles[color]}  ${styles[isActive]}`}
       onClick={onClick}
     >
       {children}

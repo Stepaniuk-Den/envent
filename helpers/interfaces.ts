@@ -56,19 +56,58 @@ export interface IMainButtonProps {
   ariaLabel?: string;
 }
 
+// export interface IPropsProjectItem {
+//   id: string;
+//   src: string;
+//   alt: string;
+//   title?: string;
+//   link?: string;
+//   address?: string;
+//   onClick?: () => void;
+// }
+
+// export interface IPropsProjectItem {
+//   id: "";
+//   hero?: {
+//     title?: "";
+//     description?: "";
+//     button?: "";
+//   };
+//   heroBG?: "";
+//   projectSlug?: "";
+//   src?: "";
+//   alt?: "";
+//   title: "";
+//   link?: "";
+//   address?: "";
+//   onClick?: () => void;
+// }
+
 export interface IPropsProjectItem {
   id: string;
-  src: string;
-  alt: string;
+  projectSlug: string;
   title: string;
+  mainImg?: string;
+  mainAlt?: string;
+  heroDescription?: string;
+  heroButton?: string;
+  images?: {
+    img1?: { alt: string; src: string };
+    img2?: { alt: string; src: string };
+    img3?: { alt: string; src: string };
+  };
   link?: string;
   address?: string;
+  categorySlug?: string;
+  category?: string;
+  linkCategory?: string;
   onClick?: () => void;
 }
 
 export interface IProjectCategory {
   category: string;
   linkCategory: string;
+  categorySlug: string;
   projects: {
     [projectId: string]: IPropsProjectItem;
   };

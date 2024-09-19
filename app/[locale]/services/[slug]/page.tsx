@@ -34,8 +34,8 @@ const ServiceItemPage = async ({ params: { slug, locale } }: Props) => {
       <Hero imageSrc={service.heroBG} className="about" t={service.hero}>
         {/* <HeroRightSideList className="about" t={heroRightSideT.todo} /> */}
       </Hero>
-      <ServiceItemDescription t={service}/>
-      <AboutProcess t={service} about={servicesT.about}/>
+      <ServiceItemDescription t={service} />
+      <AboutProcess t={service} about={servicesT.about} />
       {/* <h1>{service.hero.title}</h1>
       <p>{service.hero.description}</p>
       <div>
@@ -47,5 +47,3 @@ const ServiceItemPage = async ({ params: { slug, locale } }: Props) => {
 };
 
 export default ServiceItemPage;
-
-

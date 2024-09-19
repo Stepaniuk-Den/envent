@@ -3,13 +3,10 @@ import { locales } from "@/config";
 import { localize } from "@/localize";
 import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
 import { unstable_setRequestLocale } from "next-intl/server";
-import { Link } from "@/navigation";
-import Hero from "../components/Hero";
 import { heroProjectsPageBG } from "@/helpers/imagesImport";
-import styles from "../components/ProjectsNavigation/projectsNavigation.module.scss";
-import MainButton from "../components/Buttons/MainButton";
-import { useSelectedLayoutSegment } from "next/navigation";
+import styles from "./projects.module.scss";
 import ProjectsNavigation from "../components/ProjectsNavigation";
+import Hero from "../components/Hero";
 
 type Props = {
   children: React.ReactNode;
@@ -37,38 +34,14 @@ export default async function ProjectsLayout({
   unstable_setRequestLocale(locale);
   const t = await localize(ProjectsPageT);
 
-  //   const categoryNames = (
-  //     Object.keys(t.projects) as Array<keyof typeof t.projects>
-  //   ).map((key) => t.projects[key].category);
-
-  const projectsCategories = Object.keys(t.projects) as Array<
-    keyof typeof t.projects
-  >;
-
-  const categoryInfo = projectsCategories.map(
-    (key) => t.projects[key]
-    //   .category
-  );
-
-  //   const categoryLinks = projectsCategories.map(
-  //       (key) => t.projects[key]
-  //         //   .linkCategory
-  //   );
-
   return (
-    <div>
+    <section className={styles.projectsSection}>
       <Hero imageSrc={heroProjectsPageBG} className="" t={t.hero} />
-      <section className={styles.projectsSection}>
-        <div className={`${styles.projectsContainer} container`}>
-          <ProjectsNavigation
-            categoryInfo={categoryInfo}
-            // categoryNames={categoryNames}
-            // categoryLinks={categoryLinks}
-          />
 
-          {children}
-        </div>
-      </section>
-    </div>
+      <div className={`${styles.projectsContainer} container`}>
+        <ProjectsNavigation t={t} />
+        {children}
+      </div>
+    </section>
   );
 }

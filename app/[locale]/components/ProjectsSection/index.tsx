@@ -10,11 +10,12 @@ import ArrowRight from "@/public/icons/arrow-right.svg";
 import Close from "@/public/icons/close.svg";
 import BackdropButton from "../Buttons/BackdropButton";
 import { Link } from "@/navigation";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { handleNext, handlePrev } from "@/helpers/useClickPrevAndNext";
-import ProjectItem from "../ProjectItem";
 import AnimatedTitle from "../AnimatedTitle";
 import { MainPageT } from "@/messages/types/MainPageT";
+import ProjectItem from "../ProjectItem";
+import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
 
 // interface IPropsProjectList {
 //   projectList: IPropsProjectItem[];
@@ -22,14 +23,19 @@ import { MainPageT } from "@/messages/types/MainPageT";
 
 const ProjectSection: React.FC<{
   t: MainPageT["projects"];
-}> = ({ t }) => {
+  t2: ProjectsPageT["projects"];
+}> = ({ t, t2 }) => {
   //= ({ t }: IProjectsProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  // const [currentIndex, setCurrentIndex] = useState<number | null>(null);
-  const projectsList = Object.values(t.list);
-  // const [isHovered, setHovered] = useState(false);
-  const router = useRouter();
+  const projectsList = t2 ? Object.values(t2) : [];
+  const recentProjectsList = projectsList
+    // const [currentIndex, setCurrentIndex] = useState<number | null>(null);
+    // const [isHovered, setHovered] = useState(false);
+    // const router = useRouter();
+
+    .sort((a, b) => Number(b.id) - Number(a.id))
+    .slice(0, 6);
 
   useEffect(() => {
     if (isOpen) {
@@ -75,19 +81,17 @@ const ProjectSection: React.FC<{
   //   }
   // };
 
-  // const text = "";
-  // const textL = text.toLowerCase();
-
   return (
     <section className={styles.projectSection}>
       <div className={`${styles.projectContainer} container`}>
         <AnimatedTitle title={t.title} className={styles.sectionTitle} />
+        {/* ------------------------------------ */}
         {/* <Line className="yellow-center" /> */}
         <div className={styles.line}></div>
         <ul className={styles.projectList}>
           {/* {projectsList.map((project: IPropsProjectItem, index) => ( */}
           {/* {Object.keys(projectsList).map((key) => { */}
-          {projectsList.map((projectItem, index) => {
+          {recentProjectsList.map((projectItem, index) => {
             // const projectItem = projectsList[Number(key)];
             // const imgSrc = projects.find(
             //   (project) => project.title === projectItem.src
@@ -95,8 +99,9 @@ const ProjectSection: React.FC<{
             return (
               <ProjectItem
                 key={projectItem.id}
-                {...projectItem}
-                onClick={() => handleOpenBackdrop(index)}
+                // {...projectItem}
+                t={projectItem}
+                // onClick={() => handleOpenBackdrop(index)}
               />
 
               // ))}
@@ -114,11 +119,6 @@ const ProjectSection: React.FC<{
             {t.viewAll}
           </Link>
         </MainButton>
-
-        {/* ================== */}
-
-        {/* <p>{textL}</p> */}
-        {/* =================== */}
         {/* </Link> */}
 
         {/* ==== BACKDROP ==== */}
@@ -157,7 +157,7 @@ const ProjectSection: React.FC<{
                     handlePrev({
                       currentIndex,
                       setCurrentIndex,
-                      array: projectsList,
+                      array: recentProjectsList,
                     })
                   }
                   type="button"
@@ -167,8 +167,8 @@ const ProjectSection: React.FC<{
                 </BackdropButton>
 
                 <Image
-                  src={projectsList[currentIndex].src}
-                  alt={projectsList[currentIndex].alt}
+                  src={recentProjectsList[currentIndex].mainImg}
+                  alt={recentProjectsList[currentIndex].mainAlt}
                   fill={true}
                   sizes="(max-width: 767.98px) 460px, (max-width: 1023.98px) 660px, 800px"
                 />
@@ -180,7 +180,7 @@ const ProjectSection: React.FC<{
                     handleNext({
                       currentIndex,
                       setCurrentIndex,
-                      array: projectsList,
+                      array: recentProjectsList,
                     })
                   }
                   type="button"
@@ -189,7 +189,7 @@ const ProjectSection: React.FC<{
                   <ArrowRight className={styles.ArrowRightSVG} />
                 </BackdropButton>
                 <p className={styles.counter}>
-                  {currentIndex + 1} of {projectsList.length}
+                  {currentIndex + 1} of {recentProjectsList.length}
                 </p>
               </motion.div>
             </motion.div>

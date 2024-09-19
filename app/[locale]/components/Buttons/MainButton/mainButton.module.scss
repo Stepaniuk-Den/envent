@@ -12,6 +12,7 @@
   letter-spacing: 1.4px;
   text-transform: uppercase;
   @include transition-standart;
+  // transition: all 0.3s linear;
 
   a {
     display: flex;
@@ -96,4 +97,94 @@
     padding-left: 23px;
     padding-right: 23px;
   }
+
+  &.btnProjectsNav {
+    min-width: 0;
+    // width: 100px;
+    width: 100%;
+
+    a {
+      justify-content: flex-start;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: inline-block;
+
+      // span {
+      //   display: none;
+      // padding-left: 15px;
+
+      // .mainBtn:hover & {
+      //   display: inline-block;
+      // }
+
+      // .mainBtn.active & {
+      //   display: inline-block;
+      // }
+      // }
+    }
+
+    &:hover {
+      // min-width: 443px;
+      color: var(--color-accent-yellow);
+      border-color: var(--color-accent-yellow);
+      transform: scaleX(0.95);
+      box-shadow: none;
+    }
+
+    // ------------------
+    &.active {
+      // width: 443px;
+      color: var(--color-accent-yellow);
+      border-color: var(--color-accent-yellow);
+      transform: scaleX(0.95);
+      box-shadow: none;
+    }
+
+    // .shortText {
+    //   display: inline-block;
+    //   overflow: hidden;
+    //   max-width: 100px;
+    //   text-overflow: ellipsis;
+    // }
+
+    // .fullText {
+    //   display: none;
+    //   padding-left: 10px;
+
+    // .mainBtn:hover & {
+    //   display: inline-block;
+    // }
+
+    // .mainBtn.active & {
+    //   display: inline-block;
+    //   // }
+    // }
+  }
+  // -----------------------
+  // .textWrapper {
+  //   display: flex;
+  //   width: 100%;
+  //   justify-content: center;
+  // }
+
+  // .shortText {
+  //   display: inline-block;
+  //   overflow: hidden;
+  //   max-width: 100px;
+  //   text-overflow: ellipsis;
+  // }
+
+  // .fullText {
+  //   display: none;
+  //   padding-left: 10px;
+
+  //   .mainBtn:hover & {
+  //     display: inline-block;
+  //   }
+
+  //   .mainBtn.active & {
+  //     display: inline-block;
+  //   }
+  // }
 }

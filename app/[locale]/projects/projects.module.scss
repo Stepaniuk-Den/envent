@@ -1,9 +1,31 @@
+@import "../mixin.scss";
+
+.projectsSection {
+  width: 100%;
+
+  .projectsContainer {
+    //  display: flex;
+    // align-items: center;
+    // justify-content: center;
+    padding: 60px 0 250px;
+    // height: 100vh;
+
+    // .categoriesList {
+    //   background-color: aquamarine;
+    //   margin-bottom: 40px;
+    //   .categoriesItem:not(:last-child) {
+    //     margin-bottom: 20px;
+    //   }
+    // }
+  }
+}
+
 .projectList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin: 38px auto;
+  // margin: 38px auto;
   //   width: 1096px;
 }
