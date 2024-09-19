@@ -1,0 +1,27 @@
+@import "../../mixin.scss";
+
+.map_section {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(31, 31, 31, 0.85);
+    opacity: 0;
+    @include transition-standart;
+  }
+
+  &:hover .overlay {
+    opacity: 1;
+  }
+}

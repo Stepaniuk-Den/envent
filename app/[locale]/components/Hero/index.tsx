@@ -1,11 +1,12 @@
+"use client";
+
 import HeroTitle from "../HeroTitle";
 import styles from "./hero.module.scss";
 import { IHeroProps } from "@/helpers/interfaces";
 
-const Hero = ({ className, imageSrc, children, t }: IHeroProps) =>
-   {
-
-    const backgroundImage = typeof imageSrc === 'string' ? imageSrc : imageSrc.src;
+const Hero = ({ className, imageSrc, children, t }: IHeroProps) => {
+  const backgroundImage =
+    typeof imageSrc === "string" ? imageSrc : imageSrc.src;
 
   return (
     <section

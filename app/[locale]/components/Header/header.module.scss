@@ -9,11 +9,15 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 1280px;
+  width: 100%;
   font-family: var(--font-rubik);
 
   background-color: transparent;
   z-index: 101;
+
+  @include md {
+    display: none;
+  }
 
   .top {
     display: flex;

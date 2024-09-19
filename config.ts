@@ -4,15 +4,15 @@ export const defaultLocale = "en" as const;
 export const locales = ["en", "uk"] as const;
 
 export const pathnames: Pathnames<typeof locales> = {
-  "/": "/",
-  "/projects": {
-    en: "/projects",
-    uk: "/проєкти",
-  },
-  "/about": {
-    en: "/about",
-    uk: "/про-нас",
-  },
+  // "/": "/",
+  // "/projects": {
+  //   en: "/projects",
+  //   uk: "/проєкти",
+  // },
+  // "/about": {
+  //   en: "/about",
+  //   uk: "/про-нас",
+  // },
 };
 
 export const localePrefix: LocalePrefix<typeof locales> = "always";

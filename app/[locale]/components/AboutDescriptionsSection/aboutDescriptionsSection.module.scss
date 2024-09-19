@@ -1,0 +1,26 @@
+@import "../../mixin.scss";
+
+.descriptions_wrapper {
+  display: grid;
+  column-gap: 72px;
+  row-gap: 40px;
+  padding: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  @include text-main-openSands;
+
+  @include md {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .p1,
+  .p2,
+  .p3,
+  .p4,
+  .p5 {
+    font-size: medium;
+
+    @include md-landscape {
+      font-size: x-small;
+    }
+  }
+}

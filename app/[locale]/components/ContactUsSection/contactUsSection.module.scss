@@ -1,0 +1,115 @@
+@import "../../mixin.scss";
+
+.section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include md {
+    // height: 600px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 31, 31, 0.85);
+    z-index: 1;
+  }
+
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .wrapper {
+    position: relative;
+    display: flex;
+    height: 500px;
+    margin-top: -150px;
+
+    font-family: var(--font-rubik);
+
+    @include md {
+      height: 595px;
+    }
+    @include sm {
+      flex-direction: column;
+    }
+
+    .contacts_container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      background-color: var(--color-white);
+
+      @include sm {
+        display: none;
+      }
+
+      .social_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 115px;
+        background-color: var(--color-dark);
+
+        // @include md {
+        //   // flex-direction: column;
+        //   flex: 1;
+        //   background-color: transparent;
+        //   height: max-content;
+        // }
+      }
+
+      .list {
+        display: flex;
+        flex-direction: column;
+        margin-left: 120px;
+        margin-top: 50px;
+        gap: 23px;
+
+        @include md {
+          margin: 0;
+          justify-content: center;
+          padding-top: 36px;
+          padding-left: 50px;
+        }
+
+        .item {
+          display: flex;
+
+          .link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.8; /* 180% */
+
+            .svg {
+              width: 25px;
+              height: 25px;
+              @include transition-standart;
+              color: var(--color-dark);
+            }
+
+            &:hover .svg {
+              color: var(--color-accent-yellow);
+            }
+          }
+        }
+      }
+    }
+  }
+}

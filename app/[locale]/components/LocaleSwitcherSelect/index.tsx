@@ -3,9 +3,7 @@
 import { useParams } from "next/navigation";
 import { ChangeEvent, ReactNode, useTransition } from "react";
 import { useRouter, usePathname } from "@/navigation";
-// import { useRouter } from "next/navigation";
-// import { usePathname } from "next/navigation";
-import { Locale } from "@/types";
+import { locales } from "@/config";
 import styles from "./localeSwitcherSelect.module.scss";
 
 type Props = {
@@ -13,6 +11,7 @@ type Props = {
   defaultValue: string;
   label: string;
 };
+type Locale = (typeof locales)[number];
 
 export default function LocaleSwitcherSelect({
   children,

@@ -1,0 +1,31 @@
+$sm: 767.98px;
+$md: 1023.98px;
+$lg: 1279.98px;
+
+@mixin sm {
+  @media screen and (max-width: ($sm)) {
+    @content;
+  }
+}
+@mixin sm-landscape {
+  @media screen and (max-width: ($sm)) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media screen and (max-width: ($md)) {
+    @content;
+  }
+}
+@mixin md-landscape {
+  @media screen and (max-width: ($md)) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (max-width: ($lg)) {
+    @content;
+  }
+}

@@ -6,10 +6,13 @@ import Logo from "@/public/images/logo-envent-no-bg.png";
 import Image from "next/image";
 import { Link } from "@/navigation";
 import { Clock, Email, Phone } from "@/helpers/imagesImport";
-// import dynamic from "next/dynamic";
 import Navigation from "../Navigation";
 import SocialList from "../SocialList";
 import { HeaderT } from "@/messages/types/HeaderT";
+import BurgerMenu from "../BurgerMenu";
+import { useMediaQuery } from "react-responsive";
+import { useAfterLoad } from "@/helpers/useAfterLoad";
+// import dynamic from "next/dynamic";
 
 const Header: React.FC<{ t: HeaderT }> = ({ t }) => {
   const { scrollY } = useScroll();
@@ -21,59 +24,66 @@ const Header: React.FC<{ t: HeaderT }> = ({ t }) => {
   const opacityTop = useTransform(scrollY, [0, 30], [1, 0]);
   const heightTop = useTransform(scrollY, [0, 120], heightTopSizes);
 
+  const isTabletOrMobile = useMediaQuery({ maxWidth: 1023.98 });
+  const isPageLoaded = useAfterLoad();
+
   return (
-    <motion.header
-      style={{
-        height: heightHeader,
-      }}
-      className={`${styles.header} container`}
-    >
-      <motion.div
+    <>
+      <motion.header
         style={{
-          opacity: opacityTop,
-          height: heightTop,
-          padding: opacityTop,
+          height: heightHeader,
         }}
-        className={styles.top}
+        className={`${styles.header} container`}
       >
-        <span className={styles.logo}>
-          <Image
-            priority
-            src={Logo}
-            alt="Envent Logo"
-            width={173}
-            height={100}
-          />
-        </span>
-        <ul className={styles.contacts}>
-          <motion.li className={styles.item}>
-            <Link href={"tel:+380445038377"} className={styles.link}>
-              <Phone className={styles.svg} />
-              {t.topList.call_us}
-              <span>+38 (044) 503 83 77</span>
-            </Link>
-          </motion.li>
-          <li className={styles.item}>
-            <Link href={"mailto:info@envent.kiev.ua"} className={styles.link}>
-              <Email className={styles.svg} />
-              {t.topList.mail}
-              <span>info@envent.kiev.ua</span>
-            </Link>
-          </li>
-          <li className={styles.item}>
-            <div className={styles.link}>
-              <Clock className={styles.svg} />
-              <p>{t.topList.working_hours}</p>
-              <span>{t.topList.hours}</span>
-            </div>
-          </li>
-        </ul>
-      </motion.div>
-      <div className={styles.bottom}>
-        <Navigation translations={t.navlink} />
-        <SocialList className="header" />
-      </div>
-    </motion.header>
+        <motion.div
+          style={{
+            opacity: opacityTop,
+            height: heightTop,
+            padding: opacityTop,
+          }}
+          className={styles.top}
+        >
+          <Link href={"/"} className={styles.logo}>
+            <Image
+              priority
+              src={Logo}
+              alt="Envent Logo"
+              width={173}
+              height={100}
+            />
+          </Link>
+          <ul className={styles.contacts}>
+            <li className={styles.item}>
+              <Link href={"tel:+380445038377"} className={styles.link}>
+                <Phone className={styles.svg} />
+                {t.topList.call_us}
+                <span>+38 (044) 503 83 77</span>
+              </Link>
+            </li>
+            <li className={styles.item}>
+              <Link href={"mailto:info@envent.kiev.ua"} className={styles.link}>
+                <Email className={styles.svg} />
+                {t.topList.mail}
+                <span>info@envent.kiev.ua</span>
+              </Link>
+            </li>
+            <li className={styles.item}>
+              <div className={styles.link}>
+                <Clock className={styles.svg} />
+                <p>{t.topList.working_hours}</p>
+                <span>{t.topList.hours}</span>
+              </div>
+            </li>
+          </ul>
+        </motion.div>
+        <div className={styles.bottom}>
+          <Navigation translations={t.navlink} />
+          <SocialList className="header" />
+        </div>
+      </motion.header>
+
+      {isTabletOrMobile && isPageLoaded && <BurgerMenu navlink={t.navlink} />}
+    </>
   );
 };
 // export default dynamic(() => Promise.resolve(Header), { ssr: false });

@@ -8,16 +8,19 @@ export class HeroRightSideT implements Translation {
     title: "",
     list: {
       designing: {
+        href: "",
         svgName: "",
         title: "",
         descriptions: "",
       },
       production: {
+        href: "",
         svgName: "",
         title: "",
         descriptions: "",
       },
       assembling: {
+        href: "",
         svgName: "",
         title: "",
         descriptions: "",
@@ -28,16 +31,19 @@ export class HeroRightSideT implements Translation {
     title: "",
     list: {
       automation: {
+        href: "",
         svgName: "",
         title: "",
         descriptions: "",
       },
       works: {
+        href: "",
         svgName: "",
         title: "",
         descriptions: "",
       },
       services: {
+        href: "",
         svgName: "",
         title: "",
         descriptions: "",
@@ -57,10 +63,9 @@ export class HeroRightSideT implements Translation {
       },
       touch: {
         title: "",
-        descriptions: {
-          mail: "",
-          tel: "",
-        },
+        descriptions: "",
+        mail: "",
+        tel: "",
       },
     },
   };

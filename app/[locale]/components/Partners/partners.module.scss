@@ -17,6 +17,7 @@
     overflow: hidden;
 
     .list {
+      position: relative;
       display: flex;
       max-width: min-content;
       gap: 20px;

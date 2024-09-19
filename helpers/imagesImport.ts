@@ -1,6 +1,9 @@
 import HeroMainBG from "../public/images/hero-main-bg.webp";
 import HeroAboutBG from "../public/images/hero-about-bg.webp";
 import HeroServicesBG from "../public/images/hero-services-bg.webp";
+import heroProjectsPageBG from "../public/images/projects/hero_projects_page_BG.png";
+import AboutUsCountedBG from "../public/images/about_us_counted.webp";
+
 import RiverMall from "../public/images/riverMall.png";
 import Phone from "../public/icons/phone-call-communication.svg";
 import Email from "../public/icons/email-essential-letter.svg";
@@ -22,14 +25,12 @@ import TelegramFilled from "../public/icons/telegram-filled.svg";
 import LocationsFilled from "../public/icons/locations-filled.svg";
 import InstagramFilled from "../public/icons/IconParkSolidInstagram.svg";
 
-import heroProjectsPageBG from "../public/images/projects/hero_projects_page_BG.png";
 import riverMall from "../public/images/projects/riverMall.jpg";
 import blockBaster from "../public/images/projects/blockBaster.jpg";
 import odeskiyBulvar from "../public/images/projects/odeskiyBulvar.jpg";
 import karavan from "../public/images/projects/karavan.jpg";
 import epicentr from "../public/images/projects/epicentr.jpg";
 import altaCentr from "../public/images/projects/altaCentr.jpg";
-import AboutUsCountedBG from "../public/images/about_us_counted.webp";
 
 import LogoMitsubishi from "../public/icons/partner-mitsubishi-heavy-industries.svg";
 import LogoCooperHunter from "../public/icons/partner-cooperhunter.png";
@@ -48,6 +49,9 @@ import SideServicesAssembling from "../public/icons/IconParkOutlineHelmetOne.svg
 import SideTodoAutomation from "../public/icons/IconParkOutlineCpu.svg";
 import SideTodoCommissioning from "../public/icons/IconParkOutlineNetworkTree.svg";
 import SideTodoMaintenance from "../public/icons/IconParkOutlineSpanner.svg";
+
+import BurgerMenuBtn from "../public/icons/IconParkOutlineHamburgerButton.svg";
+import BurgerCloseBtn from "../public/icons/IconParkOutlineClose.svg";
 
 export {
   HeroMainBG,
@@ -96,4 +100,6 @@ export {
   SideTodoAutomation,
   SideTodoCommissioning,
   SideTodoMaintenance,
+  BurgerMenuBtn,
+  BurgerCloseBtn,
 };

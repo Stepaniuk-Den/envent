@@ -2,6 +2,13 @@ import { Metadata } from "next";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { localize } from "@/localize";
 import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
+// import Hero from "../components/Hero";
+// import AnimatedTitle from "../components/AnimatedTitle";
+// import Line from "../components/Line";
+// import { heroProjectsPageBG } from "@/helpers/imagesImport";
+// import Projects from "../components/Projects";
+// import ContactUsSection from "../components/ContactUsSection";
+// import Link from "next/link";
 
 export const metadata: Metadata = {
   title: " Projects | Envent",
@@ -26,6 +33,10 @@ const ProjectsPage: React.FC<Props> = async ({ params: { locale } }) => {
     //   t={projectsT.hero}
     // ></Hero> */}
     // {/* <Projects t={projectsT.projects} /> */}
+    // </div>
+
+    // <div>
+    //   <ContactUsSection params={{ locale }} />
     // </div>
   );
 };

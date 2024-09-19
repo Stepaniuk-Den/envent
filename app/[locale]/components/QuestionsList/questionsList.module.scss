@@ -1,0 +1,21 @@
+@import "../../mixin.scss";
+
+.list_wrapper {
+  display: flex;
+  .list {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    min-height: 500px;
+    padding: 34px;
+    background-color: var(--color-white);
+    box-shadow: 0 6px 10px var(--color-dark-box-shadow);
+
+    @include lg {
+      max-width: 600px;
+    }
+    @include md {
+      max-width: 100%;
+    }
+  }
+}

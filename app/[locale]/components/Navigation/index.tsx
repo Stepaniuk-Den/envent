@@ -8,7 +8,8 @@ import { Link } from "@/navigation";
 
 const Navigation: React.FC<{
   translations: HeaderT["navlink"];
-}> = ({ translations }) => {
+  onClick?: () => void;
+}> = ({ translations, onClick }) => {
   const navItems = Object.entries(translations);
   const selectedLayoutSegment = useSelectedLayoutSegment();
   const pathname = selectedLayoutSegment ? `/${selectedLayoutSegment}` : "/";
@@ -19,6 +20,7 @@ const Navigation: React.FC<{
 
         return (
           <li
+            onClick={onClick}
             key={key}
             className={`${styles.link} ${isActive ? styles.active : ""}`}
           >

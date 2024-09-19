@@ -25,7 +25,14 @@ export interface IHeroRightSideItems {
 
 export interface IServiceItem {
   list: {
-    [key: string]: { svgName: string; title: string; descriptions: string };
+    [key: string]: {
+      href?: string;
+      svgName?: string;
+      title: string;
+      descriptions: string;
+      mail?: string;
+      tel?: string;
+    };
   };
 }
 
@@ -42,10 +49,6 @@ export interface IButtonVariableColor {
   className: "blue_dark" | "blue_white" | "dark_blue";
   firstChildren: React.ReactNode;
   secondChildren: React.ReactNode;
-}
-
-export interface ILineProps {
-  className: "yellow-left" | "yellow-center" | "dark";
 }
 
 export interface IMainButtonProps {
@@ -201,24 +204,47 @@ export interface PropsServiceCard {
     description: string;
     button: string;
   };
-  firstImg: string;
-  secondImg: string;
-  thirdImg: string;
+  images: {
+    [key: number]: {
+      id: string;
+      src: string;
+      alt: string;
+    };
+  };
+  imgCard: {
+    [key: number]: {
+      id: string;
+      src: string;
+      alt: string;
+    };
+  };
+  slug?: string;
   heroBg?: string | StaticImageData;
-  alt: string;
   secondBtn: string;
-  address: string;
-  link: string;
   alignRight?: boolean;
-  p1?: string;
+  p1: string;
   p2?: string;
-  p3?: string;
-  p4?: string;
-}
-
-export interface IServices {
-  service: {
-    [key: number]: PropsServiceCard;
+  p3: string;
+  p4: string;
+  list?: {
+    l1: string;
+    l2: string;
+    l3: string;
+    l4?: string;
+    l5?: string;
+    l6?: string;
+    l7?: string;
+    l8?: string;
+  };
+  process?: {
+    text: string;
+    list: {
+      l1: string;
+      l2: string;
+      l3: string;
+      l4: string;
+      l5: string;
+    };
   };
 }
 
@@ -226,4 +252,19 @@ export interface IServiceAboutProps {
   title: string;
   phone: string;
   btnForm: string;
+  btnBack?: string;
+}
+
+export interface IImageItem {
+  id: string;
+  src: string;
+  alt: string;
+  title?: string;
+  area_label?: string;
+  address?: string;
+  link?: string;
+}
+
+export interface IImageList {
+  images: Record<number, IImageItem>;
 }

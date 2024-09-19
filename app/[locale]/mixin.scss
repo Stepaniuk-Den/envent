@@ -1,22 +1,76 @@
+@import "./responsive.scss";
+
 @mixin transition-standart {
   transition: all 300ms ease-in-out;
   @content;
 }
 
-@mixin text-dark-openSands-15px-27lh-06ls {
+@mixin text-main-openSands {
   font-family: var(--font-open-sands);
   color: var(--color-dark);
   font-size: 15px;
-  line-height: 27px; /* 180% */
+  line-height: 1.8; /* 180% */
   letter-spacing: 0.6px;
   @content;
+  @include lg {
+    font-size: 14px;
+  }
 }
 
-@mixin text-title-rubik-40px-700w-25lh {
+@mixin text-title-h1-rubik {
+  font-family: var(--font-rubik);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2; /* 110% */
+  @content;
+  @include lg {
+    font-size: 50px;
+  }
+  @include md {
+    font-size: 40px;
+  }
+  @include sm {
+    font-size: 32px;
+  }
+}
+
+@mixin text-title-h2-rubik {
   font-family: var(--font-rubik);
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
-  line-height: 25px;
+  line-height: normal;
+  @content;
+  @include lg {
+    font-size: 36px;
+  }
+}
+
+@mixin text-title-h3-rubik {
+  font-family: var(--font-rubik);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+  // letter-spacing: 0.6px;
+  @content;
+  @include lg {
+    font-size: 28px;
+  }
+}
+@mixin text-button-rubik {
+  font-family: var(--font-rubik);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  @content;
+}
+@mixin text-title-item-rubik {
+  font-family: var(--font-rubik);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.64px;
   @content;
 }

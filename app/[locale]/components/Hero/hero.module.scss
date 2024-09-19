@@ -1,3 +1,5 @@
+@import "../../mixin.scss";
+
 .hero {
   position: relative;
   display: flex;
@@ -5,15 +7,15 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  padding-top: 200px;
   overflow: hidden;
   background-repeat: no-repeat;
+  // background-attachment: fixed;
   background-size: cover;
   color: var(--color-white);
 
-  &.main {
-    // height: 691px;
-  }
+  // @include md {
+  //   height: 600px;
+  // }
 
   &::before {
     content: "";
@@ -32,9 +34,14 @@
   }
 
   .wrapper {
+    position: absolute;
+    top: 40%;
     display: flex;
     justify-content: space-between;
-    width: 1280px;
-    height: 100%;
+  }
+
+  &.contacts,
+  &.about {
+    background-position: left 50% top 0%;
   }
 }

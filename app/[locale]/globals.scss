@@ -5,9 +5,14 @@
   --color-yellow-blur: #efcc4ecc;
   --color-dark: #293241;
   --color-white: rgb(255, 255, 255);
+  --color-bg-light: #f7f7f7;
+  --color-testimonials-grey:#919191;
   --color-dark-box-shadow: rgba(0, 0, 0, 0.25);
-  --color-white-box-shadow: rgba(255, 255, 255, 0.25);
+  --color-white-box-shadow: #ffffff40;
 }
+
+@import "./mixin.scss";
+@import "./responsive.scss";
 
 @media (prefers-color-scheme: dark) {
 }
@@ -31,7 +36,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 14px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -85,18 +90,27 @@ address {
   font-style: normal;
 }
 
-.visually-hidden {
+.hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 1000;
 }
 
 // @media (prefers-color-scheme: dark) {
@@ -106,16 +120,27 @@ address {
 // }
 
 .container {
-  max-width: 1280px;
+  width: 1280px;
   margin: 0 auto;
-  // background-color: gainsboro;
-}
+  padding: 0 30px;
 
-// $footerHeight: 385px;
+  @include lg {
+    width: 1024px;
+    padding: 0 20px;
+  }
+
+  @include md {
+    width: 768px;
+  }
+
+  @include sm {
+    width: 375px;
+    padding: 0 10px;
+  }
+}
 
 main {
   min-height: 100vh;
-  // min-height: calc(100vh - $footerHeight);
 }
 
 .rubik {

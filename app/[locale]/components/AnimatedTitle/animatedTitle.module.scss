@@ -1,5 +1,9 @@
 @import "../../mixin.scss";
 
 .title {
-    @include text-title-rubik-40px-700w-25lh;
+  @include text-title-h2-rubik;
+
+  @include md {
+    text-align: center;
   }
+}

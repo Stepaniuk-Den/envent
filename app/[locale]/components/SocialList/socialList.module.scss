@@ -34,13 +34,23 @@
   &.header {
     .item {
       border-left: 1px solid rgba(0, 0, 0, 0.15);
+
+      @include md {
+        border: none;
+        &:not(:first-child) {
+          border-left: 1px solid rgba(0, 0, 0, 0.15);
+        }
+      }
     }
   }
 
   &.footer {
     justify-content: center;
-    height: 115px;
     gap: 60px;
+
+    @include md {
+      gap: 24px;
+    }
 
     .item {
       width: 40px;

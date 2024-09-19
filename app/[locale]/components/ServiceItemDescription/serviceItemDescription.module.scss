@@ -1,29 +1,77 @@
 @import "../../mixin.scss";
 
+.service_container {
+  display: flex;
+  flex-direction: column;
+  // gap: 18px;
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
 
-.service_item{
-    padding: 100px 0;
+  > * {
+    margin-bottom: 18px;
+  }
 
-    .service_container{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        // gap:68px;
+  > *:first-child {
+    margin-bottom: 30px;
+  }
 
-        .left_wrapper{
-            width: 535px;
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  @include sm {
+  padding-top: 38px !important;
+  padding-bottom: 38px !important;
+  }
+
+  .svg_container {
+    height: 88px;
+    @include transition-standart;
+
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      span {
+        @include text-main-openSands;
+        font-weight: bold;
+
+        &:hover {
+          color: var(--color-accent-yellow);
         }
-
-        .right_wrapper{
-            width: 535px;
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
-        }
-
-        .text {
-            @include text-dark-openSands-15px-27lh-06ls;
-          }
+      }
     }
-}
+
+    .svg {
+      width: 18px;
+      height: 18px;
+      color: var(--color-accent-blue);
+      transform: rotateZ(180deg);
+      @include transition-standart;
+
+      &:hover {
+        color: var(--color-accent-yellow);
+      }
+    }
+  }
+
+    .text {
+      @include text-main-openSands;
+
+      &.bold_text {
+        font-weight: bold;
+      }
+    }
+
+    .list_companies {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+    }
+    .list {
+      list-style-type: disc;
+      padding-left: 24px;
+    }
+  }
 

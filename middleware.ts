@@ -16,10 +16,11 @@ export const config = {
     // Set a cookie to remember the previous locale for
     // all requests that have a locale prefix
     "/(uk|en)/:path*",
+    // "/api/:path*",
 
     // Enable redirects that add missing locales
     // (e.g. `/pathnames` -> `/en/pathnames`)
-    "/((?!_next|_vercel|.*\\..*).*)",
+    "/((?!api|_next|_vercel|.*\\..*).*)",
   ],
 };
 // import { NextResponse } from "next/server";

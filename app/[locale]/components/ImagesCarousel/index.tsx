@@ -2,32 +2,59 @@
 
 import styles from "./imagesCarousel.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
+import { useCarouselAboutStore } from "@/stores/carousel-about-store";
+import { useCarouselServiceStore } from "@/stores/carousel-service-store";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import { useState } from "react";
 import MagnifyingGlass from "@/public/icons/magnifying-glass.svg";
 import Close from "@/public/icons/close.svg";
 import BackdropButton from "../Buttons/BackdropButton";
 import useMeasure from "react-use-measure";
 import PrevNextButtons from "../ImagesCarouselPrevNextButtons";
+import { IImageItem } from "@/helpers/interfaces";
+import { useModal } from "@/helpers/useModal";
 
-interface IImagesCarouselProps {
+export interface IListCarouselProps {
   [key: number]: {
-    id: string;
-    src: string;
-    alt: string;
-    title?: string;
-    address?: string;
-    link?: string;
+    images: Record<number, IImageItem>;
   };
 }
 
 const ImagesCarousel: React.FC<{
-  t: IImagesCarouselProps;
-}> = ({ t }) => {
+  t: IListCarouselProps;
+  page: "services" | "about" | "";
+  //Додано id як необов'язковий пропс
+  id?: number;
+}> = ({ t, page, id }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const imagesList = Object.values(t);
+  //Додано додатковий стейт для відстеження стану зображень
+  const [imagesList, setImagesList] = useState<IImageItem[]>([]);
   let [ref, { width }] = useMeasure();
+
+  const { keyImagesAbout } = useCarouselAboutStore();
+  const { keyImagesService } = useCarouselServiceStore();
+
+  // const id = page === "about" ? keyImagesAbout.id : keyImagesService.id;
+  // const imagesList = Object.values(t[id as keyof typeof t].images);
+
+  //Додано useEffect для відстеження зображень на різних сторінках 
+
+  useEffect(() => {
+    const fetchImagesList = () => {
+      if (page === "about") {
+        if (keyImagesAbout.id !== undefined) {
+          const id = keyImagesAbout.id;
+          setImagesList(Object.values(t[id]?.images || {}));
+        }
+      } else if (page === "services" && id !== undefined) {
+        const images = t[id]?.images ? Object.values(t[id]?.images) : [];
+        setImagesList(images);
+      }
+    };
+
+    fetchImagesList();
+  }, [page, id, keyImagesAbout, t]);
 
   const handleOpenBackdrop = (index: number) => {
     setCurrentIndex(index);
@@ -38,6 +65,12 @@ const ImagesCarousel: React.FC<{
   };
 
   const x = currentIndex ? width * currentIndex * -1 : 0;
+
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [id]);
+
+  useModal(isOpen, setIsOpen);
 
   return (
     <div className={styles.carousel_container} ref={ref}>
@@ -79,9 +112,9 @@ const ImagesCarousel: React.FC<{
 
       {/* ==== BACKDROP ==== */}
       <AnimatePresence mode="wait">
-        {isOpen && currentIndex !== null && (
+        {isOpen && (
           <motion.div
-            className={styles.backdrop}
+            className={`${styles.backdrop}  overlay`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -116,6 +149,7 @@ const ImagesCarousel: React.FC<{
                 alt={imagesList[currentIndex].alt}
                 fill={true}
                 sizes="80vw"
+                className={styles.images}
               />
               <p className={styles.counter}>
                 {currentIndex + 1} of {imagesList.length}
