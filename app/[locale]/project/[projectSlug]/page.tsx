@@ -9,6 +9,7 @@ import Image from "next/image";
 import { IPropsProjectItem } from "@/helpers/interfaces";
 import ProjectSection from "../../components/ProjectsSection";
 import { MainPageT } from "@/messages/types/MainPageT";
+import ContactUsSection from "../../components/ContactUsSection";
 // import AnimatedTitle from "../../components/AnimatedTitle";
 
 type Props = {
@@ -43,90 +44,94 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
   }
 
   return (
-    <section className={styles.projectItemSection}>
-      <Hero
-        imageSrc={projectData.mainImg || ""}
-        className=""
-        t={{
-          title: projectData.title,
-          description: projectData.heroDescription || "",
-          button: projectData.heroButton || "",
-        }}
-      />
+    <>
+      <section className={styles.projectItemSection}>
+        <Hero
+          imageSrc={projectData.mainImg || ""}
+          className=""
+          t={{
+            title: projectData.title,
+            description: projectData.heroDescription || "",
+            button: projectData.heroButton || "",
+          }}
+        />
 
-      <div className={`${styles.projectItemContainer} container`}>
-        <div className={styles.topInfoWrapper}>
-          <div className={styles.textWrapper}>
-            {/* <AnimatedTitle title={textCategory} /> */}
-            <h2 className={styles.descTitle}>About this Project</h2>
-            <Line className="yellow-left" />
-            <p className={styles.desc}>
-              Lectus erat, consectetur eu sapien eget rhoncus consectetur sem.
-              Proin cursus, dolor a mollis consectetur, risus dolor fermentum
-              massa, a commodo elit dui sit amet risus.
-            </p>
-            <ul>
-              <li>Maecenas ornare nisl</li>
-              <li>A tortor ultrices bibendum</li>
-              <li>Nulla fermentum</li>
-              <li>Metus quis</li>
-              <li>Sodales tristique</li>
-            </ul>
-          </div>
-          {projectData.images?.img1?.src && (
-            <div className={styles.imgWrapper}>
-              <Image
-                src={projectData.images.img1.src}
-                alt={projectData.images.img1.alt}
-                fill={true}
-                sizes="(max-width: 1439.98px) 365px, 405px"
-              />
+        <div className={`${styles.projectItemContainer} container`}>
+          <div className={styles.topInfoWrapper}>
+            <div className={styles.textWrapper}>
+              {/* <AnimatedTitle title={textCategory} /> */}
+              <h2 className={styles.descTitle}>About this Project</h2>
+              <Line className="yellow-left" />
+              <p className={styles.desc}>
+                Lectus erat, consectetur eu sapien eget rhoncus consectetur sem.
+                Proin cursus, dolor a mollis consectetur, risus dolor fermentum
+                massa, a commodo elit dui sit amet risus.
+              </p>
+              <ul>
+                <li>Maecenas ornare nisl</li>
+                <li>A tortor ultrices bibendum</li>
+                <li>Nulla fermentum</li>
+                <li>Metus quis</li>
+                <li>Sodales tristique</li>
+              </ul>
             </div>
-          )}
-        </div>
-        <div className={styles.middleImgWrapper}>
-          {projectData.images?.img2?.src && (
-            <Image
-              src={projectData.images.img2.src}
-              alt={projectData.images.img2.alt}
-              fill={true}
-              sizes="(max-width: 1439.98px) 365px, 405px"
-            />
-          )}
-        </div>
-        <div className={styles.bottomInfoWrapper}>
-          <div className={styles.imgWrapper}>
-            {projectData.images?.img3?.src && (
+            {projectData.images?.img1?.src && (
+              <div className={styles.imgWrapper}>
+                <Image
+                  src={projectData.images.img1.src}
+                  alt={projectData.images.img1.alt}
+                  fill={true}
+                  sizes="(max-width: 1439.98px) 365px, 405px"
+                />
+              </div>
+            )}
+          </div>
+          <div className={styles.middleImgWrapper}>
+            {projectData.images?.img2?.src && (
               <Image
-                src={projectData.images.img3.src}
-                alt={projectData.images.img3.alt}
+                src={projectData.images.img2.src}
+                alt={projectData.images.img2.alt}
                 fill={true}
                 sizes="(max-width: 1439.98px) 365px, 405px"
               />
             )}
           </div>
-          <div className={styles.textWrapper}>
-            <p>
-              Lorem ipsum dolor sit consectetur adipiscing elit. Nullam lectus
-              erat, consectetur eu sapien eget rhoncus consectetur sem. Proin
-              cursus, dolor a mollis consectetur, risus dolor fermentum massa, a
-              commodo elit dui sit amet risus. Maecenas ornare nisl a tortor
-              ultrices bibendum. Nulla fermentum, metus quis sodales tristique,
-              augue mauris molestie augue non feugiat ligula neque nec felis.
-            </p>
-            <p>
-              Lectus erat, consectetur eu sapien eget rhoncus consectetur sem.
-              Proin cursus, dolor a mollis consectetur, risus dolor fermentum
-              massa, a commodo elit dui sit amet risus. Maecenas ornare nisl a
-              tortor ultrices bibendum. Nulla fermentum, metus quis sodales
-              tristique, augue mauris molestie augue, non feugiat ligula neque
-              nec felis.
-            </p>
+          <div className={styles.bottomInfoWrapper}>
+            <div className={styles.imgWrapper}>
+              {projectData.images?.img3?.src && (
+                <Image
+                  src={projectData.images.img3.src}
+                  alt={projectData.images.img3.alt}
+                  fill={true}
+                  sizes="(max-width: 1439.98px) 365px, 405px"
+                />
+              )}
+            </div>
+            <div className={styles.textWrapper}>
+              <p>
+                Lorem ipsum dolor sit consectetur adipiscing elit. Nullam lectus
+                erat, consectetur eu sapien eget rhoncus consectetur sem. Proin
+                cursus, dolor a mollis consectetur, risus dolor fermentum massa,
+                a commodo elit dui sit amet risus. Maecenas ornare nisl a tortor
+                ultrices bibendum. Nulla fermentum, metus quis sodales
+                tristique, augue mauris molestie augue non feugiat ligula neque
+                nec felis.
+              </p>
+              <p>
+                Lectus erat, consectetur eu sapien eget rhoncus consectetur sem.
+                Proin cursus, dolor a mollis consectetur, risus dolor fermentum
+                massa, a commodo elit dui sit amet risus. Maecenas ornare nisl a
+                tortor ultrices bibendum. Nulla fermentum, metus quis sodales
+                tristique, augue mauris molestie augue, non feugiat ligula neque
+                nec felis.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <ProjectSection t={mainT.projects} t2={projectsT.projects} />
-    </section>
+        <ProjectSection t={mainT.projects} t2={projectsT.projects} />
+      </section>
+      <ContactUsSection params={{ locale }} />
+    </>
   );
 };
 

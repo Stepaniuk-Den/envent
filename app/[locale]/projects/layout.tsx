@@ -7,6 +7,7 @@ import { heroProjectsPageBG } from "@/helpers/imagesImport";
 import styles from "./projects.module.scss";
 import ProjectsNavigation from "../components/ProjectsNavigation";
 import Hero from "../components/Hero";
+import ContactUsSection from "../components/ContactUsSection";
 
 type Props = {
   children: React.ReactNode;
@@ -42,6 +43,7 @@ export default async function ProjectsLayout({
         <ProjectsNavigation t={t} />
         {children}
       </div>
+      <ContactUsSection params={{ locale }} />
     </section>
   );
 }
