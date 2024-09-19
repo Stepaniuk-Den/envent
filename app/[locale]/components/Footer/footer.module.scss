@@ -1,131 +1,12 @@
 @import "../../mixin.scss";
 
 .footer {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 500px;
+  height: max-content;
   width: 100vw;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 
-  @include md {
-    // height: 600px;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(31, 31, 31, 0.85);
-    z-index: 1;
-  }
-
-  > * {
-    position: relative;
-    z-index: 2;
-  }
-
-  .wrapper {
-    position: relative;
-    display: flex;
-    height: 500px;
-    margin-top: -150px;
-
-    font-family: var(--font-rubik);
-
-    @include md {
-      height: 595px;
-    }
-    @include sm {
-      flex-direction: column;
-    }
-
-    // &.scrolled {
-    //   opacity: 1;
-    //   transform: translateY(0);
-    //   // animation: fade-in 3s forwards;
-    // }
-
-    .contacts_container {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      background-color: var(--color-white);
-
-      @include sm {
-        display: none;
-      }
-
-      .social_container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 115px;
-        background-color: var(--color-dark);
-
-        // @include md {
-        //   // flex-direction: column;
-        //   flex: 1;
-        //   background-color: transparent;
-        //   height: max-content;
-        // }
-      }
-
-      .list {
-        display: flex;
-        flex-direction: column;
-        margin-left: 120px;
-        margin-top: 50px;
-        gap: 23px;
-
-        @include md {
-          margin: 0;
-          justify-content: center;
-          padding-top: 36px;
-          padding-left: 50px;
-        }
-
-        .item {
-          display: flex;
-
-          // @include md {
-          //   color: var(--color-white);
-          // }
-
-          .link {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 15px;
-            font-weight: 500;
-            line-height: 27px; /* 180% */
-
-            .svg {
-              width: 25px;
-              height: 25px;
-              @include transition-standart;
-              color: var(--color-dark);
-
-              // @include md {
-              //   color: var(--color-white);
-              // }
-            }
-
-            &:hover .svg {
-              color: var(--color-accent-yellow);
-            }
-          }
-        }
-      }
-    }
-  }
   .copyright {
     display: flex;
     height: 50px;
@@ -133,22 +14,5 @@
     align-items: center;
     color: var(--color-white);
     background-color: var(--color-accent-blue);
-  }
-}
-
-.scrolled {
-  opacity: 0;
-  transform: translateY(50px);
-  animation: fade-in 3s forwards;
-
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 }

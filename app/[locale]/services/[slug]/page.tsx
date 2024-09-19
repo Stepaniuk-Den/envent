@@ -7,6 +7,7 @@ import Hero from "../../components/Hero";
 import ServiceItemDescription from "../../components/ServiceItemDescription";
 import ServiceAboutProcess from "../../components/ServiceAboutProcess";
 import QuestionsSection from "../../components/QuestionsSection";
+import ContactUsSection from "../../components/ContactUsSection";
 
 type Props = {
   params: {
@@ -14,8 +15,6 @@ type Props = {
     locale: string;
   };
 };
-
-
 
 export async function generateMetadata({
   params: { slug, locale },
@@ -25,7 +24,6 @@ export async function generateMetadata({
   const service = Object.values(servicesT.services.service).find(
     (service) => service.slug === slug
   );
-  
 
   if (!service) {
     return {
@@ -50,8 +48,6 @@ export async function generateMetadata({
   };
 }
 
-
-
 const ServiceItemPage = async ({ params: { slug, locale } }: Props) => {
   unstable_setRequestLocale(locale);
   const servicesT = await localize(ServicesPageT);
@@ -71,7 +67,7 @@ const ServiceItemPage = async ({ params: { slug, locale } }: Props) => {
   if (id === null) {
     return notFound();
   }
-  
+
   if (!service) {
     return notFound();
   }
@@ -88,6 +84,7 @@ const ServiceItemPage = async ({ params: { slug, locale } }: Props) => {
         id={Number(id)}
       />
       <QuestionsSection type="faq" params={{ locale }} />
+      <ContactUsSection params={{ locale }} />
     </div>
   );
 };

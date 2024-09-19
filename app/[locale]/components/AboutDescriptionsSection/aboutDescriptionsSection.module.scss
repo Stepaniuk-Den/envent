@@ -12,4 +12,15 @@
   @include md {
     grid-template-columns: repeat(1, 1fr);
   }
+  .p1,
+  .p2,
+  .p3,
+  .p4,
+  .p5 {
+    font-size: medium;
+
+    @include md-landscape {
+      font-size: x-small;
+    }
+  }
 }

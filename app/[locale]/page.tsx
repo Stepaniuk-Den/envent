@@ -16,6 +16,7 @@ import { HeroRightSideT } from "@/messages/types/HeroRightSideT";
 import Testimonials from "./components/Testimonials";
 import { MainPageT } from "@/messages/types/MainPageT";
 import QuestionsSection from "./components/QuestionsSection";
+import ContactUsSection from "./components/ContactUsSection";
 
 type Props = {
   params: { locale: string };
@@ -38,6 +39,7 @@ const Home: React.FC<Props> = async ({ params: { locale } }) => {
       <QuestionsSection params={{ locale }} type="slogan" />
       <VideoSection t={mainT.videoSection} />
       <Partners t={mainT.partners} />
+      <ContactUsSection params={{ locale }} />
     </div>
   );
 };

@@ -10,7 +10,7 @@ const Observer = ({
   y,
   opacity,
   scale,
-  once = false,
+  once = true,
 }: {
   children: React.ReactNode;
   threshold: number;
