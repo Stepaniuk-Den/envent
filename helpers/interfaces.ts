@@ -51,9 +51,6 @@ export interface IButtonVariableColor {
   secondChildren: React.ReactNode;
 }
 
-export interface ILineProps {
-  className: "yellow-left" | "yellow-center";
-}
 
 export interface IMainButtonProps {
   type?: "button" | "submit" | "reset";

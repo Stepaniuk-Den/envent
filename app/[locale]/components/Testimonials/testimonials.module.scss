@@ -3,11 +3,6 @@
 .testimonials {
   margin-top: -8% !important;
   
-
-  // @include sm {
-  //   margin-top: -12% !important;
-  // }
-
   .wrapper {
     position: relative;
     background: var(--color-white);
@@ -50,7 +45,7 @@
           font-weight: 300;
           text-align: center;
           text-transform: uppercase;
-          color: #919191;
+          color: var(--color-testimonials-grey);
           letter-spacing: 3px;
           line-height: 2;
         }

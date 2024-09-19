@@ -11,6 +11,9 @@ const Observer = ({
   opacity,
   scale,
   once = true,
+  type = false,
+  className,
+  
 }: {
   children: React.ReactNode;
   threshold: number;
@@ -20,6 +23,8 @@ const Observer = ({
   opacity?: number;
   scale?: number;
   once?: boolean;
+  type?: boolean;
+  className?: string;
 }) => {
   x = x || 0;
   y = y || 0;
@@ -57,8 +62,29 @@ const Observer = ({
       };
     }
   }, [once]);
+
+  if (!type) {
+    return (
+      <div
+        style={{
+          transitionDuration: duration,
+          transform: !intersecting
+            ? `translate(${x}px, ${y}px)`
+            : `translate(0px, 0px)`,
+          opacity: !intersecting ? opacity : 1,
+          scale: !intersecting ? scale : 1,
+        }}
+        ref={ref as React.RefObject<HTMLDivElement>}
+          // className={`transition ${intersecting ? "opacity-100" : "opacity-0"}`}  // for tailwind css
+        className={className}
+      >
+        {children}
+      </div>
+    );
+  }
+
   return (
-    <div
+    <li
       style={{
         transitionDuration: duration,
         transform: !intersecting
@@ -67,12 +93,13 @@ const Observer = ({
         opacity: !intersecting ? opacity : 1,
         scale: !intersecting ? scale : 1,
       }}
-      // className={`transition ${intersecting ? "opacity-100" : "opacity-0"}`}  // for tailwind css
-      ref={ref}
+      ref={ref as React.RefObject<HTMLLIElement>}
+      className={className}
     >
       {children}
-    </div>
+    </li>
   );
 };
+
 
 export default Observer;

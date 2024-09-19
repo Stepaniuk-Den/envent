@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState} from "react";
 import { ITestimonialsProps } from "@/helpers/interfaces";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { handleNext, handlePrev } from "@/helpers/useClickPrevAndNext";
 import Image from "next/image";
 import styles from "./testimonials.module.scss";
@@ -10,20 +9,12 @@ import BackdropButton from "../Buttons/BackdropButton";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
 import ArrowRight from "@/public/icons/arrow-right.svg";
 import Line from "../Line";
+import Observer from "@/helpers/observer";
 
 const Testimonials = ({ t }: ITestimonialsProps) => {
   const itemsList = Object.values(t.items);
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "start start"],
-  });
+
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-
-  const isInView = useInView(ref, { once: true, amount: 0.1});
-
-  const y = useTransform(scrollYProgress, [0.2, 0.5], [200, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   const currentTestimonial =
     currentIndex !== null ? itemsList[currentIndex] : null;
@@ -32,14 +23,14 @@ const Testimonials = ({ t }: ITestimonialsProps) => {
     <section   
       className={`${styles.testimonials} container`}
     >
-      <motion.div className={styles.wrapper} ref={ref} 
-      // style={{ y, opacity }}
-      style={{
-        transform: isInView ? "none" : "translateY(200px)",
-        opacity: isInView ? 1 : 0,
-        transition: "all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-      }}
-      >
+       <Observer
+      y={300}
+      duration="1000ms"
+      threshold={0.1}
+      opacity={0}
+      scale={1}
+      className={styles.wrapper}
+    >
       <ul className={styles.list}>
         <li className={styles.item}>
           <h3 className={styles.title}>
@@ -98,7 +89,7 @@ const Testimonials = ({ t }: ITestimonialsProps) => {
           </div>
         </li>
       </ul>
-      </motion.div>
+      </Observer>
     </section>
   );
 };
