@@ -394,7 +394,7 @@ const en: FullTranslation = {
       list: {
         office: {
           title: "Our Office",
-          descriptions: "Darnytskyi Boulevard, 12, <br/>Kyiv, 02000",
+          descriptions: "Darnytskyi Boulevard, 12, <br/>Kyiv, 02192",
         },
         hours: {
           title: "Office Hours",
@@ -924,7 +924,7 @@ const en: FullTranslation = {
       title: "About Process",
       phone: "Call for a Quote",
       btnForm: "Online estimate form",
-      btnBack:"back",
+      btnBack: "back",
     },
   },
   ContactsPage: {

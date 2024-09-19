@@ -12,6 +12,16 @@
     flex-direction: column;
   }
 
+  @include md-landscape {
+    margin-top: 50px;
+    flex-direction: row;
+  }
+
+  @include sm-landscape {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
   .link {
     position: relative;
     display: flex;
@@ -26,6 +36,13 @@
     @include transition-standart;
 
     @include md {
+      font-size: x-large;
+    }
+
+    @include md-landscape {
+      font-size: large;
+    }
+    @include sm-landscape {
       font-size: x-large;
     }
 

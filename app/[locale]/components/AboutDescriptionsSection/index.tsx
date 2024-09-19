@@ -1,5 +1,5 @@
-import AnimatedText from "@/helpers/animatedText";
 import styles from "./aboutDescriptionsSection.module.scss";
+import Observer from "@/helpers/observer";
 
 type Props = {
   [key: string]: string;
@@ -13,11 +13,11 @@ const AboutDescriptionsSection: React.FC<{ t: Props }> = ({ t }) => {
       <div className="container">
         <div className={styles.descriptions_wrapper}>
           {aboutList.map(([key, value]) => {
-            const className = styles[key] || key;
+            const className = styles[key] ? styles[key] : "";
             return (
-              <AnimatedText key={key}>
+              <Observer y={50} duration="300ms" threshold={0.5} key={key}>
                 <p className={className}>{value}</p>
-              </AnimatedText>
+              </Observer>
             );
           })}
         </div>

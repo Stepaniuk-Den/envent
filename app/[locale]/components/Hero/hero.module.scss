@@ -39,4 +39,9 @@
     display: flex;
     justify-content: space-between;
   }
+
+  &.contacts,
+  &.about {
+    background-position: left 50% top 0%;
+  }
 }

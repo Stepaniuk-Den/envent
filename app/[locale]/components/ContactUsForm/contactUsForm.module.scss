@@ -64,9 +64,12 @@
       }
     }
 
+    @include md {
+      padding: 50px 20px;
+    }
+
     @include sm {
       width: 100%;
-      padding: 50px 20px;
     }
   }
 

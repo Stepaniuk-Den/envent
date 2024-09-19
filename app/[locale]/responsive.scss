@@ -7,9 +7,19 @@ $lg: 1279.98px;
     @content;
   }
 }
+@mixin sm-landscape {
+  @media screen and (max-width: ($sm)) and (orientation: landscape) {
+    @content;
+  }
+}
 
 @mixin md {
   @media screen and (max-width: ($md)) {
+    @content;
+  }
+}
+@mixin md-landscape {
+  @media screen and (max-width: ($md)) and (orientation: landscape) {
     @content;
   }
 }

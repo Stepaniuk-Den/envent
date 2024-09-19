@@ -11,6 +11,7 @@ import Line from "../components/Line";
 import AboutBestSection from "../components/AboutBestSection";
 import AboutDescriptionsSection from "../components/AboutDescriptionsSection";
 import AboutQuoteSection from "../components/AboutQuoteSection";
+import ContactUsSection from "../components/ContactUsSection";
 
 type Props = {
   params: { locale: string };
@@ -33,6 +34,7 @@ const About: React.FC<Props> = async ({ params: { locale } }) => {
         <AboutDescriptionsSection t={aboutT.about.description} />
         <AboutBestSection t={aboutT.best} />
         <AboutQuoteSection t={aboutT.ceo} />
+        <ContactUsSection params={{ locale }} />
       </div>
     </div>
   );

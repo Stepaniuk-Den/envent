@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./burgerMenu.module.scss";
 import Modal from "../Modal";
 import Navigation from "../Navigation";
