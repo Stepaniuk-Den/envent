@@ -34,7 +34,7 @@ const Home: React.FC<Props> = async ({ params: { locale } }) => {
       <Hero imageSrc={HeroMainBG} className="main" t={mainT.hero}>
         <HeroRightSideList className="main" t={heroRightSideT.services} />
       </Hero>
-      <Description t={mainT.descriptions} language={locale} />
+      <Description t={mainT.descriptions}/>
       <ProjectSection t={mainT.projects} t2={projectsT.projects} />
       <AboutUsCounted imageSrc={AboutUsCountedBG} t={mainT.aboutUsCounted} />
       <Testimonials t={mainT.testimonials} />

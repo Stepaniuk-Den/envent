@@ -5,14 +5,14 @@ import {
   PropsServiceCard,
 } from "@/helpers/interfaces";
 import { Link } from "@/navigation";
+import { useAfterLoad } from "@/helpers/useAfterLoad";
+import { useMediaQuery } from "react-responsive";
 import AnimatedTitle from "../AnimatedTitle";
 import ButtonVariableColor from "../Buttons/ButtonVariableColor";
 import MainButton from "../Buttons/MainButton";
 import ImagesCarousel from "../ImagesCarousel";
 import Line from "../Line";
 import styles from "./serviceAboutProcess.module.scss";
-import { useAfterLoad } from "@/helpers/useAfterLoad";
-import { useMediaQuery } from "react-responsive";
 
 interface Service {
   service: Record<number, IImageList>;
@@ -62,6 +62,7 @@ const ServiceAboutProcess: React.FC<{
       </div>
      <ButtonVariableColor
           className="blue_white"
+          fixedLeftButton={true} 
           firstChildren={
             <a
               href="tel:+380445038379"

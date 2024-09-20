@@ -297,7 +297,6 @@ export class ServicesPageT implements Translation {
         list: {
           l1: "",
           l2: "",
-          l3: "",
         },
         process: {
           text: "",

@@ -19,6 +19,8 @@
     .left_container {
       padding: 93px 37px 269px 37px;
       background-color: var(--color-dark);
+      width: 440px;
+      height: 830px;
 
       @include lg {
         padding: 50px 20px 80px 20px;
@@ -26,12 +28,12 @@
       }
 
       @include md {
-        padding: 50px 20px 80px 20px;
-        max-width: 320px;
+        width: 320px;
+        height: auto;
       }
 
       @include sm {
-        max-width: 355px;
+        width: 355px;
         padding: 50px 20px;
       }
 
@@ -54,11 +56,21 @@
     }
 
     .right_container {
-      // width: 840px;
-      width: 100%;
+      width: 780px;
+
+
+      @include md {
+        width: 408px;
+      }
+
+      @include sm {
+        width: 355px;
+      }
+      
+      
 
       .carousel {
-        height: 600px;
+        height: 700px;
 
         @include md {
           height: 100%;
@@ -69,25 +81,6 @@
         }
   
       }
-
-      .phoneLink {
-        display: flex;
-        flex-direction: column;
-        padding-left: 24px;
-        font-family: var(--font-rubik);
-        font-size: 30px;
-        font-weight: 700;
-        line-height: 1.68;
-
-        .phoneNumber {
-          font-family: var(--font-rubik);
-          font-size: 24px;
-          font-weight: 500;
-          line-height: 2.1;
-          letter-spacing: 0.48px;
-        }
-      }
     }
   }
-
 }

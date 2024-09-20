@@ -10,6 +10,7 @@ import styles from "./serviceCard.module.scss";
 import AnimatedTitle from "../AnimatedTitle";
 import Line from "../Line";
 import Observer from "@/helpers/observer";
+import { useMediaQuery } from "react-responsive";
 
 const ServiceCard = ({
   t,
@@ -21,6 +22,7 @@ const ServiceCard = ({
   language: string;
 }) => {
   const { slug, secondBtn, alignRight = false, hero, imgCard } = t;
+  const isLandscape = useMediaQuery({ orientation: 'landscape' });
 
   const { update } = useCarouselServiceStore();
 
@@ -35,7 +37,9 @@ const ServiceCard = ({
       type={true}
       y={300}
       duration="700ms"
-      threshold={0.3}
+      threshold={isLandscape ? 0 : 0.3}
+      rootMargin={isLandscape ? "20%" : "0px"} 
+      // rootMargin="20%"
       opacity={0}
       scale={1}
       className={`${styles.service_card} ${

@@ -45,12 +45,6 @@ export interface IHeroRightSideList {
   t: IHeroRightSideItem;
 }
 
-export interface IButtonVariableColor {
-  className: "blue_dark" | "blue_white" | "dark_blue";
-  firstChildren: React.ReactNode;
-  secondChildren: React.ReactNode;
-}
-
 export interface IMainButtonProps {
   type?: "button" | "submit" | "reset";
   className?: string;
