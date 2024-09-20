@@ -10,7 +10,7 @@ import Line from "../Line";
 import Observer from "@/helpers/observer";
 
 const ServiceItemDescription:React.FC<{t: PropsServiceCard,about:IServiceAboutProps}> = ({t,about} ) => {
-  const { p1, p2 ="", p3, p4, list } = t;
+  const { p1, p2 = "", p3, p4, list } = t;
 
   const pathname = usePathname();
 

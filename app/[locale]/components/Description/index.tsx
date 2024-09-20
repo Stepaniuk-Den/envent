@@ -16,13 +16,11 @@ import Observer from "@/helpers/observer";
 
 const Description = ({
   t,
-  language,
-}: IDescriptionProps & { language: string }) => {
+}: IDescriptionProps) => {
 
   const isMobile = useMediaQuery({ maxWidth: 767.98 });
   const isPageLoaded = useAfterLoad();
 
-  const languageClass = language === "uk" ? styles.ua_content : "";
 
   return (
     <section className={`${styles.description} `}>
@@ -38,7 +36,7 @@ const Description = ({
           <Image priority src={RiverMall} alt="riverMall image" />
         </Observer>
         <div className={styles.description_wrapper}>
-          <div className={`${styles.content} ${languageClass}`}>
+          <div className={styles.content}>
             <AnimatedTitle title={t.title} className={styles.descr_title} />
             <Line className="yellow-left" />
             <div className={styles.description_text_container}>
