@@ -50,56 +50,6 @@ const en: FullTranslation = {
     projects: {
       title: "Recent projects",
       viewAll: "View all",
-      list: {
-        1: {
-          id: "1",
-          src: "/images/projects/riverMall.jpg",
-          alt: "River Mall",
-          title: "River Mall",
-          address: "...",
-          link: "...",
-        },
-        2: {
-          id: "2",
-          src: "/images/projects/blockBaster.jpg",
-          alt: "BlockBaster",
-          title: "BlockBaster",
-          address: "...",
-          link: "...",
-        },
-        3: {
-          id: "3",
-          src: "/images/projects/odeskiyBulvar.jpg",
-          alt: "OdeskiyBulvar",
-          title: "OdeskiyBulvar",
-          address: "...",
-          link: "...",
-        },
-        4: {
-          id: "4",
-          src: "/images/projects/epicentr.jpg",
-          alt: "Epicentr",
-          title: "Epicentr",
-          address: "...",
-          link: "...",
-        },
-        5: {
-          id: "5",
-          src: "/images/projects/karavan.jpg",
-          alt: "Karavan",
-          title: "Karavan",
-          address: "...",
-          link: "...",
-        },
-        6: {
-          id: "6",
-          src: "/images/projects/altaCentr.jpg",
-          alt: "AltaCentr",
-          title: "AltaCentr",
-          address: "...",
-          link: "...",
-        },
-      },
     },
     aboutUsCounted: {
       title: "Premium Ventilation System",
@@ -136,14 +86,1040 @@ const en: FullTranslation = {
       link: "Link",
     },
   },
+
   ProjectsPage: {
     hero: {
       title: "Implemented projects",
       description:
         "Objects in the construction of which Energoventilyatsiya LLC took part.",
       button: "Get a Quote",
+      textCategory: "Select a category",
     },
-    projects: {},
+    projects: {
+      1: {
+        id: "1",
+        projectSlug: "sbu",
+        title:
+          "Administrative and Economic Department of the Security Service of Ukraine",
+        mainImg: "/images/projects/administrative_buildings/sbu2.jpeg",
+        mainAlt: "Five-story administrative building",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "Five-story administrative building",
+            src: "/images/projects/administrative_buildings/sbu1.jpg",
+          },
+          img2: {
+            alt: "Five-story administrative building",
+            src: "/images/projects/administrative_buildings/sbu2.jpeg",
+          },
+          img3: {
+            alt: "Five-story administrative building",
+            src: "/images/projects/administrative_buildings/sbu3.jpeg",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "administrative_buildings",
+        category: "Administrative buildings and banks",
+        linkCategory: "/projects/administrative_buildings",
+      },
+      2: {
+        id: "2",
+        projectSlug: "president_administration",
+        title: "Administration of the President of Ukraine",
+        mainImg: "/images/projects/administrative_buildings/presAdm2.png",
+        mainAlt: "Administration of the President of Ukraine",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "Six-story administrative building",
+            src: "/images/projects/administrative_buildings/presAdm1.jpg",
+          },
+          img2: {
+            alt: "Six-story administrative building",
+            src: "/images/projects/administrative_buildings/presAdm2.png",
+          },
+          img3: {
+            alt: "Six-story administrative building",
+            src: "/images/projects/administrative_buildings/presAdm3.png",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "administrative_buildings",
+        category: "Administrative buildings and banks",
+        linkCategory: "/projects/administrative_buildings",
+      },
+      3: {
+        id: "3",
+        projectSlug: "verhovna_rada",
+        title: "Supreme Council building",
+        mainImg:
+          "/images/projects/administrative_buildings/verhovna_rada2.jpeg",
+        mainAlt: "Three-story administrative building",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "Three-story administrative building",
+            src: "/images/projects/administrative_buildings/verhovna_rada1.jpeg",
+          },
+          img2: {
+            alt: "Three-story administrative building",
+            src: "/images/projects/administrative_buildings/verhovna_rada2.jpg",
+          },
+          img3: {
+            alt: "Three-story administrative building",
+            src: "/images/projects/administrative_buildings/verhovna_rada3.jpg",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "administrative_buildings",
+        category: "Administrative buildings and banks",
+        linkCategory: "/projects/administrative_buildings",
+      },
+      4: {
+        id: "4",
+        projectSlug: "ukreximbank",
+        title: "Ukreximbank",
+        mainImg: "/images/projects/administrative_buildings/ukrexim_bank2.jpg",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/ukrexim_bank1.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/ukrexim_bank2.jpg",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/ukrexim_bank3.jpg",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "administrative_buildings",
+        category: "Administrative buildings and banks",
+        linkCategory: "/projects/administrative_buildings",
+      },
+      5: {
+        id: "5",
+        projectSlug: "prominvestbank",
+        title: "Prominvestbank",
+        mainImg:
+          "/images/projects/administrative_buildings/prominvest_bank2.png",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/prominvest_bank1.jpg",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/prominvest_bank2.png",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/prominvest_bank3.png",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "administrative_buildings",
+        category: "Administrative buildings and banks",
+        linkCategory: "/projects/administrative_buildings",
+      },
+      6: {
+        id: "6",
+        projectSlug: "unicreditbank",
+        title: "Unicreditbank",
+        mainImg:
+          "/images/projects/administrative_buildings/unicredit_bank1.png",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/unicredit_bank1.png",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/unicredit_bank1.png",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/unicredit_bank1.png",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "administrative_buildings",
+        category: "Administrative buildings and banks",
+        linkCategory: "/projects/administrative_buildings",
+      },
+      7: {
+        id: "7",
+        projectSlug: "ukrsotsbank",
+        title: "Ukrsotsbank",
+        mainImg: "/images/projects/administrative_buildings/ukrsots_bank2.png",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/ukrsots_bank1.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/ukrsots_bank2.png",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/ukrsots_bank1.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "administrative_buildings",
+        category: "Administrative buildings and banks",
+        linkCategory: "/projects/administrative_buildings",
+      },
+      8: {
+        id: "8",
+        projectSlug: "bank_aval",
+        title: "Aval Bank",
+        mainImg: "/images/projects/administrative_buildings/bank_aval2.png",
+        mainAlt: "",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/bank_aval1.jpg",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/bank_aval2.png",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/bank_aval3.jpg",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "administrative_buildings",
+        category: "Administrative buildings and banks",
+        linkCategory: "/projects/administrative_buildings",
+      },
+      9: {
+        id: "9",
+        projectSlug: "oschadbank",
+        title: "State Savings Bank of Ukraine",
+        mainImg: "/images/projects/administrative_buildings/oschad_bank2.png",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/oschad_bank1.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/oschad_bank2.png",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/administrative_buildings/oschad_bank3.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "administrative_buildings",
+        category: "Administrative buildings and banks",
+        linkCategory: "/projects/administrative_buildings",
+      },
+
+      // =====================================
+      10: {
+        id: "10",
+        projectSlug: "dinamo-stadium",
+        title: "Reconstruction of the Dynamo stadium named after Lobanovsky",
+        mainImg: "/images/projects/public_facilities/dinamo1.webp",
+        mainAlt: "Reconstruction of the Dynamo stadium named after Lobanovsky",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/public_facilities/dinamo1.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/public_facilities/dinamo1.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/public_facilities/dinamo1.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "public_facilities",
+        category: "Public facilities and office centers",
+        linkCategory: "/projects/public_facilities",
+      },
+      11: {
+        id: "11",
+        projectSlug: "hotel",
+        title: "Hotel",
+        mainImg: "/images/projects/public_facilities/hotel1.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/public_facilities/hotel1.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/public_facilities/hotel1.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/public_facilities/hotel1.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "public_facilities",
+        category: "Public facilities and office centers",
+        linkCategory: "/projects/public_facilities",
+      },
+
+      12: {
+        id: "12",
+        projectSlug: "hotel_molodizhnyi",
+        title: "Hotel Molodizhnyi",
+        mainImg: "/images/projects/public_facilities/hotelMolod1.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/public_facilities/hotelMolod1.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/public_facilities/hotelMolod1.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/public_facilities/hotelMolod1.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "public_facilities",
+        category: "Public facilities and office centers",
+        linkCategory: "/projects/public_facilities",
+      },
+
+      13: {
+        id: "13",
+        projectSlug: "cafe_brovar",
+        title: "Cafe Brovar",
+        mainImg: "/images/projects/public_facilities/cafeBrovar1.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/public_facilities/cafeBrovar1.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/public_facilities/cafeBrovar1.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/public_facilities/cafeBrovar1.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "public_facilities",
+        category: "Public facilities and office centers",
+        linkCategory: "/projects/public_facilities",
+      },
+
+      14: {
+        id: "14",
+        projectSlug: "office_center",
+        title: "Office center",
+        mainImg: "/images/projects/public_facilities/officeCenter1.webp",
+        mainAlt: "Reconstruction of the Dynamo stadium named after Lobanovsky",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/public_facilities/officeCenter1.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/public_facilities/officeCenter1.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/public_facilities/officeCenter1.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "public_facilities",
+        category: "Public facilities and office centers",
+        linkCategory: "/projects/public_facilities",
+      },
+
+      // ===========================================
+
+      15: {
+        id: "15",
+        projectSlug: "sanatorium_yalynka",
+        title: "Kyiv city children's sanatorium Yalynka",
+        mainImg: "/images/projects/hskc/sanatorium_yalynka1.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/hskc/sanatorium_yalynka1.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/hskc/sanatorium_yalynka1.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/hskc/sanatorium_yalynka1.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "hskc",
+        category: "Hospitals schools kindergartens churches",
+        linkCategory: "/projects/hskc",
+      },
+
+      16: {
+        id: "16",
+        projectSlug: "cancer_dispensary",
+        title: "Cancer dispensary of the regional hospital in Kyiv",
+        mainImg: "/images/projects/hskc/cancer_dispensary1.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/hskc/cancer_dispensary1.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/hskc/cancer_dispensary1.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/hskc/cancer_dispensary1.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "hskc",
+        category: "Hospitals schools kindergartens churches",
+        linkCategory: "/projects/hskc",
+      },
+
+      17: {
+        id: "17",
+        projectSlug: "medical_clinic_innovation",
+        title: "Medical clinic Innovation",
+        mainImg: "/images/projects/hskc/medical_clinic_innovation1.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/hskc/medical_clinic_innovation1.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/hskc/medical_clinic_innovation1.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/hskc/medical_clinic_innovation1.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "hskc",
+        category: "Hospitals schools kindergartens churches",
+        linkCategory: "/projects/hskc",
+      },
+
+      18: {
+        id: "18",
+        projectSlug: "epiphany_cathedral",
+        title: "Epiphany Cathedral",
+        mainImg: "/images/projects/hskc/epiphany_cathedral1.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/hskc/epiphany_cathedral1.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/hskc/epiphany_cathedral1.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/hskc/epiphany_cathedral1.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "hskc",
+        category: "Hospitals schools kindergartens churches",
+        linkCategory: "/projects/hskc",
+      },
+
+      19: {
+        id: "19",
+        projectSlug: "residential_buildings",
+        title: "Residential buildings",
+        mainImg: "/images/projects/hskc/residential_buildings2.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/hskc/residential_buildings1.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/hskc/residential_buildings2.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/hskc/residential_buildings3.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "hskc",
+        category: "Hospitals schools kindergartens churches",
+        linkCategory: "/projects/hskc",
+      },
+
+      // ===========================================
+
+      20: {
+        id: "20",
+        projectSlug: "amstor",
+        title: "Network of public and shopping centers Amstor",
+        mainImg: "/images/projects/trade_complexes/amstorMain.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/amstorMain.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/amstorMain.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/amstorMain.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "trade_complexes",
+        category: "Public and trade complexes",
+        linkCategory: "/projects/trade_complexes",
+      },
+
+      21: {
+        id: "21",
+        projectSlug: "silpo",
+        title: "Silpo supermarket chain",
+        mainImg: "/images/projects/trade_complexes/silpoMain.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/silpoMain.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/silpoMain.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/silpoMain.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "trade_complexes",
+        category: "Public and trade complexes",
+        linkCategory: "/projects/trade_complexes",
+      },
+
+      22: {
+        id: "22",
+        projectSlug: "retroville",
+        title: "Shopping center Retroville",
+        mainImg: "/images/projects/trade_complexes/retrovilleMain.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/retrovilleMain.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/retrovilleMain.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/retrovilleMain.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "trade_complexes",
+        category: "Public and trade complexes",
+        linkCategory: "/projects/trade_complexes",
+      },
+
+      23: {
+        id: "23",
+        projectSlug: "darynok",
+        title: "Shopping center Darynok",
+        mainImg: "/images/projects/trade_complexes/darynokMain.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/darynokMain.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/darynokMain.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/darynokMain.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "trade_complexes",
+        category: "Public and trade complexes",
+        linkCategory: "/projects/trade_complexes",
+      },
+
+      24: {
+        id: "24",
+        projectSlug: "novus",
+        title: "Hypermarket Novus",
+        mainImg: "/images/projects/trade_complexes/novusMain.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/novus1.png",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/novusMain.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/novus1.png",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "trade_complexes",
+        category: "Public and trade complexes",
+        linkCategory: "/projects/trade_complexes",
+      },
+
+      25: {
+        id: "25",
+        projectSlug: "forum",
+        title: "Trade center Forum",
+        mainImg: "/images/projects/trade_complexes/forumMain.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/forum1.png",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/forumMain.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/forum1.png",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "trade_complexes",
+        category: "Public and trade complexes",
+        linkCategory: "/projects/trade_complexes",
+      },
+
+      // ===========================================
+
+      26: {
+        id: "26",
+        projectSlug: "kraft_foods_ukraine",
+        title: "Confectionery factory Kraft Foods of Ukraine",
+        mainImg: "/images/projects/industry/kraft_foods_ukraineMain.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/industry/kraft_foods_ukraineMain.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/industry/kraft_foods_ukraineMain.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/industry/kraft_foods_ukraineMain.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "industry",
+        category: "Industry",
+        linkCategory: "/projects/industry",
+      },
+
+      27: {
+        id: "27",
+        projectSlug: "alko_invest",
+        title: "Objects of JSC ALKO INVEST",
+        mainImg: "/images/projects/industry/alko_investMain.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/industry/alko_invest1.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/industry/alko_investMain.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/industry/alko_invest1.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "industry",
+        category: "Industry",
+        linkCategory: "/projects/industry",
+      },
+
+      28: {
+        id: "28",
+        projectSlug: "osmoloda_plant",
+        title: "OSMOLODA LLC Building Materials Plant",
+        mainImg: "/images/projects/industry/osmoloda_plantMain.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/industry/osmoloda_plantMain.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/industry/osmoloda_plantMain.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/industry/osmoloda_plantMain.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "industry",
+        category: "Industry",
+        linkCategory: "/projects/industry",
+      },
+
+      // +++++++++++++++++++++++++++++++++++
+
+      29: {
+        id: "29",
+        projectSlug: "altacenter",
+        title: "Alta Center in Kyiv",
+        mainImg: "/images/projects/trade_complexes/altacenterMain.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/altacenter1.png",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/altacenterMain.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/altacenter1.png",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "trade_complexes",
+        category: "Public and trade complexes",
+        linkCategory: "/projects/trade_complexes",
+      },
+
+      30: {
+        id: "30",
+        projectSlug: "karavan",
+        title: "Shopping and entertainment center Karavan",
+        mainImg: "/images/projects/trade_complexes/karavanMain.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/karavan1.png",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/karavanMain.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/karavan2.png",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "trade_complexes",
+        category: "Public and trade complexes",
+        linkCategory: "/projects/trade_complexes",
+      },
+
+      31: {
+        id: "31",
+        projectSlug: "epicenter",
+        title: "Hypermarket chain Epicenter",
+        mainImg: "/images/projects/trade_complexes/epicenterMain.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/epicenter1.png",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/epicenterMain.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/epicenter2.png",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "trade_complexes",
+        category: "Public and trade complexes",
+        linkCategory: "/projects/trade_complexes",
+      },
+
+      32: {
+        id: "32",
+        projectSlug: "odeskiy_bulvar",
+        title: "Odeskiy bulvar",
+        mainImg: "/images/projects/hskc/odeskiy_bulvarMain.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/hskc/odeskiy_bulvarMain.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/hskc/residential_buildings2.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/hskc/residential_buildings3.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "hskc",
+        category: "Hospitals schools kindergartens churches",
+        linkCategory: "/projects/hskc",
+      },
+
+      33: {
+        id: "33",
+        projectSlug: "blockbuster",
+        title: "Entertainment center Blockbuster",
+        mainImg: "/images/projects/trade_complexes/blockbusterMain.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/blockbusterMain.webp",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/blockbusterMain.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/blockbusterMain.webp",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "trade_complexes",
+        category: "Public and trade complexes",
+        linkCategory: "/projects/trade_complexes",
+      },
+
+      34: {
+        id: "34",
+        projectSlug: "river_mall",
+        title: "River Mall shopping center",
+        mainImg: "/images/projects/trade_complexes/river_mallMain.webp",
+        mainAlt: "...",
+        heroDescription:
+          "Object in the construction of which Energoventilyatsiya LLC took part.",
+        heroButton: "Get a Quote",
+        images: {
+          img1: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/river_mall1.png",
+          },
+          img2: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/river_mallMain.webp",
+          },
+          img3: {
+            alt: "...",
+            src: "/images/projects/trade_complexes/river_mall1.png",
+          },
+        },
+        link: "...",
+        address: "...",
+        categorySlug: "trade_complexes",
+        category: "Public and trade complexes",
+        linkCategory: "/projects/trade_complexes",
+      },
+    },
   },
   AboutPage: {
     hero: {

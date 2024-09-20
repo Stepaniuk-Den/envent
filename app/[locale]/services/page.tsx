@@ -9,6 +9,7 @@ import HeroRightSideList from "../components/HeroRightSideList";
 import ProjectSection from "../components/ProjectsSection";
 import { MainPageT } from "@/messages/types/MainPageT";
 import ContactUsSection from "../components/ContactUsSection";
+import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
 
 type Props = {
   params: { locale: string };
@@ -20,6 +21,7 @@ const ServicesPage: React.FC<Props> = async ({ params: { locale } }) => {
   const servicesT = await localize(ServicesPageT);
   const mainT = await localize(MainPageT);
   const heroRightSideT = await localize(HeroRightSideT);
+  const projectsT = await localize(ProjectsPageT);
 
   return (
     <div>
@@ -27,7 +29,7 @@ const ServicesPage: React.FC<Props> = async ({ params: { locale } }) => {
         <HeroRightSideList className="about" t={heroRightSideT.todo} />
       </Hero>
       <Services t={servicesT.services} language={locale} />
-      <ProjectSection t={mainT.projects} />
+      <ProjectSection t={mainT.projects} t2={projectsT.projects} />
       <ContactUsSection params={{ locale }} />
     </div>
   );
