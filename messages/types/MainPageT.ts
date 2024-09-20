@@ -22,8 +22,6 @@ export class MainPageT implements Translation {
   projects = {
     title: "",
     viewAll: "",
-    // list: [] as IPropsProjectItem[],
-    // list: {} as { [key: string]: IPropsProjectItem },
   };
 
   aboutUsCounted = {
