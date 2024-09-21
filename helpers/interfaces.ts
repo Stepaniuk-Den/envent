@@ -45,12 +45,6 @@ export interface IHeroRightSideList {
   t: IHeroRightSideItem;
 }
 
-export interface IButtonVariableColor {
-  className: "blue_dark" | "blue_white" | "dark_blue";
-  firstChildren: React.ReactNode;
-  secondChildren: React.ReactNode;
-}
-
 export interface IMainButtonProps {
   type?: "button" | "submit" | "reset";
   className?: string;
@@ -229,7 +223,7 @@ export interface PropsServiceCard {
   list?: {
     l1: string;
     l2: string;
-    l3: string;
+    l3?: string;
     l4?: string;
     l5?: string;
     l6?: string;

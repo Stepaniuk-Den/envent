@@ -30,7 +30,6 @@
 .left_btn {
   background-color: var(--color-accent-blue);
   color: var(--color-dark);
-  // width: clamp(300px, 100%, 420px);
 }
 
 .right_btn {
@@ -43,6 +42,21 @@
   width: 100%;
   align-items: flex-start;
 
+  @include md {
+    align-items: center;
+    // max-width: 320px;
+  }
+
+  @include sm {
+    max-width: 430px;
+  }
+
+  &.fixed_width{
+    @include md {
+      max-width: 320px;
+    }
+  }
+
   a {
     display: flex;
     flex-direction: column;
@@ -51,8 +65,13 @@
     font-weight: 700;
     line-height: 1.68;
 
-    @include sm {
+    @include md {
       padding-left: 0;
+      font-size: 24px;
+    }
+
+    @include sm {
+      font-size: 30px;
     }
 
     span {
@@ -60,6 +79,13 @@
       font-weight: 500;
       line-height: 2.1;
       letter-spacing: 0.48px;
+
+      @include md {
+        font-size: 18px;
+      }
+      @include sm {
+        font-size: 24px;
+      }
     }
   
   }

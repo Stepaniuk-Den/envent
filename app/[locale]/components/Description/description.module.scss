@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: row;
 
-    @include md{
+    @include md {
       flex-direction: column;
     }
   }
@@ -16,7 +16,7 @@
     height: 730px;
     overflow: hidden;
 
-    @include lg{
+    @include lg {
       min-width: 340px;
     }
 
@@ -27,6 +27,7 @@
     }
 
     @include sm {
+      height: 430px;
       min-width: 355px;
     }
 
@@ -44,11 +45,9 @@
   .content {
     display: flex;
     flex-direction: column;
-    // padding: 116px 0 113px 74px;
     padding: 76px 0 0 54px;
     margin-bottom: auto;
     gap: 38px;
-    // width: 840px;
 
     @include md {
       padding: 76px 0 24px 54px;
@@ -57,41 +56,23 @@
     @include sm {
       padding: 54px 0 24px 0;
     }
-
-    &.ua_content {
-      // padding: 76px 0 82px 74px;
-
-      .descr_title {
-        line-height: normal;
-      }
-    }
   }
 
   .description_text_container {
-    // display: flex;
-    // flex-direction: row;
-    // gap: 70px;
+    display: grid;
+    column-gap: 62px;
+    row-gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
 
-    // @include sm{
-    //   flex-direction: column;
-    //   gap: 20px;
-    // }
+    @include md {
+      align-items: center;
+    }
 
-    
-display: grid;
-column-gap: 62px;
-row-gap: 40px;
-// padding: 10px;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: auto;
-// align-items: center;
-
-@include sm{
-  grid-template-columns: 1fr;
-  justify-items: center;
-}
-
-    
+    @include sm {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
 
     .text {
       @include text-main-openSands;
@@ -109,10 +90,6 @@ grid-template-rows: auto;
       }
     }
 
-    // .left_text_container > *:not(:last-child) {
-    //   margin-bottom: 49px;
-    // }
-
     .right_text_container {
       display: flex;
       flex-direction: column;
@@ -124,10 +101,6 @@ grid-template-rows: auto;
         max-width: 350px;
       }
     }
-
-    // .right_text_container > *:not(:last-child) {
-    //   margin-bottom: 72px;
-    // }
   }
 
   .description_year,
