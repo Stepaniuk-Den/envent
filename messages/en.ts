@@ -1501,9 +1501,9 @@ const en: FullTranslation = {
             "/images/services/production-and-sale-of-finished-products.webp",
           secondBtn: "learn more",
           p1: "Air ducts are one of the most important elements of ventilation and air conditioning systems. Together with other devices, they ensure air transportation in the ventilation system.",
-          p2: "Classification of  air ducts<s/>.<br /> According to the configuration, there are air ducts of rectangular, square and round sections. They are made of straight and shaped component parts. The dimensions and types of air ducts are established in BSN 353-86 'Design and application of air ducts from unified parts', TU 36-736-93 'Metal ventilation ducts', SNiP 2.04.05-91 'Heating, ventilation, air conditioning systems'. without flange and welded.",
-          p3: "Metal air ducts.<s/><br />Normal air ducts of round and rectangular section are made of sheet galvanized or stainless steel. Air ducts of round section can be made of tape with a width of 125 to 135 mm (spiral-wound) or, in the same way as rectangular, - from a sheet (straight-seam). Round air ducts are more economical in terms of metal consumption and labor costs in comparison with rectangular ones.",
-          p4: "Manufacturing air ducts.<s/><br /> The company's products are round straight-seam, spirally wound and rectangular metal air ducts that comply with GOST 24 751-81 and SNiP 2.04.05-91 (the entire size range), shaped parts for air ducts and non-standard ventilation products. The material is galvanized or stainless steel with a thickness of up to 0.9 mm. The production of air ducts is substantially automated. a bending machine, a profiling machine and much more - ensures high labor productivity and high quality of air ducts and other ventilation products.",
+          p2: "Classification of  air ducts.<br /> According to the configuration, there are air ducts of rectangular, square and round sections. They are made of straight and shaped component parts. The dimensions and types of air ducts are established in BSN 353-86 'Design and application of air ducts from unified parts', TU 36-736-93 'Metal ventilation ducts', SNiP 2.04.05-91 'Heating, ventilation, air conditioning systems'. without flange and welded.",
+          p3: "Metal air ducts.<br />Normal air ducts of round and rectangular section are made of sheet galvanized or stainless steel. Air ducts of round section can be made of tape with a width of 125 to 135 mm (spiral-wound) or, in the same way as rectangular, - from a sheet (straight-seam). Round air ducts are more economical in terms of metal consumption and labor costs in comparison with rectangular ones.",
+          p4: "Manufacturing air ducts.<br /> The company's products are round straight-seam, spirally wound and rectangular metal air ducts that comply with GOST 24 751-81 and SNiP 2.04.05-91 (the entire size range), shaped parts for air ducts and non-standard ventilation products. The material is galvanized or stainless steel with a thickness of up to 0.9 mm. The production of air ducts is substantially automated. a bending machine, a profiling machine and much more - ensures high labor productivity and high quality of air ducts and other ventilation products.",
           process: {
             text: "'Energoventilatsia' LLC automated the production of air ducts using:",
             list: {
@@ -1684,9 +1684,8 @@ const en: FullTranslation = {
           p3: "Thanks to long-term partnerships with leading manufacturers, Energoventilatsia LLC has access to the latest developments and innovations in the field of ventilation and air conditioning equipment. This allows us to implement advanced technologies in our projects, ensuring high efficiency and reliability of systems.",
           p4: "We strive to maintain high quality standards at all stages of project implementation, from the selection of equipment to its installation and maintenance. Our cooperation with leading companies in the industry guarantees customers the best solutions for creating comfortable and safe conditions in any room.",
           list: {
-            l1: "REMAK <br /> SYSTEMAIR <br /> OSTBERG <br /> SALDA<br /> DAIKIN <br /> MITSUBISHI",
-            l2: "MITSUSHITO <br /> LENNOX <br /> FUJITSU <br />ROSENBERG <br /> BAHCIVAN <br /> FRICO",
-            l3: "VENTS <br /> VTS <br /> ACM <br /> ІНТЕРКОНДИЦІОНЕР <br /> ПРОМВЕНТИЛЯТОР <br /> MAIKO",
+            l1: "REMAK <br /> SYSTEMAIR <br /> OSTBERG <br /> SALDA <br /> DAIKIN <br /> MITSUBISHI <br />MITSUSHITO <br /> LENNOX <br /> FUJITSU <br />",
+            l2: " ROSENBERG <br /> BAHCIVAN <br /> FRICO <br /> VENTS <br /> VTS <br /> ACM <br /> ІНТЕРКОНДИЦІОНЕР <br /> ПРОМВЕНТИЛЯТОР <br /> MAIKO",
           },
           process: {
             text: "Energoventilatsia LLC cooperates with leading global brands to ensure timely supply of equipment.",
@@ -1900,7 +1899,7 @@ const en: FullTranslation = {
       title: "About Process",
       phone: "Call for a Quote",
       btnForm: "Online estimate form",
-      btnBack: "back",
+      btnBack: " Go back",
     },
   },
   ContactsPage: {
