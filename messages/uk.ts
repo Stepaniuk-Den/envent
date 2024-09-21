@@ -132,7 +132,7 @@ const uk: FullTranslation = {
         id: "2",
         projectSlug: "president_administration",
         title: "Адміністрація президента України",
-        mainImg: "/images/projects/administrative_buildings/presAdm2.png",
+        mainImg: "/images/projects/administrative_buildings/presAdm2.jpg",
         mainAlt: "Адміністрація президента України",
         heroDescription:
           "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
@@ -144,7 +144,7 @@ const uk: FullTranslation = {
           },
           img2: {
             alt: "Шестиповерхова адміністративна будівля",
-            src: "/images/projects/administrative_buildings/presAdm2.png",
+            src: "/images/projects/administrative_buildings/presAdm2.jpg",
           },
           img3: {
             alt: "Шестиповерхова адміністративна будівля",

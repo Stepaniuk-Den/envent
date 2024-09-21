@@ -130,7 +130,7 @@ const en: FullTranslation = {
         id: "2",
         projectSlug: "president_administration",
         title: "Administration of the President of Ukraine",
-        mainImg: "/images/projects/administrative_buildings/presAdm2.png",
+        mainImg: "/images/projects/administrative_buildings/presAdm2.jpg",
         mainAlt: "Administration of the President of Ukraine",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
@@ -142,7 +142,7 @@ const en: FullTranslation = {
           },
           img2: {
             alt: "Six-story administrative building",
-            src: "/images/projects/administrative_buildings/presAdm2.png",
+            src: "/images/projects/administrative_buildings/presAdm2.jpg",
           },
           img3: {
             alt: "Six-story administrative building",
