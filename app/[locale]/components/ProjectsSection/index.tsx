@@ -16,6 +16,7 @@ import AnimatedTitle from "../AnimatedTitle";
 import { MainPageT } from "@/messages/types/MainPageT";
 import ProjectItem from "../ProjectItem";
 import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
+import Line from "../Line";
 
 // interface IPropsProjectList {
 //   projectList: IPropsProjectItem[];
@@ -86,8 +87,7 @@ const ProjectSection: React.FC<{
       <div className={`${styles.projectContainer} container`}>
         <AnimatedTitle title={t.title} className={styles.sectionTitle} />
         {/* ------------------------------------ */}
-        {/* <Line className="yellow-center" /> */}
-        <div className={styles.line}></div>
+        <Line className="yellow-center" />
         <ul className={styles.projectList}>
           {/* {projectsList.map((project: IPropsProjectItem, index) => ( */}
           {/* {Object.keys(projectsList).map((key) => { */}

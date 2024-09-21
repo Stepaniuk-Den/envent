@@ -4,24 +4,18 @@
   width: 100%;
 
   .projectContainer {
-    padding: 126px 0 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @include sm {
+      max-width: 375px;
+      width: 100%;
+    }
 
     .sectionTitle {
       margin-bottom: 38px;
-      font-family: var(--font-rubik);
-      font-size: 40px;
-      font-weight: 700;
-      line-height: 1;
       text-transform: capitalize;
       text-align: center;
-    }
-
-    .line {
-      width: 48px;
-      height: 5px;
-      background-color: var(--color-accent-yellow);
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .projectList {
@@ -31,7 +25,11 @@
       align-items: center;
       gap: 30px;
       margin: 38px auto;
-      //   width: 1096px;
+      width: 100%;
+
+      @include lg {
+        gap: 16px;
+      }
     }
   }
 }

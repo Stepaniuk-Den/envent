@@ -72,7 +72,10 @@ const ProjectsNavigation: React.FC<{ t: ProjectsPageT }> = ({ t }) => {
   return (
     <div className={styles.categoriesWrapper}>
       <div className={styles.titleWrapper}>
-        <AnimatedTitle title={textCategory} />
+        <AnimatedTitle
+          title={textCategory}
+          className={styles.navigationTitle}
+        />
       </div>
       <nav className={styles.menu} ref={scope}>
         <motion.button

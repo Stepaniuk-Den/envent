@@ -7,7 +7,8 @@
     //  display: flex;
     // align-items: center;
     // justify-content: center;
-    padding: 60px 0 250px;
+    padding-top: 60px;
+    padding-bottom: 250px;
     // height: 100vh;
 
     // .categoriesList {
@@ -26,6 +27,9 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  // margin: 38px auto;
-  //   width: 1096px;
+  width: 100%;
+
+  @include lg {
+    gap: 16px;
+  }
 }

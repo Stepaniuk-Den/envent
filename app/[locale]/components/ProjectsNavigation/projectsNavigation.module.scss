@@ -23,6 +23,13 @@
   .titleWrapper {
     max-width: 380px;
     width: 100%;
+
+    .navigationTitle {
+      text-align: start;
+
+      // @include md {
+      // }
+    }
   }
 
   .menu {
