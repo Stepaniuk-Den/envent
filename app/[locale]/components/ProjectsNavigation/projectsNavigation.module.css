@@ -8,6 +8,9 @@
   max-width: 380px;
   width: 100%;
 }
+.categoriesWrapper .titleWrapper .navigationTitle {
+  text-align: start;
+}
 .categoriesWrapper .menu {
   position: relative;
   filter: drop-shadow(1px 1px 1px var(--color-dark));
