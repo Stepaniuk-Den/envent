@@ -40,7 +40,7 @@ export default async function ProjectsLayout({
       <Hero imageSrc={heroProjectsPageBG} className="" t={t.hero} />
 
       <div className={`${styles.projectsContainer} container`}>
-        <ProjectsNavigation t={t} />
+        <ProjectsNavigation t={t} language={locale} />
         {children}
       </div>
       <ContactUsSection params={{ locale }} />

@@ -10,7 +10,7 @@ import { IPropsProjectItem } from "@/helpers/interfaces";
 import ProjectSection from "../../components/ProjectsSection";
 import { MainPageT } from "@/messages/types/MainPageT";
 import ContactUsSection from "../../components/ContactUsSection";
-// import AnimatedTitle from "../../components/AnimatedTitle";
+import AnimatedTitle from "../../components/AnimatedTitle";
 
 type Props = {
   params: {
@@ -60,7 +60,10 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
           <div className={styles.topInfoWrapper}>
             <div className={styles.textWrapper}>
               {/* <AnimatedTitle title={textCategory} /> */}
-              <h2 className={styles.descTitle}>About this Project</h2>
+              <AnimatedTitle
+                className={styles.descTitle}
+                title={"About this Project"}
+              />
               <Line className="yellow-left" />
               <p className={styles.desc}>
                 Lectus erat, consectetur eu sapien eget rhoncus consectetur sem.

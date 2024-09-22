@@ -1,15 +1,16 @@
+@import "../mixin.scss";
+
 .projectItemSection {
   width: 100%;
   padding-bottom: 180px;
 
   .projectItemContainer {
-    //  display: flex;
-    // align-items: center;
-    // justify-content: center;
+    display: flex;
+    flex-direction: column;
     padding-top: 100px;
+    gap: 60px;
     font-family: var(--font-open-sands);
     font-size: 15px;
-    // height: 100vh;
 
     // .categoriesList {
     //   background-color: aquamarine;
@@ -21,25 +22,35 @@
 
     .topInfoWrapper {
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 94px;
+      gap: 64px;
+
+      @include md {
+        gap: 30px;
+      }
+
+      @include sm {
+        flex-direction: column;
+      }
 
       .textWrapper {
         display: flex;
         flex-direction: column;
-        max-width: 502px;
-        width: 100%;
 
         .descTitle {
           margin-bottom: 38px;
-          font-family: var(--font-rubik);
-          font-size: 40px;
-          font-weight: 700;
+
+          @include md {
+            margin-bottom: 16px;
+          }
         }
 
         .desc {
           margin-top: 38px;
           letter-spacing: 0.6px;
+
+          @include md {
+            margin-top: 16px;
+          }
         }
       }
 
@@ -49,6 +60,7 @@
         max-width: 536px;
         width: 100%;
         height: 324px;
+
         // --- By ratio for responsive ---
         //   width: 365px;
         //   height: 243px;
@@ -62,12 +74,27 @@
       display: flex;
       width: 100%;
       height: 600px;
-      margin-bottom: 60px;
+
+      @include md {
+        height: 360px;
+      }
+
+      @include sm {
+        height: 176px;
+      }
     }
 
     .bottomInfoWrapper {
       display: flex;
-      justify-content: space-between;
+      gap: 64px;
+
+      @include md {
+        gap: 30px;
+      }
+
+      @include sm {
+        flex-direction: column;
+      }
 
       .imgWrapper {
         position: relative;
@@ -78,7 +105,6 @@
       }
 
       .textWrapper {
-        max-width: 564px;
         width: 100%;
       }
 
