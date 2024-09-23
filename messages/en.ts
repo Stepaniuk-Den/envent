@@ -94,6 +94,7 @@ const en: FullTranslation = {
         "Objects in the construction of which Energoventilyatsiya LLC took part.",
       button: "Get a Quote",
       textCategory: "Select a category",
+      btnBack: " Go back",
     },
     projects: {
       1: {

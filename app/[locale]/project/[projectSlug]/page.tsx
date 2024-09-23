@@ -11,6 +11,10 @@ import ProjectSection from "../../components/ProjectsSection";
 import { MainPageT } from "@/messages/types/MainPageT";
 import ContactUsSection from "../../components/ContactUsSection";
 import AnimatedTitle from "../../components/AnimatedTitle";
+import MainButton from "../../components/Buttons/MainButton";
+import ArrowLeft from "@/public/icons/arrow-left.svg";
+import { Link } from "@/navigation";
+import { handleGoBack } from "@/helpers/handleGoBack";
 
 type Props = {
   params: {
@@ -34,6 +38,7 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
   const t = await localize(ProjectsPageT);
   const mainT = await localize(MainPageT);
   const projectsT = await localize(ProjectsPageT);
+  const btnBack = t.hero.btnBack;
 
   const projectData = Object.values(t.projects).find(
     (project) => project.projectSlug === projectSlug
@@ -128,6 +133,15 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
                 tristique, augue mauris molestie augue, non feugiat ligula neque
                 nec felis.
               </p>
+              <MainButton
+                type="button"
+                color="filled"
+                className="projects"
+                isGoBack={true}
+              >
+                <ArrowLeft />
+                {btnBack}
+              </MainButton>
             </div>
           </div>
         </div>
