@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import styles from "./projectSection.module.scss";
 import { AnimatePresence, motion } from "framer-motion";
@@ -27,8 +27,11 @@ const ProjectSection: React.FC<{
   t2: ProjectsPageT["projects"];
 }> = ({ t, t2 }) => {
   //= ({ t }: IProjectsProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  // =======================================
+  // const [isOpen, setIsOpen] = useState(false);
+  // const [currentIndex, setCurrentIndex] = useState<number>(0);
+  // =======================================
+
   const projectsList = t2 ? Object.values(t2) : [];
   const recentProjectsList = projectsList
     // const [currentIndex, setCurrentIndex] = useState<number | null>(null);
@@ -38,36 +41,38 @@ const ProjectSection: React.FC<{
     .sort((a, b) => Number(b.id) - Number(a.id))
     .slice(0, 6);
 
-  useEffect(() => {
-    if (isOpen) {
-      // document.body.style.overflow = "hidden";
-      document.documentElement.style.overflow = "hidden";
-    } else {
-      // document.body.style.overflow = "auto";
-      document.documentElement.style.overflow = "auto";
-    }
+  // ===================================================
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     // document.body.style.overflow = "hidden";
+  //     document.documentElement.style.overflow = "hidden";
+  //   } else {
+  //     // document.body.style.overflow = "auto";
+  //     document.documentElement.style.overflow = "auto";
+  //   }
 
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.code === "Escape") {
-        setIsOpen(false);
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "auto";
-      document.documentElement.style.overflow = "auto";
-    };
-  }, [isOpen]);
+  //   const handleKeyDown = (e: KeyboardEvent) => {
+  //     if (e.code === "Escape") {
+  //       setIsOpen(false);
+  //     }
+  //   };
+  //   window.addEventListener("keydown", handleKeyDown);
+  //   return () => {
+  //     window.removeEventListener("keydown", handleKeyDown);
+  //     document.body.style.overflow = "auto";
+  //     document.documentElement.style.overflow = "auto";
+  //   };
+  // }, [isOpen]);
 
-  const handleOpenBackdrop = (index: number) => {
-    setCurrentIndex(index);
-    setIsOpen(true);
-  };
-  const handleCloseBackdrop = () => {
-    setIsOpen(false);
-    // setCurrentIndex(null);
-  };
+  // const handleOpenBackdrop = (index: number) => {
+  //   setCurrentIndex(index);
+  //   setIsOpen(true);
+  // };
+  // const handleCloseBackdrop = () => {
+  //   setIsOpen(false);
+  // setCurrentIndex(null);
+  // };
+  // =================================================================
 
   // const handleNext = () => {
   //   if (currentIndex !== null) {
@@ -122,7 +127,7 @@ const ProjectSection: React.FC<{
         {/* </Link> */}
 
         {/* ==== BACKDROP ==== */}
-        <AnimatePresence mode="wait">
+        {/* <AnimatePresence mode="wait">
           {isOpen && currentIndex !== null && (
             <motion.div
               className={styles.backdrop}
@@ -194,7 +199,7 @@ const ProjectSection: React.FC<{
               </motion.div>
             </motion.div>
           )}
-        </AnimatePresence>
+        </AnimatePresence> */}
       </div>
     </section>
   );
