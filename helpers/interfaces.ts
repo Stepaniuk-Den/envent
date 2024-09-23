@@ -150,6 +150,7 @@ export interface IPartnersItem {
   href: string;
 }
 [];
+
 export interface IDescriptionProps {
   t: {
     title: string;
