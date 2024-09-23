@@ -1,17 +1,17 @@
 // "use client";
 
 import styles from "./projectSection.module.scss";
-import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
+// import { AnimatePresence, motion } from "framer-motion";
+// import Image from "next/image";
 import MainButton from "../Buttons/MainButton";
-import { useEffect, useState } from "react";
-import ArrowLeft from "@/public/icons/arrow-left.svg";
-import ArrowRight from "@/public/icons/arrow-right.svg";
-import Close from "@/public/icons/close.svg";
-import BackdropButton from "../Buttons/BackdropButton";
+// import { useEffect, useState } from "react";
+// import ArrowLeft from "@/public/icons/arrow-left.svg";
+// import ArrowRight from "@/public/icons/arrow-right.svg";
+// import Close from "@/public/icons/close.svg";
+// import BackdropButton from "../Buttons/BackdropButton";
 import { Link } from "@/navigation";
 // import { useRouter } from "next/navigation";
-import { handleNext, handlePrev } from "@/helpers/useClickPrevAndNext";
+// import { handleNext, handlePrev } from "@/helpers/useClickPrevAndNext";
 import AnimatedTitle from "../AnimatedTitle";
 import { MainPageT } from "@/messages/types/MainPageT";
 import ProjectItem from "../ProjectItem";
