@@ -10,7 +10,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useMenuAnimation } from "@/helpers/animateMenu";
 import AnimatedTitle from "../AnimatedTitle";
 
-const ProjectsNavigation: React.FC<{ t: ProjectsPageT }> = ({ t }) => {
+const ProjectsNavigation: React.FC<{ t: ProjectsPageT; language: string }> = ({
+  t,
+  language,
+}) => {
   const pathname = usePathname();
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
@@ -74,7 +77,9 @@ const ProjectsNavigation: React.FC<{ t: ProjectsPageT }> = ({ t }) => {
       <div className={styles.titleWrapper}>
         <AnimatedTitle
           title={textCategory}
-          className={styles.navigationTitle}
+          className={`styles.navigationTitle ${
+            language === "uk" && styles.navigationTitleUK
+          }`}
         />
       </div>
       <nav className={styles.menu} ref={scope}>
@@ -102,7 +107,6 @@ const ProjectsNavigation: React.FC<{ t: ProjectsPageT }> = ({ t }) => {
             const isActive = pathname.includes(
               `/projects/${category.categorySlug}`
             );
-
             return (
               <li
                 className={styles.categoriesItem}

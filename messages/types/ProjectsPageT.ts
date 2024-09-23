@@ -11,6 +11,7 @@ export class ProjectsPageT implements Translation {
     description: "",
     button: "",
     textCategory: "",
+    btnBack: "",
   };
 
   projects = {

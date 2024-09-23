@@ -10,7 +10,11 @@ import { IPropsProjectItem } from "@/helpers/interfaces";
 import ProjectSection from "../../components/ProjectsSection";
 import { MainPageT } from "@/messages/types/MainPageT";
 import ContactUsSection from "../../components/ContactUsSection";
-// import AnimatedTitle from "../../components/AnimatedTitle";
+import AnimatedTitle from "../../components/AnimatedTitle";
+import MainButton from "../../components/Buttons/MainButton";
+import ArrowLeft from "@/public/icons/arrow-left.svg";
+import { Link } from "@/navigation";
+import { handleGoBack } from "@/helpers/handleGoBack";
 
 type Props = {
   params: {
@@ -34,6 +38,7 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
   const t = await localize(ProjectsPageT);
   const mainT = await localize(MainPageT);
   const projectsT = await localize(ProjectsPageT);
+  const btnBack = t.hero.btnBack;
 
   const projectData = Object.values(t.projects).find(
     (project) => project.projectSlug === projectSlug
@@ -60,7 +65,10 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
           <div className={styles.topInfoWrapper}>
             <div className={styles.textWrapper}>
               {/* <AnimatedTitle title={textCategory} /> */}
-              <h2 className={styles.descTitle}>About this Project</h2>
+              <AnimatedTitle
+                className={styles.descTitle}
+                title={"About this Project"}
+              />
               <Line className="yellow-left" />
               <p className={styles.desc}>
                 Lectus erat, consectetur eu sapien eget rhoncus consectetur sem.
@@ -125,6 +133,15 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
                 tristique, augue mauris molestie augue, non feugiat ligula neque
                 nec felis.
               </p>
+              <MainButton
+                type="button"
+                color="filled"
+                className="projects"
+                isGoBack={true}
+              >
+                <ArrowLeft />
+                {btnBack}
+              </MainButton>
             </div>
           </div>
         </div>

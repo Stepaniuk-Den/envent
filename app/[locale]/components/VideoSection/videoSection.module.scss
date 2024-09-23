@@ -64,9 +64,9 @@
     .videoWrapper {
       width: 100%;
 
-      // @include md {
-      // margin-top: -1px;
-      // }
+      @include md {
+        margin-top: -1px;
+      }
 
       .videoBox {
         width: 100%;

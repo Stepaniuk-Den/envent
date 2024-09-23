@@ -95,6 +95,7 @@ const uk: FullTranslation = {
         "Об'єкти, у будівництві яких брало участь ТОВ Енерговентиляція.",
       button: "зробити розрахунок",
       textCategory: "Вибрати категорію",
+      btnBack: "повернутись назад",
     },
 
     projects: {
@@ -1124,7 +1125,7 @@ const uk: FullTranslation = {
           },
           img3: {
             alt: "...",
-            src: "/images/projects/trade_complexes/river_mall1.webp",
+            src: "/images/projects/trade_complexes/river_mall1.png",
           },
         },
         link: "...",

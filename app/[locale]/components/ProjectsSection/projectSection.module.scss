@@ -4,8 +4,11 @@
   width: 100%;
 
   .projectContainer {
+    display: flex;
+    flex-direction: column;
     padding-top: 100px;
     padding-bottom: 100px;
+    gap: 38px;
 
     @include sm {
       max-width: 375px;
@@ -13,9 +16,9 @@
     }
 
     .sectionTitle {
-      margin-bottom: 38px;
       text-transform: capitalize;
       text-align: center;
+      line-height: 1;
     }
 
     .projectList {
@@ -24,7 +27,6 @@
       justify-content: center;
       align-items: center;
       gap: 30px;
-      margin: 38px auto;
       width: 100%;
 
       @include lg {

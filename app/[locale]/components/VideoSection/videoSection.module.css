@@ -1,0 +1,98 @@
+.videoSection {
+  width: 100%;
+}
+.videoSection .videoContainer {
+  display: flex;
+  padding-top: 100px;
+}
+@media screen and (max-width: 1023.98px) {
+  .videoSection .videoContainer {
+    flex-direction: column;
+  }
+}
+.videoSection .videoContainer .videoDescWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 78px 38px;
+  max-width: 418px;
+  width: 100%;
+  color: var(--color-white);
+  background-color: var(--color-dark);
+}
+@media screen and (max-width: 1279.98px) {
+  .videoSection .videoContainer .videoDescWrapper {
+    max-width: 370px;
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .videoSection .videoContainer .videoDescWrapper {
+    max-width: 100%;
+    padding: 58px 38px 0;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .videoSection .videoContainer .videoDescWrapper {
+    padding: 52px 20px 0;
+  }
+}
+.videoSection .videoContainer .videoDescWrapper .videoTitle {
+  margin-bottom: 38px;
+}
+@media screen and (max-width: 1023.98px) {
+  .videoSection .videoContainer .videoDescWrapper .videoTitle {
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .videoSection .videoContainer .videoDescWrapper .videoTitle {
+    margin-bottom: 20px 0;
+  }
+}
+.videoSection .videoContainer .videoDescWrapper .videoDesc {
+  font-family: var(--font-open-sands);
+  color: var(--color-dark);
+  font-size: 15px;
+  line-height: 1.8; /* 180% */
+  letter-spacing: 0.6px;
+  color: var(--color-white);
+  margin: 38px 0;
+}
+@media screen and (max-width: 1279.98px) {
+  .videoSection .videoContainer .videoDescWrapper .videoDesc {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .videoSection .videoContainer .videoDescWrapper .videoDesc {
+    margin: 24px 0;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .videoSection .videoContainer .videoDescWrapper .videoDesc {
+    margin: 20px 0;
+  }
+}
+.videoSection .videoContainer .videoWrapper {
+  width: 100%;
+}
+@media screen and (max-width: 1023.98px) {
+  .videoSection .videoContainer .videoWrapper {
+    margin-top: -1px;
+  }
+}
+.videoSection .videoContainer .videoWrapper .videoBox {
+  width: 100%;
+  height: 602px;
+  background-color: var(--color-dark);
+}
+@media screen and (max-width: 1023.98px) {
+  .videoSection .videoContainer .videoWrapper .videoBox {
+    height: 520px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .videoSection .videoContainer .videoWrapper .videoBox {
+    height: 320px;
+  }
+}/*# sourceMappingURL=videoSection.module.css.map */
