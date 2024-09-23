@@ -110,9 +110,18 @@
     border-color: var(--color-accent-blue);
 
     &.about_us {
+      position: relative;
       max-width: max-content;
       margin-top: auto;
       align-self: flex-end;
+
+      @include md {
+        align-self: center;
+      }
+
+      @include sm {
+        display: none;
+      }
     }
 
     &.question {

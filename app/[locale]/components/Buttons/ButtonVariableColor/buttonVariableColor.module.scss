@@ -5,9 +5,9 @@
   flex-direction: row;
 
   &.dark_blue {
-  @include sm {
-    flex-direction: column;
-  }
+    @include sm {
+      flex-direction: column;
+    }
   }
 
   &.blue_white{
@@ -111,9 +111,9 @@
   height: 115px;
 }
 
-.dark_blue{
-  .button_container{
-    @include sm{
+.dark_blue {
+  .button_container {
+    @include sm {
       flex-direction: column;
     }
   }
@@ -134,5 +134,9 @@
   .btn {
     max-width: 420px;
     width: 100%;
+  }
+
+  @include sm {
+    display: none;
   }
 }

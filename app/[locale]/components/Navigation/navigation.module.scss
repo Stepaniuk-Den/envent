@@ -20,6 +20,7 @@
   @include sm-landscape {
     margin-top: 0;
     flex-direction: column;
+    gap: 16px;
   }
 
   .link {

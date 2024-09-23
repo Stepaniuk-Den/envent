@@ -38,6 +38,10 @@
     top: 40%;
     display: flex;
     justify-content: space-between;
+
+    @include md-landscape {
+      top: 100px;
+    }
   }
 
   &.contacts,

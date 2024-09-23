@@ -74,3 +74,12 @@
   letter-spacing: 0.64px;
   @content;
 }
+@mixin text-uppercase-rubik {
+  font-family: var(--font-rubik);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 4.2; /* 420% */
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  @content;
+}

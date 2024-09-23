@@ -17,10 +17,13 @@
   .p3,
   .p4,
   .p5 {
-    font-size: medium;
-
     @include md-landscape {
-      font-size: x-small;
+      // font-size: x-small;
+      font-size: 12px;
+    }
+    @include sm-landscape {
+      // font-size: x-small;
+      font-size: 14px;
     }
   }
 }
