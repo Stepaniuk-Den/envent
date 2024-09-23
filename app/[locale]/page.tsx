@@ -11,13 +11,13 @@ import { unstable_setRequestLocale } from "next-intl/server";
 
 import { localize } from "@/localize";
 import VideoSection from "./components/VideoSection";
-import Partners from "./components/Partners";
 import { HeroRightSideT } from "@/messages/types/HeroRightSideT";
 import Testimonials from "./components/Testimonials";
 import { MainPageT } from "@/messages/types/MainPageT";
 import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
 import QuestionsSection from "./components/QuestionsSection";
 import ContactUsSection from "./components/ContactUsSection";
+import PartnersCarousel from "./components/PartnersCarousel";
 
 type Props = {
   params: { locale: string };
@@ -34,13 +34,13 @@ const Home: React.FC<Props> = async ({ params: { locale } }) => {
       <Hero imageSrc={HeroMainBG} className="main" t={mainT.hero}>
         <HeroRightSideList className="main" t={heroRightSideT.services} />
       </Hero>
-      <Description t={mainT.descriptions}/>
+      <Description t={mainT.descriptions} />
       <ProjectSection t={mainT.projects} t2={projectsT.projects} />
       <AboutUsCounted imageSrc={AboutUsCountedBG} t={mainT.aboutUsCounted} />
       <Testimonials t={mainT.testimonials} />
       <QuestionsSection params={{ locale }} type="slogan" />
       <VideoSection t={mainT.videoSection} />
-      <Partners t={mainT.partners} />
+      <PartnersCarousel t={mainT.partners} />
       <ContactUsSection params={{ locale }} />
     </div>
   );
