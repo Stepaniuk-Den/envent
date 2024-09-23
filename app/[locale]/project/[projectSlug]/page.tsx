@@ -13,8 +13,6 @@ import ContactUsSection from "../../components/ContactUsSection";
 import AnimatedTitle from "../../components/AnimatedTitle";
 import MainButton from "../../components/Buttons/MainButton";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
-import { Link } from "@/navigation";
-import { handleGoBack } from "@/helpers/handleGoBack";
 
 type Props = {
   params: {
