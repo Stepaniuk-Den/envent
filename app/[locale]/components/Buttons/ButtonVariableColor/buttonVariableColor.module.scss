@@ -44,16 +44,18 @@
 
   @include md {
     align-items: center;
-    // max-width: 320px;
   }
 
   @include sm {
     max-width: 430px;
   }
 
-  &.fixed_width{
+  &.fixed_width {
     @include md {
       max-width: 320px;
+    }
+    @include sm {
+      max-width: 430px;
     }
   }
 
