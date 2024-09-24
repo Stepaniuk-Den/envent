@@ -19,7 +19,6 @@
     "framer-motion": "^11.3.24",
     "negotiator": "^0.6.3",
     "next": "^14.2.5",
-    "next-compose-plugins": "^2.2.1",
     "next-intl": "^3.17.3",
     "nodemailer": "^6.9.15",
     "plaiceholder": "^3.0.0",
