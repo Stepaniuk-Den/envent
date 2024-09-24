@@ -25,6 +25,10 @@ const Contacts: React.FC<Props> = async ({ params: { locale } }) => {
       <Hero imageSrc={HeroAboutBG} t={contactsT.hero} className="contacts">
         <HeroRightSideList className="contacts" t={heroRightSideT.contact} />
       </Hero>
+      <HeroRightSideList
+        className="contacts_mobile"
+        t={heroRightSideT.contact}
+      />
       <div className={styles.contacts}>
         <QuestionsSection params={{ locale }} type="form" />
         <MapSection locationBtn={contactsT.locationBtn.description} />
