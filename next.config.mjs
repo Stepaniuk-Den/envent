@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 import createNextIntlPlugin from "next-intl/plugin";
-// import withPlaiceholder from "@plaiceholder/next";
+import withPlaiceholder from "@plaiceholder/next";
 // import withPlugins from "next-compose-plugins";
 // import { withNextVideo } from "next-video/process";
 
@@ -65,12 +65,12 @@ const nextConfig = {
 };
 
 // export default nextConfig;
-export default withNextIntl(nextConfig);
+// export default withNextIntl(nextConfig);
 // export default withPlaiceholder(nextConfig);
 // export default withPlugins([withNextIntl, withPlaiceholder], nextConfig);
 
-// const combinedConfig = withPlaiceholder(withNextIntl(nextConfig));
-// export default combinedConfig;
+const combinedConfig = withNextIntl(withPlaiceholder(nextConfig));
+export default combinedConfig;
 
 // config.module.rules.push({
 //   test: /\.(mp4|webm|ogg)$/,

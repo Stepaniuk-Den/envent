@@ -19,7 +19,7 @@ const ProjectItem = async ({
   }
   const { projectSlug, mainImg, mainAlt, title, onClick } = t;
 
-  const buffer = await fs.readFile(`./public${mainImg}`);
+  const buffer = await fs.readFile(`public${mainImg}`);
   const { base64 } = await getPlaiceholder(buffer);
 
   return (
