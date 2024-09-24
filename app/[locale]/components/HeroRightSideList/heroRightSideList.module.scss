@@ -11,7 +11,7 @@
     width: 350px;
   }
 
-  @include md {
+  @include sm {
     display: none;
   }
 
@@ -70,6 +70,12 @@
       &:hover :first-child {
         color: var(--color-white);
       }
+    }
+  }
+
+  &.contacts_mobile {
+    @include md {
+      display: flex;
     }
   }
 }
