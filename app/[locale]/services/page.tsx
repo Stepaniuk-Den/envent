@@ -10,7 +10,7 @@ import ProjectSection from "../components/ProjectsSection";
 import { MainPageT } from "@/messages/types/MainPageT";
 import ContactUsSection from "../components/ContactUsSection";
 import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
-import { getBase64FromImage } from "@/helpers/getBase64";
+import getBase64FromImage from "@/helpers/getBase64";
 
 type Props = {
   params: { locale: string };

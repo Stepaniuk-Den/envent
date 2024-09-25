@@ -18,7 +18,7 @@ import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
 import QuestionsSection from "./components/QuestionsSection";
 import ContactUsSection from "./components/ContactUsSection";
 import PartnersCarousel from "./components/PartnersCarousel";
-import { getBase64FromImage } from "@/helpers/getBase64";
+import getBase64FromImage from "@/helpers/getBase64";
 
 type Props = {
   params: { locale: string };

@@ -1,11 +1,64 @@
 import fs from "node:fs/promises";
 import { getPlaiceholder } from "plaiceholder";
+// import path from "path";
 
-export const getBase64FromImage = async (imagePath: string) => {
+// Variant1
+const getBase64FromImage = async (imagePath: string) => {
   const buffer = await fs.readFile(imagePath);
   const { base64 } = await getPlaiceholder(buffer);
   return base64;
 };
+
+export default getBase64FromImage;
+
+// Variant2
+// const getBase64FromImage = async (imagePath: string) => {
+//   try {
+//     const res = await fetch(imagePath);
+
+//     if (!res.ok) {
+//       throw new Error("Network response was not ok");
+//     }
+
+//     const buffer = await res.arrayBuffer();
+//     const { base64 } = await getPlaiceholder(Buffer.from(buffer));
+//     console.log(base64);
+//     return base64;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// export default getBase64FromImage;
+
+// =================generateBase64====================
+
+// const projectsDataPath = path.join(process.cwd(), "data", "projects.json");
+// const projectsData = JSON.parse(fs.readFileSync(projectsDataPath, "utf8"));
+
+// async function generateBase64() {
+//   const updatedProjects = await Promise.all(
+//     projectsData.projects.map(async (project) => {
+//       const imagePath = path.join(process.cwd(), "public", project.mainImg);
+//       const buffer = fs.readFileSync(imagePath);
+//       const { base64 } = await getPlaiceholder(buffer);
+//       return {
+//         ...project,
+//         base64,
+//       };
+//     })
+//   );
+
+//   const updatedData = {
+//     ...projectsData,
+//     projects: updatedProjects,
+//   };
+
+//   fs.writeFileSync(projectsDataPath, JSON.stringify(updatedData, null, 2));
+// }
+
+// generateBase64();
+// ============================================
 
 // import { NextApiRequest, NextApiResponse } from "next";
 // import fs from "fs/promises";
