@@ -1,17 +1,27 @@
+// "use client";
+
 import styles from "./projectItem.module.scss";
 import Image from "next/image";
 import LinkIcon from "@/public/icons/link.svg";
 import MagnifyingGlass from "@/public/icons/magnifying-glass.svg";
 import { Link } from "@/navigation";
 import { IPropsProjectItem } from "@/helpers/interfaces";
-import { getPlaiceholder } from "plaiceholder";
-import fs from "node:fs/promises";
+// import { getPlaiceholder } from "plaiceholder";
+// import fs from "node:fs/promises";
+// import { useState, useEffect } from "react";
 
-const ProjectItem = async ({
+// const getPlaiceholder =
+//   typeof window === "undefined"
+//     ? require("plaiceholder").getPlaiceholder
+//     : null;
+
+const ProjectItem = ({
   t,
+  base64,
 }: // categorySlug,
 {
   t: IPropsProjectItem;
+  base64: string;
   // categorySlug: string;
 }) => {
   if (!t) {
@@ -19,21 +29,23 @@ const ProjectItem = async ({
   }
   const { projectSlug, mainImg, mainAlt, title, onClick } = t;
 
-  const buffer = await fs.readFile(`public${mainImg}`);
-  const { base64 } = await getPlaiceholder(buffer);
+  // const buffer = await fs.readFile(`public${mainImg}`);
+  // const { base64 } = await getPlaiceholder(buffer);
 
-  // let base64 = "";
-  // if (mainImg) {
-  //   try {
-  //     const buffer = await fetch(mainImg).then(async (res) => {
-  //       return Buffer.from(await res.arrayBuffer());
-  //     });
-  //     const plaiceholder = await getPlaiceholder(buffer);
-  //     base64 = plaiceholder.base64;
-  //   } catch (error) {
-  //     console.error("Failed to fetch the image:", error);
-  //   }
-  // }
+  // const [blurDataURL, setBlurDataURL] = useState<string | null>(null);
+
+  // useEffect(() => {
+  //   const loadImagePlaceholder = async () => {
+  //     if (mainImg && getPlaiceholder) {
+  //       const res = await fetch(mainImg);
+  //       const buffer = await res.arrayBuffer();
+  //       const { base64 } = await getPlaiceholder(Buffer.from(buffer));
+  //       setBlurDataURL(base64);
+  //     }
+  //   };
+
+  //   loadImagePlaceholder();
+  // }, [mainImg]);
 
   return (
     <li className={styles.projectItem}>
@@ -46,6 +58,7 @@ const ProjectItem = async ({
           sizes="(max-width: 767.98px) 355px, (max-width: 1023.98px) 356px,  317px,"
           placeholder="blur"
           blurDataURL={base64}
+          // blurDataURL={blurDataURL || ""}
         />
       )}
       <div className={styles.overlayContent}>

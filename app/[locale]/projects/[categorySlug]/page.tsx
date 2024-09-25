@@ -6,6 +6,7 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import styles from "../projects.module.scss";
 import ProjectItem from "../../components/ProjectItem";
 import { IPropsProjectItem } from "@/helpers/interfaces";
+import { getBase64FromImage } from "@/helpers/getBase64";
 
 type Props = {
   params: {
@@ -42,14 +43,25 @@ const Categories = async ({ params: { categorySlug, locale } }: Props) => {
   //   return <p>No projects available in this category.</p>;
   // }
 
+  // -------------------------------
+  const projectsWithBase64 = await Promise.all(
+    filteredProjects.map(async (project) => {
+      const mainImgPath = `./public${project.mainImg}`;
+      const base64 = await getBase64FromImage(mainImgPath);
+      return { ...project, base64 };
+    })
+  );
+  // -----------------------------------
+
   return (
     <ul className={styles.projectList}>
-      {filteredProjects.map((projectItem) => (
+      {/* {filteredProjects.map((projectItem) => ( */}
+      {projectsWithBase64.map((projectItem) => (
         <ProjectItem
           key={projectItem.projectSlug}
           // t={{ ...projectItem }}
           t={projectItem}
-
+          base64={projectItem.base64}
           // categorySlug={categoryData.categorySlug}
           // onClick={() => handleOpenBackdrop(index)}
         />

@@ -13,6 +13,7 @@ import ContactUsSection from "../../components/ContactUsSection";
 import AnimatedTitle from "../../components/AnimatedTitle";
 import MainButton from "../../components/Buttons/MainButton";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
+import { getBase64FromImage } from "@/helpers/getBase64";
 
 type Props = {
   params: {
@@ -21,6 +22,18 @@ type Props = {
     locale: string;
   };
 };
+
+// ---------------------------------------------
+const getProjectsWithBase64 = async (projects: ProjectsPageT["projects"]) => {
+  return await Promise.all(
+    Object.entries(projects).map(async ([key, project]) => {
+      const mainImgPath = `./public${project.mainImg}`;
+      const base64 = await getBase64FromImage(mainImgPath);
+      return { ...project, base64 };
+    })
+  );
+};
+// ---------------------------------------------
 
 export async function generateMetadata({
   params: { projectSlug },
@@ -45,6 +58,10 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
   if (!projectData) {
     return <p>Project not found</p>;
   }
+
+  // ---------------------------------------------
+  const projectsWithBase64 = await getProjectsWithBase64(projectsT.projects);
+  // ---------------------------------------------
 
   return (
     <>
@@ -143,7 +160,11 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
             </div>
           </div>
         </div>
-        <ProjectSection t={mainT.projects} t2={projectsT.projects} />
+        <ProjectSection
+          t={mainT.projects}
+          // t2={projectsT.projects}
+          t2={projectsWithBase64}
+        />
       </section>
       <ContactUsSection params={{ locale }} />
     </>
