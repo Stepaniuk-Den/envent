@@ -69,7 +69,7 @@ export default withNextIntl(nextConfig);
 // export default withPlaiceholder(nextConfig);
 // export default withPlugins([withNextIntl, withPlaiceholder], nextConfig);
 
-// const combinedConfig = withPlaiceholder(withNextIntl(nextConfig));
+// const combinedConfig = withNextIntl(withPlaiceholder(nextConfig));
 // export default combinedConfig;
 
 // config.module.rules.push({
