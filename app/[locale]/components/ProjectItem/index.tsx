@@ -71,7 +71,8 @@ const ProjectItem = ({
             // -----------------------------------------------------
 
             // href={`/projects/${categorySlug}/${slug}`}
-            href={`/project/${projectSlug}`}
+            // href={`/project/${projectSlug}`}
+            href={`/${projectSlug}`}
           >
             <LinkIcon className={styles.linkIcon} />
           </Link>
