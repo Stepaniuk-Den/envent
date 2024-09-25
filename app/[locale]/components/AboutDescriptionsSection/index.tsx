@@ -15,7 +15,7 @@ const AboutDescriptionsSection: React.FC<{ t: Props }> = ({ t }) => {
           {aboutList.map(([key, value]) => {
             const className = styles[key] ? styles[key] : "";
             return (
-              <Observer y={50} duration="300ms" threshold={0.5} key={key}>
+              <Observer y={50} threshold={0.5} key={key}>
                 <p className={className}>{value}</p>
               </Observer>
             );

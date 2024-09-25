@@ -43,8 +43,8 @@ const HeroTitle: React.FC<{ t: IHeroTitleProps }> = ({ t }) => {
       opacity: 1,
       y: 0,
       transition: {
-        delay: 0.3,
-        duration: 1,
+        delay: 0.1,
+        duration: 0.5,
         when: "beforeChildren",
       },
     },
@@ -57,7 +57,7 @@ const HeroTitle: React.FC<{ t: IHeroTitleProps }> = ({ t }) => {
     visible: {
       x: 0,
       transition: {
-        duration: 1,
+        duration: 0.5,
       },
     },
   };
@@ -71,7 +71,7 @@ const HeroTitle: React.FC<{ t: IHeroTitleProps }> = ({ t }) => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 1,
+        duration: 0.5,
       },
     },
   };

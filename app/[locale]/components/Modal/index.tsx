@@ -21,7 +21,8 @@ const Modal: React.FC<IModal> = ({ children, className = "" }) => {
 
   return createPortal(
     <div className={`${styles[className]} overlay`}>
-      <div className={`${styles.modal_content} container`}>{children}</div>
+      <div className={styles.modal_content}>{children}</div>
+      {/* <div className={`${styles.modal_content} container`}>{children}</div> */}
     </div>,
     document.getElementById("modal")!
   );

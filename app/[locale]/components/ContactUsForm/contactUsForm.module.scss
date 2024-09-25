@@ -90,6 +90,17 @@
   }
 }
 
+.touch_obs {
+  flex: 1;
+  gap: 24px;
+  padding: 0 48px 0 0;
+
+  @include md {
+    padding: 0;
+    order: 2;
+  }
+}
+
 // ===== MODAL ======
 .p1 {
   @include text-title-h3-rubik;
