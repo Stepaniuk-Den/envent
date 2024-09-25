@@ -22,6 +22,19 @@ const ProjectItem = async ({
   const buffer = await fs.readFile(`public${mainImg}`);
   const { base64 } = await getPlaiceholder(buffer);
 
+  // let base64 = "";
+  // if (mainImg) {
+  //   try {
+  //     const buffer = await fetch(mainImg).then(async (res) => {
+  //       return Buffer.from(await res.arrayBuffer());
+  //     });
+  //     const plaiceholder = await getPlaiceholder(buffer);
+  //     base64 = plaiceholder.base64;
+  //   } catch (error) {
+  //     console.error("Failed to fetch the image:", error);
+  //   }
+  // }
+
   return (
     <li className={styles.projectItem}>
       {mainImg && (

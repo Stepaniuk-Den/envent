@@ -47,7 +47,9 @@ const Categories = async ({ params: { categorySlug, locale } }: Props) => {
       {filteredProjects.map((projectItem) => (
         <ProjectItem
           key={projectItem.projectSlug}
-          t={{ ...projectItem }}
+          // t={{ ...projectItem }}
+          t={projectItem}
+
           // categorySlug={categoryData.categorySlug}
           // onClick={() => handleOpenBackdrop(index)}
         />
