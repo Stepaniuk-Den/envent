@@ -10,12 +10,7 @@ import useMeasure from "react-use-measure";
 import AnimatedTitle from "../AnimatedTitle";
 import Line from "../Line";
 import { IPartnersProps } from "@/helpers/interfaces";
-
-const isMobileDevice = () => {
-  const userAgent = typeof window !== "undefined" ? navigator.userAgent : "";
-  const mobileRegex = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i;
-  return mobileRegex.test(userAgent);
-};
+import useIsMobileDevice from "@/helpers/useIsMobileDevice";
 
 const PartnersCarousel = ({ t }: IPartnersProps) => {
   const FAST_DURATION = 25;
@@ -24,26 +19,13 @@ const PartnersCarousel = ({ t }: IPartnersProps) => {
   const [duration, setDuration] = useState(FAST_DURATION);
   const [mustFinish, setMustFinish] = useState(false);
   const [rerender, setRerender] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [activeCardIndex, setActiveCardIndex] = useState<number | null>(null);
 
   let [ref, { width }] = useMeasure();
   const listRef = useRef<HTMLDivElement | null>(null);
 
   const xTranslation = useMotionValue(0);
-
-  useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(isMobileDevice());
-    };
-
-    checkIsMobile();
-    window.addEventListener("resize", checkIsMobile);
-
-    return () => {
-      window.removeEventListener("resize", checkIsMobile);
-    };
-  }, []);
+  const isMobileDevice = useIsMobileDevice();
 
   useEffect(() => {
     const handleTouchOutside = (event: TouchEvent) => {
@@ -100,21 +82,21 @@ const PartnersCarousel = ({ t }: IPartnersProps) => {
           ref={ref}
           style={{ x: xTranslation }}
           onHoverStart={
-            !isMobile
+            !isMobileDevice
               ? () => {
                   setDuration(SLOW_DURATION), setMustFinish(true);
                 }
               : undefined
           }
           onHoverEnd={
-            !isMobile
+            !isMobileDevice
               ? () => {
                   setDuration(FAST_DURATION), setMustFinish(true);
                 }
               : undefined
           }
           onTap={
-            isMobile
+            isMobileDevice
               ? () => {
                   setDuration(SLOW_DURATION), setMustFinish(true);
                 }
@@ -127,7 +109,7 @@ const PartnersCarousel = ({ t }: IPartnersProps) => {
                 key={index}
                 partner={partner}
                 linkTitle={t.link}
-                isMobile={isMobile}
+                isMobile={isMobileDevice}
                 isActive={activeCardIndex === index}
                 onClick={() =>
                   setActiveCardIndex(activeCardIndex === index ? null : index)

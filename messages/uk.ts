@@ -1385,11 +1385,11 @@ const uk: FullTranslation = {
       list: {
         office: {
           title: "Наш офіс",
-          descriptions: "Дарницький бульвар, 12, <br/>Київ, 02192",
+          descriptions: "Дарницький бульвар, 12, <br/> Київ, 02192",
         },
         hours: {
           title: "Години роботи офісу",
-          descriptions: "Пн-Пт: 9:00 – 18:00 <br/>Сб-Нд: Вихідний",
+          descriptions: "Пн-Пт: 9:00 – 18:00 <br/> Сб-Нд: Вихідний",
         },
         touch: {
           title: "Зв'яжіться з нами",

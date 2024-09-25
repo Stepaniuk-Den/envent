@@ -9,6 +9,7 @@ import { QuestionsT } from "@/messages/types/QuestionsT";
 import { QuestionCardT } from "@/messages/types/QuestionCardT";
 import QuestionCard from "../QuestionCard";
 import { ContactUsT } from "@/messages/types/ContactUsT";
+import Observer from "@/helpers/observer";
 
 type Props = {
   params: { locale: string };
@@ -43,7 +44,9 @@ const QuestionsSection: React.FC<Props> = async ({
             description={description}
           />
         )}
-        <QuestionsList t={questionsT.list} />
+        <Observer y={50} threshold={0.2}>
+          <QuestionsList t={questionsT.list} />
+        </Observer>
       </div>
     </section>
   );

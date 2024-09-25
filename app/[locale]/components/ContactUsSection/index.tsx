@@ -26,7 +26,7 @@ const ContactUsSection: React.FC<Props> = async ({ params: { locale } }) => {
       className={styles.section}
       style={{ backgroundImage: `url("/images/footer-bg.webp")` }}
     >
-      <Observer y={50} duration="500ms" threshold={0.2}>
+      <Observer y={50} threshold={0}>
         <div className={`${styles.wrapper} container`}>
           <ContactUsForm t={footerT} className="footer" />
           <div className={styles.contacts_container}>
