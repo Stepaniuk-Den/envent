@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 import createNextIntlPlugin from "next-intl/plugin";
+import path from "path";
 // import withPlaiceholder from "@plaiceholder/next";
 // import withPlugins from "next-compose-plugins";
 // import { withNextVideo } from "next-video/process";
@@ -9,6 +10,7 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
+    path: "",
     // deviceSizes: [768, 1024, 1280],
     // deviceSizes: [375, 768, 1024, 1440, 1920],
     // loader: "custom",
