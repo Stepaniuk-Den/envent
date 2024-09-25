@@ -14,11 +14,10 @@ const Observer = ({
   type = false,
   className,
   rootMargin,
-  
 }: {
   children: React.ReactNode;
   threshold: number;
-  duration: string;
+  duration?: string;
   x?: number;
   y?: number;
   opacity?: number;
@@ -33,12 +32,14 @@ const Observer = ({
   opacity = opacity || 0;
   scale = scale || 0.5;
   rootMargin = rootMargin || "0px";
+  duration = duration || "300ms";
 
   const ref = useRef<HTMLDivElement | null>(null);
   const [intersecting, setIntersecting] = useState(false);
 
   useEffect(() => {
-    if (ref.current) {
+    const element = ref.current;
+    if (element) {
       const observer = new IntersectionObserver(
         (entries) => {
           if (entries[0].isIntersecting) {
@@ -57,15 +58,15 @@ const Observer = ({
           rootMargin,
         }
       );
-      observer.observe(ref.current);
+      observer.observe(element);
 
       return () => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
+        if (element) {
+          observer.unobserve(element);
         }
       };
     }
-  }, [once]);
+  }, [once, rootMargin, threshold]);
 
   if (!type) {
     return (
@@ -79,7 +80,7 @@ const Observer = ({
           scale: !intersecting ? scale : 1,
         }}
         ref={ref as React.RefObject<HTMLDivElement>}
-          // className={`transition ${intersecting ? "opacity-100" : "opacity-0"}`}  // for tailwind css
+        // className={`transition ${intersecting ? "opacity-100" : "opacity-0"}`}  // for tailwind css
         className={className}
       >
         {children}
@@ -104,6 +105,5 @@ const Observer = ({
     </li>
   );
 };
-
 
 export default Observer;

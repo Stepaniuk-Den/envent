@@ -1371,11 +1371,11 @@ const en: FullTranslation = {
       list: {
         office: {
           title: "Our Office",
-          descriptions: "Darnytskyi Boulevard, 12, <br/>Kyiv, 02192",
+          descriptions: "Darnytskyi Boulevard, 12, <br/> Kyiv, 02192",
         },
         hours: {
           title: "Office Hours",
-          descriptions: "Mon-Fri: 9:00 AM – 6:00 PM <br/>Sat-Sun: Closed",
+          descriptions: "Mon-Fri: 9:00 AM – 6:00 PM <br/> Sat-Sun: Closed",
         },
         touch: {
           title: "Get in Touch",
