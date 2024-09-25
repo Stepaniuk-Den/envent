@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 import createNextIntlPlugin from "next-intl/plugin";
-// import withPlaiceholder from "@plaiceholder/next";
-// import withPlugins from "next-compose-plugins";
+import withPlaiceholder from "@plaiceholder/next";
+import withPlugins from "next-compose-plugins";
 // import { withNextVideo } from "next-video/process";
 
 const withNextIntl = createNextIntlPlugin();
@@ -65,9 +65,9 @@ const nextConfig = {
 };
 
 // export default nextConfig;
-export default withNextIntl(nextConfig);
+// export default withNextIntl(nextConfig);
 // export default withPlaiceholder(nextConfig);
-// export default withPlugins([withNextIntl, withPlaiceholder], nextConfig);
+export default withPlugins([withNextIntl, withPlaiceholder], nextConfig);
 
 // const combinedConfig = withNextIntl(withPlaiceholder(nextConfig));
 // export default combinedConfig;
