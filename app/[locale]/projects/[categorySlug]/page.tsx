@@ -46,7 +46,7 @@ const Categories = async ({ params: { categorySlug, locale } }: Props) => {
   // -------------------------------
   const projectsWithBase64 = await Promise.all(
     filteredProjects.map(async (project) => {
-      const mainImgPath = `./public${project.mainImg}`;
+      const mainImgPath = `${process.cwd()}/public${project.mainImg}`;
       const base64 = await getBase64FromImage(mainImgPath);
       return { ...project, base64 };
     })

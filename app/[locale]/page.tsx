@@ -28,7 +28,7 @@ type Props = {
 const getProjectsWithBase64 = async (projects: ProjectsPageT["projects"]) => {
   return await Promise.all(
     Object.entries(projects).map(async ([key, project]) => {
-      const mainImgPath = `./public${project.mainImg}`;
+      const mainImgPath = `${process.cwd()}/public${project.mainImg}`;
       const base64 = await getBase64FromImage(mainImgPath);
       return { ...project, base64 };
     })
