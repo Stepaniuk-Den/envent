@@ -71,7 +71,7 @@ const nextConfig = {
 // export default withPlaiceholder(nextConfig);
 // export default withPlugins([withNextIntl, withPlaiceholder], nextConfig);
 
-const combinedConfig = withNextIntl(withPlaiceholder(nextConfig));
+const combinedConfig = withPlaiceholder(withNextIntl(nextConfig));
 export default combinedConfig;
 
 // config.module.rules.push({
