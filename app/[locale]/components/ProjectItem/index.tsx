@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import styles from "./projectItem.module.scss";
 import Image from "next/image";
@@ -7,8 +7,8 @@ import MagnifyingGlass from "@/public/icons/magnifying-glass.svg";
 import { Link } from "@/navigation";
 import { IPropsProjectItem } from "@/helpers/interfaces";
 import { useState } from "react";
-// import { getPlaiceholder } from "plaiceholder";
-// import fs from "node:fs/promises";
+import { getPlaiceholder } from "plaiceholder";
+import fs from "node:fs/promises";
 // import { useState, useEffect } from "react";
 
 // const getPlaiceholder =
@@ -16,7 +16,7 @@ import { useState } from "react";
 //     ? require("plaiceholder").getPlaiceholder
 //     : null;
 
-const ProjectItem = ({
+const ProjectItem = async ({
   t,
 }: // base64,
 // categorySlug,
@@ -25,15 +25,15 @@ const ProjectItem = ({
   // base64: string;
   // categorySlug: string;
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
   if (!t) {
     return <p>Project data is missing</p>;
   }
   const { projectSlug, mainImg, mainAlt, title, onClick } = t;
 
-  // const buffer = await fs.readFile(`public${mainImg}`);
-  // const { base64 } = await getPlaiceholder(buffer);
+  const buffer = await fs.readFile(`public${mainImg}`);
+  const { base64 } = await getPlaiceholder(buffer);
 
   // const [blurDataURL, setBlurDataURL] = useState<string | null>(null);
 
@@ -69,19 +69,18 @@ const ProjectItem = ({
     <li className={styles.projectItem}>
       {mainImg && (
         <Image
-          className={`styles.projectImg ${
-            isLoading ? styles.loading : styles.notLoading
-          }`}
+          className={styles.projectImg}
+          // ${isLoading ? styles.loading : styles.notLoading}`}
           src={mainImg}
           alt={mainAlt || "Project image"}
           fill={true}
           sizes="(max-width: 767.98px) 355px, (max-width: 1023.98px) 356px,  317px,"
-          // placeholder="blur"
-          // blurDataURL={base64}
+          placeholder="blur"
+          blurDataURL={base64}
           // blurDataURL={blurDataURL || ""}
-          onLoad={() => {
-            setIsLoading(false), console.log("setIsLoading");
-          }}
+          // onLoad={() => {
+          //   setIsLoading(false), console.log("setIsLoading");
+          // }}
         />
       )}
       <div className={styles.overlayContent}>
