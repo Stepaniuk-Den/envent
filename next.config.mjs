@@ -10,7 +10,7 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
-    path: "/",
+    // path: "",
     // deviceSizes: [768, 1024, 1280],
     // deviceSizes: [375, 768, 1024, 1440, 1920],
     // loader: "custom",

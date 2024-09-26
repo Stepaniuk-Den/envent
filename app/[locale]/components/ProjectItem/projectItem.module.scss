@@ -45,6 +45,18 @@
     transition: transform 800ms ease-in-out;
   }
 
+  .loading {
+    transform: scale(1.1);
+    filter: blur(60px);
+    // filter: grayscale(100%);
+  }
+
+  .notLoading {
+    transform: scale(1);
+    filter: blur(0);
+    // filter: grayscale(0%);
+  }
+
   .overlayContent {
     position: absolute;
     top: 0;

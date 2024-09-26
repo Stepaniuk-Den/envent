@@ -48,8 +48,8 @@ const ServicesPage: React.FC<Props> = async ({ params: { locale } }) => {
       <Services t={servicesT.services} language={locale} />
       <ProjectSection
         t={mainT.projects}
-        // t2={projectsT.projects}
-        t2={projectsWithBase64}
+        t2={projectsT.projects}
+        // t2={projectsWithBase64}
       />
       <ContactUsSection params={{ locale }} />
     </div>
