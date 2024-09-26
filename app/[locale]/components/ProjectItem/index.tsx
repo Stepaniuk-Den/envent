@@ -80,7 +80,7 @@ const ProjectItem = ({
           // blurDataURL={base64}
           // blurDataURL={blurDataURL || ""}
           onLoad={() => {
-            setIsLoading(false), console.log();
+            setIsLoading(false), console.log("setIsLoading");
           }}
         />
       )}
