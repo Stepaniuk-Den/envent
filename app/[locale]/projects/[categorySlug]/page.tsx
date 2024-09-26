@@ -65,12 +65,13 @@ const Categories = async ({ params: { categorySlug, locale } }: Props) => {
       {/* {projectsWithBase64.map(
         (projectItem) => ( */}
       {filteredProjects.map(async (projectItem) => {
-        const mainImgPath = `${process.cwd()}/public${projectItem.mainImg}`;
-        const base64 = await getBase64FromImage(mainImgPath);
+        // const mainImgPath = `${process.cwd()}/public${projectItem.mainImg}`;
+        // const base64 = await getBase64FromImage(mainImgPath);
         return (
           <ProjectItem
             key={projectItem.projectSlug}
             // t={{ ...projectItem }}
+            {...projectItem}
             t={projectItem}
             // base64={projectItem.base64}
             // base64={base64}
