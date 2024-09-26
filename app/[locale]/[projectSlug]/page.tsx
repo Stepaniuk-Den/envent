@@ -13,7 +13,7 @@ import ContactUsSection from "../components/ContactUsSection";
 import AnimatedTitle from "../components/AnimatedTitle";
 import MainButton from "../components/Buttons/MainButton";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
-import getBase64FromImage from "@/helpers/getBase64";
+// import getBase64FromImage from "@/helpers/getBase64";
 // import { getBase64FromImage } from "@/helpers/getBase64";
 
 type Props = {
@@ -25,15 +25,15 @@ type Props = {
 };
 
 // ---------------------------------------------
-const getProjectsWithBase64 = async (projects: ProjectsPageT["projects"]) => {
-  return await Promise.all(
-    Object.entries(projects).map(async ([key, project]) => {
-      const mainImgPath = `${process.cwd()}/public${project.mainImg}`;
-      const base64 = await getBase64FromImage(mainImgPath);
-      return { ...project, base64 };
-    })
-  );
-};
+// const getProjectsWithBase64 = async (projects: ProjectsPageT["projects"]) => {
+//   return await Promise.all(
+//     Object.entries(projects).map(async ([key, project]) => {
+//       const mainImgPath = `${process.cwd()}/public${project.mainImg}`;
+//       const base64 = await getBase64FromImage(mainImgPath);
+//       return { ...project, base64 };
+//     })
+//   );
+// };
 // ---------------------------------------------
 
 export async function generateMetadata({
@@ -61,7 +61,7 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
   }
 
   // ---------------------------------------------
-  const projectsWithBase64 = await getProjectsWithBase64(projectsT.projects);
+  // const projectsWithBase64 = await getProjectsWithBase64(projectsT.projects);
   // ---------------------------------------------
 
   return (
