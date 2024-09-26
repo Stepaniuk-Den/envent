@@ -73,7 +73,7 @@ const Categories = async ({ params: { categorySlug, locale } }: Props) => {
             // t={{ ...projectItem }}
             t={projectItem}
             // base64={projectItem.base64}
-            base64={base64}
+            // base64={base64}
 
             // onClick={() => handleOpenBackdrop(index)}
             // categorySlug={categoryData.categorySlug}

@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 import styles from "./projectItem.module.scss";
 import Image from "next/image";
@@ -6,6 +6,7 @@ import LinkIcon from "@/public/icons/link.svg";
 import MagnifyingGlass from "@/public/icons/magnifying-glass.svg";
 import { Link } from "@/navigation";
 import { IPropsProjectItem } from "@/helpers/interfaces";
+import { useState } from "react";
 // import { getPlaiceholder } from "plaiceholder";
 // import fs from "node:fs/promises";
 // import { useState, useEffect } from "react";
@@ -17,13 +18,15 @@ import { IPropsProjectItem } from "@/helpers/interfaces";
 
 const ProjectItem = ({
   t,
-  base64,
-}: // categorySlug,
+}: // base64,
+// categorySlug,
 {
   t: IPropsProjectItem;
-  base64: string;
+  // base64: string;
   // categorySlug: string;
 }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   if (!t) {
     return <p>Project data is missing</p>;
   }
@@ -47,18 +50,36 @@ const ProjectItem = ({
   //   loadImagePlaceholder();
   // }, [mainImg]);
 
+  // useEffect(() => {
+  //   const loadBlurData = async () => {
+  //     if (mainImg) {
+  //       const res = await fetch(
+  //         `/api/get-blur-image?imageUrl=${encodeURIComponent(mainImg)}`
+  //       );
+  //       const { base64 } = await res.json();
+  //       setBlurDataURL(base64);
+  //       console.log(base64);
+  //     }
+  //   };
+
+  //   loadBlurData();
+  // }, [mainImg]);
+
   return (
     <li className={styles.projectItem}>
       {mainImg && (
         <Image
-          className={styles.projectImg}
+          className={`styles.projectImg ${
+            isLoading ? styles.loading : styles.notLoading
+          }`}
           src={mainImg}
           alt={mainAlt || "Project image"}
           fill={true}
           sizes="(max-width: 767.98px) 355px, (max-width: 1023.98px) 356px,  317px,"
-          placeholder="blur"
-          blurDataURL={base64}
+          // placeholder="blur"
+          // blurDataURL={base64}
           // blurDataURL={blurDataURL || ""}
+          onLoadingComplete={() => setIsLoading(false)}
         />
       )}
       <div className={styles.overlayContent}>

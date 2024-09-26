@@ -38,6 +38,14 @@
   height: auto;
   transition: transform 800ms ease-in-out;
 }
+.projectItem .loading {
+  transform: scale(1.1);
+  filter: blur(60px);
+}
+.projectItem .notLoading {
+  transform: scale(1);
+  filter: blur(0);
+}
 .projectItem .overlayContent {
   position: absolute;
   top: 0;

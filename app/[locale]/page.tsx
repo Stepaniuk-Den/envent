@@ -55,8 +55,9 @@ const Home: React.FC<Props> = async ({ params: { locale } }) => {
       <Description t={mainT.descriptions} />
       <ProjectSection
         t={mainT.projects}
-        // t2={projectsT.projects}
-        t2={projectsWithBase64}
+        t2={projectsT.projects}
+        // t2={projectsWithBase64}
+        // t2={base64}
       />
       <AboutUsCounted imageSrc={AboutUsCountedBG} t={mainT.aboutUsCounted} />
       <Testimonials t={mainT.testimonials} />
