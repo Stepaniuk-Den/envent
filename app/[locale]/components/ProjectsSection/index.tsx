@@ -110,7 +110,7 @@ const ProjectSection: React.FC<{
             return (
               <ProjectItem
                 key={projectItem.id}
-                // {...projectItem}
+                {...projectItem}
                 t={projectItem}
                 // base64={projectItem.base64}
                 // onClick={() => handleOpenBackdrop(index)}
