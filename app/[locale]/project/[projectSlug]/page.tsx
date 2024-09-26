@@ -3,15 +3,15 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import { localize } from "@/localize";
 import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
 import Hero from "@/app/[locale]/components/Hero";
-import styles from "./project.module.scss";
-import Line from "../components/Line";
+import styles from "./../project.module.scss";
+import Line from "../../components/Line";
 import Image from "next/image";
 import { IPropsProjectItem } from "@/helpers/interfaces";
-import ProjectSection from "../components/ProjectsSection";
+import ProjectSection from "../../components/ProjectsSection";
 import { MainPageT } from "@/messages/types/MainPageT";
-import ContactUsSection from "../components/ContactUsSection";
-import AnimatedTitle from "../components/AnimatedTitle";
-import MainButton from "../components/Buttons/MainButton";
+import ContactUsSection from "../../components/ContactUsSection";
+import AnimatedTitle from "../../components/AnimatedTitle";
+import MainButton from "../../components/Buttons/MainButton";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
 // import getBase64FromImage from "@/helpers/getBase64";
 // import { getBase64FromImage } from "@/helpers/getBase64";
@@ -161,11 +161,11 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
             </div>
           </div>
         </div>
-        {/* <ProjectSection
+        <ProjectSection
           t={mainT.projects}
           t2={projectsT.projects}
           // t2={projectsWithBase64}
-        /> */}
+        />
       </section>
       <ContactUsSection params={{ locale }} />
     </>
