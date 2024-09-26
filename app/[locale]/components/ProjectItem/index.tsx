@@ -79,7 +79,9 @@ const ProjectItem = ({
           // placeholder="blur"
           // blurDataURL={base64}
           // blurDataURL={blurDataURL || ""}
-          onLoadingComplete={() => setIsLoading(false)}
+          onLoad={() => {
+            setIsLoading(false), console.log();
+          }}
         />
       )}
       <div className={styles.overlayContent}>
@@ -90,7 +92,6 @@ const ProjectItem = ({
             // href={`/projects/${id}`}
             // href={`/projects/${category.linkCategory}/${project.slug}`}
             // -----------------------------------------------------
-
             // href={`/projects/${categorySlug}/${slug}`}
             // href={`/project/${projectSlug}`}
             href={`/${projectSlug}`}
