@@ -161,11 +161,11 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
             </div>
           </div>
         </div>
-        <ProjectSection
+        {/* <ProjectSection
           t={mainT.projects}
           t2={projectsT.projects}
           // t2={projectsWithBase64}
-        />
+        /> */}
       </section>
       <ContactUsSection params={{ locale }} />
     </>
