@@ -25,6 +25,8 @@ const ProjectItem = ({
   // base64: string;
   // categorySlug: string;
 }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   if (!t) {
     return <p>Project data is missing</p>;
   }
@@ -34,7 +36,6 @@ const ProjectItem = ({
   // const { base64 } = await getPlaiceholder(buffer);
 
   // const [blurDataURL, setBlurDataURL] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
 
   // useEffect(() => {
   //   const loadImagePlaceholder = async () => {
