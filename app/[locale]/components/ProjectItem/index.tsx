@@ -10,7 +10,7 @@ import { IPropsProjectItem } from "@/helpers/interfaces";
 // import fs from "node:fs/promises";
 import { useState } from "react";
 
-const ProjectItem = async ({
+const ProjectItem = ({
   t,
 }: // base64,
 // categorySlug,
