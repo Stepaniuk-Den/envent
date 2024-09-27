@@ -6,8 +6,8 @@ import LinkIcon from "@/public/icons/link.svg";
 import MagnifyingGlass from "@/public/icons/magnifying-glass.svg";
 import { Link } from "@/navigation";
 import { IPropsProjectItem } from "@/helpers/interfaces";
-import { getPlaiceholder } from "plaiceholder";
-import fs from "node:fs/promises";
+// import { getPlaiceholder } from "plaiceholder";
+// import fs from "node:fs/promises";
 import { useState } from "react";
 
 const ProjectItem = async ({
@@ -27,8 +27,8 @@ const ProjectItem = async ({
   }
   const { projectSlug, mainImg, mainAlt, title, onClick } = t;
 
-  const buffer = await fs.readFile(`public${mainImg}`);
-  const { base64 } = await getPlaiceholder(buffer);
+  // const buffer = await fs.readFile(`public${mainImg}`);
+  // const { base64 } = await getPlaiceholder(buffer);
 
   return (
     <li className={styles.projectItem}>
@@ -40,8 +40,8 @@ const ProjectItem = async ({
           alt={mainAlt || "Project image"}
           fill={true}
           sizes="(max-width: 767.98px) 355px, (max-width: 1023.98px) 356px,  317px,"
-          placeholder="blur"
-          blurDataURL={base64}
+          // placeholder="blur"
+          // blurDataURL={base64}
           // blurDataURL={blurDataURL || ""}
           onLoad={() => {
             setIsLoading(false), console.log("setIsLoading");
