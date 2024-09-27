@@ -34,8 +34,9 @@ const ProjectItem = async ({
     <li className={styles.projectItem}>
       {mainImg && (
         <Image
-          className={styles.projectImg}
-          // ${isLoading ? styles.loading : styles.notLoading}`}
+          className={`styles.projectImg${
+            isLoading ? styles.loading : styles.notLoading
+          }`}
           src={mainImg}
           alt={mainAlt || "Project image"}
           fill={true}
