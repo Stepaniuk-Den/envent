@@ -3,7 +3,7 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import { localize } from "@/localize";
 import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
 import Hero from "@/app/[locale]/components/Hero";
-import styles from "../project.module.scss";
+import styles from "./../project.module.scss";
 import Line from "../../components/Line";
 import Image from "next/image";
 import { IPropsProjectItem } from "@/helpers/interfaces";
@@ -13,6 +13,8 @@ import ContactUsSection from "../../components/ContactUsSection";
 import AnimatedTitle from "../../components/AnimatedTitle";
 import MainButton from "../../components/Buttons/MainButton";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
+import { getBase64FromImage } from "@/helpers/getBase64FromImage";
+// import { getBase64FromImage } from "@/helpers/getBase64";
 
 type Props = {
   params: {
@@ -21,6 +23,18 @@ type Props = {
     locale: string;
   };
 };
+
+// ---------------------------------------------
+// const getProjectsWithBase64 = async (projects: ProjectsPageT["projects"]) => {
+//   return await Promise.all(
+//     Object.entries(projects).map(async ([key, project]) => {
+//       const mainImgPath = `${process.cwd()}/public${project.mainImg}`;
+//       const base64 = await getBase64FromImage(mainImgPath);
+//       return { ...project, base64 };
+//     })
+//   );
+// };
+// ---------------------------------------------
 
 export async function generateMetadata({
   params: { projectSlug },
@@ -45,6 +59,10 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
   if (!projectData) {
     return <p>Project not found</p>;
   }
+
+  // ---------------------------------------------
+  // const projectsWithBase64 = await getProjectsWithBase64(projectsT.projects);
+  // ---------------------------------------------
 
   return (
     <>
@@ -143,7 +161,11 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
             </div>
           </div>
         </div>
-        <ProjectSection t={mainT.projects} t2={projectsT.projects} />
+        <ProjectSection
+          t={mainT.projects}
+          t2={projectsT.projects}
+          // t2={projectsWithBase64}
+        />
       </section>
       <ContactUsSection params={{ locale }} />
     </>

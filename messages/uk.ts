@@ -103,7 +103,7 @@ const uk: FullTranslation = {
         id: "1",
         projectSlug: "sbu",
         title: "Адміністративно-господарське управління СБУ",
-        mainImg: "/images/projects/administrative_buildings/sbu2.jpeg",
+        mainImg: "/images/projects/administrative_buildings/sbuMain.webp",
         mainAlt: "Адміністративна пʼятиповерхова будівля",
         heroDescription:
           "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
@@ -115,11 +115,11 @@ const uk: FullTranslation = {
           },
           img2: {
             alt: "Адміністративна пʼятиповерхова будівля",
-            src: "/images/projects/administrative_buildings/sbu2.jpeg",
+            src: "/images/projects/administrative_buildings/sbuMain.webp",
           },
           img3: {
             alt: "Адміністративна пʼятиповерхова будівля",
-            src: "/images/projects/administrative_buildings/sbu3.jpeg",
+            src: "/images/projects/administrative_buildings/sbu2.jpeg",
           },
         },
         link: "...",
@@ -133,7 +133,7 @@ const uk: FullTranslation = {
         id: "2",
         projectSlug: "president_administration",
         title: "Адміністрація президента України",
-        mainImg: "/images/projects/administrative_buildings/presAdm2.jpg",
+        mainImg: "/images/projects/administrative_buildings/presAdmMain.webp",
         mainAlt: "Адміністрація президента України",
         heroDescription:
           "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
@@ -145,11 +145,11 @@ const uk: FullTranslation = {
           },
           img2: {
             alt: "Шестиповерхова адміністративна будівля",
-            src: "/images/projects/administrative_buildings/presAdm2.jpg",
+            src: "/images/projects/administrative_buildings/presAdmMain.webp",
           },
           img3: {
             alt: "Шестиповерхова адміністративна будівля",
-            src: "/images/projects/administrative_buildings/presAdm3.png",
+            src: "/images/projects/administrative_buildings/presAdm2.png",
           },
         },
         link: "...",
@@ -164,7 +164,7 @@ const uk: FullTranslation = {
         projectSlug: "verhovna_rada",
         title: "Будівля верховної ради",
         mainImg:
-          "/images/projects/administrative_buildings/verhovna_rada2.jpeg",
+          "/images/projects/administrative_buildings/verhovna_radaMain.webp",
         mainAlt: "Адміністративна триповерхова будівля",
         heroDescription:
           "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
@@ -176,11 +176,11 @@ const uk: FullTranslation = {
           },
           img2: {
             alt: "Адміністративна трьоповерхова будівля",
-            src: "/images/projects/administrative_buildings/verhovna_rada2.jpeg",
+            src: "/images/projects/administrative_buildings/verhovna_radaMain.webp",
           },
           img3: {
             alt: "Адміністративна трьоповерхова будівля",
-            src: "/images/projects/administrative_buildings/verhovna_rada3.jpg",
+            src: "/images/projects/administrative_buildings/verhovna_rada2.jpg",
           },
         },
 

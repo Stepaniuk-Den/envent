@@ -17,14 +17,19 @@ import { MainPageT } from "@/messages/types/MainPageT";
 import ProjectItem from "../ProjectItem";
 import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
 import Line from "../Line";
+import { IPropsProjectItem } from "@/helpers/interfaces";
 
 // interface IPropsProjectList {
 //   projectList: IPropsProjectItem[];
 // }
 
+type ProjectWithBase64 = IPropsProjectItem & { base64: string };
+// type ProjectWithBase64 = ProjectsPageT["projects"] & { base64: string };
+
 const ProjectSection: React.FC<{
   t: MainPageT["projects"];
   t2: ProjectsPageT["projects"];
+  // t2: ProjectWithBase64[];
 }> = ({ t, t2 }) => {
   //= ({ t }: IProjectsProps) => {
   // =======================================
@@ -33,6 +38,8 @@ const ProjectSection: React.FC<{
   // =======================================
 
   const projectsList = t2 ? Object.values(t2) : [];
+  // const projectsList = t2 ? t2 : [];
+  // const projectsList = t2 || []; ------
   const recentProjectsList = projectsList
     // const [currentIndex, setCurrentIndex] = useState<number | null>(null);
     // const [isHovered, setHovered] = useState(false);
@@ -104,8 +111,9 @@ const ProjectSection: React.FC<{
             return (
               <ProjectItem
                 key={projectItem.id}
-                // {...projectItem}
+                {...projectItem}
                 t={projectItem}
+                // base64={projectItem.base64}
                 // onClick={() => handleOpenBackdrop(index)}
               />
 

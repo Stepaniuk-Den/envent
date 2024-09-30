@@ -102,7 +102,7 @@ const en: FullTranslation = {
         projectSlug: "sbu",
         title:
           "Administrative and Economic Department of the Security Service of Ukraine",
-        mainImg: "/images/projects/administrative_buildings/sbu2.jpeg",
+        mainImg: "/images/projects/administrative_buildings/sbuMain.webp",
         mainAlt: "Five-story administrative building",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
@@ -114,11 +114,11 @@ const en: FullTranslation = {
           },
           img2: {
             alt: "Five-story administrative building",
-            src: "/images/projects/administrative_buildings/sbu2.jpeg",
+            src: "/images/projects/administrative_buildings/sbuMain.webp",
           },
           img3: {
             alt: "Five-story administrative building",
-            src: "/images/projects/administrative_buildings/sbu3.jpeg",
+            src: "/images/projects/administrative_buildings/sbu2.jpeg",
           },
         },
         link: "...",
@@ -131,7 +131,7 @@ const en: FullTranslation = {
         id: "2",
         projectSlug: "president_administration",
         title: "Administration of the President of Ukraine",
-        mainImg: "/images/projects/administrative_buildings/presAdm2.jpg",
+        mainImg: "/images/projects/administrative_buildings/presAdmMain.webp",
         mainAlt: "Administration of the President of Ukraine",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
@@ -143,11 +143,11 @@ const en: FullTranslation = {
           },
           img2: {
             alt: "Six-story administrative building",
-            src: "/images/projects/administrative_buildings/presAdm2.jpg",
+            src: "/images/projects/administrative_buildings/presAdmMain.webp",
           },
           img3: {
             alt: "Six-story administrative building",
-            src: "/images/projects/administrative_buildings/presAdm3.png",
+            src: "/images/projects/administrative_buildings/presAdm2.png",
           },
         },
         link: "...",
@@ -161,7 +161,7 @@ const en: FullTranslation = {
         projectSlug: "verhovna_rada",
         title: "Supreme Council building",
         mainImg:
-          "/images/projects/administrative_buildings/verhovna_rada2.jpeg",
+          "/images/projects/administrative_buildings/verhovna_radaMain.webp",
         mainAlt: "Three-story administrative building",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
@@ -173,11 +173,11 @@ const en: FullTranslation = {
           },
           img2: {
             alt: "Three-story administrative building",
-            src: "/images/projects/administrative_buildings/verhovna_rada2.jpg",
+            src: "/images/projects/administrative_buildings/verhovna_radaMain.webp",
           },
           img3: {
             alt: "Three-story administrative building",
-            src: "/images/projects/administrative_buildings/verhovna_rada3.jpg",
+            src: "/images/projects/administrative_buildings/verhovna_rada2.jpg",
           },
         },
         link: "...",
