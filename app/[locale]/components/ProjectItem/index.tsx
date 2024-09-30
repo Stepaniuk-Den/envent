@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import styles from "./projectItem.module.scss";
 import Image from "next/image";
@@ -8,9 +8,9 @@ import { Link } from "@/navigation";
 import { IPropsProjectItem } from "@/helpers/interfaces";
 // import { getPlaiceholder } from "plaiceholder";
 // import fs from "node:fs/promises";
-import { useState } from "react";
+// import { useState } from "react";
 
-const ProjectItem = ({
+const ProjectItem = async ({
   t,
 }: // base64,
 // categorySlug,
@@ -19,7 +19,7 @@ const ProjectItem = ({
   // base64: string;
   // categorySlug: string;
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
   // const [blurDataURL, setBlurDataURL] = useState<string | null>(null);
 
   if (!t) {
@@ -34,9 +34,8 @@ const ProjectItem = ({
     <li className={styles.projectItem}>
       {mainImg && (
         <Image
-          className={`styles.projectImg${
-            isLoading ? styles.loading : styles.notLoading
-          }`}
+          className={styles.projectImg}
+          // ${isLoading ? styles.loading : styles.notLoading}`}
           src={mainImg}
           alt={mainAlt || "Project image"}
           fill={true}
@@ -44,9 +43,9 @@ const ProjectItem = ({
           // placeholder="blur"
           // blurDataURL={base64}
           // blurDataURL={blurDataURL || ""}
-          onLoad={() => {
-            setIsLoading(false), console.log("setIsLoading");
-          }}
+          // onLoad={() => {
+          //   setIsLoading(false), console.log("setIsLoading");
+          // }}
         />
       )}
       <div className={styles.overlayContent}>

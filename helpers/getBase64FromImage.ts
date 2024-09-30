@@ -1,15 +1,64 @@
-import fs from "node:fs/promises";
-import { getPlaiceholder } from "plaiceholder";
+import sharp from "sharp";
+import { promises as fs } from "fs";
+import path from "path";
+
+function bufferToBase64(buffer: Buffer): string {
+  return `data:image/webp;base64,${buffer.toString("base64")}`;
+}
+
+async function getFileBufferLocal(filepath: string) {
+  const realFilepath = path.join(process.cwd(), "public", filepath);
+  return fs.readFile(realFilepath);
+}
+
+export async function getBase64FromImage(filepath: string) {
+  try {
+    const originalBuffer = await getFileBufferLocal(filepath);
+    const resizedBuffer = await sharp(originalBuffer).resize(20).toBuffer();
+    return {
+      src: filepath,
+      placeholder: bufferToBase64(resizedBuffer),
+    };
+  } catch {
+    return {
+      src: filepath,
+      placeholder:
+        "data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mOsa2yqBwAFCAICLICSyQAAAABJRU5ErkJggg==",
+    };
+  }
+}
+
+// ===================================
+// import Jimp from "jimp";
+
+// export const getImageUrlBase64 = async (imagePath: string) => {
+//   const cachedImage = await redis.get(imagePath);
+//   if (cachedImage) {
+//     return cachedImage;
+//   }
+
+//   const response = await fetch(url);
+//   const buffer = Buffer.from(await response.arrayBuffer());
+//   const image = await Jimp.read(buffer);
+//   const processedImage = image.resize(20, Jimp.AUTO).quality(60).blur(5);
+//   const base64String = await processedImage.getBase64Async(Jimp.MIME_JPEG);
+
+//   await redis.set(url, base64String);
+//   return base64String;
+// };
+// ==========================================
+// import fs from "node:fs/promises";
+// import { getPlaiceholder } from "plaiceholder";
 // import path from "path";
 
 // Variant1
-const getBase64FromImage = async (imagePath: string) => {
-  const buffer = await fs.readFile(imagePath);
-  const { base64 } = await getPlaiceholder(buffer);
-  return base64;
-};
+// const getBase64FromImage = async (imagePath: string) => {
+//   const buffer = await fs.readFile(imagePath);
+//   const { base64 } = await getPlaiceholder(buffer);
+//   return base64;
+// };
 
-export default getBase64FromImage;
+// export default getBase64FromImage;
 
 // Variant2
 // const getBase64FromImage = async (imagePath: string) => {
@@ -32,15 +81,20 @@ export default getBase64FromImage;
 // export default getBase64FromImage;
 
 // =================generateBase64====================
-
+// getBase64FromImage
 // const projectsDataPath = path.join(process.cwd(), "data", "projects.json");
-// const projectsData = JSON.parse(fs.readFileSync(projectsDataPath, "utf8"));
+// const projectsData =  JSON.parse(fs.readFile(projectsDataPath: string, "utf8"));
 
-// async function generateBase64() {
+// async function generateBase64(imagePath) {
+//   // ----------------
+// // const projectsDataPath = path.join(process.cwd(), "data", "projects.json");
+// // const projectsData =  JSON.parse(fs.readFile(projectsDataPath: string, "utf8"));
+//   // ----------------
+
 //   const updatedProjects = await Promise.all(
 //     projectsData.projects.map(async (project) => {
 //       const imagePath = path.join(process.cwd(), "public", project.mainImg);
-//       const buffer = fs.readFileSync(imagePath);
+//       const buffer = await fs.readFile(imagePath);
 //       const { base64 } = await getPlaiceholder(buffer);
 //       return {
 //         ...project,
@@ -54,11 +108,11 @@ export default getBase64FromImage;
 //     projects: updatedProjects,
 //   };
 
-//   fs.writeFileSync(projectsDataPath, JSON.stringify(updatedData, null, 2));
+//   fs.writeFile(projectsDataPath, JSON.stringify(updatedData, null, 2));
 // }
 
 // generateBase64();
-// ============================================
+// =========================================
 
 // import { NextApiRequest, NextApiResponse } from "next";
 // import fs from "fs/promises";

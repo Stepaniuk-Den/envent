@@ -24,6 +24,7 @@ import { IPropsProjectItem } from "@/helpers/interfaces";
 // }
 
 type ProjectWithBase64 = IPropsProjectItem & { base64: string };
+// type ProjectWithBase64 = ProjectsPageT["projects"] & { base64: string };
 
 const ProjectSection: React.FC<{
   t: MainPageT["projects"];
