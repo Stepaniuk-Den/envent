@@ -1,10 +1,12 @@
 @import "../../mixin.scss";
 
+.partners_section {
+  padding-top: 100px;
+}
 .partners {
   display: flex;
   flex-direction: column;
   min-height: 620px;
-  padding-top: 100px;
   align-items: center;
   gap: 30px;
 
