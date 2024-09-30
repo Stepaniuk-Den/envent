@@ -73,52 +73,54 @@ const PartnersCarousel = ({ t }: IPartnersProps) => {
   }, [width, xTranslation, duration, rerender, mustFinish]);
 
   return (
-    <section className={`${styles.partners} container`}>
-      <AnimatedTitle title={t.title} />
-      <Line className="yellow-center" />
-      <div className={styles.list_wrapper} ref={listRef}>
-        <motion.ul
-          className={styles.list}
-          ref={ref}
-          style={{ x: xTranslation }}
-          onHoverStart={
-            !isMobileDevice
-              ? () => {
-                  setDuration(SLOW_DURATION), setMustFinish(true);
-                }
-              : undefined
-          }
-          onHoverEnd={
-            !isMobileDevice
-              ? () => {
-                  setDuration(FAST_DURATION), setMustFinish(true);
-                }
-              : undefined
-          }
-          onTap={
-            isMobileDevice
-              ? () => {
-                  setDuration(SLOW_DURATION), setMustFinish(true);
-                }
-              : undefined
-          }
-        >
-          {[...partners, ...partners].map((partner, index) => {
-            return (
-              <PartnerCard
-                key={index}
-                partner={partner}
-                linkTitle={t.link}
-                isMobile={isMobileDevice}
-                isActive={activeCardIndex === index}
-                onClick={() =>
-                  setActiveCardIndex(activeCardIndex === index ? null : index)
-                }
-                index={index}
-              />
-            );
-          })}
-        </motion.ul>
+    <section className={styles.partners_section}>
+      <div className={`${styles.partners} container`}>
+        <AnimatedTitle title={t.title} />
+        <Line className="yellow-center" />
+        <div className={styles.list_wrapper} ref={listRef}>
+          <motion.ul
+            className={styles.list}
+            ref={ref}
+            style={{ x: xTranslation }}
+            onHoverStart={
+              !isMobileDevice
+                ? () => {
+                    setDuration(SLOW_DURATION), setMustFinish(true);
+                  }
+                : undefined
+            }
+            onHoverEnd={
+              !isMobileDevice
+                ? () => {
+                    setDuration(FAST_DURATION), setMustFinish(true);
+                  }
+                : undefined
+            }
+            onTap={
+              isMobileDevice
+                ? () => {
+                    setDuration(SLOW_DURATION), setMustFinish(true);
+                  }
+                : undefined
+            }
+          >
+            {[...partners, ...partners].map((partner, index) => {
+              return (
+                <PartnerCard
+                  key={index}
+                  partner={partner}
+                  linkTitle={t.link}
+                  isMobile={isMobileDevice}
+                  isActive={activeCardIndex === index}
+                  onClick={() =>
+                    setActiveCardIndex(activeCardIndex === index ? null : index)
+                  }
+                  index={index}
+                />
+              );
+            })}
+          </motion.ul>
+        </div>
       </div>
     </section>
   );
