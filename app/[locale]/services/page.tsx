@@ -10,22 +10,22 @@ import ProjectSection from "../components/ProjectsSection";
 import { MainPageT } from "@/messages/types/MainPageT";
 import ContactUsSection from "../components/ContactUsSection";
 import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
-import getBase64FromImage from "@/helpers/getBase64";
+// import { getBase64FromImage } from "@/helpers/getBase64FromImage";
 
 type Props = {
   params: { locale: string };
 };
 
 // ---------------------------------------------
-const getProjectsWithBase64 = async (projects: ProjectsPageT["projects"]) => {
-  return await Promise.all(
-    Object.entries(projects).map(async ([key, project]) => {
-      const mainImgPath = `${process.cwd()}/public${project.mainImg}`;
-      const base64 = await getBase64FromImage(mainImgPath);
-      return { ...project, base64 };
-    })
-  );
-};
+// const getProjectsWithBase64 = async (projects: ProjectsPageT["projects"]) => {
+//   return await Promise.all(
+//     Object.entries(projects).map(async ([key, project]) => {
+//       const mainImgPath = `${process.cwd()}/public${project.mainImg}`;
+//       const base64 = await getBase64FromImage(mainImgPath);
+//       return { ...project, base64 };
+//     })
+//   );
+// };
 // ---------------------------------------------
 
 const ServicesPage: React.FC<Props> = async ({ params: { locale } }) => {
@@ -37,7 +37,7 @@ const ServicesPage: React.FC<Props> = async ({ params: { locale } }) => {
   const projectsT = await localize(ProjectsPageT);
 
   // ---------------------------------------------
-  const projectsWithBase64 = await getProjectsWithBase64(projectsT.projects);
+  // const projectsWithBase64 = await getProjectsWithBase64(projectsT.projects);
   // ---------------------------------------------
 
   return (

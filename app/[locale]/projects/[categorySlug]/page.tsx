@@ -6,8 +6,7 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import styles from "../projects.module.scss";
 import ProjectItem from "../../components/ProjectItem";
 import { IPropsProjectItem } from "@/helpers/interfaces";
-import getBase64FromImage from "@/helpers/getBase64";
-// import { getBase64FromImage } from "@/helpers/getBase64";
+// import {getBase64FromImage} from "@/helpers/getBase64FromImage";
 
 type Props = {
   params: {
