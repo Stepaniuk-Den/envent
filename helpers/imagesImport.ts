@@ -65,6 +65,9 @@ import SideTodoMaintenance from "../public/icons/IconParkOutlineSpanner.svg";
 import BurgerMenuBtn from "../public/icons/IconParkOutlineHamburgerButton.svg";
 import BurgerCloseBtn from "../public/icons/IconParkOutlineClose.svg";
 
+import ThemeMoon from "../public/icons/PhMoon.svg";
+import ThemeSun from "../public/icons/PhSun.svg";
+
 export {
   HeroMainBG,
   HeroAboutBG,
@@ -114,6 +117,8 @@ export {
   SideTodoMaintenance,
   BurgerMenuBtn,
   BurgerCloseBtn,
+  ThemeMoon,
+  ThemeSun,
   // ================
   altacenterMain,
   karavanMain,
