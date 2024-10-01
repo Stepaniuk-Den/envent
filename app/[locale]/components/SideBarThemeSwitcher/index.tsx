@@ -7,8 +7,9 @@ import { useTheme } from "next-themes";
 import { ThemeMoon, ThemeSun } from "@/helpers/imagesImport";
 
 const SideBarThemeSwitcher = () => {
-  const { setTheme, theme } = useTheme();
-  console.log("theme - ", theme);
+  const { setTheme, theme, resolvedTheme } = useTheme();
+
+  console.log("resolvedTheme - ", resolvedTheme);
   const handleToggleTheme = (newTheme: string) => {
     const currentTheme = newTheme === "light" ? "dark" : "light";
     setTheme(currentTheme);
@@ -30,7 +31,7 @@ const SideBarThemeSwitcher = () => {
         type="button"
         onClick={() => handleToggleTheme(theme!)}
       >
-        {theme === "dark" ? <ThemeSun /> : <ThemeMoon />}
+        {resolvedTheme === "dark" ? <ThemeSun /> : <ThemeMoon />}
       </button>
       <button
         ref={ref}
@@ -40,7 +41,7 @@ const SideBarThemeSwitcher = () => {
         type="button"
         onClick={() => setBtnThemeVisible(!isBtnThemeVisible)}
       >
-        {theme === "light" ? <ThemeSun /> : <ThemeMoon />}
+        {resolvedTheme === "light" ? <ThemeSun /> : <ThemeMoon />}
       </button>
     </div>
   );
