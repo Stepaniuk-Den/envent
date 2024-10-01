@@ -1,7 +1,7 @@
 // "use client";
 
 import styles from "./projectItem.module.scss";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import LinkIcon from "@/public/icons/link.svg";
 import MagnifyingGlass from "@/public/icons/magnifying-glass.svg";
 import { Link } from "@/navigation";
@@ -12,10 +12,12 @@ import { IPropsProjectItem } from "@/helpers/interfaces";
 
 const ProjectItem = async ({
   t,
+  currentImg,
 }: // base64,
 // categorySlug,
 {
   t: IPropsProjectItem;
+  currentImg: StaticImageData;
   // base64: string;
   // categorySlug: string;
 }) => {
@@ -25,22 +27,22 @@ const ProjectItem = async ({
   if (!t) {
     return <p>Project data is missing</p>;
   }
-  const { projectSlug, mainImg, mainAlt, title, onClick } = t;
+  const { projectSlug, mainAlt, title, onClick } = t;
 
   // const buffer = await fs.readFile(`public${mainImg}`);
   // const { base64 } = await getPlaiceholder(buffer);
 
   return (
     <li className={styles.projectItem}>
-      {mainImg && (
+      {currentImg && (
         <Image
           className={styles.projectImg}
           // ${isLoading ? styles.loading : styles.notLoading}`}
-          src={mainImg}
+          src={currentImg}
           alt={mainAlt || "Project image"}
           fill={true}
           sizes="(max-width: 767.98px) 355px, (max-width: 1023.98px) 356px,  317px,"
-          // placeholder="blur"
+          placeholder="blur"
           // blurDataURL={base64}
           // blurDataURL={blurDataURL || ""}
           // onLoad={() => {

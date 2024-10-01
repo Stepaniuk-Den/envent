@@ -14,6 +14,7 @@ import AnimatedTitle from "../../components/AnimatedTitle";
 import MainButton from "../../components/Buttons/MainButton";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
 import { getBase64FromImage } from "@/helpers/getBase64FromImage";
+import Observer from "@/helpers/observer";
 // import { getBase64FromImage } from "@/helpers/getBase64";
 
 type Props = {
@@ -86,18 +87,20 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
                 title={"About this Project"}
               />
               <Line className="yellow-left" />
-              <p className={styles.desc}>
-                Lectus erat, consectetur eu sapien eget rhoncus consectetur sem.
-                Proin cursus, dolor a mollis consectetur, risus dolor fermentum
-                massa, a commodo elit dui sit amet risus.
-              </p>
-              <ul>
-                <li>Maecenas ornare nisl</li>
-                <li>A tortor ultrices bibendum</li>
-                <li>Nulla fermentum</li>
-                <li>Metus quis</li>
-                <li>Sodales tristique</li>
-              </ul>
+              <Observer y={50} threshold={0.5}>
+                <p className={styles.desc}>
+                  Lectus erat, consectetur eu sapien eget rhoncus consectetur
+                  sem. Proin cursus, dolor a mollis consectetur, risus dolor
+                  fermentum massa, a commodo elit dui sit amet risus.
+                </p>
+                <ul>
+                  <li>Maecenas ornare nisl</li>
+                  <li>A tortor ultrices bibendum</li>
+                  <li>Nulla fermentum</li>
+                  <li>Metus quis</li>
+                  <li>Sodales tristique</li>
+                </ul>
+              </Observer>
             </div>
             {projectData.images?.img1?.src && (
               <div className={styles.imgWrapper}>
@@ -132,23 +135,27 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
               )}
             </div>
             <div className={styles.textWrapper}>
-              <p>
-                Lorem ipsum dolor sit consectetur adipiscing elit. Nullam lectus
-                erat, consectetur eu sapien eget rhoncus consectetur sem. Proin
-                cursus, dolor a mollis consectetur, risus dolor fermentum massa,
-                a commodo elit dui sit amet risus. Maecenas ornare nisl a tortor
-                ultrices bibendum. Nulla fermentum, metus quis sodales
-                tristique, augue mauris molestie augue non feugiat ligula neque
-                nec felis.
-              </p>
-              <p>
-                Lectus erat, consectetur eu sapien eget rhoncus consectetur sem.
-                Proin cursus, dolor a mollis consectetur, risus dolor fermentum
-                massa, a commodo elit dui sit amet risus. Maecenas ornare nisl a
-                tortor ultrices bibendum. Nulla fermentum, metus quis sodales
-                tristique, augue mauris molestie augue, non feugiat ligula neque
-                nec felis.
-              </p>
+              <Observer y={50} threshold={0.5}>
+                <p>
+                  Lorem ipsum dolor sit consectetur adipiscing elit. Nullam
+                  lectus erat, consectetur eu sapien eget rhoncus consectetur
+                  sem. Proin cursus, dolor a mollis consectetur, risus dolor
+                  fermentum massa, a commodo elit dui sit amet risus. Maecenas
+                  ornare nisl a tortor ultrices bibendum. Nulla fermentum, metus
+                  quis sodales tristique, augue mauris molestie augue non
+                  feugiat ligula neque nec felis.
+                </p>
+              </Observer>
+              <Observer y={50} threshold={0.7}>
+                <p>
+                  Lectus erat, consectetur eu sapien eget rhoncus consectetur
+                  sem. Proin cursus, dolor a mollis consectetur, risus dolor
+                  fermentum massa, a commodo elit dui sit amet risus. Maecenas
+                  ornare nisl a tortor ultrices bibendum. Nulla fermentum, metus
+                  quis sodales tristique, augue mauris molestie augue, non
+                  feugiat ligula neque nec felis.
+                </p>
+              </Observer>
               <MainButton
                 type="button"
                 color="filled"
