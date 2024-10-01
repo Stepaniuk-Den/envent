@@ -10,7 +10,14 @@ interface IMainButtonProps {
   children?: ReactNode;
   isActive?: string;
   onClick?: () => void;
-  color?: "black" | "white" | "yellow" | "blue" | "filled" | "";
+  color?:
+    | "black"
+    | "white"
+    | "white_allways"
+    | "yellow"
+    | "blue"
+    | "filled"
+    | "";
   isGoBack?: boolean;
 }
 
