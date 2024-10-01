@@ -28,6 +28,8 @@ const ImagesCarousel: React.FC<{
 }> = ({ t, page, id }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
   //Додано додатковий стейт для відстеження стану зображень
   const [imagesList, setImagesList] = useState<IImageItem[]>([]);
   let [ref, { width }] = useMeasure();
@@ -38,7 +40,7 @@ const ImagesCarousel: React.FC<{
   // const id = page === "about" ? keyImagesAbout.id : keyImagesService.id;
   // const imagesList = Object.values(t[id as keyof typeof t].images);
 
-  //Додано useEffect для відстеження зображень на різних сторінках 
+  //Додано useEffect для відстеження зображень на різних сторінках
 
   useEffect(() => {
     const fetchImagesList = () => {
@@ -72,11 +74,44 @@ const ImagesCarousel: React.FC<{
 
   useModal(isOpen, setIsOpen);
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const swipeThreshold = 50;
+
+    if (distance > swipeThreshold) {
+      setCurrentIndex((prevIndex) =>
+        prevIndex < imagesList.length - 1 ? prevIndex + 1 : 0
+      );
+    }
+
+    if (distance < -swipeThreshold) {
+      setCurrentIndex((prevIndex) =>
+        prevIndex > 0 ? prevIndex - 1 : imagesList.length - 1
+      );
+    }
+
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
+
   return (
     <div className={styles.carousel_container} ref={ref}>
       <motion.ul
         className={styles.list}
         style={{ width: imagesList.length * width, x }}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         {imagesList.map((imagesItem, index) => {
           return (
