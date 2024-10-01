@@ -17,13 +17,13 @@ import { MainPageT } from "@/messages/types/MainPageT";
 import ProjectItem from "../ProjectItem";
 import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
 import Line from "../Line";
-import { IPropsProjectItem } from "@/helpers/interfaces";
+import { ProjectItems } from "@/data/ProjectItems";
 
 // interface IPropsProjectList {
 //   projectList: IPropsProjectItem[];
 // }
 
-type ProjectWithBase64 = IPropsProjectItem & { base64: string };
+// type ProjectWithBase64 = IPropsProjectItem & { base64: string };
 // type ProjectWithBase64 = ProjectsPageT["projects"] & { base64: string };
 
 const ProjectSection: React.FC<{
@@ -108,11 +108,18 @@ const ProjectSection: React.FC<{
             // const imgSrc = projects.find(
             //   (project) => project.title === projectItem.src
             // );
+            const imgName = projectItem.mainImg.split("/").pop()?.split(".")[0];
+            const currentImg = [
+              ...ProjectItems.trade_complexes,
+              ...ProjectItems.hskc,
+            ].find((item) => item.name === imgName);
+            if (!currentImg) return;
             return (
               <ProjectItem
                 key={projectItem.id}
-                {...projectItem}
+                // {...projectItem}
                 t={projectItem}
+                currentImg={currentImg?.srcImg}
                 // base64={projectItem.base64}
                 // onClick={() => handleOpenBackdrop(index)}
               />
