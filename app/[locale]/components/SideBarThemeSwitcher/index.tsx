@@ -8,7 +8,7 @@ import { ThemeMoon, ThemeSun } from "@/helpers/imagesImport";
 
 const SideBarThemeSwitcher = () => {
   const { setTheme, theme } = useTheme();
-
+  console.log("theme - ", theme);
   const handleToggleTheme = (newTheme: string) => {
     const currentTheme = newTheme === "light" ? "dark" : "light";
     setTheme(currentTheme);
