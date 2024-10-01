@@ -12,6 +12,9 @@ import { Link } from "@/navigation";
 import Image from "next/image";
 import Logo from "@/public/images/logo-envent-no-bg.png";
 import { useAfterLoad } from "@/helpers/useAfterLoad";
+import SideBar from "../SideBar";
+import SideBarLangSwitcher from "../SideBarLangSwitcher";
+import SideBarThemeSwitcher from "../SideBarThemeSwitcher";
 
 const BurgerMenu: React.FC<{
   navlink: HeaderT["navlink"];
@@ -50,6 +53,10 @@ const BurgerMenu: React.FC<{
             >
               <BurgerCloseBtn className={styles.svg} />
             </button>
+            <div className={styles.side_bar}>
+              <SideBarLangSwitcher />
+              <SideBarThemeSwitcher />
+            </div>
             <Navigation
               translations={navlink}
               onClick={() => setIsMenuOpen(false)}

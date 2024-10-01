@@ -11,11 +11,17 @@ import { localize } from "@/localize";
 import { HeaderT } from "@/messages/types/HeaderT";
 import { LocaleLayoutT } from "@/messages/types/LocaleLayoutT";
 import SideBar from "./components/SideBar";
+import dynamic from "next/dynamic";
+import { cookies } from "next/headers";
 
 type Props = {
   children: React.ReactNode;
   params: { locale: string };
 };
+
+const AppThemeProvider = dynamic(() => import("@/utils/theme-provider"), {
+  ssr: false,
+});
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -36,19 +42,27 @@ export default async function LocaleLayout({
 }: Props) {
   unstable_setRequestLocale(locale);
 
+  const theme = cookies().get("__theme__")?.value || "system";
+
   const headerT = await localize(HeaderT);
 
   return (
-    <html lang={locale}>
+    <html
+      lang={locale}
+      className={theme}
+      style={theme !== "system" ? { colorScheme: theme } : {}}
+    >
       <body
         className={`${rubik.variable} ${openSans.variable} ${montserrat.variable}`}
       >
-        <Header t={headerT} />
-        <main>{children}</main>
-        <Footer />
-        <SideBar />
-        <TotopButton />
-        <div id="modal"></div>
+        <AppThemeProvider enableSystem attribute="class" defaultTheme={theme}>
+          <Header t={headerT} />
+          <main>{children}</main>
+          <Footer />
+          <SideBar />
+          <TotopButton />
+          <div id="modal"></div>
+        </AppThemeProvider>
       </body>
     </html>
   );

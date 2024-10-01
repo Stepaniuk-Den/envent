@@ -37,7 +37,7 @@
 
       .item_text {
         @include text-main-openSands;
-        color: var(--color-white);
+        color: var(--color-white-allways);
         line-height: 1.8;
 
         :first-child {
@@ -68,7 +68,7 @@
     a {
       cursor: auto;
       &:hover :first-child {
-        color: var(--color-white);
+        color: var(--color-white-allways);
       }
     }
     .item {
