@@ -9,8 +9,6 @@ import { ThemeMoon, ThemeSun } from "@/helpers/imagesImport";
 const SideBarThemeSwitcher = () => {
   const { setTheme, theme } = useTheme();
 
-  // console.log("theme - ", theme);
-
   const handleToggleTheme = (newTheme: string) => {
     const currentTheme = newTheme === "light" ? "dark" : "light";
     setTheme(currentTheme);
@@ -25,9 +23,7 @@ const SideBarThemeSwitcher = () => {
 
   return (
     <div className={styles.btnsThemeWrapper}>
-      {/* {theme !== "light" && ( */}
       <button
-        // className={styles.btnTheme}
         className={`${styles.btnTheme} ${
           isBtnThemeVisible ? styles.visible : ""
         }`}
@@ -36,20 +32,8 @@ const SideBarThemeSwitcher = () => {
       >
         {theme === "dark" ? <ThemeSun /> : <ThemeMoon />}
       </button>
-      {/* )} */}
-      {/* {theme !== "dark" && (
-        <button
-          className={styles.btnTheme}
-          type="button"
-          onClick={() => handleToggleTheme("dark")}
-        >
-          <ThemeMoon />
-        </button>
-      )} */}
-
       <button
         ref={ref}
-        // className={styles.btnSelectedTheme}
         className={`${styles.btnSelectedTheme} ${
           isBtnThemeVisible ? styles.active : ""
         }`}
