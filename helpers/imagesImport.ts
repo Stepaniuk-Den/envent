@@ -17,6 +17,18 @@ import LinkIcon from "../public/icons/link.svg";
 import ArrowRightLinkIcon from "../public/icons/IconParkOutlineArrowRight.svg";
 import ArrowRightAboutIcon from "../public/icons/2arrows-right.svg";
 
+import altacenterMain from "../public/images/projects/trade_complexes/altacenterMain.webp";
+
+import karavanMain from "../public/images/projects/trade_complexes/karavanMain.webp";
+
+import epicenterMain from "../public/images/projects/trade_complexes/epicenterMain.webp";
+
+import odeskiy_bulvarMain from "../public/images/projects/hskc/odeskiy_bulvarMain.webp";
+
+import blockbusterMain from "../public/images/projects/trade_complexes/blockbusterMain.webp";
+
+import river_mallMain from "../public/images/projects/trade_complexes/river_mallMain.webp";
+
 import FacebookFilled from "../public/icons/facebook-filled.svg";
 import EmailFilled from "../public/icons/mail-filled.svg";
 import PhoneFilled from "../public/icons/phone-filled.svg";
@@ -102,4 +114,11 @@ export {
   SideTodoMaintenance,
   BurgerMenuBtn,
   BurgerCloseBtn,
+  // ================
+  altacenterMain,
+  karavanMain,
+  epicenterMain,
+  odeskiy_bulvarMain,
+  blockbusterMain,
+  river_mallMain,
 };

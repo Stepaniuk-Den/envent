@@ -9,6 +9,7 @@ import VideoPlayer from "../VideoPlayer";
 import { Link } from "@/navigation";
 import AnimatedTitle from "../AnimatedTitle";
 import { MainPageT } from "@/messages/types/MainPageT";
+import Observer from "@/helpers/observer";
 
 const VideoSection: React.FC<{
   t: MainPageT["videoSection"];
@@ -31,7 +32,9 @@ const VideoSection: React.FC<{
         <div className={styles.videoDescWrapper}>
           <AnimatedTitle title={t.title} className={styles.videoTitle} />
           <Line className="yellow-left" />
-          <p className={styles.videoDesc}>{t.text}</p>
+          <Observer y={50} threshold={0.5}>
+            <p className={styles.videoDesc}>{t.text}</p>
+          </Observer>
           <MainButton color="blue" type="button">
             <Link href={"/about"}>{t.aboutUs}</Link>
           </MainButton>

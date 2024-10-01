@@ -6,6 +6,7 @@ import { unstable_setRequestLocale } from "next-intl/server";
 import styles from "../projects.module.scss";
 import ProjectItem from "../../components/ProjectItem";
 import { IPropsProjectItem } from "@/helpers/interfaces";
+import { ProjectItems } from "@/data/ProjectItems";
 // import {getBase64FromImage} from "@/helpers/getBase64FromImage";
 
 type Props = {
@@ -63,15 +64,22 @@ const Categories = async ({ params: { categorySlug, locale } }: Props) => {
       {/* {filteredProjects.map((projectItem) => ( */}
       {/* {projectsWithBase64.map(
         (projectItem) => ( */}
-      {filteredProjects.map(async (projectItem) => {
+      {filteredProjects.map((projectItem) => {
         // const mainImgPath = `${process.cwd()}/public${projectItem.mainImg}`;
         // const base64 = await getBase64FromImage(mainImgPath);
+        const imgName = projectItem.mainImg?.split("/").pop()?.split(".")[0];
+        const currentImg = [
+          ...ProjectItems.trade_complexes,
+          ...ProjectItems.hskc,
+        ].find((item) => item.name === imgName);
+        if (!currentImg) return;
         return (
           <ProjectItem
             key={projectItem.projectSlug}
             // t={{ ...projectItem }}
-            {...projectItem}
+            // {...projectItem}
             t={projectItem}
+            currentImg={currentImg.srcImg}
             // base64={projectItem.base64}
             // base64={base64}
 
