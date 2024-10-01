@@ -8,6 +8,23 @@
   --color-white: #ffffff;
   --color-white-allways: #ffffff;
   --color-bg-light: #f7f7f7;
+  --color-card: #f7f7f7;
+  --color-testimonials-grey: #919191;
+  --color-border: #00000040;
+  --color-dark-box-shadow: #00000040;
+  --color-white-box-shadow: #ffffff40;
+}
+
+.light {
+  --color-accent-blue: #2596be;
+  --color-accent-yellow: #efc11a;
+  --color-yellow-blur: #efcc4ecc;
+  --color-dark: #293241;
+  --color-dark-allways: #293241;
+  --color-white: #ffffff;
+  --color-white-allways: #ffffff;
+  --color-bg-light: #f7f7f7;
+  --color-card: #f7f7f7;
   --color-testimonials-grey: #919191;
   --color-border: #00000040;
   --color-dark-box-shadow: #00000040;
@@ -15,15 +32,13 @@
 }
 
 .dark {
-  background-color: #141b29;
+  background-color: #1f2631;
   --color-white: #293241;
   --color-dark: #ffffff;
-  --color-bg-light: #141b29;
-  // --color-bg-light: #f7f7f7;
+  --color-bg-light: #1f2631;
+  --color-card: #293241;
   --color-testimonials-grey: #919191;
   --color-border: #ffffff40;
-  // --color-white-box-shadow: #00000040;
-  // --color-dark-box-shadow: #ffffff40;
 }
 
 @import "./mixin.scss";

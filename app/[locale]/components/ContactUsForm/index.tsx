@@ -91,7 +91,7 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
               <MainButton
                 type="submit"
                 className={className === "footer" ? "contact_us" : "contacts"}
-                color={className === "footer" ? "white" : "black"}
+                color={className === "footer" ? "white_allways" : "black"}
               >
                 {t.button}
               </MainButton>
@@ -125,7 +125,7 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
             <MainButton
               type="submit"
               className={className === "footer" ? "contact_us" : "contacts"}
-              color={className === "footer" ? "white" : "black"}
+              color={className === "footer" ? "white_allways" : "black"}
             >
               {t.button}
             </MainButton>

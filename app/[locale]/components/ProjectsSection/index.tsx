@@ -119,7 +119,7 @@ const ProjectSection: React.FC<{
                 key={projectItem.id}
                 // {...projectItem}
                 t={projectItem}
-                currentImg={currentImg?.srcImg}
+                currentImg={currentImg.srcImg}
                 // base64={projectItem.base64}
                 // onClick={() => handleOpenBackdrop(index)}
               />

@@ -22,7 +22,7 @@ const ServiceCard = ({
   language: string;
 }) => {
   const { slug, secondBtn, alignRight = false, hero, imgCard } = t;
-  const isLandscape = useMediaQuery({ orientation: 'landscape' });
+  const isLandscape = useMediaQuery({ orientation: "landscape" });
 
   const { update } = useCarouselServiceStore();
 
@@ -38,7 +38,7 @@ const ServiceCard = ({
       y={300}
       duration="700ms"
       threshold={isLandscape ? 0 : 0.3}
-      rootMargin={isLandscape ? "20%" : "0px"} 
+      rootMargin={isLandscape ? "20%" : "0px"}
       // rootMargin="20%"
       opacity={0}
       scale={1}
@@ -82,7 +82,7 @@ const ServiceCard = ({
         secondChildren={
           <MainButton
             className={language === "uk" ? "services" : ""}
-            color="white"
+            color="white_allways"
             onClick={handleClick}
           >
             <Link href={`/services/${slug}`}>{secondBtn}</Link>
