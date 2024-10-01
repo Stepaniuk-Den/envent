@@ -32,6 +32,9 @@
   }
 
   &.header {
+    @include md {
+      margin-top: auto;
+    }
     .item {
       border-left: 1px solid var(--color-border);
 

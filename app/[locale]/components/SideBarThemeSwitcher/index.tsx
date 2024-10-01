@@ -9,14 +9,10 @@ import { ThemeMoon, ThemeSun } from "@/helpers/imagesImport";
 const SideBarThemeSwitcher = () => {
   const { setTheme, theme, resolvedTheme } = useTheme();
 
-  console.log("resolvedTheme - ", resolvedTheme);
   const handleToggleTheme = (newTheme: string) => {
     const currentTheme = newTheme === "light" ? "dark" : "light";
     setTheme(currentTheme);
     setBtnThemeVisible(false);
-    // setSelectedTheme(newTheme);
-    // document.body.classList.remove("light-theme", "dark-theme");
-    // document.body.classList.add(`${newTheme}-theme`);
   };
 
   const [isBtnThemeVisible, setBtnThemeVisible] = useState(false);
