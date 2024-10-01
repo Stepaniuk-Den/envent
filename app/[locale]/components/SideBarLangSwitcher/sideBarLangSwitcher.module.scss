@@ -4,7 +4,10 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  // color: var(--color-dark);
+
+  @include md {
+    flex-direction: column-reverse;
+  }
 
   .sideBarBtnSelected {
     display: flex;
@@ -21,14 +24,15 @@
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 
-    &.active {
+    @include md {
       position: relative;
-      border-top-left-radius: 0;
+      border: none;
+      font-size: 22px;
 
-      &::before {
+      &::after {
         position: absolute;
         content: "";
-        left: 0;
+        right: 0;
         top: 50%;
         width: 1px;
         height: 30%;
@@ -37,42 +41,13 @@
       }
     }
 
-    &:hover {
-      background-color: var(--color-accent-yellow);
-    }
+    @include side-buttons-active-before;
+    @include side-buttons-hover;
   }
 
   .sideBarLangBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 7px;
-    width: 60px;
-    height: 60px;
-    color: var(--color-dark);
-    background-color: var(--color-white);
-    opacity: 0;
-    transform: translateX(60px);
-    @include transition-standart;
-    z-index: 9;
-
-    @include md {
-      transform: translateY(60px);
-    }
-
-    &.visible {
-      opacity: 1;
-      transform: translateX(0);
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px;
-      box-shadow: 0 6px 10px var(--color-dark-box-shadow);
-      @include md {
-        transform: translateY(0);
-      }
-    }
-
-    &:hover {
-      background-color: var(--color-accent-yellow);
-    }
+    @include side-buttons-hidden;
+    @include side-buttons-visible;
+    @include side-buttons-hover;
   }
 }
