@@ -28,7 +28,7 @@ const HeroRightSideList = ({ className, t }: IHeroRightSideList) => {
               ...heroRightSideItems.todo,
             ].find((svg) => svg.name === svgName);
             return (
-              <Observer key={key} y={40} threshold={1} duration={"300ms"}>
+              <Observer key={key} y={40} threshold={0.8} duration={"300ms"}>
                 <li className={styles.item}>
                   {svgCurrent && <svgCurrent.svg className={styles.svg} />}
                   <Link href={href} className={styles.item_text}>
