@@ -42,7 +42,7 @@ export default async function LocaleLayout({
 }: Props) {
   unstable_setRequestLocale(locale);
 
-  const theme = cookies().get("__theme__")?.value || "light";
+  const theme = cookies().get("__theme__")?.value || "system";
 
   const headerT = await localize(HeaderT);
 
@@ -50,7 +50,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       className={theme}
-      style={theme !== "light" ? { colorScheme: theme } : {}}
+      style={theme !== "system" ? { colorScheme: theme } : {}}
     >
       <body
         className={`${rubik.variable} ${openSans.variable} ${montserrat.variable}`}
