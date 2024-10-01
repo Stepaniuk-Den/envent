@@ -13,6 +13,7 @@ import MainButton from "../Buttons/MainButton";
 import ImagesCarousel from "../ImagesCarousel";
 import Line from "../Line";
 import styles from "./serviceAboutProcess.module.scss";
+import Observer from "@/helpers/observer";
 
 interface Service {
   service: Record<number, IImageList>;
@@ -42,14 +43,16 @@ const ServiceAboutProcess: React.FC<{
           <AnimatedTitle title={title} />
           <Line className="yellow-left" />
         </div>
+        <Observer y={50} duration="300ms" threshold={0.5}> 
         <p className={styles.process_text} style={{ marginBottom: "20px" }}>
           {process?.text}
-        </p>
+        </p> </Observer>
         <ul className={styles.process_list}>
           {processList.map(([key, item], idx) => (
-            <li key={idx}>
+             <Observer y={50} key={idx} duration="300ms" threshold={0.5}>
+            <li >
               <p className={styles.process_text}>{item}</p>
-            </li>
+            </li></Observer>
           ))}
         </ul>
       </div>
