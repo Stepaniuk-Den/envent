@@ -2,7 +2,6 @@
 
 import { RiverMall } from "@/helpers/imagesImport";
 import { IDescriptionProps } from "@/helpers/interfaces";
-import { useRef } from "react";
 import { Link } from "@/navigation";
 import { useMediaQuery } from "react-responsive";
 import { useAfterLoad } from "@/helpers/useAfterLoad";
@@ -40,9 +39,12 @@ const Description = ({
             <AnimatedTitle title={t.title} className={styles.descr_title} />
             <Line className="yellow-left" />
             <div className={styles.description_text_container}>
-              <p className={styles.text}>{t.firstDescr}</p>
-              <p className={styles.text}>{t.thirdDescr}</p>
-              <p className={styles.text}>{t.secondDescr}</p>
+            <Observer y={50} duration="300ms" threshold={0.5}> 
+              <p className={styles.text}>{t.firstDescr}</p></Observer>
+              <Observer y={50} duration="300ms" threshold={0.5}>
+              <p className={styles.text}>{t.thirdDescr}</p></Observer>
+              <Observer y={50} duration="300ms" threshold={0.5}>
+              <p className={styles.text}>{t.secondDescr}</p></Observer>
               <MainButton className="description">
                 <Link href="/about">{t.button}</Link>
               </MainButton>
