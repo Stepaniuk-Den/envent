@@ -9,7 +9,6 @@ import Observer from "@/helpers/observer";
 
 const HeroRightSideList = ({ className, t }: IHeroRightSideList) => {
   const tList = Object.entries(t.list);
-
   return (
     <div className={`${styles.hero_wrapper} ${styles[className]}`}>
       {className === "mobile" ? (
@@ -31,18 +30,19 @@ const HeroRightSideList = ({ className, t }: IHeroRightSideList) => {
               <Observer key={key} y={40} threshold={0.8} duration={"300ms"}>
                 <li className={styles.item}>
                   {svgCurrent && <svgCurrent.svg className={styles.svg} />}
-                  <Link href={href} className={styles.item_text}>
-                    <p>{title}</p>
-                    {svgCurrent ? (
+                  {href !== "" ? (
+                    <Link href={href} className={styles.item_text}>
+                      <p>{title}</p>
                       <p>{descriptions}</p>
-                    ) : (
-                      <>
-                        <p>{parseHTMLString(descriptions)}</p>
-                        <p>{mail}</p>
-                        <p>{tel}</p>
-                      </>
-                    )}
-                  </Link>
+                    </Link>
+                  ) : (
+                    <div className={styles.item_text}>
+                      <p>{title}</p>
+                      <p>{parseHTMLString(descriptions)}</p>
+                      {mail && <p>{mail}</p>}
+                      {tel && <p>{tel}</p>}
+                    </div>
+                  )}
                 </li>
               </Observer>
             );

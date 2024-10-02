@@ -9,7 +9,6 @@
   color: var(--color-dark);
   @include text-button-rubik;
   @include transition-standart;
-  // transition: all 0.3s linear;
 
   a {
     display: flex;
@@ -96,6 +95,26 @@
     &.services {
       @include sm {
         min-width: 292px;
+      }
+    }
+  }
+
+  &.black,
+  &.white_allways {
+    &.disabled {
+      cursor: not-allowed;
+      color: lightgrey;
+      border-color: lightgrey;
+      transform: scaleX(1);
+      scale: 1;
+      box-shadow: none;
+
+      &:hover {
+        color: lightgrey;
+        border-color: lightgrey;
+        transform: scaleX(1);
+        scale: 1;
+        box-shadow: none;
       }
     }
   }

@@ -14,6 +14,7 @@ import { ContactUsT } from "@/messages/types/ContactUsT";
 import { parseHTMLString } from "@/helpers/parseHTMLString";
 import AnimatedTitle from "../AnimatedTitle";
 import Observer from "@/helpers/observer";
+import Checkbox from "../Checkbox";
 // import dynamic from "next/dynamic";
 
 interface Props {
@@ -25,14 +26,16 @@ export type FormData = {
   name: string;
   email: string;
   message: string;
+  acceptTerms: boolean;
 };
 
-// const MediaQuery = dynamic(() => import("react-responsive"), {
-//   ssr: false,
-// });
-
 const ContactUsForm: React.FC<Props> = ({ className, t }) => {
-  const { register, handleSubmit, reset } = useForm<FormData>();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isValid },
+  } = useForm<FormData>({ mode: "onChange" });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isError, setIsError] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
@@ -41,9 +44,6 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
 
   useModal(isModalOpen, setIsModalOpen);
 
-  // const onSubmit = (data: FormData) => {
-  //   sendEmail(data);
-  // };
   const onSubmit = async (data: FormData) => {
     try {
       const response = await sendEmail(data);
@@ -61,76 +61,58 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
     }
   };
 
+  const Form = () => {
+    return (
+      <div className={`${styles.form_container} ${styles[className]}`}>
+        <AnimatedTitle title={t.formTitle} />
+        <Line className="yellow-left" />
+        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+          <div className={styles.input_container}>
+            <input
+              type="text"
+              id="name"
+              placeholder={t.placeholderName}
+              {...register("name", { required: true })}
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder={t.placeholderEmail}
+              {...register("email", { required: true })}
+            />
+          </div>
+          <textarea
+            id="message"
+            placeholder={t.placeholderMessage}
+            {...register("message", { required: true })}
+          />
+          <Checkbox
+            label="Accept Terms & Conditions"
+            name="acceptTerms"
+            register={register}
+            required={true}
+          />
+          <MainButton
+            type="submit"
+            className={className === "footer" ? "contact_us" : "contacts"}
+            color={className === "footer" ? "white_allways" : "black"}
+            disabled={!isValid}
+          >
+            {t.button}
+          </MainButton>
+        </form>
+      </div>
+    );
+  };
+
   return (
     <>
       {isTouchClassName ? (
         <Observer y={50} threshold={0.2} className={styles.touch_obs}>
-          <div className={`${styles.form_container} ${styles[className]}`}>
-            <AnimatedTitle title={t.formTitle} />
-            <Line className="yellow-left" />
-            <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-              <div className={styles.input_container}>
-                <input
-                  type="text"
-                  id="name"
-                  placeholder={t.placeholderName}
-                  {...register("name", { required: true })}
-                />
-                <input
-                  type="email"
-                  id="email"
-                  placeholder={t.placeholderEmail}
-                  {...register("email", { required: true })}
-                />
-              </div>
-              <textarea
-                id="message"
-                placeholder={t.placeholderMessage}
-                {...register("message", { required: true })}
-              />
-              <MainButton
-                type="submit"
-                className={className === "footer" ? "contact_us" : "contacts"}
-                color={className === "footer" ? "white_allways" : "black"}
-              >
-                {t.button}
-              </MainButton>
-            </form>
-          </div>
+          <Form />
         </Observer>
       ) : (
-        <div className={`${styles.form_container} ${styles[className]}`}>
-          <AnimatedTitle title={t.formTitle} />
-          <Line className="yellow-left" />
-          <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-            <div className={styles.input_container}>
-              <input
-                type="text"
-                id="name"
-                placeholder={t.placeholderName}
-                {...register("name", { required: true })}
-              />
-              <input
-                type="email"
-                id="email"
-                placeholder={t.placeholderEmail}
-                {...register("email", { required: true })}
-              />
-            </div>
-            <textarea
-              id="message"
-              placeholder={t.placeholderMessage}
-              {...register("message", { required: true })}
-            />
-            <MainButton
-              type="submit"
-              className={className === "footer" ? "contact_us" : "contacts"}
-              color={className === "footer" ? "white_allways" : "black"}
-            >
-              {t.button}
-            </MainButton>
-          </form>
-        </div>
+        <Form />
       )}
       {isModalOpen && (
         <Modal className="message">

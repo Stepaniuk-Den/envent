@@ -37,19 +37,9 @@
 
     @include md {
       line-height: 2;
-      font-size: x-large;
-    }
-
-    @include sm {
-      font-size: large;
-    }
-
-    @include md-landscape {
-      font-size: large;
     }
 
     @include sm-landscape {
-      font-size: medium;
     }
 
     &::after {
@@ -70,6 +60,14 @@
       align-items: center;
       width: 100%;
       height: 100%;
+
+      @include md-landscape {
+        font-size: x-large;
+      }
+
+      @include sm {
+        font-size: large;
+      }
     }
 
     &:hover {
