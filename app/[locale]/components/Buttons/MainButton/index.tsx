@@ -19,6 +19,7 @@ interface IMainButtonProps {
     | "filled"
     | "";
   isGoBack?: boolean;
+  disabled?: boolean;
 }
 
 const MainButton = ({
@@ -29,6 +30,7 @@ const MainButton = ({
   isActive = "",
   onClick,
   isGoBack = false,
+  disabled = false,
 }: IMainButtonProps) => {
   const router = useRouter();
 
@@ -43,8 +45,11 @@ const MainButton = ({
   return (
     <button
       type={type}
-      className={`${styles.mainBtn} ${styles[className]} ${styles[color]}  ${styles[isActive]}`}
+      className={`${styles.mainBtn} ${styles[className]} ${styles[color]} ${
+        styles[isActive]
+      } ${disabled ? styles.disabled : ""}`}
       onClick={handleClick}
+      disabled={disabled}
     >
       {children}
     </button>

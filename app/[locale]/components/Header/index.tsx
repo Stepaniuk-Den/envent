@@ -12,6 +12,7 @@ import { HeaderT } from "@/messages/types/HeaderT";
 import BurgerMenu from "../BurgerMenu";
 import { useMediaQuery } from "react-responsive";
 import { useAfterLoad } from "@/helpers/useAfterLoad";
+import HeaderLinks from "../HeaderLinks";
 // import dynamic from "next/dynamic";
 
 const Header: React.FC<{ t: HeaderT }> = ({ t }) => {
@@ -52,29 +53,7 @@ const Header: React.FC<{ t: HeaderT }> = ({ t }) => {
               height={100}
             />
           </Link>
-          <ul className={styles.contacts}>
-            <li className={styles.item}>
-              <Link href={"tel:+380445038377"} className={styles.link}>
-                <Phone className={styles.svg} />
-                {t.topList.call_us}
-                <span>+38 (044) 503 83 77</span>
-              </Link>
-            </li>
-            <li className={styles.item}>
-              <Link href={"mailto:info@envent.kiev.ua"} className={styles.link}>
-                <Email className={styles.svg} />
-                {t.topList.mail}
-                <span>info@envent.kiev.ua</span>
-              </Link>
-            </li>
-            <li className={styles.item}>
-              <div className={styles.link}>
-                <Clock className={styles.svg} />
-                <p>{t.topList.working_hours}</p>
-                <span>{t.topList.hours}</span>
-              </div>
-            </li>
-          </ul>
+          <HeaderLinks t={t.topList} />
         </motion.div>
         <div className={styles.bottom}>
           <Navigation translations={t.navlink} />
