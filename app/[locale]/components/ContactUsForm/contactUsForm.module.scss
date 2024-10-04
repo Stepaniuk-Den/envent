@@ -11,13 +11,13 @@
     display: flex;
     flex-direction: column;
     font-family: var(--font-open-sands);
-    gap: 16px;
+    gap: 20px;
     ::placeholder {
       @include text-main-openSands;
       color: var(--color-dark-allways);
     }
 
-    input,
+    .input,
     textarea {
       padding: 10px 15px;
       border: none;
@@ -36,9 +36,26 @@
       gap: 30px;
       width: 100%;
 
-      input {
+      .input {
         width: 100%;
-        height: 53px;
+        height: 40px;
+      }
+    }
+
+    .wrapper {
+      position: relative;
+      width: 100%;
+
+      .error_name {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.2;
+        color: var(--color-accent-yellow);
+        left: 0;
+        bottom: -17px;
       }
     }
 
@@ -64,7 +81,7 @@
 
       .input_container {
         flex-direction: column;
-        gap: 16px;
+        gap: 20px;
       }
     }
 
@@ -90,6 +107,12 @@
     .input_container {
       flex-direction: column;
       gap: 24px;
+    }
+
+    textarea {
+      @include lg {
+        height: 100px;
+      }
     }
   }
 }

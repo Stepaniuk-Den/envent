@@ -17,10 +17,19 @@ const Checkbox: React.FC<CheckboxProps> = ({
 }) => {
   return (
     <div className={styles.checkbox_container}>
-      <input type="checkbox" id={name} {...register(name, { required })} />
-      <label htmlFor={name}>{label}</label>
+      <input
+        type="checkbox"
+        id={name}
+        {...register(name, { required })}
+        aria-required={required ? "true" : "false"}
+      />
+      <label htmlFor={name} className={styles.label}>
+        {label}
+        <a href="/terms-and-conditions">
+          Terms & Conditions and Privacy policy
+        </a>
+      </label>
     </div>
   );
 };
-
 export default Checkbox;

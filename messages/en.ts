@@ -86,7 +86,6 @@ const en: FullTranslation = {
       link: "Link",
     },
   },
-
   ProjectsPage: {
     hero: {
       title: "Implemented projects",
@@ -1313,6 +1312,11 @@ const en: FullTranslation = {
     msg_success: "Congratulations!!<br/>Email sent successfully!",
     msg_error: "Oops!!<br/>Error sending email<br/>",
     msg_btn: "Close",
+    acceptTerms: "Accept ",
+    requiredName: "Minimum 2 symbols",
+    requiredEmail: "Enter valid email address",
+    requiredMessage: "Minimum 15 symbols",
+    required: "Required field",
   },
   HeroRightSide: {
     services: {

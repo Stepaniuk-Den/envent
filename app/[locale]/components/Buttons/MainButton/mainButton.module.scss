@@ -58,6 +58,12 @@
       margin-top: 20px;
       padding: 8px 15px 8px 0;
     }
+
+    &.terms {
+      max-width: max-content;
+      padding: 8px 15px 8px 0;
+      margin: 20px auto;
+    }
   }
 
   &.black {
