@@ -11,4 +11,8 @@
   width: 60px;
   box-shadow: 0 6px 10px var(--color-dark-box-shadow);
   z-index: 10;
+
+  @include md {
+    display: none;
+  }
 }

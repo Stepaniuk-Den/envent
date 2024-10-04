@@ -17,9 +17,9 @@
   z-index: 90;
   @include transition-standart;
 
-  @include sm {
-    width: 32px;
-    height: 32px;
+  @include md {
+    width: 40px;
+    height: 40px;
   }
 
   &.visible {

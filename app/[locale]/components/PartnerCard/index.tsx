@@ -64,26 +64,16 @@ const PartnerCard: React.FC<IPartnerCardProps> = ({
           )}
         </div>
         {isMobile && showCard && (
-          <div
-            className={styles.link_wrapper}
-            // className={`${styles.link_wrapper}  ${
-            //   showCard ? styles.active : ""
-            // }`}
-            // onClick={(event) => event.stopPropagation()}
-          >
+          <div className={styles.link_wrapper}>
             <Link
-              // className={styles.overlay_link}
               className={`${styles.overlay_link}  ${
                 showCard ? styles.active : ""
               }`}
               href={partner.href}
               target="_blank"
               rel="noopener noreferrer"
-              // onClick={(event) => event.stopPropagation()}
             >
-              <span className={styles.text} onClick={() => console.log("span")}>
-                {linkTitle}
-              </span>
+              <span className={styles.text}>{linkTitle}</span>
               <ArrowRightLinkIcon className={styles.icon} />
             </Link>
           </div>

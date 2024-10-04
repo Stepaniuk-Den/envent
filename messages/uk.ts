@@ -1329,6 +1329,11 @@ const uk: FullTranslation = {
     msg_success: "Вітаємо!!<br/>Електронний лист успішно надіслано!",
     msg_error: "Вибачте!!<br/>Виникла помилка при відправці листа<br/>",
     msg_btn: "закрити",
+    acceptTerms: "Я приймаю ",
+    requiredName: "Мінімум 2 символи",
+    requiredEmail: "Введіть коректну електронну адресу",
+    requiredMessage: "Мінімум 15 символів",
+    required: "Обов'язкове поле",
   },
   HeroRightSide: {
     services: {

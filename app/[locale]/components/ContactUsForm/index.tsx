@@ -14,6 +14,7 @@ import { ContactUsT } from "@/messages/types/ContactUsT";
 import { parseHTMLString } from "@/helpers/parseHTMLString";
 import AnimatedTitle from "../AnimatedTitle";
 import Observer from "@/helpers/observer";
+import Checkbox from "../Checkbox";
 // import dynamic from "next/dynamic";
 
 interface Props {
@@ -27,12 +28,13 @@ export type FormData = {
   message: string;
 };
 
-// const MediaQuery = dynamic(() => import("react-responsive"), {
-//   ssr: false,
-// });
-
 const ContactUsForm: React.FC<Props> = ({ className, t }) => {
-  const { register, handleSubmit, reset } = useForm<FormData>();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isValid },
+  } = useForm<FormData>({ mode: "onChange" });
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isError, setIsError] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
@@ -41,9 +43,6 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
 
   useModal(isModalOpen, setIsModalOpen);
 
-  // const onSubmit = (data: FormData) => {
-  //   sendEmail(data);
-  // };
   const onSubmit = async (data: FormData) => {
     try {
       const response = await sendEmail(data);
@@ -61,6 +60,95 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
     }
   };
 
+  const Form = () => {
+    return (
+      <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+        <div className={styles.input_container}>
+          <div className={styles.wrapper}>
+            <input
+              className={styles.input}
+              type="text"
+              id="name"
+              placeholder={t.placeholderName}
+              {...register("name", {
+                required: `${t.required}`,
+                minLength: {
+                  value: 2,
+                  message: `${t.requiredName}`,
+                },
+                validate: {
+                  isNotEmpty: (value) => {
+                    if (value.trim() === "") {
+                      return `${t.requiredName}`;
+                    }
+                    return true;
+                  },
+                },
+              })}
+            />
+            {errors?.name && (
+              <div className={styles.error_name}>
+                <p>{errors?.name?.message || "Error!"}</p>
+              </div>
+            )}
+          </div>
+          <div className={styles.wrapper}>
+            <input
+              className={styles.input}
+              type="email"
+              id="email"
+              placeholder={t.placeholderEmail}
+              {...register("email", {
+                required: `${t.required}`,
+                pattern: {
+                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                  message: `${t.requiredEmail}`,
+                },
+              })}
+            />
+            {errors?.email && (
+              <div className={styles.error_name}>
+                <p>{errors?.email?.message || "Error!"}</p>
+              </div>
+            )}
+          </div>
+        </div>
+        <div className={styles.wrapper}>
+          <textarea
+            id="message"
+            placeholder={t.placeholderMessage}
+            {...register("message", {
+              required: `${t.required}`,
+              minLength: {
+                value: 15,
+                message: `${t.requiredMessage}`,
+              },
+            })}
+          />
+          {errors?.message && (
+            <div className={styles.error_name}>
+              <p>{errors?.message?.message || "Error!"}</p>
+            </div>
+          )}
+        </div>
+        <Checkbox
+          label={t.acceptTerms}
+          name="acceptTerms"
+          register={register}
+          required={true}
+        />
+        <MainButton
+          type="submit"
+          className={className === "footer" ? "contact_us" : "contacts"}
+          color={className === "footer" ? "white_allways" : "black"}
+          disabled={!isValid}
+        >
+          {t.button}
+        </MainButton>
+      </form>
+    );
+  };
+
   return (
     <>
       {isTouchClassName ? (
@@ -68,68 +156,14 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
           <div className={`${styles.form_container} ${styles[className]}`}>
             <AnimatedTitle title={t.formTitle} />
             <Line className="yellow-left" />
-            <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-              <div className={styles.input_container}>
-                <input
-                  type="text"
-                  id="name"
-                  placeholder={t.placeholderName}
-                  {...register("name", { required: true })}
-                />
-                <input
-                  type="email"
-                  id="email"
-                  placeholder={t.placeholderEmail}
-                  {...register("email", { required: true })}
-                />
-              </div>
-              <textarea
-                id="message"
-                placeholder={t.placeholderMessage}
-                {...register("message", { required: true })}
-              />
-              <MainButton
-                type="submit"
-                className={className === "footer" ? "contact_us" : "contacts"}
-                color={className === "footer" ? "white_allways" : "black"}
-              >
-                {t.button}
-              </MainButton>
-            </form>
+            <Form />
           </div>
         </Observer>
       ) : (
         <div className={`${styles.form_container} ${styles[className]}`}>
           <AnimatedTitle title={t.formTitle} />
           <Line className="yellow-left" />
-          <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-            <div className={styles.input_container}>
-              <input
-                type="text"
-                id="name"
-                placeholder={t.placeholderName}
-                {...register("name", { required: true })}
-              />
-              <input
-                type="email"
-                id="email"
-                placeholder={t.placeholderEmail}
-                {...register("email", { required: true })}
-              />
-            </div>
-            <textarea
-              id="message"
-              placeholder={t.placeholderMessage}
-              {...register("message", { required: true })}
-            />
-            <MainButton
-              type="submit"
-              className={className === "footer" ? "contact_us" : "contacts"}
-              color={className === "footer" ? "white_allways" : "black"}
-            >
-              {t.button}
-            </MainButton>
-          </form>
+          <Form />
         </div>
       )}
       {isModalOpen && (

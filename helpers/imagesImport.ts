@@ -3,6 +3,7 @@ import HeroAboutBG from "../public/images/hero-about-bg.webp";
 import HeroServicesBG from "../public/images/hero-services-bg.webp";
 import heroProjectsPageBG from "../public/images/projects/hero_projects_page_BG.png";
 import AboutUsCountedBG from "../public/images/about_us_counted.webp";
+import HeroTermsBG from "../public/images/privacy-policy.webp";
 
 import RiverMall from "../public/images/riverMall.png";
 import Phone from "../public/icons/phone-call-communication.svg";
@@ -88,6 +89,7 @@ export {
   HeroMainBG,
   HeroAboutBG,
   HeroServicesBG,
+  HeroTermsBG,
   RiverMall,
   Phone,
   Email,

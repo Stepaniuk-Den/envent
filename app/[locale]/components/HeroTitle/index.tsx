@@ -8,8 +8,8 @@ import { Link, usePathname } from "@/navigation";
 
 interface IHeroTitleProps {
   title: string;
-  description: string;
-  button: string;
+  description?: string;
+  button?: string;
 }
 
 const HeroTitle: React.FC<{ t: IHeroTitleProps }> = ({ t }) => {
@@ -115,9 +115,11 @@ const HeroTitle: React.FC<{ t: IHeroTitleProps }> = ({ t }) => {
         className={styles.descriptions_wrapper}
       >
         <p className={styles.descriptions}>{t.description}</p>
-        <MainButton className="filled">
-          <Link href={currentHref}>{t.button}</Link>
-        </MainButton>
+        {t.button && (
+          <MainButton className="filled">
+            <Link href={currentHref}>{t.button}</Link>
+          </MainButton>
+        )}
       </motion.div>
     </div>
   );
