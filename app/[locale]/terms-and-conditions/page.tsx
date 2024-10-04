@@ -11,7 +11,7 @@ const page = () => {
   return (
     <div>
       <Hero
-        className={styles.terms_and_conditions}
+        className="terms"
         imageSrc={HeroTermsBG}
         t={{ title: "Політика конфіденційності і персональні дані" }}
       />
