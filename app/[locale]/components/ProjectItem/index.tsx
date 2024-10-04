@@ -10,14 +10,16 @@ import { IPropsProjectItem } from "@/helpers/interfaces";
 // import fs from "node:fs/promises";
 // import { useState } from "react";
 
-const ProjectItem = async ({
+const ProjectItem = ({
   t,
   currentImg,
+  onClick,
 }: // base64,
 // categorySlug,
 {
   t: IPropsProjectItem;
   currentImg: StaticImageData;
+  onClick?: () => void;
   // base64: string;
   // categorySlug: string;
 }) => {
@@ -27,7 +29,7 @@ const ProjectItem = async ({
   if (!t) {
     return <p>Project data is missing</p>;
   }
-  const { projectSlug, mainAlt, title, onClick } = t;
+  const { projectSlug, mainAlt, title } = t;
 
   // const buffer = await fs.readFile(`public${mainImg}`);
   // const { base64 } = await getPlaiceholder(buffer);

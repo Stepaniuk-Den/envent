@@ -18,18 +18,6 @@ import LinkIcon from "../public/icons/link.svg";
 import ArrowRightLinkIcon from "../public/icons/IconParkOutlineArrowRight.svg";
 import ArrowRightAboutIcon from "../public/icons/2arrows-right.svg";
 
-import altacenterMain from "../public/images/projects/trade_complexes/altacenterMain.webp";
-
-import karavanMain from "../public/images/projects/trade_complexes/karavanMain.webp";
-
-import epicenterMain from "../public/images/projects/trade_complexes/epicenterMain.webp";
-
-import odeskiy_bulvarMain from "../public/images/projects/hskc/odeskiy_bulvarMain.webp";
-
-import blockbusterMain from "../public/images/projects/trade_complexes/blockbusterMain.webp";
-
-import river_mallMain from "../public/images/projects/trade_complexes/river_mallMain.webp";
-
 import FacebookFilled from "../public/icons/facebook-filled.svg";
 import EmailFilled from "../public/icons/mail-filled.svg";
 import PhoneFilled from "../public/icons/phone-filled.svg";
@@ -38,12 +26,40 @@ import TelegramFilled from "../public/icons/telegram-filled.svg";
 import LocationsFilled from "../public/icons/locations-filled.svg";
 import InstagramFilled from "../public/icons/IconParkSolidInstagram.svg";
 
-import riverMall from "../public/images/projects/riverMall.jpg";
-import blockBaster from "../public/images/projects/blockBaster.jpg";
-import odeskiyBulvar from "../public/images/projects/odeskiyBulvar.jpg";
-import karavan from "../public/images/projects/karavan.jpg";
-import epicentr from "../public/images/projects/epicentr.jpg";
-import altaCentr from "../public/images/projects/altaCentr.jpg";
+import sbuMain from "../public/images/projects/administrative_buildings/sbuMain.webp";
+import presAdmMain from "../public/images/projects/administrative_buildings/presAdmMain.webp";
+import verhovna_radaMain from "../public/images/projects/administrative_buildings/verhovna_radaMain.webp";
+import ukrexim_bankMain from "../public/images/projects/administrative_buildings/ukrexim_bankMain.webp";
+import prominvest_bankMain from "../public/images/projects/administrative_buildings/prominvest_bankMain.webp";
+import unicredit_bankMain from "../public/images/projects/administrative_buildings/unicredit_bankMain.webp";
+import ukrsots_bankMain from "../public/images/projects/administrative_buildings/ukrsots_bankMain.webp";
+import bank_avalMain from "../public/images/projects/administrative_buildings/bank_avalMain.webp";
+import oschad_bankMain from "../public/images/projects/administrative_buildings/oschad_bankMain.webp";
+import dinamoMain from "../public/images/projects/public_facilities/dinamoMain.webp";
+import hotelMain from "../public/images/projects/public_facilities/hotelMain.webp";
+import hotelMolodMain from "../public/images/projects/public_facilities/hotelMolodMain.webp";
+import cafeBrovarMain from "../public/images/projects/public_facilities/cafeBrovarMain.webp";
+import officeCenterMain from "../public/images/projects/public_facilities/officeCenterMain.webp";
+import sanatorium_yalynkaMain from "../public/images/projects/hskc/sanatorium_yalynkaMain.webp";
+import cancer_dispensaryMain from "../public/images/projects/hskc/cancer_dispensaryMain.webp";
+import medical_clinic_innovationMain from "../public/images/projects/hskc/medical_clinic_innovationMain.webp";
+import epiphany_cathedralMain from "../public/images/projects/hskc/epiphany_cathedralMain.webp";
+import residential_buildingsMain from "../public/images/projects/hskc/residential_buildingsMain.webp";
+import amstorMain from "../public/images/projects/trade_complexes/amstorMain.webp";
+import silpoMain from "../public/images/projects/trade_complexes/silpoMain.webp";
+import retrovilleMain from "../public/images/projects/trade_complexes/retrovilleMain.webp";
+import darynokMain from "../public/images/projects/trade_complexes/darynokMain.webp";
+import novusMain from "../public/images/projects/trade_complexes/novusMain.webp";
+import forumMain from "../public/images/projects/trade_complexes/forumMain.webp";
+import kraft_foods_ukraineMain from "../public/images/projects/industry/kraft_foods_ukraineMain.webp";
+import alko_investMain from "../public/images/projects/industry/alko_investMain.webp";
+import osmoloda_plantMain from "../public/images/projects/industry/osmoloda_plantMain.webp";
+import altacenterMain from "../public/images/projects/trade_complexes/altacenterMain.webp";
+import karavanMain from "../public/images/projects/trade_complexes/karavanMain.webp";
+import epicenterMain from "../public/images/projects/trade_complexes/epicenterMain.webp";
+import odeskiy_bulvarMain from "../public/images/projects/hskc/odeskiy_bulvarMain.webp";
+import blockbusterMain from "../public/images/projects/trade_complexes/blockbusterMain.webp";
+import river_mallMain from "../public/images/projects/trade_complexes/river_mallMain.webp";
 
 import LogoMitsubishi from "../public/icons/partner-mitsubishi-heavy-industries.svg";
 import LogoCooperHunter from "../public/icons/partner-cooperhunter.png";
@@ -86,12 +102,6 @@ export {
   ArrowRightLinkIcon,
   ArrowRightAboutIcon,
   heroProjectsPageBG,
-  riverMall,
-  blockBaster,
-  odeskiyBulvar,
-  karavan,
-  epicentr,
-  altaCentr,
   FacebookFilled,
   EmailFilled,
   PhoneFilled,
@@ -121,7 +131,34 @@ export {
   BurgerCloseBtn,
   ThemeMoon,
   ThemeSun,
-  // ================
+  sbuMain,
+  presAdmMain,
+  verhovna_radaMain,
+  ukrexim_bankMain,
+  prominvest_bankMain,
+  unicredit_bankMain,
+  ukrsots_bankMain,
+  bank_avalMain,
+  oschad_bankMain,
+  dinamoMain,
+  hotelMain,
+  hotelMolodMain,
+  cafeBrovarMain,
+  officeCenterMain,
+  sanatorium_yalynkaMain,
+  cancer_dispensaryMain,
+  medical_clinic_innovationMain,
+  epiphany_cathedralMain,
+  residential_buildingsMain,
+  amstorMain,
+  silpoMain,
+  retrovilleMain,
+  darynokMain,
+  novusMain,
+  forumMain,
+  kraft_foods_ukraineMain,
+  alko_investMain,
+  osmoloda_plantMain,
   altacenterMain,
   karavanMain,
   epicenterMain,

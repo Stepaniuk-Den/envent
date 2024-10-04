@@ -1,0 +1,71 @@
+.backdrop {
+  background-color: var(--color-dark-allways);
+  justify-content: center;
+  align-items: center;
+  padding: 56px;
+}
+@media screen and (max-width: 767.98px) {
+  .backdrop {
+    padding: 0;
+  }
+}
+
+.modalContent {
+  position: absolute;
+  width: 90vw;
+  height: 90%;
+}
+.modalContent .images {
+  object-fit: cover;
+}
+@media screen and (max-width: 1023.98px) {
+  .modalContent .images {
+    object-fit: contain;
+  }
+}
+
+.closeButton {
+  top: 20px;
+  right: 20px;
+}
+.closeButton .closeSVG {
+  width: 30px;
+  height: 30px;
+}
+
+.prevButton {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.nextButton {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.ArrowLeftSVG,
+.ArrowRightSVG {
+  width: 32px;
+  height: 32px;
+}
+
+.counter {
+  position: absolute;
+  left: 60px;
+  bottom: 2%;
+  color: var(--color-accent-blue);
+  font-size: 16px;
+  font-weight: 600;
+}
+@media screen and (max-width: 1023.98px) {
+  .counter {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .counter {
+    left: 0;
+  }
+}/*# sourceMappingURL=backdrop.module.css.map */

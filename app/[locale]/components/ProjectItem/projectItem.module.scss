@@ -46,17 +46,17 @@
     transition: transform 800ms ease-in-out;
   }
 
-  .loading {
-    transform: scale(1.1);
-    filter: blur(60px);
-    // filter: grayscale(100%);
-  }
+  // .loading {
+  //   transform: scale(1.1);
+  //   filter: blur(60px);
+  //   // filter: grayscale(100%);
+  // }
 
-  .notLoading {
-    transform: scale(1);
-    filter: blur(0);
-    // filter: grayscale(0%);
-  }
+  // .notLoading {
+  //   transform: scale(1);
+  //   filter: blur(0);
+  //   // filter: grayscale(0%);
+  // }
 
   .overlayContent {
     position: absolute;
@@ -71,20 +71,31 @@
     justify-content: center;
     text-align: center;
     background-color: var(--color-yellow-blur);
-    color: var(--color-white);
+    color: var(--color-white-allways);
     opacity: 0;
     transition: opacity 300ms ease-in-out;
 
     .projectTitle {
       font-size: 28px;
       font-weight: 800;
+      margin-top: 18px;
       margin-bottom: 26px;
+
+      @include lg {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      @include sm {
+        font-size: 22px;
+        margin-bottom: 16px;
+      }
     }
 
     .projectLinksWrapper {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
 
       .linkProject,
       .magnifyingGlassBtn {
@@ -93,14 +104,14 @@
         align-items: center;
         width: 60px;
         height: 60px;
-        color: var(--color-white);
+        color: var(--color-white-allways);
         background-color: transparent;
         border-radius: 100%;
         @include transition-standart;
 
         &:hover {
-          color: var(--color-dark);
-          background-color: var(--color-white);
+          color: var(--color-dark-allways);
+          background-color: var(--color-white-allways);
         }
 
         .linkIcon {
