@@ -3,6 +3,10 @@
 .projectSection {
   width: 100%;
 
+  &.withPaddingBottom {
+    padding-bottom: 180px;
+  }
+
   .projectContainer {
     display: flex;
     flex-direction: column;
