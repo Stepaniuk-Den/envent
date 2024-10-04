@@ -1,9 +1,16 @@
+@import "../mixin.scss";
+
 .wrapper {
   padding-top: 20px;
+  @include text-main-openSands;
+
   ul {
     list-style: circle;
     li {
       margin-left: 20px;
+      span {
+        font-weight: bold;
+      }
     }
   }
   h2,
@@ -12,7 +19,6 @@
     margin-top: 20px;
   }
   p {
-    // display: inline-block;
     text-indent: 30px;
   }
   a {
