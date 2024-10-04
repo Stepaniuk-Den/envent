@@ -1,0 +1,93 @@
+.projectItemSection {
+  width: 100%;
+}
+.projectItemSection .projectItemContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  gap: 60px;
+  font-family: var(--font-open-sands);
+  font-size: 15px;
+}
+.projectItemSection .projectItemContainer .topInfoWrapper {
+  display: flex;
+  gap: 64px;
+}
+@media screen and (max-width: 1023.98px) {
+  .projectItemSection .projectItemContainer .topInfoWrapper {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .projectItemSection .projectItemContainer .topInfoWrapper {
+    flex-direction: column;
+  }
+}
+.projectItemSection .projectItemContainer .topInfoWrapper .textWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.projectItemSection .projectItemContainer .topInfoWrapper .textWrapper .descTitle {
+  margin-bottom: 38px;
+}
+@media screen and (max-width: 1023.98px) {
+  .projectItemSection .projectItemContainer .topInfoWrapper .textWrapper .descTitle {
+    margin-bottom: 16px;
+  }
+}
+.projectItemSection .projectItemContainer .topInfoWrapper .textWrapper .desc {
+  margin-top: 38px;
+  letter-spacing: 0.6px;
+}
+@media screen and (max-width: 1023.98px) {
+  .projectItemSection .projectItemContainer .topInfoWrapper .textWrapper .desc {
+    margin-top: 16px;
+  }
+}
+.projectItemSection .projectItemContainer .topInfoWrapper .imgWrapper {
+  position: relative;
+  display: flex;
+  max-width: 536px;
+  width: 100%;
+  height: 324px;
+}
+.projectItemSection .projectItemContainer .middleImgWrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 600px;
+}
+@media screen and (max-width: 1023.98px) {
+  .projectItemSection .projectItemContainer .middleImgWrapper {
+    height: 360px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .projectItemSection .projectItemContainer .middleImgWrapper {
+    height: 176px;
+  }
+}
+.projectItemSection .projectItemContainer .bottomInfoWrapper {
+  display: flex;
+  gap: 64px;
+}
+@media screen and (max-width: 1023.98px) {
+  .projectItemSection .projectItemContainer .bottomInfoWrapper {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .projectItemSection .projectItemContainer .bottomInfoWrapper {
+    flex-direction: column;
+  }
+}
+.projectItemSection .projectItemContainer .bottomInfoWrapper .imgWrapper {
+  position: relative;
+  display: flex;
+  max-width: 458px;
+  width: 100%;
+  height: 282px;
+}
+.projectItemSection .projectItemContainer .bottomInfoWrapper .textWrapper {
+  width: 100%;
+}/*# sourceMappingURL=project.module.css.map */

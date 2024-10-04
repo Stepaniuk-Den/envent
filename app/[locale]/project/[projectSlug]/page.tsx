@@ -67,17 +67,16 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
 
   return (
     <>
+      <Hero
+        imageSrc={projectData.mainImg || ""}
+        className=""
+        t={{
+          title: projectData.title,
+          description: projectData.heroDescription || "",
+          button: projectData.heroButton || "",
+        }}
+      />
       <section className={styles.projectItemSection}>
-        <Hero
-          imageSrc={projectData.mainImg || ""}
-          className=""
-          t={{
-            title: projectData.title,
-            description: projectData.heroDescription || "",
-            button: projectData.heroButton || "",
-          }}
-        />
-
         <div className={`${styles.projectItemContainer} container`}>
           <div className={styles.topInfoWrapper}>
             <div className={styles.textWrapper}>
@@ -168,12 +167,13 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
             </div>
           </div>
         </div>
-        <ProjectSection
-          t={mainT.projects}
-          t2={projectsT.projects}
-          // t2={projectsWithBase64}
-        />
       </section>
+      <ProjectSection
+        className="withPaddingBottom"
+        t={mainT.projects}
+        t2={projectsT.projects}
+        // t2={projectsWithBase64}
+      />
       <ContactUsSection params={{ locale }} />
     </>
   );
