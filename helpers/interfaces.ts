@@ -7,8 +7,8 @@ export interface IHeroProps {
   className: string;
   t: {
     title: string;
-    description: string;
-    button: string;
+    description?: string;
+    button?: string;
   };
 }
 

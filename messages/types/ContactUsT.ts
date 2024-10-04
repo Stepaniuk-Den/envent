@@ -13,4 +13,9 @@ export class ContactUsT implements Translation {
   msg_success = "";
   msg_error = "";
   msg_btn = "";
+  acceptTerms = "";
+  requiredName = "";
+  requiredEmail = "";
+  requiredMessage = "";
+  required = "";
 }
