@@ -34,7 +34,6 @@ import {
   blockbusterMain,
   river_mallMain,
 } from "@/helpers/imagesImport";
-import { IProjectItems } from "@/helpers/interfaces";
 
 export const ProjectItems = [
   { srcImg: sbuMain, name: "sbuMain" },
