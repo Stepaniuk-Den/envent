@@ -1,0 +1,13 @@
+.projectList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+@media screen and (max-width: 1279.98px) {
+  .projectList {
+    gap: 16px;
+  }
+}/*# sourceMappingURL=categoryProjectsList.module.css.map */

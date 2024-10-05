@@ -1,0 +1,98 @@
+@import "../../mixin.scss";
+
+.backdrop {
+  // background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--color-dark-allways);
+  // background: rgba(0, 0, 0, 0.5);
+  // backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  padding: 56px;
+
+  @include sm {
+    padding: 0;
+  }
+}
+
+.modalContent {
+  position: absolute;
+  // overflow: hidden;
+  width: 90vw;
+  // height: inherit;
+  height: 90%;
+  // --- By ratio width for responsive ---
+  // width: 660px;
+  // width: 460px;
+  // --- By ratio height for responsive ---
+  // height: 412px;
+  // height: 288px;
+
+  // @include md {
+  //   width: 90vw;
+  //   height: 90%;
+  // }
+
+  .images {
+    object-fit: cover;
+
+    @include md {
+      object-fit: contain;
+    }
+  }
+}
+
+// .scaledImgWrapper {
+//   position: relative;
+//   display: flex;
+//   width: 200px;
+//   height: 160px;
+//   overflow: hidden;
+//   object-fit: cover;
+// }
+// ==========================
+
+.closeButton {
+  top: 20px;
+  right: 20px;
+
+  .closeSVG {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.prevButton {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.nextButton {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.ArrowLeftSVG,
+.ArrowRightSVG {
+  width: 32px;
+  height: 32px;
+}
+
+.counter {
+  position: absolute;
+  left: 60px;
+  bottom: 2%;
+  color: var(--color-accent-blue);
+  font-size: 16px;
+  font-weight: 600;
+
+  @include md {
+    // bottom: -20px;
+    font-size: 14px;
+  }
+
+  @include sm {
+    left: 0;
+  }
+}

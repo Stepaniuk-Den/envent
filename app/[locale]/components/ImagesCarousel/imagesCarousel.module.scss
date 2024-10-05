@@ -95,13 +95,15 @@
 
 .modalContent {
   position: relative;
-  width: 60vw;
-  height: inherit;
+  // width: 60vw;
+  width: 90vw;
+  // height: inherit;
+  height: 90%;
 
-  @include md {
-    width: 90vw;
-    height: 90%;
-  }
+  // @include md {
+  //   width: 90vw;
+  //   height: 90%;
+  // }
 
   .images {
     object-fit: cover;
@@ -116,6 +118,11 @@
 .closeButton {
   top: 20px;
   right: 20px;
+
+  .closeSVG {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .counter {

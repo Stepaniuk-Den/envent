@@ -23,16 +23,11 @@ export interface IHeroRightSideItems {
   }[];
 }
 
-export interface IProjectItems {
-  trade_complexes: {
-    srcImg: StaticImageData;
-    name: string;
-  }[];
-  hskc: {
-    srcImg: StaticImageData;
-    name: string;
-  }[];
-}
+// export interface IProjectItems {
+//   srcImg: StaticImageData;
+//   name: string;
+// }
+// [];
 
 export interface IServiceItem {
   list: {
@@ -60,7 +55,7 @@ export interface IMainButtonProps {
   type?: "button" | "submit" | "reset";
   className?: string;
   children?: ReactNode;
-  onClick?: () => void;
+  onClick?: (() => void) | ((e: React.MouseEvent<HTMLButtonElement>) => void);
   ariaLabel?: string;
 }
 

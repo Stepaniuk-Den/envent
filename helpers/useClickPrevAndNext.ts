@@ -1,7 +1,7 @@
 import { IHandleNavigationProps } from "./interfaces";
 
 export const handleNext = <T>({
-  currentIndex,
+  // currentIndex,
   setCurrentIndex,
   array,
 }: IHandleNavigationProps<T>) => {
@@ -10,7 +10,7 @@ export const handleNext = <T>({
   // }
 };
 export const handlePrev = <T>({
-  currentIndex,
+  // currentIndex,
   setCurrentIndex,
   array,
 }: IHandleNavigationProps<T>) => {

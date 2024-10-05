@@ -1,5 +1,3 @@
-@import "../../../mixin.scss";
-
 .backdropBtn {
   position: fixed;
   display: flex;
@@ -10,10 +8,9 @@
   border: 2px solid var(--color-accent-blue);
   border-radius: 100%;
   z-index: 1000;
-  @include transition-standart;
-
-  &:hover {
-    color: var(--color-accent-yellow);
-    border-color: var(--color-accent-yellow);
-  }
+  transition: all 300ms ease-in-out;
 }
+.backdropBtn:hover {
+  color: var(--color-accent-yellow);
+  border-color: var(--color-accent-yellow);
+}/*# sourceMappingURL=backdropButton.module.css.map */
