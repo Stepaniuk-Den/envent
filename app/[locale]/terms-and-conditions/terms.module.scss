@@ -1,7 +1,7 @@
 @import "../mixin.scss";
 
 .wrapper {
-  padding-top: 20px;
+  padding-top: 50px;
   @include text-main-openSands;
 
   ul {
@@ -13,14 +13,25 @@
       }
     }
   }
+
   h2,
   h3 {
     text-align: center;
     margin-top: 20px;
   }
+
+  h2 {
+    @include text-title-h3-rubik;
+  }
+
+  h3 {
+    font-family: var(--font-rubik);
+  }
+
   p {
     text-indent: 30px;
   }
+
   a {
     display: inline;
     max-width: max-content;
