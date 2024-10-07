@@ -12,7 +12,7 @@
 
 .modalContent {
   position: absolute;
-  width: 90vw;
+  width: 80vw;
   height: 90%;
 }
 .modalContent .images {
@@ -33,16 +33,30 @@
   height: 30px;
 }
 
-.prevButton {
+.prevButton,
+.nextButton {
   top: 50%;
-  left: 20px;
   transform: translateY(-50%);
+}
+@media screen and (max-width: 767.98px) {
+  .prevButton,
+  .nextButton {
+    top: 70%;
+  }
+}
+@media screen and (max-width: 767.98px) and (orientation: landscape) {
+  .prevButton,
+  .nextButton {
+    top: 50%;
+  }
+}
+
+.prevButton {
+  left: 20px;
 }
 
 .nextButton {
-  top: 50%;
   right: 20px;
-  transform: translateY(-50%);
 }
 
 .ArrowLeftSVG,

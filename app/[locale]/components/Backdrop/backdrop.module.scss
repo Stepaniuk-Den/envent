@@ -17,7 +17,7 @@
 .modalContent {
   position: absolute;
   // overflow: hidden;
-  width: 90vw;
+  width: 80vw;
   // height: inherit;
   height: 90%;
   // --- By ratio width for responsive ---
@@ -61,16 +61,25 @@
   }
 }
 
-.prevButton {
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
-}
-
+.prevButton,
 .nextButton {
   top: 50%;
-  right: 20px;
   transform: translateY(-50%);
+
+  @include sm {
+    top: 70%;
+  }
+
+  @include sm-landscape {
+    top: 50%;
+  }
+}
+
+.prevButton {
+  left: 20px;
+}
+.nextButton {
+  right: 20px;
 }
 
 .ArrowLeftSVG,
