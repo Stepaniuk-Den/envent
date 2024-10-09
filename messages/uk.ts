@@ -93,9 +93,9 @@ const uk: FullTranslation = {
       title: "Реалізовані проєкти",
       description:
         "Об'єкти, у будівництві яких брало участь ТОВ Енерговентиляція.",
-      button: "зробити розрахунок",
+      button: "Зробити розрахунок",
       textCategory: "Вибрати категорію",
-      btnBack: "повернутись назад",
+      btnBack: "Повернутись назад",
     },
 
     projects: {
@@ -104,21 +104,22 @@ const uk: FullTranslation = {
         projectSlug: "sbu",
         title: "Адміністративно-господарське управління СБУ",
         mainImg: "/images/projects/administrative_buildings/sbuMain.webp",
-        mainAlt: "Адміністративна пʼятиповерхова будівля",
+        mainAlt:
+          "Центральний фасад будівлі Служби безпеки України з колонами і українським прапором на даху",
         heroDescription:
           "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "Адміністративна пʼятиповерхова будівля",
+            alt: "Центральний фасад будівлі Служби безпеки України з колонами і українським прапором на даху",
             src: "/images/projects/administrative_buildings/sbu1.jpg",
           },
           img2: {
-            alt: "Адміністративна пʼятиповерхова будівля",
+            alt: "Центральний фасад будівлі Служби безпеки України з колонами і українським прапором на даху",
             src: "/images/projects/administrative_buildings/sbuMain.webp",
           },
           img3: {
-            alt: "Адміністративна пʼятиповерхова будівля",
+            alt: "Центральний фасад будівлі Служби безпеки України з колонами і українським прапором на даху",
             src: "/images/projects/administrative_buildings/sbu2.jpeg",
           },
         },
@@ -134,21 +135,22 @@ const uk: FullTranslation = {
         projectSlug: "president_administration",
         title: "Адміністрація президента України",
         mainImg: "/images/projects/administrative_buildings/presAdmMain.webp",
-        mainAlt: "Адміністрація президента України",
+        mainAlt:
+          "Велика неокласична будівля з високими білими колонами, прикрашена великим українським прапором, що висить на фасаді",
         heroDescription:
           "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "Шестиповерхова адміністративна будівля",
+            alt: "Велика неокласична будівля з високими білими колонами",
             src: "/images/projects/administrative_buildings/presAdm1.jpg",
           },
           img2: {
-            alt: "Шестиповерхова адміністративна будівля",
+            alt: "Велика неокласична будівля з високими білими колонами, прикрашена великим українським прапором, що висить на фасаді",
             src: "/images/projects/administrative_buildings/presAdmMain.webp",
           },
           img3: {
-            alt: "Шестиповерхова адміністративна будівля",
+            alt: "Велика неокласична будівля з високими білими колонами",
             src: "/images/projects/administrative_buildings/presAdm2.png",
           },
         },
@@ -165,21 +167,22 @@ const uk: FullTranslation = {
         title: "Будівля верховної ради",
         mainImg:
           "/images/projects/administrative_buildings/verhovna_radaMain.webp",
-        mainAlt: "Адміністративна триповерхова будівля",
+        mainAlt:
+          "Триповерхова будівля парламенту України з куполоподібним дахом та українським прапором",
         heroDescription:
           "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "Адміністративна трьоповерхова будівля",
+            alt: "Триповерхова будівля парламенту України з куполоподібним дахом та українським прапором",
             src: "/images/projects/administrative_buildings/verhovna_rada1.jpg",
           },
           img2: {
-            alt: "Адміністративна трьоповерхова будівля",
+            alt: "Триповерхова будівля парламенту України з куполоподібним дахом та українським прапором",
             src: "/images/projects/administrative_buildings/verhovna_radaMain.webp",
           },
           img3: {
-            alt: "Адміністративна трьоповерхова будівля",
+            alt: "Триповерхова будівля парламенту України з куполоподібним дахом та українським прапором",
             src: "/images/projects/administrative_buildings/verhovna_rada2.jpg",
           },
         },
@@ -195,23 +198,25 @@ const uk: FullTranslation = {
         id: "4",
         projectSlug: "ukreximbank",
         title: "Укрексімбанк",
-        mainImg: "/images/projects/administrative_buildings/ukrexim_bank2.jpg",
-        mainAlt: "...",
+        mainImg:
+          "/images/projects/administrative_buildings/ukrexim_bankMain.webp",
+        mainAlt:
+          "Вхід до головного офісу Укрексімбанку, виконаний зі скла з сучасним дизайном",
         heroDescription:
           "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Вхід до головного офісу Укрексімбанку, виконаний зі скла з сучасним дизайном",
             src: "/images/projects/administrative_buildings/ukrexim_bank1.webp",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/administrative_buildings/ukrexim_bank2.jpg",
+            alt: "Вхід до головного офісу Укрексімбанку, виконаний зі скла з сучасним дизайном",
+            src: "/images/projects/administrative_buildings/ukrexim_bankMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/administrative_buildings/ukrexim_bank3.jpg",
+            alt: "Вхід до головного офісу Укрексімбанку, виконаний зі скла з сучасним дизайном",
+            src: "/images/projects/administrative_buildings/ukrexim_bank2.jpg",
           },
         },
 
@@ -227,23 +232,24 @@ const uk: FullTranslation = {
         projectSlug: "prominvestbank",
         title: "Промінвестбанк",
         mainImg:
-          "/images/projects/administrative_buildings/prominvest_bank2.png",
-        mainAlt: "...",
+          "/images/projects/administrative_buildings/prominvest_bankMain.webp",
+        mainAlt:
+          "Вхід до Промінвестбанку з золотистими елементами на темній глянцевій будівлі",
         heroDescription:
           "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Вхід до Промінвестбанку з золотистими елементами на темній глянцевій будівлі",
             src: "/images/projects/administrative_buildings/prominvest_bank1.jpg",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/administrative_buildings/prominvest_bank2.png",
+            alt: "Вхід до Промінвестбанку з золотистими елементами на темній глянцевій будівлі",
+            src: "/images/projects/administrative_buildings/prominvest_bankMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/administrative_buildings/prominvest_bank3.png",
+            alt: "Вхід до Промінвестбанку з золотистими елементами на темній глянцевій будівлі",
+            src: "/images/projects/administrative_buildings/prominvest_bank2.png",
           },
         },
 
@@ -259,23 +265,24 @@ const uk: FullTranslation = {
         projectSlug: "unicreditbank",
         title: "Юнікредітбанк",
         mainImg:
-          "/images/projects/administrative_buildings/unicredit_bank1.png",
-        mainAlt: "...",
+          "/images/projects/administrative_buildings/unicredit_bankMain.webp",
+        mainAlt:
+          "Велична будівля з арочними вікнами та логотипом UniCredit Bank на вершині, де зображена біла вивіска з червоно-чорними літерами",
         heroDescription:
           "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
-            src: "/images/projects/administrative_buildings/unicredit_bank1.png",
+            alt: "Велична будівля з арочними вікнами та логотипом UniCredit Bank на вершині, де зображена біла вивіска з червоно-чорними літерами",
+            src: "/images/projects/administrative_buildings/unicredit_bankMain.webp",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/administrative_buildings/unicredit_bank1.png",
+            alt: "Велична будівля з арочними вікнами та логотипом UniCredit Bank на вершині, де зображена біла вивіска з червоно-чорними літерами",
+            src: "/images/projects/administrative_buildings/unicredit_bankMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/administrative_buildings/unicredit_bank1.png",
+            alt: "Велична будівля з арочними вікнами та логотипом UniCredit Bank на вершині, де зображена біла вивіска з червоно-чорними літерами",
+            src: "/images/projects/administrative_buildings/unicredit_bankMain.webp",
           },
         },
 
@@ -290,22 +297,24 @@ const uk: FullTranslation = {
         id: "7",
         projectSlug: "ukrsotsbank",
         title: "Укрсоцбанк",
-        mainImg: "/images/projects/administrative_buildings/ukrsots_bank2.png",
-        mainAlt: "...",
+        mainImg:
+          "/images/projects/administrative_buildings/ukrsots_bankMain.webp",
+        mainAlt:
+          "Модернізована будівля Укрсоцбанку з сірими фасадними елементами та зеленою зоною біля входу",
         heroDescription:
           "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Модернізована будівля Укрсоцбанку з сірими фасадними елементами та зеленою зоною біля входу",
             src: "/images/projects/administrative_buildings/ukrsots_bank1.webp",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/administrative_buildings/ukrsots_bank2.png",
+            alt: "Модернізована будівля Укрсоцбанку з сірими фасадними елементами та зеленою зоною біля входу",
+            src: "/images/projects/administrative_buildings/ukrsots_bankMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Модернізована будівля Укрсоцбанку з сірими фасадними елементами та зеленою зоною біля входу",
             src: "/images/projects/administrative_buildings/ukrsots_bank1.webp",
           },
         },
@@ -321,26 +330,26 @@ const uk: FullTranslation = {
         id: "8",
         projectSlug: "bank_aval",
         title: "Банк «АВАЛЬ»",
-        mainImg: "/images/projects/administrative_buildings/bank_aval2.png",
-        mainAlt: "",
+        mainImg: "/images/projects/administrative_buildings/bank_avalMain.webp",
+        mainAlt:
+          "Висока офісна будівля з логотипом Райффайзен Банку Аваль на вершині",
         heroDescription:
           "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Висока офісна будівля з логотипом Райффайзен Банку Аваль на вершині",
             src: "/images/projects/administrative_buildings/bank_aval1.jpg",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/administrative_buildings/bank_aval2.png",
+            alt: "Висока офісна будівля з логотипом Райффайзен Банку Аваль на вершині",
+            src: "/images/projects/administrative_buildings/bank_avalMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/administrative_buildings/bank_aval3.jpg",
+            alt: "Висока офісна будівля з логотипом Райффайзен Банку Аваль на вершині",
+            src: "/images/projects/administrative_buildings/bank_aval2.jpg",
           },
         },
-
         link: "...",
         address: "...",
         categorySlug: "administrative_buildings",
@@ -352,23 +361,24 @@ const uk: FullTranslation = {
         id: "9",
         projectSlug: "oschadbank",
         title: "Державний Ощадний Банк України",
-        mainImg: "/images/projects/administrative_buildings/oschad_bank2.png",
-        mainAlt: "...",
+        mainImg:
+          "/images/projects/administrative_buildings/oschad_bankMain.webp",
+        mainAlt: "Фасад банківської будівлі з логотипом Ощадбанку",
         heroDescription:
           "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Фасад банківської будівлі з логотипом Ощадбанку",
             src: "/images/projects/administrative_buildings/oschad_bank1.webp",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/administrative_buildings/oschad_bank2.png",
+            alt: "Фасад банківської будівлі з логотипом Ощадбанку",
+            src: "/images/projects/administrative_buildings/oschad_bankMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/administrative_buildings/oschad_bank3.webp",
+            alt: "Фасад банківської будівлі з логотипом Ощадбанку",
+            src: "/images/projects/administrative_buildings/oschad_bank2.webp",
           },
         },
 
@@ -384,23 +394,24 @@ const uk: FullTranslation = {
         id: "10",
         projectSlug: "dinamo-stadium",
         title: "Реконструкція стадіону «Динамо» ім. В.Лобановського",
-        mainImg: "/images/projects/public_facilities/dinamo1.webp",
-        mainAlt: "Реконструкція стадіону «Динамо» ім. В.Лобановського",
+        mainImg: "/images/projects/public_facilities/dinamoMain.webp",
+        mainAlt:
+          "Головний вхід до стадіону «Динамо» в Києві з арки, де розміщена емблема футбольного клубу «Динамо»",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
-            src: "/images/projects/public_facilities/dinamo1.webp",
+            alt: "Головний вхід до стадіону «Динамо» в Києві з арки, де розміщена емблема футбольного клубу «Динамо»",
+            src: "/images/projects/public_facilities/dinamoMain.webp",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/public_facilities/dinamo1.webp",
+            alt: "Головний вхід до стадіону «Динамо» в Києві з арки, де розміщена емблема футбольного клубу «Динамо»",
+            src: "/images/projects/public_facilities/dinamoMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/public_facilities/dinamo1.webp",
+            alt: "Головний вхід до стадіону «Динамо» в Києві з арки, де розміщена емблема футбольного клубу «Динамо»",
+            src: "/images/projects/public_facilities/dinamoMain.webp",
           },
         },
         link: "...",
@@ -414,23 +425,23 @@ const uk: FullTranslation = {
         id: "11",
         projectSlug: "hotel",
         title: "Готель",
-        mainImg: "/images/projects/public_facilities/hotel1.webp",
-        mainAlt: "...",
+        mainImg: "/images/projects/public_facilities/hotelMain.webp",
+        mainAlt: "Готель у стилі червоної цегли з декором та арочними вікнами",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
-            src: "/images/projects/public_facilities/hotel1.webp",
+            alt: "Готель у стилі червоної цегли з декором та арочними вікнами",
+            src: "/images/projects/public_facilities/hotelMain.webp",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/public_facilities/hotel1.webp",
+            alt: "Готель у стилі червоної цегли з декором та арочними вікнами",
+            src: "/images/projects/public_facilities/hotelMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/public_facilities/hotel1.webp",
+            alt: "Готель у стилі червоної цегли з декором та арочними вікнами",
+            src: "/images/projects/public_facilities/hotelMain.webp",
           },
         },
         link: "...",
@@ -444,23 +455,23 @@ const uk: FullTranslation = {
         id: "12",
         projectSlug: "hotel_molodizhnyi",
         title: "Готель Молодіжний",
-        mainImg: "/images/projects/public_facilities/hotelMolod1.webp",
-        mainAlt: "...",
+        mainImg: "/images/projects/public_facilities/hotelMolodMain.webp",
+        mainAlt: "Готель з чорними та білими фасадами",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
-            src: "/images/projects/public_facilities/hotelMolod1.webp",
+            alt: "Готель з чорними та білими фасадами",
+            src: "/images/projects/public_facilities/hotelMolodMain.webp",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/public_facilities/hotelMolod1.webp",
+            alt: "Готель з чорними та білими фасадами",
+            src: "/images/projects/public_facilities/hotelMolodMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/public_facilities/hotelMolod1.webp",
+            alt: "Готель з чорними та білими фасадами",
+            src: "/images/projects/public_facilities/hotelMolodMain.webp",
           },
         },
         link: "...",
@@ -474,23 +485,24 @@ const uk: FullTranslation = {
         id: "13",
         projectSlug: "cafe_brovar",
         title: "Кафе Бровар",
-        mainImg: "/images/projects/public_facilities/cafeBrovar1.webp",
-        mainAlt: "...",
+        mainImg: "/images/projects/public_facilities/cafeBrovarMain.webp",
+        mainAlt:
+          "Кафе Бровар, розташоване на нижньому поверсі багатоповерхової будівлі",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
-            src: "/images/projects/public_facilities/cafeBrovar1.webp",
+            alt: "Кафе Бровар, розташоване на нижньому поверсі багатоповерхової будівлі",
+            src: "/images/projects/public_facilities/cafeBrovarMain.webp",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/public_facilities/cafeBrovar1.webp",
+            alt: "Кафе Бровар, розташоване на нижньому поверсі багатоповерхової будівлі",
+            src: "/images/projects/public_facilities/cafeBrovarMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/public_facilities/cafeBrovar1.webp",
+            alt: "Кафе Бровар, розташоване на нижньому поверсі багатоповерхової будівлі",
+            src: "/images/projects/public_facilities/cafeBrovarMain.webp",
           },
         },
         link: "...",
@@ -504,23 +516,23 @@ const uk: FullTranslation = {
         id: "14",
         projectSlug: "office_center",
         title: "Офісний центр",
-        mainImg: "/images/projects/public_facilities/officeCenter1.webp",
-        mainAlt: "Реконструкція стадіону «Динамо» ім. В.Лобановського",
+        mainImg: "/images/projects/public_facilities/officeCenterMain.webp",
+        mainAlt: "Бізнес-центр з сучасною скляною та металевою обробкою",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
-            src: "/images/projects/public_facilities/officeCenter1.webp",
+            alt: "Бізнес-центр з сучасною скляною та металевою обробкою",
+            src: "/images/projects/public_facilities/officeCenterMain.webp",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/public_facilities/officeCenter1.webp",
+            alt: "Бізнес-центр з сучасною скляною та металевою обробкою",
+            src: "/images/projects/public_facilities/officeCenterMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/public_facilities/officeCenter1.webp",
+            alt: "Бізнес-центр з сучасною скляною та металевою обробкою",
+            src: "/images/projects/public_facilities/officeCenterMain.webp",
           },
         },
         link: "...",
@@ -535,23 +547,24 @@ const uk: FullTranslation = {
         id: "15",
         projectSlug: "sanatorium_yalynka",
         title: "Київський міський дитячий санаторій Ялинка",
-        mainImg: "/images/projects/hskc/sanatorium_yalynka1.webp",
-        mainAlt: "...",
+        mainImg: "/images/projects/hskc/sanatorium_yalynkaMain.webp",
+        mainAlt:
+          "Головний корпус Київського міського дитячого санаторію «Ялинка», оточений деревами, з яскравим фасадом та територією для відпочинку дітей",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
-            src: "/images/projects/hskc/sanatorium_yalynka1.webp",
+            alt: "Головний корпус Київського міського дитячого санаторію «Ялинка», оточений деревами, з яскравим фасадом та територією для відпочинку дітей",
+            src: "/images/projects/hskc/sanatorium_yalynkaMain.webp",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/hskc/sanatorium_yalynka1.webp",
+            alt: "Головний корпус Київського міського дитячого санаторію «Ялинка», оточений деревами, з яскравим фасадом та територією для відпочинку дітей",
+            src: "/images/projects/hskc/sanatorium_yalynkaMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/hskc/sanatorium_yalynka1.webp",
+            alt: "Головний корпус Київського міського дитячого санаторію «Ялинка», оточений деревами, з яскравим фасадом та територією для відпочинку дітей",
+            src: "/images/projects/hskc/sanatorium_yalynkaMain.webp",
           },
         },
         link: "...",
@@ -565,23 +578,24 @@ const uk: FullTranslation = {
         id: "16",
         projectSlug: "cancer_dispensary",
         title: "Онкодиспансер обласної лікарні в м.Києві",
-        mainImg: "/images/projects/hskc/cancer_dispensary1.webp",
-        mainAlt: "...",
+        mainImg: "/images/projects/hskc/cancer_dispensaryMain.webp",
+        mainAlt:
+          "Будівля онкодиспансеру обласної лікарні в Києві з сучасним фасадом, кілька поверхів, оточена зеленою територією",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
-            src: "/images/projects/hskc/cancer_dispensary1.webp",
+            alt: "Будівля онкодиспансеру обласної лікарні в Києві з сучасним фасадом, кілька поверхів, оточена зеленою територією",
+            src: "/images/projects/hskc/cancer_dispensaryMain.webp",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/hskc/cancer_dispensary1.webp",
+            alt: "Будівля онкодиспансеру обласної лікарні в Києві з сучасним фасадом, кілька поверхів, оточена зеленою територією",
+            src: "/images/projects/hskc/cancer_dispensaryMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/hskc/cancer_dispensary1.webp",
+            alt: "Будівля онкодиспансеру обласної лікарні в Києві з сучасним фасадом, кілька поверхів, оточена зеленою територією",
+            src: "/images/projects/hskc/cancer_dispensaryMain.webp",
           },
         },
         link: "...",
@@ -594,24 +608,25 @@ const uk: FullTranslation = {
       17: {
         id: "17",
         projectSlug: "medical_clinic_innovation",
-        title: "Мeдична клініка Інновація",
-        mainImg: "/images/projects/hskc/medical_clinic_innovation1.webp",
-        mainAlt: "...",
+        title: "Мeдична клініка «Інновація»",
+        mainImg: "/images/projects/hskc/medical_clinic_innovationMain.webp",
+        mainAlt:
+          "Фасад трьоповерхової медичної клініки Інновація з сучасним дизайном",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
-            src: "/images/projects/hskc/medical_clinic_innovation1.webp",
+            alt: "Фасад трьоповерхової медичної клініки Інновація з сучасним дизайном",
+            src: "/images/projects/hskc/medical_clinic_innovationMain.webp",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/hskc/medical_clinic_innovation1.webp",
+            alt: "Фасад трьоповерхової медичної клініки Інновація з сучасним дизайном",
+            src: "/images/projects/hskc/medical_clinic_innovationMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/hskc/medical_clinic_innovation1.webp",
+            alt: "Фасад трьоповерхової медичної клініки Інновація з сучасним дизайном",
+            src: "/images/projects/hskc/medical_clinic_innovationMain.webp",
           },
         },
         link: "...",
@@ -625,23 +640,24 @@ const uk: FullTranslation = {
         id: "18",
         projectSlug: "epiphany_cathedral",
         title: "Свято-богоявленський кафедральний Собор",
-        mainImg: "/images/projects/hskc/epiphany_cathedral1.webp",
-        mainAlt: "...",
+        mainImg: "/images/projects/hskc/epiphany_cathedralMain.webp",
+        mainAlt:
+          "Кафедральний собор з високими куполами та традиційною православною архітектурою",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
-            src: "/images/projects/hskc/epiphany_cathedral1.webp",
+            alt: "Кафедральний собор з високими куполами та традиційною православною архітектурою",
+            src: "/images/projects/hskc/epiphany_cathedralMain.webp",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/hskc/epiphany_cathedral1.webp",
+            alt: "Кафедральний собор з високими куполами та традиційною православною архітектурою",
+            src: "/images/projects/hskc/epiphany_cathedralMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/hskc/epiphany_cathedral1.webp",
+            alt: "Кафедральний собор з високими куполами та традиційною православною архітектурою",
+            src: "/images/projects/hskc/epiphany_cathedralMain.webp",
           },
         },
         link: "...",
@@ -655,23 +671,24 @@ const uk: FullTranslation = {
         id: "19",
         projectSlug: "residential_buildings",
         title: "Житлові будинки",
-        mainImg: "/images/projects/hskc/residential_buildings2.webp",
-        mainAlt: "...",
+        mainImg: "/images/projects/hskc/residential_buildingsMain.webp",
+        mainAlt:
+          "Сучасні багатоповерхові житлові будинки з балконами, розташовані у міському районі",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Сучасні багатоповерхові житлові будинки з балконами, розташовані у міському районі",
             src: "/images/projects/hskc/residential_buildings1.webp",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/hskc/residential_buildings2.webp",
+            alt: "Сучасні багатоповерхові житлові будинки з балконами, розташовані у міському районі",
+            src: "/images/projects/hskc/residential_buildingsMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/hskc/residential_buildings3.webp",
+            alt: "Сучасні багатоповерхові житлові будинки з балконами, розташовані у міському районі",
+            src: "/images/projects/hskc/residential_buildings2.webp",
           },
         },
         link: "...",
@@ -687,21 +704,22 @@ const uk: FullTranslation = {
         projectSlug: "amstor",
         title: "Мережа громадсько-торгівельних центрів Амстор",
         mainImg: "/images/projects/trade_complexes/amstorMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Фасад торгово-розважального центру «Амстор» із яскравими вивісками та просторою парковкою перед будівлею",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Фасад торгово-розважального центру «Амстор» із яскравими вивісками та просторою парковкою перед будівлею",
             src: "/images/projects/trade_complexes/amstorMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "Фасад торгово-розважального центру «Амстор» із яскравими вивісками та просторою парковкою перед будівлею",
             src: "/images/projects/trade_complexes/amstorMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Фасад торгово-розважального центру «Амстор» із яскравими вивісками та просторою парковкою перед будівлею",
             src: "/images/projects/trade_complexes/amstorMain.webp",
           },
         },
@@ -717,21 +735,22 @@ const uk: FullTranslation = {
         projectSlug: "silpo",
         title: "Мережа супермаркетів Сільпо",
         mainImg: "/images/projects/trade_complexes/silpoMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Вхід до супермаркету Сільпо з фірмовою вивіскою та продуктовими вітринами",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Вхід до супермаркету Сільпо з фірмовою вивіскою та продуктовими вітринами",
             src: "/images/projects/trade_complexes/silpoMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "Вхід до супермаркету Сільпо з фірмовою вивіскою та продуктовими вітринами",
             src: "/images/projects/trade_complexes/silpoMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Вхід до супермаркету Сільпо з фірмовою вивіскою та продуктовими вітринами",
             src: "/images/projects/trade_complexes/silpoMain.webp",
           },
         },
@@ -747,21 +766,22 @@ const uk: FullTranslation = {
         projectSlug: "retroville",
         title: "Торгівельний центр Ретровіль",
         mainImg: "/images/projects/trade_complexes/retrovilleMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Фасад торгового центру Ретровіль з сучасним дизайном та великими скляними вітринами",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Фасад торгового центру Ретровіль з сучасним дизайном та великими скляними вітринами",
             src: "/images/projects/trade_complexes/retrovilleMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "Фасад торгового центру Ретровіль з сучасним дизайном та великими скляними вітринами",
             src: "/images/projects/trade_complexes/retrovilleMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Фасад торгового центру Ретровіль з сучасним дизайном та великими скляними вітринами",
             src: "/images/projects/trade_complexes/retrovilleMain.webp",
           },
         },
@@ -777,21 +797,22 @@ const uk: FullTranslation = {
         projectSlug: "darynok",
         title: "Торгівельний центр Даринок",
         mainImg: "/images/projects/trade_complexes/darynokMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Фасад торгового центру Даринок коричневого кольору з великими вітринами та яскравими вивісками",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Фасад торгового центру Даринок коричневого кольору з великими вітринами та яскравими вивісками",
             src: "/images/projects/trade_complexes/darynokMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "Фасад торгового центру Даринок коричневого кольору з великими вітринами та яскравими вивісками",
             src: "/images/projects/trade_complexes/darynokMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Фасад торгового центру Даринок коричневого кольору з великими вітринами та яскравими вивісками",
             src: "/images/projects/trade_complexes/darynokMain.webp",
           },
         },
@@ -807,21 +828,22 @@ const uk: FullTranslation = {
         projectSlug: "novus",
         title: "Гіпермаркет Novus",
         mainImg: "/images/projects/trade_complexes/novusMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Вхід до гіпермаркету Novus з яскравою вивіскою та широкими вітринами, що демонструють асортимент товарів",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Вхід до гіпермаркету Novus з яскравою вивіскою та широкими вітринами, що демонструють асортимент товарів",
             src: "/images/projects/trade_complexes/novus1.png",
           },
           img2: {
-            alt: "...",
+            alt: "Вхід до гіпермаркету Novus з яскравою вивіскою та широкими вітринами, що демонструють асортимент товарів",
             src: "/images/projects/trade_complexes/novusMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Вхід до гіпермаркету Novus з яскравою вивіскою та широкими вітринами, що демонструють асортимент товарів",
             src: "/images/projects/trade_complexes/novus1.png",
           },
         },
@@ -837,21 +859,22 @@ const uk: FullTranslation = {
         projectSlug: "forum",
         title: "Торгівельно-розважальний центр Forum",
         mainImg: "/images/projects/trade_complexes/forumMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Фасад торгівельно-розважального центру Forum з сучасним дизайном, великими вікнами та вивісками, що рекламують магазини та розважальні заклади",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Фасад торгівельно-розважального центру Forum з сучасним дизайном, великими вікнами та вивісками, що рекламують магазини та розважальні заклади",
             src: "/images/projects/trade_complexes/forum1.png",
           },
           img2: {
-            alt: "...",
+            alt: "Фасад торгівельно-розважального центру Forum з сучасним дизайном, великими вікнами та вивісками, що рекламують магазини та розважальні заклади",
             src: "/images/projects/trade_complexes/forumMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Фасад торгівельно-розважального центру Forum з сучасним дизайном, великими вікнами та вивісками, що рекламують магазини та розважальні заклади",
             src: "/images/projects/trade_complexes/forum1.png",
           },
         },
@@ -869,21 +892,22 @@ const uk: FullTranslation = {
         projectSlug: "kraft_foods_ukraine",
         title: "Кондитерська фабрика Крафт Фудз України",
         mainImg: "/images/projects/industry/kraft_foods_ukraineMain.webp",
-        mainAlt: "Кондитерська фабрика Крафт Фудз України",
+        mainAlt:
+          "Зовнішній вигляд фасаду синього кольору кондитерської фабрики з великими вікнами та брендовими вивісками",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Зовнішній вигляд фасаду синього кольору кондитерської фабрики з великими вікнами та брендовими вивісками",
             src: "/images/projects/industry/kraft_foods_ukraineMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "Зовнішній вигляд фасаду синього кольору кондитерської фабрики з великими вікнами та брендовими вивісками",
             src: "/images/projects/industry/kraft_foods_ukraineMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Зовнішній вигляд фасаду синього кольору кондитерської фабрики з великими вікнами та брендовими вивісками",
             src: "/images/projects/industry/kraft_foods_ukraineMain.webp",
           },
         },
@@ -899,21 +923,22 @@ const uk: FullTranslation = {
         projectSlug: "alko_invest",
         title: "Обʼєкти ЗАТ АЛКО ІНВЕСТ",
         mainImg: "/images/projects/industry/alko_investMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Фасад будівлі ЗАТ АЛКО ІНВЕСТ із сучасним дизайном, що демонструє логотип компанії на зовнішній стіні",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Фасад будівлі ЗАТ АЛКО ІНВЕСТ із сучасним дизайном, що демонструє логотип компанії на зовнішній стіні",
             src: "/images/projects/industry/alko_invest1.webp",
           },
           img2: {
-            alt: "...",
+            alt: "Фасад будівлі ЗАТ АЛКО ІНВЕСТ із сучасним дизайном, що демонструє логотип компанії на зовнішній стіні",
             src: "/images/projects/industry/alko_investMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Фасад будівлі ЗАТ АЛКО ІНВЕСТ із сучасним дизайном, що демонструє логотип компанії на зовнішній стіні",
             src: "/images/projects/industry/alko_invest1.webp",
           },
         },
@@ -929,21 +954,22 @@ const uk: FullTranslation = {
         projectSlug: "osmoloda_plant",
         title: "Завод будматеріалів ТОВ ОСМОЛОДА",
         mainImg: "/images/projects/industry/osmoloda_plantMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Зовнішній вигляд заводу будматеріалів ТОВ ОСМОЛОДА з виробничими зонами",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Зовнішній вигляд заводу будматеріалів ТОВ ОСМОЛОДА з виробничими зонами",
             src: "/images/projects/industry/osmoloda_plantMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "Зовнішній вигляд заводу будматеріалів ТОВ ОСМОЛОДА з виробничими зонами",
             src: "/images/projects/industry/osmoloda_plantMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Зовнішній вигляд заводу будматеріалів ТОВ ОСМОЛОДА з виробничими зонами",
             src: "/images/projects/industry/osmoloda_plantMain.webp",
           },
         },
@@ -960,21 +986,22 @@ const uk: FullTranslation = {
         projectSlug: "altacenter",
         title: "Альта-центр в Києві",
         mainImg: "/images/projects/trade_complexes/altacenterMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Фасад Альта-центру в Києві зеленого кольору з сучасним архітектурним дизайном",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Фасад Альта-центру в Києві зеленого кольору з сучасним архітектурним дизайном",
             src: "/images/projects/trade_complexes/altacenter1.png",
           },
           img2: {
-            alt: "...",
+            alt: "Фасад Альта-центру в Києві зеленого кольору з сучасним архітектурним дизайном",
             src: "/images/projects/trade_complexes/altacenterMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Фасад Альта-центру в Києві зеленого кольору з сучасним архітектурним дизайном",
             src: "/images/projects/trade_complexes/altacenter1.png",
           },
         },
@@ -990,21 +1017,22 @@ const uk: FullTranslation = {
         projectSlug: "karavan",
         title: "Торгово-розважальний центр Karavan",
         mainImg: "/images/projects/trade_complexes/karavanMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Фасад торгово-розважального центру Karavan з великим логотипом, вхідними дверима та паркувальними місцями на передньому плані",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Фасад торгово-розважального центру Karavan з великим логотипом, вхідними дверима та паркувальними місцями на передньому плані",
             src: "/images/projects/trade_complexes/karavan1.png",
           },
           img2: {
-            alt: "...",
+            alt: "Фасад торгово-розважального центру Karavan з великим логотипом, вхідними дверима та паркувальними місцями на передньому плані",
             src: "/images/projects/trade_complexes/karavanMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Фасад торгово-розважального центру Karavan з великим логотипом, вхідними дверима та паркувальними місцями на передньому плані",
             src: "/images/projects/trade_complexes/karavan2.png",
           },
         },
@@ -1020,21 +1048,22 @@ const uk: FullTranslation = {
         projectSlug: "epicenter",
         title: "Мережа гіпермаркетів Епіцентр",
         mainImg: "/images/projects/trade_complexes/epicenterMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Фасад гіпермаркету Епіцентр з великим логотипом, вхідними дверима та сучасним дизайном, оточений паркувальними місцями",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Фасад гіпермаркету Епіцентр з великим логотипом, вхідними дверима та сучасним дизайном, оточений паркувальними місцями",
             src: "/images/projects/trade_complexes/epicenter1.png",
           },
           img2: {
-            alt: "...",
+            alt: "Фасад гіпермаркету Епіцентр з великим логотипом, вхідними дверима та сучасним дизайном, оточений паркувальними місцями",
             src: "/images/projects/trade_complexes/epicenterMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Фасад гіпермаркету Епіцентр з великим логотипом, вхідними дверима та сучасним дизайном, оточений паркувальними місцями",
             src: "/images/projects/trade_complexes/epicenter2.png",
           },
         },
@@ -1050,21 +1079,21 @@ const uk: FullTranslation = {
         projectSlug: "odeskiy_bulvar",
         title: "Одеський бульвар",
         mainImg: "/images/projects/hskc/odeskiy_bulvarMain.webp",
-        mainAlt: "...",
+        mainAlt: "Житловий комплекс яскравих багатоповерхівок Одеський бульвар",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Житловий комплекс яскравих багатоповерхівок Одеський бульвар",
             src: "/images/projects/hskc/odeskiy_bulvarMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "Житловий комплекс яскравих багатоповерхівок Одеський бульвар",
             src: "/images/projects/hskc/odeskiy_bulvarMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Житловий комплекс яскравих багатоповерхівок Одеський бульвар",
             src: "/images/projects/hskc/odeskiy_bulvarMain.webp",
           },
         },
@@ -1080,21 +1109,22 @@ const uk: FullTranslation = {
         projectSlug: "blockbuster",
         title: "Розважальний центр BlockБастер",
         mainImg: "/images/projects/trade_complexes/blockbusterMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Скляний фасад розважального центру BlockBuster з яскраво-червоними вставками з великим логотипом",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Скляний фасад розважального центру BlockBuster з яскраво-червоними вставками з великим логотипом",
             src: "/images/projects/trade_complexes/blockbusterMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "Скляний фасад розважального центру BlockBuster з яскраво-червоними вставками з великим логотипом",
             src: "/images/projects/trade_complexes/blockbusterMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Скляний фасад розважального центру BlockBuster з яскраво-червоними вставками з великим логотипом",
             src: "/images/projects/trade_complexes/blockbusterMain.webp",
           },
         },
@@ -1110,21 +1140,22 @@ const uk: FullTranslation = {
         projectSlug: "river_mall",
         title: "Торговий центр River Mall",
         mainImg: "/images/projects/trade_complexes/river_mallMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Фасад торгового центру River Mall з сучасним дизайном і скляними вітринами",
         heroDescription:
-          "Object in the construction of which Energoventilyatsiya LLC took part.",
+          "Об'єкт, у будівництві якого брало участь ТОВ Енерговентиляція.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Фасад торгового центру River Mall з сучасним дизайном і скляними вітринами",
             src: "/images/projects/trade_complexes/river_mall1.png",
           },
           img2: {
-            alt: "...",
+            alt: "Фасад торгового центру River Mall з сучасним дизайном і скляними вітринами",
             src: "/images/projects/trade_complexes/river_mallMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Фасад торгового центру River Mall з сучасним дизайном і скляними вітринами",
             src: "/images/projects/trade_complexes/river_mall1.png",
           },
         },

@@ -90,20 +90,15 @@
 
 .counter {
   position: absolute;
-  left: 60px;
-  bottom: 2%;
+  // left: 60px;
+  // bottom: 2%;
+  left: 20px;
+  top: 20px;
   color: var(--color-accent-blue);
   font-size: 16px;
   font-weight: 600;
 
   @include md {
-    // bottom: -20px;
     font-size: 14px;
-  }
-
-  @include sm {
-    left: 20px;
-    // bottom: unset;
-    top: 20px;
   }
 }
