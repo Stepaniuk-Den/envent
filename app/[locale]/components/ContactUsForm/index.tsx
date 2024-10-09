@@ -6,12 +6,13 @@ import Line from "../Line";
 import Modal from "../Modal";
 
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { sendEmail } from "@/utils/send-email";
 import { useModal } from "@/helpers/useModal";
 import { ContactUsT } from "@/messages/types/ContactUsT";
 import { parseHTMLString } from "@/helpers/parseHTMLString";
+import { setCookie, getCookie, deleteCookie } from "cookies-next";
 import AnimatedTitle from "../AnimatedTitle";
 import Observer from "@/helpers/observer";
 import Checkbox from "../Checkbox";
@@ -32,6 +33,7 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
   const {
     register,
     handleSubmit,
+    setValue,
     reset,
     formState: { errors, isValid },
   } = useForm<FormData>({ mode: "onChange" });
@@ -43,6 +45,28 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
 
   useModal(isModalOpen, setIsModalOpen);
 
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+    setValue(name as keyof FormData, value);
+
+    const cookieData = getCookie("contactUsForm");
+  
+    const parsedCookieData = cookieData ? JSON.parse(cookieData as string) : {};
+  
+    setCookie("contactUsForm", JSON.stringify({ ...parsedCookieData, [name]: value }));
+  };
+
+  useEffect(() => {
+    const savedData = getCookie("contactUsForm");
+    if (savedData) {
+      const parsedData = JSON.parse(savedData as string);
+      for (const key in parsedData) {
+        setValue(key as keyof FormData, parsedData[key]);
+      }
+    }
+  }, [setValue]);
+
+
   const onSubmit = async (data: FormData) => {
     try {
       const response = await sendEmail(data);
@@ -53,6 +77,7 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
       }
       setIsModalOpen(true);
       reset();
+      deleteCookie("contactUsForm");
     } catch (err: any) {
       setModalMessage(`${t.msg_error} ${err.message}`);
       setIsModalOpen(true);
@@ -90,6 +115,7 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
                         },
                       },
                     })}
+                    onChange={handleChange}
                   />
                   {errors?.name && (
                     <div className={styles.error_name}>
@@ -111,7 +137,8 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
                         message: `${t.requiredEmail}`,
                       },
                     })}
-                  />
+                    onChange={handleChange}
+                  />          
                   {errors?.email && (
                     <div className={styles.error_name}>
                       <p>{errors?.email?.message || "Error!"}</p>
@@ -130,6 +157,7 @@ const ContactUsForm: React.FC<Props> = ({ className, t }) => {
                       message: `${t.requiredMessage}`,
                     },
                   })}
+                  onChange={handleChange}
                 />
                 {errors?.message && (
                   <div className={styles.error_name}>

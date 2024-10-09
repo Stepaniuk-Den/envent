@@ -1939,6 +1939,7 @@ const en: FullTranslation = {
       phone: "Call for a Quote",
       btnForm: "Online estimate form",
       btnBack: " Go back",
+      description:"Description",
     },
   },
   ContactsPage: {
