@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 import { IPropsProjectItem } from "@/helpers/interfaces";
 import { handleCloseBackdrop } from "@/helpers/handleOpenAndCloseBackdrop";
 import { handleNext, handlePrev } from "@/helpers/useClickPrevAndNext";
+import BackdropButtonsPrevNext from "../BackdropButtonsPrevNext";
 // import { wrap } from "popmotion";
 
 interface IBackdropProps {
@@ -168,7 +169,7 @@ IBackdropProps) => {
                 <Close className={styles.closeSVG} />
               </BackdropButton>
 
-              <BackdropButton
+              {/* <BackdropButton
                 className={styles.prevButton}
                 // onClick={() =>
                 //   handlePrev({
@@ -203,7 +204,8 @@ IBackdropProps) => {
                 aria-label="Swipe to next"
               >
                 <ArrowRight className={styles.ArrowRightSVG} />
-              </BackdropButton>
+              </BackdropButton> */}
+              <BackdropButtonsPrevNext paginate={paginate} />
             </motion.div>
           )}
         </AnimatePresence>

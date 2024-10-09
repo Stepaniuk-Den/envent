@@ -22,10 +22,6 @@
     overflow: hidden;
     transform: scale(1);
 
-    &:hover .overlay_content {
-      opacity: 1;
-    }
-
     .img {
       object-fit: cover;
     }
@@ -42,7 +38,6 @@
       align-items: center;
       justify-content: flex-end;
       color: var(--color-white);
-      opacity: 0;
       @include transition-standart;
 
       .buttons_wrapper {
