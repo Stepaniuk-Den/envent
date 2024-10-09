@@ -1920,6 +1920,7 @@ const uk: FullTranslation = {
       phone: "Залишити заявку",
       btnForm: "зробити розрахунок",
       btnBack: "повернутись назад",
+      description:"Опис",
     },
   },
   ContactsPage: {

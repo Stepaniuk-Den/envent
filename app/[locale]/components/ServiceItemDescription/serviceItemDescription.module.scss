@@ -23,6 +23,10 @@
   padding-bottom: 38px !important;
   }
 
+  & .title{
+    text-align: center;
+  }
+
   .svg_container {
     height: 88px;
     @include transition-standart;

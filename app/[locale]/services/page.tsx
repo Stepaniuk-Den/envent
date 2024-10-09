@@ -1,15 +1,16 @@
 import { ServicesPageT } from "@/messages/types/ServicesPageT";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { localize } from "@/localize";
-import Services from "../components/Services";
 import { HeroRightSideT } from "@/messages/types/HeroRightSideT";
-import Hero from "../components/Hero";
 import { HeroServicesBG } from "@/helpers/imagesImport";
+import { MainPageT } from "@/messages/types/MainPageT";
+import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
+import Services from "../components/Services";
+import Hero from "../components/Hero";
 import HeroRightSideList from "../components/HeroRightSideList";
 import ProjectSection from "../components/ProjectsSection";
-import { MainPageT } from "@/messages/types/MainPageT";
 import ContactUsSection from "../components/ContactUsSection";
-import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
+// import { getBase64FromImage } from "@/helpers/getBase64FromImage";
 
 type Props = {
   params: { locale: string };
