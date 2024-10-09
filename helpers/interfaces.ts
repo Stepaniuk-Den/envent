@@ -254,6 +254,7 @@ export interface IServiceAboutProps {
   phone: string;
   btnForm: string;
   btnBack?: string;
+  description?:string;
 }
 
 export interface IImageItem {

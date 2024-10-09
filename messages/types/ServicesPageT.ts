@@ -508,5 +508,6 @@ export class ServicesPageT implements Translation {
     phone: "",
     btnForm: "",
     btnBack:"",
+    description:"",
   };
 }
