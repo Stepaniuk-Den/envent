@@ -102,6 +102,8 @@
   }
 
   @include sm {
-    left: 0;
+    left: 20px;
+    // bottom: unset;
+    top: 20px;
   }
 }

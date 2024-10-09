@@ -1,50 +1,28 @@
 @import "../../mixin.scss";
 
-.prevButton {
-  top: 50%;
-  left: 20px;
-  transform: translateY(-50%);
+.prevButton,
+.nextButton {
+  bottom: 50%;
+  transform: translateY(50%);
+
+  @include sm {
+    bottom: 36px;
+  }
+
+  @include sm-landscape {
+    bottom: 50%;
+  }
 }
 
+.prevButton {
+  left: 20px;
+}
 .nextButton {
-  top: 50%;
   right: 20px;
-  transform: translateY(-50%);
 }
 
 .ArrowLeftSVG,
 .ArrowRightSVG {
   width: 32px;
   height: 32px;
-}
-
-.prevButton,
-.nextButton {
-  &.absolute {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: var(--color-white);
-    border: none;
-
-    @include md {
-      width: 40px;
-      height: 40px;
-    }
-
-    svg {
-      width: 42px;
-      height: 42px;
-
-      @include md {
-        width: 30px;
-        height: 30px;
-      }
-    }
-
-    &:hover {
-      color: var(--color-white);
-      background-color: var(--color-accent-yellow);
-    }
-  }
 }
