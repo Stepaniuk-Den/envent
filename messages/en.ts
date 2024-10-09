@@ -102,21 +102,22 @@ const en: FullTranslation = {
         title:
           "Administrative and Economic Department of the Security Service of Ukraine",
         mainImg: "/images/projects/administrative_buildings/sbuMain.webp",
-        mainAlt: "Five-story administrative building",
+        mainAlt:
+          "The central facade of the building of the Security Service of Ukraine with columns and the Ukrainian flag on the roof.",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "Five-story administrative building",
+            alt: "The central facade of the building of the Security Service of Ukraine with columns and the Ukrainian flag on the roof.",
             src: "/images/projects/administrative_buildings/sbu1.jpg",
           },
           img2: {
-            alt: "Five-story administrative building",
+            alt: "The central facade of the building of the Security Service of Ukraine with columns and the Ukrainian flag on the roof.",
             src: "/images/projects/administrative_buildings/sbuMain.webp",
           },
           img3: {
-            alt: "Five-story administrative building",
+            alt: "The central facade of the building of the Security Service of Ukraine with columns and the Ukrainian flag on the roof.",
             src: "/images/projects/administrative_buildings/sbu2.jpeg",
           },
         },
@@ -131,21 +132,22 @@ const en: FullTranslation = {
         projectSlug: "president_administration",
         title: "Administration of the President of Ukraine",
         mainImg: "/images/projects/administrative_buildings/presAdmMain.webp",
-        mainAlt: "Administration of the President of Ukraine",
+        mainAlt:
+          "A large neoclassical building with tall white columns, decorated with a large Ukrainian flag hanging on the facade",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "Six-story administrative building",
+            alt: "A large neoclassical building with tall white columns",
             src: "/images/projects/administrative_buildings/presAdm1.jpg",
           },
           img2: {
-            alt: "Six-story administrative building",
+            alt: "A large neoclassical building with tall white columns, decorated with a large Ukrainian flag hanging on the facade",
             src: "/images/projects/administrative_buildings/presAdmMain.webp",
           },
           img3: {
-            alt: "Six-story administrative building",
+            alt: "A large neoclassical building with tall white columns",
             src: "/images/projects/administrative_buildings/presAdm2.png",
           },
         },
@@ -161,21 +163,22 @@ const en: FullTranslation = {
         title: "Supreme Council building",
         mainImg:
           "/images/projects/administrative_buildings/verhovna_radaMain.webp",
-        mainAlt: "Three-story administrative building",
+        mainAlt:
+          "The three-story building of the Parliament of Ukraine with a dome-shaped roof and the Ukrainian flag",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "Three-story administrative building",
+            alt: "The three-story building of the Parliament of Ukraine with a dome-shaped roof and the Ukrainian flag",
             src: "/images/projects/administrative_buildings/verhovna_rada1.jpeg",
           },
           img2: {
-            alt: "Three-story administrative building",
+            alt: "The three-story building of the Parliament of Ukraine with a dome-shaped roof and the Ukrainian flag",
             src: "/images/projects/administrative_buildings/verhovna_radaMain.webp",
           },
           img3: {
-            alt: "Three-story administrative building",
+            alt: "The three-story building of the Parliament of Ukraine with a dome-shaped roof and the Ukrainian flag",
             src: "/images/projects/administrative_buildings/verhovna_rada2.jpg",
           },
         },
@@ -191,21 +194,22 @@ const en: FullTranslation = {
         title: "Ukreximbank",
         mainImg:
           "/images/projects/administrative_buildings/ukrexim_bankMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "The entrance to the main office of Ukreximbank is made of glass with a modern design",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The entrance to the main office of Ukreximbank is made of glass with a modern design",
             src: "/images/projects/administrative_buildings/ukrexim_bank1.webp",
           },
           img2: {
-            alt: "...",
+            alt: "The entrance to the main office of Ukreximbank is made of glass with a modern design",
             src: "/images/projects/administrative_buildings/ukrexim_bankMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The entrance to the main office of Ukreximbank is made of glass with a modern design",
             src: "/images/projects/administrative_buildings/ukrexim_bank2.jpg",
           },
         },
@@ -221,21 +225,22 @@ const en: FullTranslation = {
         title: "Prominvestbank",
         mainImg:
           "/images/projects/administrative_buildings/prominvest_bankMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Entrance to Prominvestbank with golden elements on a dark glossy building",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Entrance to Prominvestbank with golden elements on a dark glossy building",
             src: "/images/projects/administrative_buildings/prominvest_bank1.jpg",
           },
           img2: {
-            alt: "...",
+            alt: "Entrance to Prominvestbank with golden elements on a dark glossy building",
             src: "/images/projects/administrative_buildings/prominvest_bankMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Entrance to Prominvestbank with golden elements on a dark glossy building",
             src: "/images/projects/administrative_buildings/prominvest_bank2.png",
           },
         },
@@ -251,21 +256,22 @@ const en: FullTranslation = {
         title: "Unicreditbank",
         mainImg:
           "/images/projects/administrative_buildings/unicredit_bankMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "A majestic building with arched windows and the UniCredit Bank logo on top, featuring a white sign with red and black letters",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "A majestic building with arched windows and the UniCredit Bank logo on top, featuring a white sign with red and black letters",
             src: "/images/projects/administrative_buildings/unicredit_bankMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "A majestic building with arched windows and the UniCredit Bank logo on top, featuring a white sign with red and black letters",
             src: "/images/projects/administrative_buildings/unicredit_bankMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "A majestic building with arched windows and the UniCredit Bank logo on top, featuring a white sign with red and black letters",
             src: "/images/projects/administrative_buildings/unicredit_bankMain.webp",
           },
         },
@@ -281,21 +287,22 @@ const en: FullTranslation = {
         title: "Ukrsotsbank",
         mainImg:
           "/images/projects/administrative_buildings/ukrsots_bankMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "The modernized Ukrsotsbank building with gray facade elements and a green area near the entrance",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The modernized Ukrsotsbank building with gray facade elements and a green area near the entrance",
             src: "/images/projects/administrative_buildings/ukrsots_bank1.webp",
           },
           img2: {
-            alt: "...",
+            alt: "The modernized Ukrsotsbank building with gray facade elements and a green area near the entrance",
             src: "/images/projects/administrative_buildings/ukrsots_bankMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The modernized Ukrsotsbank building with gray facade elements and a green area near the entrance",
             src: "/images/projects/administrative_buildings/ukrsots_bank1.webp",
           },
         },
@@ -310,21 +317,22 @@ const en: FullTranslation = {
         projectSlug: "bank_aval",
         title: "Aval Bank",
         mainImg: "/images/projects/administrative_buildings/bank_avalMain.webp",
-        mainAlt: "",
+        mainAlt:
+          "A tall office building with the Raiffeisen Bank Aval logo on top",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "A tall office building with the Raiffeisen Bank Aval logo on top",
             src: "/images/projects/administrative_buildings/bank_aval1.jpg",
           },
           img2: {
-            alt: "...",
+            alt: "A tall office building with the Raiffeisen Bank Aval logo on top",
             src: "/images/projects/administrative_buildings/bank_avalMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "A tall office building with the Raiffeisen Bank Aval logo on top",
             src: "/images/projects/administrative_buildings/bank_aval2.jpg",
           },
         },
@@ -340,21 +348,21 @@ const en: FullTranslation = {
         title: "State Savings Bank of Ukraine",
         mainImg:
           "/images/projects/administrative_buildings/oschad_bankMain.webp",
-        mainAlt: "...",
+        mainAlt: "The facade of the bank building with the logo of Oschadbank",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The facade of the bank building with the logo of Oschadbank",
             src: "/images/projects/administrative_buildings/oschad_bank1.webp",
           },
           img2: {
-            alt: "...",
+            alt: "The facade of the bank building with the logo of Oschadbank",
             src: "/images/projects/administrative_buildings/oschad_bankMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The facade of the bank building with the logo of Oschadbank",
             src: "/images/projects/administrative_buildings/oschad_bank2.webp",
           },
         },
@@ -369,23 +377,24 @@ const en: FullTranslation = {
       10: {
         id: "10",
         projectSlug: "dinamo-stadium",
-        title: "Reconstruction of the Dynamo stadium named after Lobanovsky",
+        title: "Reconstruction of the «Dynamo» stadium named after Lobanovsky",
         mainImg: "/images/projects/public_facilities/dinamoMain.webp",
-        mainAlt: "Reconstruction of the Dynamo stadium named after Lobanovsky",
+        mainAlt:
+          "The main entrance to the «Dynamo» stadium in Kyiv with arch where the emblem of the «Dynamo» football club is located",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The main entrance to the «Dynamo» stadium in Kyiv with arch where the emblem of the «Dynamo» football club is located",
             src: "/images/projects/public_facilities/dinamoMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "The main entrance to the «Dynamo» stadium in Kyiv with arch where the emblem of the «Dynamo» football club is located",
             src: "/images/projects/public_facilities/dinamoMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The main entrance to the «Dynamo» stadium in Kyiv with arch where the emblem of the «Dynamo» football club is located",
             src: "/images/projects/public_facilities/dinamoMain.webp",
           },
         },
@@ -400,21 +409,22 @@ const en: FullTranslation = {
         projectSlug: "hotel",
         title: "Hotel",
         mainImg: "/images/projects/public_facilities/hotelMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "A hotel in red brick style with decorative elements and arched windows",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "A hotel in red brick style with decorative elements and arched windows",
             src: "/images/projects/public_facilities/hotelMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "A hotel in red brick style with decorative elements and arched windows",
             src: "/images/projects/public_facilities/hotelMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "A hotel in red brick style with decorative elements and arched windows",
             src: "/images/projects/public_facilities/hotelMain.webp",
           },
         },
@@ -430,21 +440,21 @@ const en: FullTranslation = {
         projectSlug: "hotel_molodizhnyi",
         title: "Hotel Molodizhnyi",
         mainImg: "/images/projects/public_facilities/hotelMolodMain.webp",
-        mainAlt: "...",
+        mainAlt: "A hotel with black and white facades",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "A hotel with black and white facades",
             src: "/images/projects/public_facilities/hotelMolodMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "A hotel with black and white facades",
             src: "/images/projects/public_facilities/hotelMolodMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "A hotel with black and white facades",
             src: "/images/projects/public_facilities/hotelMolodMain.webp",
           },
         },
@@ -460,21 +470,22 @@ const en: FullTranslation = {
         projectSlug: "cafe_brovar",
         title: "Cafe Brovar",
         mainImg: "/images/projects/public_facilities/cafeBrovarMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "The café Brovar, located on the ground floor of a multi-story building",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The café Brovar, located on the ground floor of a multi-story building",
             src: "/images/projects/public_facilities/cafeBrovarMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "The café Brovar, located on the ground floor of a multi-story building",
             src: "/images/projects/public_facilities/cafeBrovarMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The café Brovar, located on the ground floor of a multi-story building",
             src: "/images/projects/public_facilities/cafeBrovarMain.webp",
           },
         },
@@ -490,21 +501,21 @@ const en: FullTranslation = {
         projectSlug: "office_center",
         title: "Office center",
         mainImg: "/images/projects/public_facilities/officeCenterMain.webp",
-        mainAlt: "Reconstruction of the Dynamo stadium named after Lobanovsky",
+        mainAlt: "A business center with modern glass and metal finishing",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "A business center with modern glass and metal finishing",
             src: "/images/projects/public_facilities/officeCenterMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "A business center with modern glass and metal finishing",
             src: "/images/projects/public_facilities/officeCenterMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "A business center with modern glass and metal finishing",
             src: "/images/projects/public_facilities/officeCenterMain.webp",
           },
         },
@@ -522,21 +533,22 @@ const en: FullTranslation = {
         projectSlug: "sanatorium_yalynka",
         title: "Kyiv city children's sanatorium Yalynka",
         mainImg: "/images/projects/hskc/sanatorium_yalynkaMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "The main building of the Kyiv City Children's Sanatorium Yalynka, surrounded by trees, with a bright facade and an area for children to relax",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The main building of the Kyiv City Children's Sanatorium Yalynka, surrounded by trees, with a bright facade and an area for children to relax",
             src: "/images/projects/hskc/sanatorium_yalynkaMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "The main building of the Kyiv City Children's Sanatorium Yalynka, surrounded by trees, with a bright facade and an area for children to relax",
             src: "/images/projects/hskc/sanatorium_yalynkaMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The main building of the Kyiv City Children's Sanatorium Yalynka, surrounded by trees, with a bright facade and an area for children to relax",
             src: "/images/projects/hskc/sanatorium_yalynkaMain.webp",
           },
         },
@@ -552,21 +564,22 @@ const en: FullTranslation = {
         projectSlug: "cancer_dispensary",
         title: "Cancer dispensary of the regional hospital in Kyiv",
         mainImg: "/images/projects/hskc/cancer_dispensaryMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "The building of the oncology dispensary of the regional hospital in Kyiv with a modern facade, several floors, surrounded by green territory",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The building of the oncology dispensary of the regional hospital in Kyiv with a modern facade, several floors, surrounded by green territory",
             src: "/images/projects/hskc/cancer_dispensaryMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "The building of the oncology dispensary of the regional hospital in Kyiv with a modern facade, several floors, surrounded by green territory",
             src: "/images/projects/hskc/cancer_dispensaryMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The building of the oncology dispensary of the regional hospital in Kyiv with a modern facade, several floors, surrounded by green territory",
             src: "/images/projects/hskc/cancer_dispensaryMain.webp",
           },
         },
@@ -582,21 +595,22 @@ const en: FullTranslation = {
         projectSlug: "medical_clinic_innovation",
         title: "Medical clinic Innovation",
         mainImg: "/images/projects/hskc/medical_clinic_innovationMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "The facade of the three-story medical clinic Innovation with a modern design",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The facade of the three-story medical clinic Innovation with a modern design",
             src: "/images/projects/hskc/medical_clinic_innovationMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "The facade of the three-story medical clinic Innovation with a modern design",
             src: "/images/projects/hskc/medical_clinic_innovationMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The facade of the three-story medical clinic Innovation with a modern design",
             src: "/images/projects/hskc/medical_clinic_innovationMain.webp",
           },
         },
@@ -612,21 +626,22 @@ const en: FullTranslation = {
         projectSlug: "epiphany_cathedral",
         title: "Epiphany Cathedral",
         mainImg: "/images/projects/hskc/epiphany_cathedralMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Cathedral with high domes and traditional Orthodox architecture",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Cathedral with high domes and traditional Orthodox architecture",
             src: "/images/projects/hskc/epiphany_cathedralMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "Cathedral with high domes and traditional Orthodox architecture",
             src: "/images/projects/hskc/epiphany_cathedralMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Cathedral with high domes and traditional Orthodox architecture",
             src: "/images/projects/hskc/epiphany_cathedralMain.webp",
           },
         },
@@ -642,21 +657,22 @@ const en: FullTranslation = {
         projectSlug: "residential_buildings",
         title: "Residential buildings",
         mainImg: "/images/projects/hskc/residential_buildingsMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Modern multi-storey residential buildings with balconies located in the urban area",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Modern multi-storey residential buildings with balconies located in the urban area",
             src: "/images/projects/hskc/residential_buildings1.webp",
           },
           img2: {
-            alt: "...",
+            alt: "Modern multi-storey residential buildings with balconies located in the urban area",
             src: "/images/projects/hskc/residential_buildingsMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Modern multi-storey residential buildings with balconies located in the urban area",
             src: "/images/projects/hskc/residential_buildings2.webp",
           },
         },
@@ -674,21 +690,22 @@ const en: FullTranslation = {
         projectSlug: "amstor",
         title: "Network of public and shopping centers Amstor",
         mainImg: "/images/projects/trade_complexes/amstorMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "The facade of the shopping and entertainment center Amstor with bright signs and a spacious parking lot in front of the building",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The facade of the shopping and entertainment center Amstor with bright signs and a spacious parking lot in front of the building",
             src: "/images/projects/trade_complexes/amstorMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "The facade of the shopping and entertainment center Amstor with bright signs and a spacious parking lot in front of the building",
             src: "/images/projects/trade_complexes/amstorMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The facade of the shopping and entertainment center Amstor with bright signs and a spacious parking lot in front of the building",
             src: "/images/projects/trade_complexes/amstorMain.webp",
           },
         },
@@ -704,21 +721,22 @@ const en: FullTranslation = {
         projectSlug: "silpo",
         title: "Silpo supermarket chain",
         mainImg: "/images/projects/trade_complexes/silpoMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Entrance to Silpo supermarket with a company sign and product windows",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Entrance to Silpo supermarket with a company sign and product windows",
             src: "/images/projects/trade_complexes/silpoMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "Entrance to Silpo supermarket with a company sign and product windows",
             src: "/images/projects/trade_complexes/silpoMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Entrance to Silpo supermarket with a company sign and product windows",
             src: "/images/projects/trade_complexes/silpoMain.webp",
           },
         },
@@ -734,21 +752,22 @@ const en: FullTranslation = {
         projectSlug: "retroville",
         title: "Shopping center Retroville",
         mainImg: "/images/projects/trade_complexes/retrovilleMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "The facade of the Retroville shopping center with a modern design and large glass windows",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The facade of the Retroville shopping center with a modern design and large glass windows",
             src: "/images/projects/trade_complexes/retrovilleMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "The facade of the Retroville shopping center with a modern design and large glass windows",
             src: "/images/projects/trade_complexes/retrovilleMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The facade of the Retroville shopping center with a modern design and large glass windows",
             src: "/images/projects/trade_complexes/retrovilleMain.webp",
           },
         },
@@ -764,21 +783,22 @@ const en: FullTranslation = {
         projectSlug: "darynok",
         title: "Shopping center Darynok",
         mainImg: "/images/projects/trade_complexes/darynokMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "The facade of the Darynok shopping center is brown in color with large and bright windows",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The facade of the Darynok shopping center is brown in color with large and bright windows",
             src: "/images/projects/trade_complexes/darynokMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "The facade of the Darynok shopping center is brown in color with large and bright windows",
             src: "/images/projects/trade_complexes/darynokMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The facade of the Darynok shopping center is brown in color with large and bright windows",
             src: "/images/projects/trade_complexes/darynokMain.webp",
           },
         },
@@ -794,21 +814,22 @@ const en: FullTranslation = {
         projectSlug: "novus",
         title: "Hypermarket Novus",
         mainImg: "/images/projects/trade_complexes/novusMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "The entrance to the Novus hypermarket with a bright sign and wide windows displaying a range of products",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The entrance to the Novus hypermarket with a bright sign and wide windows displaying a range of products",
             src: "/images/projects/trade_complexes/novus1.png",
           },
           img2: {
-            alt: "...",
+            alt: "The entrance to the Novus hypermarket with a bright sign and wide windows displaying a range of products",
             src: "/images/projects/trade_complexes/novusMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The entrance to the Novus hypermarket with a bright sign and wide windows displaying a range of products",
             src: "/images/projects/trade_complexes/novus1.png",
           },
         },
@@ -824,21 +845,22 @@ const en: FullTranslation = {
         projectSlug: "forum",
         title: "Trade center Forum",
         mainImg: "/images/projects/trade_complexes/forumMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "The facade of the shopping and entertainment center Forum with a modern design, large windows and signs advertising shops and entertainment establishments",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The facade of the shopping and entertainment center Forum with a modern design, large windows and signs advertising shops and entertainment establishments",
             src: "/images/projects/trade_complexes/forum1.png",
           },
           img2: {
-            alt: "...",
+            alt: "The facade of the shopping and entertainment center Forum with a modern design, large windows and signs advertising shops and entertainment establishments",
             src: "/images/projects/trade_complexes/forumMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The facade of the shopping and entertainment center Forum with a modern design, large windows and signs advertising shops and entertainment establishments",
             src: "/images/projects/trade_complexes/forum1.png",
           },
         },
@@ -856,21 +878,22 @@ const en: FullTranslation = {
         projectSlug: "kraft_foods_ukraine",
         title: "Confectionery factory Kraft Foods of Ukraine",
         mainImg: "/images/projects/industry/kraft_foods_ukraineMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Exterior view of the blue facade of the Kraft Foods of Ukraine confectionery factory with large windows and brand signs",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Exterior view of the blue facade of the Kraft Foods of Ukraine confectionery factory with large windows and brand signs",
             src: "/images/projects/industry/kraft_foods_ukraineMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "Exterior view of the blue facade of the Kraft Foods of Ukraine confectionery factory with large windows and brand signs",
             src: "/images/projects/industry/kraft_foods_ukraineMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Exterior view of the blue facade of the Kraft Foods of Ukraine confectionery factory with large windows and brand signs",
             src: "/images/projects/industry/kraft_foods_ukraineMain.webp",
           },
         },
@@ -886,21 +909,22 @@ const en: FullTranslation = {
         projectSlug: "alko_invest",
         title: "Objects of JSC ALKO INVEST",
         mainImg: "/images/projects/industry/alko_investMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "The facade of the ALKO INVEST CJSC building with a modern design, showing the company's logo on the outer wall",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The facade of the ALKO INVEST CJSC building with a modern design, showing the company's logo on the outer wall",
             src: "/images/projects/industry/alko_invest1.webp",
           },
           img2: {
-            alt: "...",
+            alt: "The facade of the ALKO INVEST CJSC building with a modern design, showing the company's logo on the outer wall",
             src: "/images/projects/industry/alko_investMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The facade of the ALKO INVEST CJSC building with a modern design, showing the company's logo on the outer wall",
             src: "/images/projects/industry/alko_invest1.webp",
           },
         },
@@ -916,21 +940,22 @@ const en: FullTranslation = {
         projectSlug: "osmoloda_plant",
         title: "OSMOLODA LLC Building Materials Plant",
         mainImg: "/images/projects/industry/osmoloda_plantMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "The exterior of the OSMOLODA LLC building materials plant with production areas",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The exterior of the OSMOLODA LLC building materials plant with production areas",
             src: "/images/projects/industry/osmoloda_plantMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "The exterior of the OSMOLODA LLC building materials plant with production areas",
             src: "/images/projects/industry/osmoloda_plantMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The exterior of the OSMOLODA LLC building materials plant with production areas",
             src: "/images/projects/industry/osmoloda_plantMain.webp",
           },
         },
@@ -948,21 +973,22 @@ const en: FullTranslation = {
         projectSlug: "altacenter",
         title: "Alta Center in Kyiv",
         mainImg: "/images/projects/trade_complexes/altacenterMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "The facade of the Alta Center in Kyiv is green with a modern architectural design",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The facade of the Alta Center in Kyiv is green with a modern architectural design",
             src: "/images/projects/trade_complexes/altacenter1.png",
           },
           img2: {
-            alt: "...",
+            alt: "The facade of the Alta Center in Kyiv is green with a modern architectural design",
             src: "/images/projects/trade_complexes/altacenterMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The facade of the Alta Center in Kyiv is green with a modern architectural design",
             src: "/images/projects/trade_complexes/altacenter1.png",
           },
         },
@@ -978,21 +1004,22 @@ const en: FullTranslation = {
         projectSlug: "karavan",
         title: "Shopping and entertainment center Karavan",
         mainImg: "/images/projects/trade_complexes/karavanMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Facade of the Karavan shopping and entertainment center with a large logo, entrance doors and parking spaces in the foreground",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Facade of the Karavan shopping and entertainment center with a large logo, entrance doors and parking spaces in the foreground",
             src: "/images/projects/trade_complexes/karavan1.png",
           },
           img2: {
-            alt: "...",
+            alt: "Facade of the Karavan shopping and entertainment center with a large logo, entrance doors and parking spaces in the foreground",
             src: "/images/projects/trade_complexes/karavanMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "Facade of the Karavan shopping and entertainment center with a large logo, entrance doors and parking spaces in the foreground",
             src: "/images/projects/trade_complexes/karavan2.png",
           },
         },
@@ -1008,21 +1035,22 @@ const en: FullTranslation = {
         projectSlug: "epicenter",
         title: "Hypermarket chain Epicenter",
         mainImg: "/images/projects/trade_complexes/epicenterMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "The facade of the Epicenter hypermarket with a large logo, entrance doors and modern design, surrounded by parking spaces",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The facade of the Epicenter hypermarket with a large logo, entrance doors and modern design, surrounded by parking spaces",
             src: "/images/projects/trade_complexes/epicenter1.png",
           },
           img2: {
-            alt: "...",
+            alt: "The facade of the Epicenter hypermarket with a large logo, entrance doors and modern design, surrounded by parking spaces",
             src: "/images/projects/trade_complexes/epicenterMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The facade of the Epicenter hypermarket with a large logo, entrance doors and modern design, surrounded by parking spaces",
             src: "/images/projects/trade_complexes/epicenter2.png",
           },
         },
@@ -1038,22 +1066,23 @@ const en: FullTranslation = {
         projectSlug: "odeskiy_bulvar",
         title: "Odeskiy bulvar",
         mainImg: "/images/projects/hskc/odeskiy_bulvarMain.webp",
-        mainAlt: "...",
+        mainAlt:
+          "Residential complex of bright high-rise buildings Odesa Boulevard",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "Residential complex of bright high-rise buildings Odesa Boulevard",
             src: "/images/projects/hskc/odeskiy_bulvarMain.webp",
           },
           img2: {
-            alt: "...",
-            src: "/images/projects/hskc/residential_buildings2.webp",
+            alt: "Residential complex of bright high-rise buildings Odesa Boulevard",
+            src: "/images/projects/hskc/odeskiy_bulvarMain.webp",
           },
           img3: {
-            alt: "...",
-            src: "/images/projects/hskc/residential_buildings3.webp",
+            alt: "Residential complex of bright high-rise buildings Odesa Boulevard",
+            src: "/images/projects/hskc/odeskiy_bulvarMain.webp",
           },
         },
         link: "...",
@@ -1068,21 +1097,22 @@ const en: FullTranslation = {
         projectSlug: "blockbuster",
         title: "Entertainment center Blockbuster",
         mainImg: "/images/projects/trade_complexes/blockbusterMain.webp",
-        mainAlt: "wowwowwow",
+        mainAlt:
+          "The glass facade of the BlockBuster entertainment center with bright red inserts with a large logo",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The glass facade of the BlockBuster entertainment center with bright red inserts with a large logo",
             src: "/images/projects/trade_complexes/blockbusterMain.webp",
           },
           img2: {
-            alt: "...",
+            alt: "The glass facade of the BlockBuster entertainment center with bright red inserts with a large logo",
             src: "/images/projects/trade_complexes/blockbusterMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The glass facade of the BlockBuster entertainment center with bright red inserts with a large logo",
             src: "/images/projects/trade_complexes/blockbusterMain.webp",
           },
         },
@@ -1098,21 +1128,22 @@ const en: FullTranslation = {
         projectSlug: "river_mall",
         title: "River Mall shopping center",
         mainImg: "/images/projects/trade_complexes/river_mallMain.webp",
-        mainAlt: "hohoho",
+        mainAlt:
+          "The facade of the River Mall shopping center with modern design and glass windows",
         heroDescription:
           "Object in the construction of which Energoventilyatsiya LLC took part.",
         heroButton: "Get a Quote",
         images: {
           img1: {
-            alt: "...",
+            alt: "The facade of the River Mall shopping center with modern design and glass windows",
             src: "/images/projects/trade_complexes/river_mall1.png",
           },
           img2: {
-            alt: "...",
+            alt: "The facade of the River Mall shopping center with modern design and glass windows",
             src: "/images/projects/trade_complexes/river_mallMain.webp",
           },
           img3: {
-            alt: "...",
+            alt: "The facade of the River Mall shopping center with modern design and glass windows",
             src: "/images/projects/trade_complexes/river_mall1.png",
           },
         },

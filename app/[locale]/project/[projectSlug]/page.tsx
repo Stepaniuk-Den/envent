@@ -73,7 +73,7 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
         t={{
           title: projectData.title,
           description: projectData.heroDescription || "",
-          button: projectData.heroButton || "",
+          button: t.hero.button || "",
         }}
       />
       <section className={styles.projectItemSection}>
@@ -172,7 +172,6 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
         className="withPaddingBottom"
         t={mainT.projects}
         t2={projectsT.projects}
-        // t2={projectsWithBase64}
       />
       <ContactUsSection params={{ locale }} />
     </>
