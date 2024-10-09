@@ -13,6 +13,7 @@ import useMeasure from "react-use-measure";
 import PrevNextButtons from "../ImagesCarouselPrevNextButtons";
 import { IImageItem } from "@/helpers/interfaces";
 import { useModal } from "@/helpers/useModal";
+import Backdrop from "../Backdrop";
 
 export interface IListCarouselProps {
   [key: number]: {
@@ -32,6 +33,7 @@ const ImagesCarousel: React.FC<{
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   //Додано додатковий стейт для відстеження стану зображень
   const [imagesList, setImagesList] = useState<IImageItem[]>([]);
+  const [backdropImagesList, setBackdropImagesList] = useState<string[]>([]);
   let [ref, { width }] = useMeasure();
 
   const { keyImagesAbout } = useCarouselAboutStore();
@@ -41,17 +43,25 @@ const ImagesCarousel: React.FC<{
   // const imagesList = Object.values(t[id as keyof typeof t].images);
 
   //Додано useEffect для відстеження зображень на різних сторінках
-
+  const aboutId = keyImagesAbout.id;
   useEffect(() => {
     const fetchImagesList = () => {
       if (page === "about") {
-        if (keyImagesAbout.id !== undefined) {
-          const id = keyImagesAbout.id;
-          setImagesList(Object.values(t[id]?.images || {}));
+        if (aboutId !== undefined) {
+          const currentImagesList = Object.values(t[aboutId]?.images)
+            .map((img) => img.src)
+            .filter((item): item is string => !!item);
+          setBackdropImagesList(currentImagesList);
+          setImagesList(Object.values(t[aboutId]?.images));
         }
       } else if (page === "services" && id !== undefined) {
+        // const images = Object.values(t[id]?.images) || [];
         const images = t[id]?.images ? Object.values(t[id]?.images) : [];
         setImagesList(images);
+        const currentImagesList = images
+          .map((img) => img.src)
+          .filter((item): item is string => !!item);
+        setBackdropImagesList(currentImagesList);
       }
     };
 
@@ -62,15 +72,15 @@ const ImagesCarousel: React.FC<{
     setCurrentIndex(index);
     setIsOpen(true);
   };
-  const handleCloseBackdrop = () => {
-    setIsOpen(false);
-  };
+  // const handleCloseBackdrop = () => {
+  //   setIsOpen(false);
+  // };
 
   const x = currentIndex ? width * currentIndex * -1 : 0;
 
   useEffect(() => {
     setCurrentIndex(0);
-  }, [id]);
+  }, [id, aboutId]);
 
   useModal(isOpen, setIsOpen);
 
@@ -90,13 +100,13 @@ const ImagesCarousel: React.FC<{
 
     if (distance > swipeThreshold) {
       setCurrentIndex((prevIndex) =>
-        prevIndex < imagesList.length - 1 ? prevIndex + 1 : 0
+        prevIndex < backdropImagesList.length - 1 ? prevIndex + 1 : 0
       );
     }
 
     if (distance < -swipeThreshold) {
       setCurrentIndex((prevIndex) =>
-        prevIndex > 0 ? prevIndex - 1 : imagesList.length - 1
+        prevIndex > 0 ? prevIndex - 1 : backdropImagesList.length - 1
       );
     }
 
@@ -108,7 +118,7 @@ const ImagesCarousel: React.FC<{
     <div className={styles.carousel_container} ref={ref}>
       <motion.ul
         className={styles.list}
-        style={{ width: imagesList.length * width, x }}
+        style={{ width: backdropImagesList.length * width, x }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -132,21 +142,30 @@ const ImagesCarousel: React.FC<{
                   >
                     <MagnifyingGlass className={styles.magnifyingGlassIcon} />
                   </button>
+                  <PrevNextButtons
+                    list={backdropImagesList}
+                    currentIndex={currentIndex}
+                    setCurrentIndex={setCurrentIndex}
+                    position="absolute"
+                  />
                 </div>
-                <PrevNextButtons
-                  list={imagesList}
-                  currentIndex={currentIndex}
-                  setCurrentIndex={setCurrentIndex}
-                  position="absolute"
-                />
               </div>
             </li>
           );
         })}
       </motion.ul>
+      <Backdrop
+        imgList={backdropImagesList}
+        // imgAlt={recentImgAlt}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
+        alt="..."
+      />
 
       {/* ==== BACKDROP ==== */}
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait">
         {isOpen && (
           <motion.div
             className={`${styles.backdrop}  overlay`}
@@ -192,7 +211,7 @@ const ImagesCarousel: React.FC<{
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 };

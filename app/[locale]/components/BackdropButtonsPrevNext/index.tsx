@@ -1,38 +1,29 @@
 "use client";
 
-import { handleNext, handlePrev } from "@/helpers/useClickPrevAndNext";
 import BackdropButton from "../Buttons/BackdropButton";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
 import ArrowRight from "@/public/icons/arrow-right.svg";
-import styles from "./imagesCarouselPrevNextButtons.module.scss";
-import { Dispatch, SetStateAction } from "react";
+import styles from "./backdropButtonsPrevNext.module.scss";
 
-interface IPrevNextButtonsProps {
+interface Props {
   className?: string;
   position?: "fixed" | "absolute" | "";
-  currentIndex: number;
-  setCurrentIndex: Dispatch<SetStateAction<number>>;
-  list: string[];
+  paginate: (newDirection: number) => void;
 }
 
-const PrevNextButtons = ({
+const BackdropButtonsPrevNext = ({
   className = "",
   position = "",
-  currentIndex,
-  setCurrentIndex,
-  list,
-}: IPrevNextButtonsProps) => {
+  paginate,
+}: Props) => {
   return (
     <div className={className}>
       <BackdropButton
         className={`${styles.prevButton} ${styles[position]}`}
-        onClick={() =>
-          handlePrev({
-            currentIndex,
-            setCurrentIndex,
-            array: list,
-          })
-        }
+        onClick={(e: any) => {
+          e.stopPropagation();
+          paginate(-1);
+        }}
         type="button"
         aria-label="Swipe to previous"
       >
@@ -40,13 +31,10 @@ const PrevNextButtons = ({
       </BackdropButton>
       <BackdropButton
         className={`${styles.nextButton} ${styles[position]}`}
-        onClick={() =>
-          handleNext({
-            currentIndex,
-            setCurrentIndex,
-            array: list,
-          })
-        }
+        onClick={(e: any) => {
+          e.stopPropagation();
+          paginate(1);
+        }}
         type="button"
         aria-label="Swipe to next"
       >
@@ -56,4 +44,4 @@ const PrevNextButtons = ({
   );
 };
 
-export default PrevNextButtons;
+export default BackdropButtonsPrevNext;
