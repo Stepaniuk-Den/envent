@@ -21,10 +21,15 @@
 
     .topInfoWrapper {
       display: flex;
+      justify-content: space-between;
       gap: 64px;
 
+      @include lg {
+        gap: 60px;
+      }
+
       @include md {
-        gap: 30px;
+        gap: 16px;
       }
 
       @include sm {
@@ -87,8 +92,12 @@
       display: flex;
       gap: 64px;
 
+      @include lg {
+        gap: 60px;
+      }
+
       @include md {
-        gap: 30px;
+        gap: 16px;
       }
 
       @include sm {

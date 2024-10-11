@@ -7,18 +7,12 @@
   // backdrop-filter: blur(10px);
   justify-content: center;
   align-items: center;
-  padding: 56px;
-
-  @include sm {
-    padding: 0;
-  }
 }
 
 .modalContent {
   position: absolute;
   // overflow: hidden;
   width: 80vw;
-  // height: inherit;
   height: 90%;
   // --- By ratio width for responsive ---
   // width: 660px;
@@ -32,12 +26,29 @@
   //   height: 90%;
   // }
 
-  .images {
-    object-fit: cover;
+  @include md {
+    height: 56%;
+  }
 
-    @include md {
-      object-fit: contain;
-    }
+  @include md-landscape {
+    width: 76vw;
+    height: 80%;
+  }
+
+  @include sm {
+    height: 30%;
+  }
+
+  @include sm-landscape {
+    height: 80%;
+  }
+
+  .images {
+    object-fit: contain;
+
+    // @include md {
+    //   object-fit: contain;
+    // }
   }
 }
 

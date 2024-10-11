@@ -14,6 +14,12 @@ export class ProjectsPageT implements Translation {
     btnBack: "",
   };
 
+  projectItem = {
+    title: "",
+    description: "",
+    subDescription: "",
+  };
+
   projects = {
     1: {
       id: "",
