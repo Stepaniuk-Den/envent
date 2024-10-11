@@ -95,6 +95,14 @@ const en: FullTranslation = {
       textCategory: "Select a category",
       btnBack: " Go back",
     },
+    projectItem: {
+      title: "About this Project",
+      description:
+        "The projects encompass a full cycle of work, including system design, installation, adjustment, and maintenance. The company has completed projects covering areas ranging from several hundred to tens of thousands of square meters.",
+      subDescription:
+        "Thanks to a professional approach to each project, the installation time for ventilation systems varies depending on the complexity of the site and can take from several weeks to several months.The company guarantees high quality and energy efficiency of the systems, contributing to the creation of comfortable and safe conditions in any type of premises.",
+    },
+
     projects: {
       1: {
         id: "1",
@@ -907,7 +915,7 @@ const en: FullTranslation = {
       27: {
         id: "27",
         projectSlug: "alko_invest",
-        title: "Objects of JSC ALKO INVEST",
+        title: "Objects of JSC ALKO INVEST (trademark «Nemiroff»)",
         mainImg: "/images/projects/industry/alko_investMain.webp",
         mainAlt:
           "The facade of the ALKO INVEST CJSC building with a modern design, showing the company's logo on the outer wall",
@@ -1064,7 +1072,7 @@ const en: FullTranslation = {
       32: {
         id: "32",
         projectSlug: "odeskiy_bulvar",
-        title: "Odeskiy bulvar",
+        title: "Residential complex Odesa Boulevard",
         mainImg: "/images/projects/hskc/odeskiy_bulvarMain.webp",
         mainAlt:
           "Residential complex of bright high-rise buildings Odesa Boulevard",
@@ -1095,7 +1103,7 @@ const en: FullTranslation = {
       33: {
         id: "33",
         projectSlug: "blockbuster",
-        title: "Entertainment center Blockbuster",
+        title: "Shopping and entertainment complex Blockbuster",
         mainImg: "/images/projects/trade_complexes/blockbusterMain.webp",
         mainAlt:
           "The glass facade of the BlockBuster entertainment center with bright red inserts with a large logo",
@@ -1939,7 +1947,7 @@ const en: FullTranslation = {
       phone: "Call for a Quote",
       btnForm: "Online estimate form",
       btnBack: " Go back",
-      description:"Description",
+      description: "Description",
     },
   },
   ContactsPage: {

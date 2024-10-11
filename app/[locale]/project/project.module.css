@@ -11,11 +11,17 @@
 }
 .projectItemSection .projectItemContainer .topInfoWrapper {
   display: flex;
+  justify-content: space-between;
   gap: 64px;
+}
+@media screen and (max-width: 1279.98px) {
+  .projectItemSection .projectItemContainer .topInfoWrapper {
+    gap: 60px;
+  }
 }
 @media screen and (max-width: 1023.98px) {
   .projectItemSection .projectItemContainer .topInfoWrapper {
-    gap: 30px;
+    gap: 16px;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -71,9 +77,14 @@
   display: flex;
   gap: 64px;
 }
+@media screen and (max-width: 1279.98px) {
+  .projectItemSection .projectItemContainer .bottomInfoWrapper {
+    gap: 60px;
+  }
+}
 @media screen and (max-width: 1023.98px) {
   .projectItemSection .projectItemContainer .bottomInfoWrapper {
-    gap: 30px;
+    gap: 16px;
   }
 }
 @media screen and (max-width: 767.98px) {
