@@ -40,9 +40,14 @@ type Props = {
 export async function generateMetadata({
   params: { projectSlug },
 }: Props): Promise<Metadata> {
+  const t = await localize(ProjectsPageT);
+  const projectData = Object.values(t.projects).find(
+    (project) => project.projectSlug === projectSlug
+  ) as IPropsProjectItem | undefined;
+
   return {
-    title: `Project ${projectSlug} | Envent`,
-    description: `Details about project ${projectSlug}`,
+    title: `Project ${projectData?.title} | Envent`,
+    description: `Details about project ${projectData?.heroDescription}`,
   };
 }
 
