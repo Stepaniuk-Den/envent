@@ -16,10 +16,12 @@ type Props = {
 export async function generateMetadata({
   params: { categorySlug },
 }: Props): Promise<Metadata> {
+  const t = await localize(ProjectsPageT);
+
   return {
-    title: `Project ${categorySlug} | Envent`,
+    title: `Project ${t.projectItem.description} | Envent`,
     // description: `Project ${categorySlug} details`,
-    description: `Browse projects in the ${categorySlug} category`,
+    description: `Browse projects in the ${t.projectItem.subDescription} category`,
   };
 }
 
