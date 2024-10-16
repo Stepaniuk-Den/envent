@@ -40,9 +40,14 @@ type Props = {
 export async function generateMetadata({
   params: { projectSlug },
 }: Props): Promise<Metadata> {
+  const t = await localize(ProjectsPageT);
+  const projectData = Object.values(t.projects).find(
+    (project) => project.projectSlug === projectSlug
+  ) as IPropsProjectItem | undefined;
+
   return {
-    title: `Project ${projectSlug} | Envent`,
-    description: `Details about project ${projectSlug}`,
+    title: `Project ${projectData?.title} | Envent`,
+    description: `Details about project ${projectData?.heroDescription}`,
   };
 }
 
@@ -65,6 +70,9 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
   // const projectsWithBase64 = await getProjectsWithBase64(projectsT.projects);
   // ---------------------------------------------
 
+  const addressAr = projectData.address?.split(";");
+  const addresses = addressAr?.map((item) => item.trim());
+
   return (
     <>
       <Hero
@@ -73,7 +81,7 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
         t={{
           title: projectData.title,
           description: projectData.heroDescription || "",
-          button: projectData.heroButton || "",
+          button: t.hero.button || "",
         }}
       />
       <section className={styles.projectItemSection}>
@@ -83,21 +91,14 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
               {/* <AnimatedTitle title={textCategory} /> */}
               <AnimatedTitle
                 className={styles.descTitle}
-                title={"About this Project"}
+                title={t.projectItem.title}
               />
               <Line className="yellow-left" />
               <Observer y={50} threshold={0.5}>
-                <p className={styles.desc}>
-                  Lectus erat, consectetur eu sapien eget rhoncus consectetur
-                  sem. Proin cursus, dolor a mollis consectetur, risus dolor
-                  fermentum massa, a commodo elit dui sit amet risus.
-                </p>
-                <ul>
-                  <li>Maecenas ornare nisl</li>
-                  <li>A tortor ultrices bibendum</li>
-                  <li>Nulla fermentum</li>
-                  <li>Metus quis</li>
-                  <li>Sodales tristique</li>
+                <ul className={styles.desc}>
+                  {addresses?.map((address, index) => (
+                    <li key={index}>{address}</li>
+                  ))}
                 </ul>
               </Observer>
             </div>
@@ -135,25 +136,10 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
             </div>
             <div className={styles.textWrapper}>
               <Observer y={50} threshold={0.5}>
-                <p>
-                  Lorem ipsum dolor sit consectetur adipiscing elit. Nullam
-                  lectus erat, consectetur eu sapien eget rhoncus consectetur
-                  sem. Proin cursus, dolor a mollis consectetur, risus dolor
-                  fermentum massa, a commodo elit dui sit amet risus. Maecenas
-                  ornare nisl a tortor ultrices bibendum. Nulla fermentum, metus
-                  quis sodales tristique, augue mauris molestie augue non
-                  feugiat ligula neque nec felis.
-                </p>
+                <p>{t.projectItem.description}</p>
               </Observer>
               <Observer y={50} threshold={0.7}>
-                <p>
-                  Lectus erat, consectetur eu sapien eget rhoncus consectetur
-                  sem. Proin cursus, dolor a mollis consectetur, risus dolor
-                  fermentum massa, a commodo elit dui sit amet risus. Maecenas
-                  ornare nisl a tortor ultrices bibendum. Nulla fermentum, metus
-                  quis sodales tristique, augue mauris molestie augue, non
-                  feugiat ligula neque nec felis.
-                </p>
+                <p>{t.projectItem.subDescription}</p>
               </Observer>
               <MainButton
                 type="button"
@@ -172,7 +158,6 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
         className="withPaddingBottom"
         t={mainT.projects}
         t2={projectsT.projects}
-        // t2={projectsWithBase64}
       />
       <ContactUsSection params={{ locale }} />
     </>

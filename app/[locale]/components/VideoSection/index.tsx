@@ -20,7 +20,7 @@ const VideoSection: React.FC<{
     controls: true,
     sources: [
       {
-        src: "/videoPlayer/ventilation.mp4",
+        src: "/videoPlayer/processVentilation.mp4",
         type: "video/mp4",
       },
     ],

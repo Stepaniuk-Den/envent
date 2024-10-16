@@ -40,9 +40,7 @@ const AboutBestList: React.FC<{ list: IProps }> = ({ list }) => {
                   <motion.span
                     initial={{ height: 0, opacity: 0 }}
                     animate={{
-                      // height: "inherit",
-                      // opacity: 1,
-                      height: [0, 0.5, "inherit"],
+                      height: [0, 100],
                       opacity: [0, 0, 1],
                     }}
                     exit={{

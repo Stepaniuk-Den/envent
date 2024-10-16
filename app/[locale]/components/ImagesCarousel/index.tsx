@@ -1,14 +1,11 @@
 "use client";
 
 import styles from "./imagesCarousel.module.scss";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useCarouselAboutStore } from "@/stores/carousel-about-store";
-import { useCarouselServiceStore } from "@/stores/carousel-service-store";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import MagnifyingGlass from "@/public/icons/magnifying-glass.svg";
-import Close from "@/public/icons/close.svg";
-import BackdropButton from "../Buttons/BackdropButton";
 import useMeasure from "react-use-measure";
 import PrevNextButtons from "../ImagesCarouselPrevNextButtons";
 import { IImageItem } from "@/helpers/interfaces";
@@ -24,45 +21,49 @@ export interface IListCarouselProps {
 const ImagesCarousel: React.FC<{
   t: IListCarouselProps;
   page: "services" | "about" | "";
-  //Додано id як необов'язковий пропс
   id?: number;
 }> = ({ t, page, id }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
-  //Додано додатковий стейт для відстеження стану зображень
   const [imagesList, setImagesList] = useState<IImageItem[]>([]);
   const [backdropImagesList, setBackdropImagesList] = useState<string[]>([]);
   let [ref, { width }] = useMeasure();
 
   const { keyImagesAbout } = useCarouselAboutStore();
-  const { keyImagesService } = useCarouselServiceStore();
 
-  // const id = page === "about" ? keyImagesAbout.id : keyImagesService.id;
-  // const imagesList = Object.values(t[id as keyof typeof t].images);
-
-  //Додано useEffect для відстеження зображень на різних сторінках
   const aboutId = keyImagesAbout.id;
+
   useEffect(() => {
     const fetchImagesList = () => {
-      if (page === "about") {
-        if (aboutId !== undefined) {
-          const currentImagesList = Object.values(t[aboutId]?.images)
-            .map((img) => img.src)
-            .filter((item): item is string => !!item);
-          setBackdropImagesList(currentImagesList);
-          setImagesList(Object.values(t[aboutId]?.images));
-        }
-      } else if (page === "services" && id !== undefined) {
-        // const images = Object.values(t[id]?.images) || [];
-        const images = t[id]?.images ? Object.values(t[id]?.images) : [];
-        setImagesList(images);
-        const currentImagesList = images
+      const currentId =
+        page === "about" ? aboutId : page === "services" ? id : 0;
+      if (currentId !== undefined) {
+        const currentImages = Object.values(t[currentId]?.images);
+        const currentImagesList = currentImages
           .map((img) => img.src)
           .filter((item): item is string => !!item);
         setBackdropImagesList(currentImagesList);
+        setImagesList(currentImages);
       }
+      // if (page === "about") {
+      //   if (aboutId !== undefined) {
+      //     const currentImagesList = Object.values(t[aboutId]?.images)
+      //       .map((img) => img.src)
+      //       .filter((item): item is string => !!item);
+      //     setBackdropImagesList(currentImagesList);
+      //     setImagesList(Object.values(t[aboutId]?.images));
+      //   }
+      // } else if (page === "services" && id !== undefined) {
+      //   const images = Object.values(t[id]?.images);
+      //   // const images = t[id]?.images ? Object.values(t[id]?.images) : [];
+      //   setImagesList(images);
+      //   const currentImagesList = images
+      //     .map((img) => img.src)
+      //     .filter((item): item is string => !!item);
+      //   setBackdropImagesList(currentImagesList);
+      // }
     };
 
     fetchImagesList();
@@ -72,9 +73,6 @@ const ImagesCarousel: React.FC<{
     setCurrentIndex(index);
     setIsOpen(true);
   };
-  // const handleCloseBackdrop = () => {
-  //   setIsOpen(false);
-  // };
 
   const x = currentIndex ? width * currentIndex * -1 : 0;
 
