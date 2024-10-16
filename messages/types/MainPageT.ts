@@ -59,4 +59,9 @@ export class MainPageT implements Translation {
     title: "",
     link: "",
   };
+
+  error = {
+    message:"",
+    btnBack:"",
+  }
 }
