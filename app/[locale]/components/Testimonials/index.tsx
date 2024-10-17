@@ -51,7 +51,7 @@ const Testimonials = ({ t }: ITestimonialsProps) => {
                   })
                 }
                 type="button"
-                aria-label="Swipe to previous"
+                ariaLabel="Swipe to previous"
               >
                 <ArrowLeft />
               </BackdropButton>
@@ -73,7 +73,7 @@ const Testimonials = ({ t }: ITestimonialsProps) => {
                   })
                 }
                 type="button"
-                aria-label="Swipe to next"
+                ariaLabel="Swipe to next"
               >
                 <ArrowRight />
               </BackdropButton>

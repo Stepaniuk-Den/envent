@@ -5,7 +5,7 @@ import Image, { StaticImageData } from "next/image";
 import LinkIcon from "@/public/icons/link.svg";
 import MagnifyingGlass from "@/public/icons/magnifying-glass.svg";
 import { Link } from "@/navigation";
-import { IPropsProjectItem } from "@/helpers/interfaces";
+import {IPropsProjectItem } from "@/helpers/interfaces";
 // import { getPlaiceholder } from "plaiceholder";
 // import fs from "node:fs/promises";
 // import { useState } from "react";
@@ -14,11 +14,13 @@ const ProjectItem = ({
   t,
   currentImg,
   onClick,
+  ariaLabel,
 }: // base64,
 // categorySlug,
 {
   t: IPropsProjectItem;
   currentImg: StaticImageData;
+  ariaLabel: string;
   onClick?: () => void;
   // base64: string;
   // categorySlug: string;
@@ -62,6 +64,7 @@ const ProjectItem = ({
             // -----------------------------------------------------
             // href={`/projects/${categorySlug}/${slug}`}
             href={`/project/${projectSlug}`}
+            aria-label={`${ariaLabel} ${title}`}
             // href={`/${projectSlug}`}
           >
             <LinkIcon className={styles.linkIcon} />

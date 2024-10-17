@@ -1,6 +1,6 @@
 "use client";
 
-import { IPropsProjectItem } from "@/helpers/interfaces";
+import { IAriaLabelProps, IPropsProjectItem } from "@/helpers/interfaces";
 import { ProjectItems } from "@/data/ProjectItems";
 import ProjectItem from "../ProjectItem";
 import styles from "./categoryProjectsList.module.scss";
@@ -12,7 +12,8 @@ import { handleOpenBackdrop } from "@/helpers/handleOpenAndCloseBackdrop";
 const CaregoryProjectsList: React.FC<{
   //   t: ProjectsPageT;
   filteredProjects: IPropsProjectItem[];
-}> = ({ filteredProjects }) => {
+  ariaLabel:string,
+}> = ({ filteredProjects,ariaLabel }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -43,6 +44,7 @@ const CaregoryProjectsList: React.FC<{
               // {...projectItem}
               t={projectItem}
               currentImg={currentImg.srcImg}
+              ariaLabel={ariaLabel}
               onClick={() =>
                 handleOpenBackdrop(index, setCurrentIndex, setIsOpen)
               }

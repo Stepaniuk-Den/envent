@@ -73,6 +73,7 @@ const Home: React.FC<Props> = async ({ params: { locale } }) => {
       <ProjectSection
         t={mainT.projects}
         t2={projectsT.projects}
+        ariaLabel={mainT.ariaLabel.text}
         // t2={base64}
         // t2={base64}
       />

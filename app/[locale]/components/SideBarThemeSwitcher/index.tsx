@@ -5,8 +5,9 @@ import styles from "./sideBarThemeSwitcher.module.scss";
 import { useClickOutside } from "@/helpers/useClickOutside";
 import { useTheme } from "next-themes";
 import { ThemeMoon, ThemeSun } from "@/helpers/imagesImport";
+import { IAriaLabelProps } from "@/helpers/interfaces";
 
-const SideBarThemeSwitcher = () => {
+const SideBarThemeSwitcher: React.FC<{ ariaLabel: IAriaLabelProps }> = ({ ariaLabel }) => {
   const { setTheme, theme, resolvedTheme } = useTheme();
 
   const handleToggleTheme = (newTheme: string) => {
@@ -26,6 +27,7 @@ const SideBarThemeSwitcher = () => {
         }`}
         type="button"
         onClick={() => handleToggleTheme(theme!)}
+        aria-label={resolvedTheme === "dark" ? ariaLabel.ariaLabel.btnLightSwitchTheme : ariaLabel.ariaLabel.btnDarkSwitchTheme}
       >
         {resolvedTheme === "dark" ? <ThemeSun /> : <ThemeMoon />}
       </button>
@@ -36,6 +38,7 @@ const SideBarThemeSwitcher = () => {
         }`}
         type="button"
         onClick={() => setBtnThemeVisible(!isBtnThemeVisible)}
+        aria-label={resolvedTheme === "light" ? ariaLabel.ariaLabel.btnLightThemeCurrent : ariaLabel.ariaLabel.btnDarkThemeCurrent}
       >
         {resolvedTheme === "light" ? <ThemeSun /> : <ThemeMoon />}
       </button>

@@ -61,7 +61,17 @@ export class MainPageT implements Translation {
   };
 
   error = {
-    message:"",
-    btnBack:"",
-  }
+    message: "",
+    btnBack: "",
+  };
+  ariaLabel = {
+    text: "",
+    btnSwitchLang: "",
+    btnLangCurrent: "",
+    btnDarkSwitchTheme: "",
+    btnLightSwitchTheme: "",
+    btnDarkThemeCurrent: "",
+    btnLightThemeCurrent: "",
+    btnTop:"",
+  };
 }

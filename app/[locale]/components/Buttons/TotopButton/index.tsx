@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react";
 import styles from "./totopButton.module.scss";
 import ArrowTotop from "@/public/icons/arrow-totop.svg";
+import { IAriaLabelProps } from "@/helpers/interfaces";
 
-const TotopButton = () => {
+const TotopButton: React.FC<{ ariaLabel: IAriaLabelProps }> = ({ ariaLabel }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -33,6 +34,7 @@ const TotopButton = () => {
         type="button"
         title="Scroll to top"
         onClick={handleClickTotop}
+        aria-label={ariaLabel.ariaLabel.btnTop}
       >
         <ArrowTotop className={styles.ArrowTotopSVG} />
 

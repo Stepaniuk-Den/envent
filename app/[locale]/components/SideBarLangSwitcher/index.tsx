@@ -7,10 +7,12 @@ import { useLocale } from "next-intl";
 import { locales } from "@/config";
 import { useParams } from "next/navigation";
 import { useClickOutside } from "@/helpers/useClickOutside";
+import { IAriaLabelProps } from "@/helpers/interfaces";
 
 type Locale = (typeof locales)[number];
 
-const SideBarLangSwitcher = () => {
+const SideBarLangSwitcher: React.FC<{ ariaLabel: IAriaLabelProps }> = ({ ariaLabel }) => {
+  
   const languages = [
     {
       lang: "en",
@@ -28,6 +30,8 @@ const SideBarLangSwitcher = () => {
   const [isPending, startTransition] = useTransition();
   const params = useParams();
   const ref = useClickOutside(() => setBtnLangVisible(false));
+
+  const {} = ariaLabel
 
   function onSelectChange(lang: string) {
     const nextLocale = lang as Locale;
@@ -56,6 +60,7 @@ const SideBarLangSwitcher = () => {
             }`}
             type="button"
             onClick={() => onSelectChange(lang.lang)}
+            aria-label={ariaLabel.ariaLabel.btnSwitchLang}
             disabled={isPending}
           >
             {lang.label}
@@ -69,6 +74,7 @@ const SideBarLangSwitcher = () => {
         }`}
         type="button"
         onClick={() => setBtnLangVisible(!isBtnLangVisible)}
+        aria-label={ariaLabel.ariaLabel.btnLangCurrent}
       >
         {languages.find((lang) => lang.lang === locale)?.label}
       </button>

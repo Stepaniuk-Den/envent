@@ -85,10 +85,20 @@ const en: FullTranslation = {
       title: "Our Partners",
       link: "Link",
     },
-    error:{
-      message:"Ooops... something went wrong",
-      btnBack:"Back to homepage",
-    }
+    error: {
+      message: "Ooops... something went wrong",
+      btnBack: "Back to homepage",
+    },
+    ariaLabel: {
+      text: "Link to",
+      btnSwitchLang: "Switch language to Ukrainian",
+      btnLangCurrent: "Current language is English",
+      btnDarkSwitchTheme: "Switch to  mode dark",
+      btnLightSwitchTheme: "Switch to mode light ",
+      btnDarkThemeCurrent: "Current mode is dark",
+      btnLightThemeCurrent: "Current mode is light",
+      btnTop:"Back to top",
+    },
   },
   ProjectsPage: {
     hero: {
@@ -1143,7 +1153,6 @@ const en: FullTranslation = {
         category: "Public and trade complexes",
         linkCategory: "/projects/trade_complexes",
       },
-
       34: {
         id: "34",
         projectSlug: "river_mall",
