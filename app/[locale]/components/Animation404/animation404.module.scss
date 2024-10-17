@@ -1,0 +1,71 @@
+@import "../../mixin.scss";
+
+.animation_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 364px;
+    margin-bottom: 48px;
+
+    @include md {
+      height: 234px;
+    }
+
+    @include sm {
+      height: 184px;
+    }
+
+    @include md-landscape {
+      height: 184px;
+      margin-bottom: 10px;
+    }
+
+    
+
+    .text {
+      font-family: var(--font-rubik);
+      font-size: 162px;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 2.5px;
+      color: var(--color-accent-blue);
+      
+      @include lg {
+        font-size: 148px;
+      }
+
+      @include md {
+        font-size: 102px;
+      }
+
+      @include sm {
+        font-size: 88px;
+      }
+
+      @include sm-landscape {
+        font-size: 68px;
+      }
+
+    }
+
+    .animation {
+      width: 360px;
+
+      @include lg {
+        width: 320px;
+      }
+
+      @include md {
+        width: 220px;
+      }
+
+      @include sm {
+        width: 180px;
+      }
+
+      @include md-landscape {
+        width: 180px; 
+      }
+    }
+  }

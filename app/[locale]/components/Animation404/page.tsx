@@ -1,11 +1,12 @@
 "use client"
 
 import { useEffect, useRef } from "react";
-import styles from "./loader.module.scss";
-import lottie from 'lottie-web';
+import lottie from "lottie-web";
+import styles from "./animation404.module.scss";
 
-const Loader = () => {
-  const animationContainer = useRef<HTMLDivElement | null>(null);
+const Animation404 = () => {
+
+    const animationContainer = useRef<HTMLDivElement | null>(null);
   const animationInstance = useRef<any>(null);
 
   useEffect(() => {
@@ -16,10 +17,10 @@ const Loader = () => {
 
       animationInstance.current = lottie.loadAnimation({
         container: animationContainer.current,
-        renderer: 'svg',
+        renderer: "svg",
         loop: true,
         autoplay: true,
-        path: '/Loader.json',
+        path: "/Error404.json",
       });
     }
 
@@ -30,11 +31,13 @@ const Loader = () => {
     };
   }, []);
 
-  return (
-    <div className={styles.loader_container}>
-      <div className={styles.loader} ref={animationContainer}></div>
-    </div>
-  );
+    return (
+        <div className={styles.animation_container}>
+        <p className={styles.text}>4</p>
+        <div className={styles.animation} ref={animationContainer}></div>
+        <p className={styles.text}>4</p>
+      </div>
+    );
 };
 
-export default Loader;
+export default Animation404;

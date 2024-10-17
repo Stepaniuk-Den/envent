@@ -85,6 +85,10 @@ const en: FullTranslation = {
       title: "Our Partners",
       link: "Link",
     },
+    error:{
+      message:"Ooops... something went wrong",
+      btnBack:"Back to homepage",
+    }
   },
   ProjectsPage: {
     hero: {
