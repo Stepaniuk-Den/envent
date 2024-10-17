@@ -98,7 +98,13 @@ const uk: FullTranslation = {
       btnLightSwitchTheme: "Змінити тему на світлу",
       btnDarkThemeCurrent: "Поточна тема темна",
       btnLightThemeCurrent: "Поточна тема світла",
-      btnTop:"Наверх",
+      btnTop: "Наверх",
+    },
+  },
+
+  SideBar: {
+    catalog: {
+      catalogTitle: "Каталог",
     },
   },
 

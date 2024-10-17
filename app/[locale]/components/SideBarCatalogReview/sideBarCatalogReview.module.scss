@@ -27,12 +27,14 @@
     @include md {
       position: relative;
       border: none;
-      font-size: 22px;
+      // font-size: 22px;
+
+      font-size: 14px;
 
       &::after {
         position: absolute;
         content: "";
-        right: 0;
+        left: 0;
         top: 50%;
         width: 1px;
         height: 30%;
@@ -50,5 +52,19 @@
     @include side-buttons-visible;
     @include side-buttons-hover;
     padding: 2px;
+    width: 70px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: var(--color-accent-yellow);
+
+    @include md {
+      width: 60px;
+    }
+
+    &.visible {
+      @include md {
+        font-size: 15px;
+      }
+    }
   }
 }

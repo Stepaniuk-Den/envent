@@ -15,12 +15,15 @@ import { useAfterLoad } from "@/helpers/useAfterLoad";
 import SideBar from "../SideBar";
 import SideBarLangSwitcher from "../SideBarLangSwitcher";
 import SideBarThemeSwitcher from "../SideBarThemeSwitcher";
+import SideBarCatalogReview from "../SideBarCatalogReview";
+import { SideBarT } from "@/messages/types/SideBarT";
 import { IAriaLabelProps } from "@/helpers/interfaces";
 
 const BurgerMenu: React.FC<{
   navlink: HeaderT["navlink"];
-  ariaLabel:IAriaLabelProps;
-}> = ({ navlink, ariaLabel }) => {
+  t: SideBarT;
+  ariaLabel: IAriaLabelProps;
+}> = ({ navlink, t, ariaLabel }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isPageLoaded = useAfterLoad();
 
@@ -58,6 +61,7 @@ const BurgerMenu: React.FC<{
             <div className={styles.side_bar}>
               <SideBarLangSwitcher ariaLabel={ariaLabel} />
               <SideBarThemeSwitcher ariaLabel={ariaLabel} />
+              <SideBarCatalogReview t={t} />
             </div>
             <Navigation
               translations={navlink}

@@ -1,16 +1,19 @@
 import styles from "./sidebar.module.scss";
 import SideBarLangSwitcher from "../SideBarLangSwitcher";
 import SideBarThemeSwitcher from "../SideBarThemeSwitcher";
-import CatalogReview from "../CatalogReview";
+import SideBarCatalogReview from "../SideBarCatalogReview";
+import { SideBarT } from "@/messages/types/SideBarT";
 import { IAriaLabelProps } from "@/helpers/interfaces";
 
-const SideBar:React.FC<{ariaLabel:IAriaLabelProps}> = ({ariaLabel}) => {
+const SideBar: React.FC<{ t: SideBarT; ariaLabel: IAriaLabelProps }> = ({
+  t,
+  ariaLabel,
+}) => {
   return (
     <div className={styles.sideBarContainer}>
-
       <SideBarLangSwitcher ariaLabel={ariaLabel} />
       <SideBarThemeSwitcher ariaLabel={ariaLabel} />
-      <CatalogReview />
+      <SideBarCatalogReview t={t} />
     </div>
   );
 };

@@ -97,9 +97,16 @@ const en: FullTranslation = {
       btnLightSwitchTheme: "Switch to mode light ",
       btnDarkThemeCurrent: "Current mode is dark",
       btnLightThemeCurrent: "Current mode is light",
-      btnTop:"Back to top",
+      btnTop: "Back to top",
     },
   },
+
+  SideBar: {
+    catalog: {
+      catalogTitle: "Catalog",
+    },
+  },
+
   ProjectsPage: {
     hero: {
       title: "Implemented projects",
