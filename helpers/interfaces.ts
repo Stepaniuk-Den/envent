@@ -137,6 +137,7 @@ export interface ISocialItem {
   id: number;
   svg: React.ElementType;
   href: string;
+  title:string;
 }
 [];
 
@@ -269,4 +270,17 @@ export interface IImageItem {
 
 export interface IImageList {
   images: Record<number, IImageItem>;
+}
+
+export interface IAriaLabelProps {
+  ariaLabel: {
+    text:string | undefined,
+    btnSwitchLang?:string,
+    btnLangCurrent?:string,
+    btnDarkSwitchTheme?:string,
+    btnLightSwitchTheme?:string,
+    btnDarkThemeCurrent?:string,
+    btnLightThemeCurrent:string,
+    btnTop:string;
+  }
 }

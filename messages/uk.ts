@@ -90,6 +90,16 @@ const uk: FullTranslation = {
       message: "Ой, щось пішло не так",
       btnBack: "На головну",
     },
+    ariaLabel: {
+      text: "Посилання на",
+      btnSwitchLang: "Змінити мову на англійську",
+      btnLangCurrent: "Поточна мова українська",
+      btnDarkSwitchTheme: "Змінити тему на темну",
+      btnLightSwitchTheme: "Змінити тему на світлу",
+      btnDarkThemeCurrent: "Поточна тема темна",
+      btnLightThemeCurrent: "Поточна тема світла",
+      btnTop: "Наверх",
+    },
   },
 
   SideBar: {

@@ -10,6 +10,7 @@ import SocialList from "../SocialList";
 import { contactsItems } from "@/data/ContactsItem";
 import { Link } from "@/navigation";
 import { parseHTMLString } from "@/helpers/parseHTMLString";
+import { MainPageT } from "@/messages/types/MainPageT";
 
 type Props = {
   params: { locale: string };
@@ -20,6 +21,7 @@ const ContactUsSection: React.FC<Props> = async ({ params: { locale } }) => {
 
   const footerT = await localize(ContactUsT);
   const contactT = await localize(HeroRightSideT);
+  const ariaLabelT = await localize(MainPageT);
 
   return (
     <section
@@ -31,7 +33,7 @@ const ContactUsSection: React.FC<Props> = async ({ params: { locale } }) => {
           <ContactUsForm t={footerT} className="footer" />
           <div className={styles.contacts_container}>
             <div className={styles.social_container}>
-              <SocialList className="footer" />
+              <SocialList className="footer" ariaLabel={ariaLabelT} />
             </div>
             <ul className={styles.list}>
               {contactsItems.map((contact) => {

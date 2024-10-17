@@ -34,7 +34,7 @@ const PrevNextButtons = ({
           })
         }
         type="button"
-        aria-label="Swipe to previous"
+        ariaLabel="Swipe to previous"
       >
         <ArrowLeft className={styles.ArrowLeftSVG} />
       </BackdropButton>
@@ -48,7 +48,7 @@ const PrevNextButtons = ({
           })
         }
         type="button"
-        aria-label="Swipe to next"
+        ariaLabel="Swipe to next"
       >
         <ArrowRight className={styles.ArrowRightSVG} />
       </BackdropButton>

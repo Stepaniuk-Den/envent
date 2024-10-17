@@ -1,14 +1,15 @@
 import Link from "next/link";
 import styles from "./socialList.module.scss";
 import { socialFooterItems, socialHeaderItems } from "@/data/SocialItems";
-import { ISocialItem } from "@/helpers/interfaces";
+import { IAriaLabelProps, ISocialItem } from "@/helpers/interfaces";
 
 type Props = {
   className: "header" | "footer";
   onClick?: () => void;
+  ariaLabel: IAriaLabelProps;
 };
 
-const SocialList = ({ className, onClick }: Props) => {
+const SocialList: React.FC<Props> = ({ className, onClick, ariaLabel }) => {
   const items: ISocialItem[] =
     className === "header" ? socialHeaderItems : socialFooterItems;
 
@@ -22,6 +23,7 @@ const SocialList = ({ className, onClick }: Props) => {
               className={styles.link}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`${ariaLabel.ariaLabel.text} ${item.title}`}
             >
               <item.svg className={styles.svg} />
             </Link>

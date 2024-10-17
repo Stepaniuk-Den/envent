@@ -25,9 +25,10 @@ const ProjectSection: React.FC<{
   t: MainPageT["projects"];
   t2: ProjectsPageT["projects"];
   className?: string;
+  ariaLabel: string;
 
   // t2: ProjectWithBase64[];
-}> = ({ t, t2, className = "" }) => {
+}> = ({ t, t2, className = "", ariaLabel }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -95,6 +96,7 @@ const ProjectSection: React.FC<{
                 key={projectItem.id}
                 // {...projectItem}
                 t={projectItem}
+                ariaLabel={ariaLabel}
                 currentImg={currentImg.srcImg}
                 // base64={projectItem.base64}
                 onClick={() =>

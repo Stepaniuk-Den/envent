@@ -5,6 +5,7 @@ import { localize } from "@/localize";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { IPropsProjectItem } from "@/helpers/interfaces";
 import CaregoryProjectsList from "../../components/CaregoryProjectsList";
+import { MainPageT } from "@/messages/types/MainPageT";
 
 type Props = {
   params: {
@@ -17,6 +18,7 @@ export async function generateMetadata({
   params: { categorySlug },
 }: Props): Promise<Metadata> {
   const t = await localize(ProjectsPageT);
+  
 
   return {
     title: `Project ${t.projectItem.description} | Envent`,
@@ -29,6 +31,7 @@ export async function generateMetadata({
 const Categories = async ({ params: { categorySlug, locale } }: Props) => {
   unstable_setRequestLocale(locale);
   const t = await localize(ProjectsPageT);
+  const ariaLabelT = await localize(MainPageT)
 
   const filteredProjects = Object.values(t.projects).filter(
     (project) => project.categorySlug === categorySlug
@@ -61,7 +64,7 @@ const Categories = async ({ params: { categorySlug, locale } }: Props) => {
 
   return (
     <>
-      <CaregoryProjectsList filteredProjects={filteredProjects} />
+      <CaregoryProjectsList filteredProjects={filteredProjects} ariaLabel={ariaLabelT.ariaLabel.text} />
 
       {/* <ul className={styles.projectList}>
         {filteredProjects.map((projectItem, index) => { */}
