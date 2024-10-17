@@ -1,0 +1,118 @@
+.btnCatalogWrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+@media screen and (max-width: 1023.98px) {
+  .btnCatalogWrapper {
+    flex-direction: column-reverse;
+  }
+}
+.btnCatalogWrapper .btnSelected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  width: 60px;
+  height: 60px;
+  color: var(--color-dark);
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-border);
+  transition: all 300ms ease-in-out;
+  z-index: 10;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+@media screen and (max-width: 1023.98px) {
+  .btnCatalogWrapper .btnSelected {
+    position: relative;
+    border: none;
+    font-size: 22px;
+  }
+  .btnCatalogWrapper .btnSelected::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 50%;
+    width: 1px;
+    height: 30%;
+    background-color: var(--color-border);
+    transform: translateY(-50%);
+  }
+}
+.btnCatalogWrapper .btnSelected.active {
+  position: relative;
+  border-top-left-radius: 0;
+}
+.btnCatalogWrapper .btnSelected.active::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 30%;
+  background-color: var(--color-border);
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 1023.98px) {
+  .btnCatalogWrapper .btnSelected.active::before {
+    top: 100%;
+    left: 50%;
+    height: 1px;
+    width: 30%;
+    transform: translateX(-50%);
+  }
+}
+.btnCatalogWrapper .btnSelected:hover {
+  background-color: var(--color-accent-yellow);
+}
+@media screen and (max-width: 1023.98px) {
+  .btnCatalogWrapper .btnSelected:hover {
+    background-color: transparent;
+    color: var(--color-accent-yellow);
+  }
+}
+.btnCatalogWrapper .sideBarViewLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  width: 60px;
+  height: 60px;
+  color: var(--color-dark);
+  background-color: var(--color-white);
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 300ms ease-in-out;
+  z-index: 9;
+  padding: 2px;
+}
+@media screen and (max-width: 1023.98px) {
+  .btnCatalogWrapper .sideBarViewLink {
+    transform: translateY(-60px);
+  }
+}
+.btnCatalogWrapper .sideBarViewLink.visible {
+  opacity: 1;
+  transform: translateX(0);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  box-shadow: 0 6px 10px var(--color-dark-box-shadow);
+}
+@media screen and (max-width: 1023.98px) {
+  .btnCatalogWrapper .sideBarViewLink.visible {
+    border: none;
+    box-shadow: none;
+    transform: translateY(0);
+    font-size: 22px;
+  }
+}
+.btnCatalogWrapper .sideBarViewLink:hover {
+  background-color: var(--color-accent-yellow);
+}
+@media screen and (max-width: 1023.98px) {
+  .btnCatalogWrapper .sideBarViewLink:hover {
+    background-color: transparent;
+    color: var(--color-accent-yellow);
+  }
+}/*# sourceMappingURL=catalogReview.module.css.map */

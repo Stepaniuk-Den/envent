@@ -1,0 +1,54 @@
+@import "../../mixin.scss";
+
+.btnCatalogWrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  @include md {
+    flex-direction: column-reverse;
+  }
+
+  .btnSelected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    width: 60px;
+    height: 60px;
+    color: var(--color-dark);
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-border);
+    @include transition-standart;
+    z-index: 10;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    @include md {
+      position: relative;
+      border: none;
+      font-size: 22px;
+
+      &::after {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 50%;
+        width: 1px;
+        height: 30%;
+        background-color: var(--color-border);
+        transform: translateY(-50%);
+      }
+    }
+
+    @include side-buttons-active-before;
+    @include side-buttons-hover;
+  }
+
+  .sideBarViewLink {
+    @include side-buttons-hidden;
+    @include side-buttons-visible;
+    @include side-buttons-hover;
+    padding: 2px;
+  }
+}
