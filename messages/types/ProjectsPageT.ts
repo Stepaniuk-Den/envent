@@ -1,6 +1,5 @@
 import { Translation } from "./Translation";
 import { FullTranslation } from "./FullTranslation";
-import { IProjectCategory } from "@/helpers/interfaces";
 
 export class ProjectsPageT implements Translation {
   namespace?: keyof FullTranslation = "ProjectsPage";

@@ -13,13 +13,13 @@ import ContactUsSection from "../../components/ContactUsSection";
 import AnimatedTitle from "../../components/AnimatedTitle";
 import MainButton from "../../components/Buttons/MainButton";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
-import { getBase64FromImage } from "@/helpers/getBase64FromImage";
+// import { getBase64FromImage } from "@/helpers/getBase64FromImage";
 import Observer from "@/helpers/observer";
 // import { getBase64FromImage } from "@/helpers/getBase64";
 
 type Props = {
   params: {
-    categorySlug: string;
+    // categorySlug: string;
     projectSlug: string;
     locale: string;
   };

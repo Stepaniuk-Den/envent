@@ -1,13 +1,15 @@
 "use client";
 
-import { useState, useTransition } from "react";
-import styles from "./catalogReview.module.scss";
+import { useState } from "react";
+import styles from "./sideBarCatalogReview.module.scss";
 import { Catalog } from "@/helpers/imagesImport";
 import { useClickOutside } from "@/helpers/useClickOutside";
+import { SideBarT } from "@/messages/types/SideBarT";
 
-const CatalogReview = () => {
+const SideBarCatalogReview: React.FC<{ t: SideBarT }> = ({ t }) => {
   const [isBtnVisible, setBtnVisible] = useState(false);
   const ref = useClickOutside(() => setBtnVisible(false));
+  const catalogTitle = t.catalog.catalogTitle;
 
   return (
     <div className={styles.btnCatalogWrapper}>
@@ -22,7 +24,7 @@ const CatalogReview = () => {
           isBtnVisible ? styles.visible : ""
         }`}
       >
-        Catalog
+        {catalogTitle}
       </a>
 
       <button
@@ -37,4 +39,4 @@ const CatalogReview = () => {
   );
 };
 
-export default CatalogReview;
+export default SideBarCatalogReview;

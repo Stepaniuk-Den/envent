@@ -13,6 +13,7 @@ import { LocaleLayoutT } from "@/messages/types/LocaleLayoutT";
 import SideBar from "./components/SideBar";
 import dynamic from "next/dynamic";
 import { cookies } from "next/headers";
+import { SideBarT } from "@/messages/types/SideBarT";
 
 type Props = {
   children: React.ReactNode;
@@ -45,6 +46,7 @@ export default async function LocaleLayout({
   const theme = cookies().get("__theme__")?.value || "system";
 
   const headerT = await localize(HeaderT);
+  const sideBarT = await localize(SideBarT);
 
   return (
     <html
@@ -56,10 +58,10 @@ export default async function LocaleLayout({
         className={`${rubik.variable} ${openSans.variable} ${montserrat.variable}`}
       >
         <AppThemeProvider enableSystem attribute="class" defaultTheme={theme}>
-          <Header t={headerT} />
+          <Header t={headerT} t2={sideBarT} />
           <main>{children}</main>
           <Footer />
-          <SideBar />
+          <SideBar t={sideBarT} />
           <TotopButton />
           <div id="modal"></div>
         </AppThemeProvider>

@@ -15,10 +15,13 @@ import { useAfterLoad } from "@/helpers/useAfterLoad";
 import SideBar from "../SideBar";
 import SideBarLangSwitcher from "../SideBarLangSwitcher";
 import SideBarThemeSwitcher from "../SideBarThemeSwitcher";
+import SideBarCatalogReview from "../SideBarCatalogReview";
+import { SideBarT } from "@/messages/types/SideBarT";
 
 const BurgerMenu: React.FC<{
   navlink: HeaderT["navlink"];
-}> = ({ navlink }) => {
+  t: SideBarT;
+}> = ({ navlink, t }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isPageLoaded = useAfterLoad();
 
@@ -56,6 +59,7 @@ const BurgerMenu: React.FC<{
             <div className={styles.side_bar}>
               <SideBarLangSwitcher />
               <SideBarThemeSwitcher />
+              <SideBarCatalogReview t={t} />
             </div>
             <Navigation
               translations={navlink}

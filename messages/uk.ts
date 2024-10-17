@@ -86,10 +86,16 @@ const uk: FullTranslation = {
       title: "Наші партнери",
       link: "Посилання",
     },
-    error:{
-      message:"Ой, щось пішло не так",
-      btnBack:"На головну",
-    }
+    error: {
+      message: "Ой, щось пішло не так",
+      btnBack: "На головну",
+    },
+  },
+
+  SideBar: {
+    catalog: {
+      catalogTitle: "Каталог",
+    },
   },
 
   ProjectsPage: {

@@ -13,9 +13,10 @@ import BurgerMenu from "../BurgerMenu";
 import { useMediaQuery } from "react-responsive";
 import { useAfterLoad } from "@/helpers/useAfterLoad";
 import HeaderLinks from "../HeaderLinks";
+import { SideBarT } from "@/messages/types/SideBarT";
 // import dynamic from "next/dynamic";
 
-const Header: React.FC<{ t: HeaderT }> = ({ t }) => {
+const Header: React.FC<{ t: HeaderT; t2: SideBarT }> = ({ t, t2 }) => {
   const { scrollY } = useScroll();
   const offsetY = [0, 192];
   const heightHeaderSizes = [192, 72];
@@ -61,7 +62,9 @@ const Header: React.FC<{ t: HeaderT }> = ({ t }) => {
         </div>
       </motion.header>
 
-      {isTabletOrMobile && isPageLoaded && <BurgerMenu navlink={t.navlink} />}
+      {isTabletOrMobile && isPageLoaded && (
+        <BurgerMenu navlink={t.navlink} t={t2} />
+      )}
     </>
   );
 };

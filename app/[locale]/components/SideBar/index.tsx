@@ -1,14 +1,15 @@
 import styles from "./sidebar.module.scss";
 import SideBarLangSwitcher from "../SideBarLangSwitcher";
 import SideBarThemeSwitcher from "../SideBarThemeSwitcher";
-import CatalogReview from "../CatalogReview";
+import SideBarCatalogReview from "../SideBarCatalogReview";
+import { SideBarT } from "@/messages/types/SideBarT";
 
-const SideBar = () => {
+const SideBar: React.FC<{ t: SideBarT }> = ({ t }) => {
   return (
     <div className={styles.sideBarContainer}>
       <SideBarLangSwitcher />
       <SideBarThemeSwitcher />
-      <CatalogReview />
+      <SideBarCatalogReview t={t} />
     </div>
   );
 };
