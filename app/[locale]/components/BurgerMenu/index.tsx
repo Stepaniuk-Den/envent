@@ -15,10 +15,12 @@ import { useAfterLoad } from "@/helpers/useAfterLoad";
 import SideBar from "../SideBar";
 import SideBarLangSwitcher from "../SideBarLangSwitcher";
 import SideBarThemeSwitcher from "../SideBarThemeSwitcher";
+import { IAriaLabelProps } from "@/helpers/interfaces";
 
 const BurgerMenu: React.FC<{
   navlink: HeaderT["navlink"];
-}> = ({ navlink }) => {
+  ariaLabel:IAriaLabelProps;
+}> = ({ navlink, ariaLabel }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isPageLoaded = useAfterLoad();
 
@@ -54,8 +56,8 @@ const BurgerMenu: React.FC<{
               <BurgerCloseBtn className={styles.svg} />
             </button>
             <div className={styles.side_bar}>
-              <SideBarLangSwitcher />
-              <SideBarThemeSwitcher />
+              <SideBarLangSwitcher ariaLabel={ariaLabel} />
+              <SideBarThemeSwitcher ariaLabel={ariaLabel} />
             </div>
             <Navigation
               translations={navlink}
@@ -64,6 +66,7 @@ const BurgerMenu: React.FC<{
             <SocialList
               className="header"
               onClick={() => setIsMenuOpen(false)}
+              ariaLabel={ariaLabel}
             />
           </Modal>
         )}

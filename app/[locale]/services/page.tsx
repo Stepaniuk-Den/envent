@@ -34,6 +34,7 @@ const ServicesPage: React.FC<Props> = async ({ params: { locale } }) => {
         className="withPaddingBottom"
         t={mainT.projects}
         t2={projectsT.projects}
+        ariaLabel={mainT.ariaLabel.text}
       />
       <ContactUsSection params={{ locale }} />
     </div>

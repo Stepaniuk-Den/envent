@@ -13,9 +13,10 @@ import BurgerMenu from "../BurgerMenu";
 import { useMediaQuery } from "react-responsive";
 import { useAfterLoad } from "@/helpers/useAfterLoad";
 import HeaderLinks from "../HeaderLinks";
+import { IAriaLabelProps } from "@/helpers/interfaces";
 // import dynamic from "next/dynamic";
 
-const Header: React.FC<{ t: HeaderT }> = ({ t }) => {
+const Header: React.FC<{ t: HeaderT,ariaLabel:IAriaLabelProps }> = ({ t,ariaLabel }) => {
   const { scrollY } = useScroll();
   const offsetY = [0, 192];
   const heightHeaderSizes = [192, 72];
@@ -57,11 +58,11 @@ const Header: React.FC<{ t: HeaderT }> = ({ t }) => {
         </motion.div>
         <div className={styles.bottom}>
           <Navigation translations={t.navlink} />
-          <SocialList className="header" />
+          <SocialList className="header" ariaLabel={ariaLabel} />
         </div>
       </motion.header>
 
-      {isTabletOrMobile && isPageLoaded && <BurgerMenu navlink={t.navlink} />}
+      {isTabletOrMobile && isPageLoaded && <BurgerMenu ariaLabel={ariaLabel} navlink={t.navlink} />}
     </>
   );
 };
