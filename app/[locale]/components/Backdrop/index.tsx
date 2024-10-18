@@ -19,7 +19,7 @@ interface IBackdropProps {
   //   imgList: IPropsProjectItem[];
   imgList: string[];
   // imgAlt: string[];
-  alt: string[];
+  alt: string;
   currentIndex: number | null;
   setCurrentIndex: (currentIndex: number) => void;
   isOpen: boolean;
