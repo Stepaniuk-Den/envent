@@ -18,10 +18,9 @@ export async function generateMetadata({
   params: { categorySlug },
 }: Props): Promise<Metadata> {
   const t = await localize(ProjectsPageT);
-  
 
   return {
-    title: `Project ${t.projectItem.description} | Envent`,
+    title: `${t.projectItem.description} | Envent`,
     // description: `Project ${categorySlug} details`,
     description: `Browse projects in the ${t.projectItem.subDescription} category`,
   };
@@ -31,7 +30,7 @@ export async function generateMetadata({
 const Categories = async ({ params: { categorySlug, locale } }: Props) => {
   unstable_setRequestLocale(locale);
   const t = await localize(ProjectsPageT);
-  const ariaLabelT = await localize(MainPageT)
+  const ariaLabelT = await localize(MainPageT);
 
   const filteredProjects = Object.values(t.projects).filter(
     (project) => project.categorySlug === categorySlug
@@ -64,7 +63,10 @@ const Categories = async ({ params: { categorySlug, locale } }: Props) => {
 
   return (
     <>
-      <CaregoryProjectsList filteredProjects={filteredProjects} ariaLabel={ariaLabelT.ariaLabel.text} />
+      <CaregoryProjectsList
+        filteredProjects={filteredProjects}
+        ariaLabel={ariaLabelT.ariaLabel.text}
+      />
 
       {/* <ul className={styles.projectList}>
         {filteredProjects.map((projectItem, index) => { */}

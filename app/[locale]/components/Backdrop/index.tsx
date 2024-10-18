@@ -17,8 +17,8 @@ import BackdropButtonsPrevNext from "../BackdropButtonsPrevNext";
 interface IBackdropProps {
   //   children: React.ReactElement;
   //   imgList: IPropsProjectItem[];
-  //   imgAlt: string[];
   imgList: string[];
+  // imgAlt: string[];
   alt: string;
   currentIndex: number | null;
   setCurrentIndex: (currentIndex: number) => void;
@@ -59,14 +59,14 @@ const swipePower = (offset: number, velocity: number) => {
 
 const Backdrop = ({
   imgList,
+  // imgAlt,
+  alt,
   currentIndex,
   setCurrentIndex,
   isOpen,
   setIsOpen,
-  //   src,
-  //   imgAlt,
-  alt,
-}: //   direction,
+}: //   src,
+//   direction,
 //   page,
 //   setPage,
 IBackdropProps) => {
@@ -81,7 +81,8 @@ IBackdropProps) => {
 
   //   const imageIndex = wrap(currentIndex || 0, imgList.length, page);
   const imageIndex = (page + imgList.length) % imgList.length;
-  //   const imageAlt = wrap(currentIndex || 0, imgAlt.length, page);
+  // const imageAlt = wrap(currentIndex || 0, imgAlt.length, page);
+  const imageAlt = wrap(currentIndex || 0, alt.length, page);
 
   const paginate = (newDirection: number) => {
     // setPage([page + newDirection, newDirection]);
@@ -150,7 +151,9 @@ IBackdropProps) => {
                     className={styles.images}
                     src={imgList[imageIndex]}
                     // alt={imgAlt[imageAlt]}
-                    alt={alt}
+                    alt={alt[imageAlt]}
+                    // alt={imgAlt}
+                    // alt={alt}
                     fill={true}
                     sizes="(max-width: 767.98px) 460px, (max-width: 1023.98px) 660px, 800px"
                   />
