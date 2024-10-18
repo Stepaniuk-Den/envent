@@ -18,12 +18,12 @@ interface IBackdropProps {
   //   children: React.ReactElement;
   //   imgList: IPropsProjectItem[];
   imgList: string[];
-  imgAlt: string[];
+  // imgAlt: string[];
+  alt: string[];
   currentIndex: number | null;
   setCurrentIndex: (currentIndex: number) => void;
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
-  // alt: string;
   //   src: string;
   //   direction: any;
   //   page: number;
@@ -59,13 +59,13 @@ const swipePower = (offset: number, velocity: number) => {
 
 const Backdrop = ({
   imgList,
-  imgAlt,
+  // imgAlt,
+  alt,
   currentIndex,
   setCurrentIndex,
   isOpen,
   setIsOpen,
 }: //   src,
-// alt,
 //   direction,
 //   page,
 //   setPage,
@@ -81,7 +81,8 @@ IBackdropProps) => {
 
   //   const imageIndex = wrap(currentIndex || 0, imgList.length, page);
   const imageIndex = (page + imgList.length) % imgList.length;
-  const imageAlt = wrap(currentIndex || 0, imgAlt.length, page);
+  // const imageAlt = wrap(currentIndex || 0, imgAlt.length, page);
+  const imageAlt = wrap(currentIndex || 0, alt.length, page);
 
   const paginate = (newDirection: number) => {
     // setPage([page + newDirection, newDirection]);
@@ -149,7 +150,8 @@ IBackdropProps) => {
                   <Image
                     className={styles.images}
                     src={imgList[imageIndex]}
-                    alt={imgAlt[imageAlt]}
+                    // alt={imgAlt[imageAlt]}
+                    alt={alt[imageAlt]}
                     // alt={imgAlt}
                     // alt={alt}
                     fill={true}

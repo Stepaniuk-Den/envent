@@ -116,7 +116,8 @@ const ProjectSection: React.FC<{
         {/* ========BACKDROP======== */}
         <Backdrop
           imgList={recentProjectsListMainImgs}
-          imgAlt={recentImgAlt}
+          // imgAlt={recentImgAlt}
+          alt={recentImgAlt}
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           currentIndex={currentIndex}

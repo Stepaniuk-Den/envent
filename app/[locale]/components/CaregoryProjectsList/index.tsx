@@ -63,7 +63,8 @@ const CaregoryProjectsList: React.FC<{
       </ul>
       <Backdrop
         imgList={filteredProjectsMainImgs}
-        imgAlt={filteredProjectsMainAlt}
+        // imgAlt={filteredProjectsMainAlt}
+        alt={filteredProjectsMainAlt}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         currentIndex={currentIndex}
