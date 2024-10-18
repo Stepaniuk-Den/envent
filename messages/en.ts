@@ -2,8 +2,9 @@ import { FullTranslation } from "./types/FullTranslation";
 
 const en: FullTranslation = {
   LocaleLayout: {
-    title: "Envent",
-    description: "Envent site",
+    title: "Power ventilation Envent",
+    description:
+      "A company engaged in the design, installation, adjustment and maintenance of ventilation systems in Kyiv and throughout Ukraine.",
   },
   LocaleSwitcher: {
     label: "Change language",

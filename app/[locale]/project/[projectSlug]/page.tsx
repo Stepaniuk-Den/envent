@@ -46,8 +46,9 @@ export async function generateMetadata({
   ) as IPropsProjectItem | undefined;
 
   return {
-    title: `Project ${projectData?.title} | Envent`,
-    description: `Details about project ${projectData?.heroDescription}`,
+    title: `${projectData?.title} | Envent`,
+    // description: `Details about project ${projectData?.heroDescription}`,
+    description: `${t.projectItem.description}`,
   };
 }
 

@@ -3,7 +3,8 @@ import { FullTranslation } from "./types/FullTranslation";
 const uk: FullTranslation = {
   LocaleLayout: {
     title: "Енерговентиляція",
-    description: "Сайт Енерговентиляція",
+    description:
+      "Підприємство з проектування, монтажу, налаштування та технічного обслуговування вентиляційних систем у м. Києві та по всій Україні",
   },
   LocaleSwitcher: {
     label: "Зміна мови",
