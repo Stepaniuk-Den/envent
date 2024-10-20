@@ -45,7 +45,7 @@ const ProjectSection: React.FC<{
 
   const recentImgAlt = recentProjectsList
     .map((project) => project.mainAlt)
-    .filter((alt) => alt);
+    .filter((alt): alt is string => !!alt);
 
   useModal(isOpen, setIsOpen);
 
@@ -116,13 +116,11 @@ const ProjectSection: React.FC<{
         {/* ========BACKDROP======== */}
         <Backdrop
           imgList={recentProjectsListMainImgs}
-          // imgAlt={recentImgAlt}
-          // alt={recentImgAlt}
+          alt={recentImgAlt}
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           currentIndex={currentIndex}
           setCurrentIndex={setCurrentIndex}
-          alt="..."
         />
       </div>
     </section>

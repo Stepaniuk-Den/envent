@@ -19,7 +19,7 @@ interface IBackdropProps {
   //   imgList: IPropsProjectItem[];
   imgList: string[];
   // imgAlt: string[];
-  alt: string;
+  alt: string[];
   currentIndex: number | null;
   setCurrentIndex: (currentIndex: number) => void;
   isOpen: boolean;
@@ -151,9 +151,9 @@ IBackdropProps) => {
                     className={styles.images}
                     src={imgList[imageIndex]}
                     // alt={imgAlt[imageIndex]}
-                    // alt={alt[imageIndex]}
+                    alt={alt[imageIndex]}
                     // alt={imgAlt}
-                    alt={alt}
+                    // alt={alt}
                     fill={true}
                     sizes="(max-width: 767.98px) 460px, (max-width: 1023.98px) 660px, 800px"
                   />
