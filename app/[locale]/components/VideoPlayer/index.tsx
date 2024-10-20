@@ -28,22 +28,30 @@ const throttle = (func: (...args: any[]) => void, limit: number) => {
 };
 
 const VideoPlayer: React.FC<VideoPlayerProps> = (props: VideoPlayerProps) => {
-  const [videoEl, setVideoEl] = useState<HTMLVideoElement | null>(null);
+  // const [videoEl, setVideoEl] = useState<HTMLVideoElement | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const playerRef = useRef<any>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   // const [isUserInteracted, setIsUserInteracted] = useState(false);
   //   const [pausedByUser, setPausedByUser] = useState(false);
 
-  const onVideo = useCallback((el: HTMLVideoElement) => {
-    setVideoEl(el);
-  }, []);
+  // ------
+  // const onVideo = useCallback((el: HTMLVideoElement) => {
+  //   setVideoEl(el);
+  // }, []);
+  // -------
 
   useEffect(() => {
-    if (videoEl == null) {
-      // || !document.body.contains(videoEl)
-      return;
-    }
+    // if (videoEl == null) {
+    //   // || !document.body.contains(videoEl)
+    //   return;
+    // }
+    // -------
+    const videoEl = videoRef.current;
+    if (!videoEl) return;
+    // -------
+
     const player = videojs(videoEl, props);
     playerRef.current = player;
 
@@ -84,7 +92,6 @@ const VideoPlayer: React.FC<VideoPlayerProps> = (props: VideoPlayerProps) => {
             threshold: [0.5],
           }
         );
-
         videoObserver.observe(videoEl);
         observerRef.current = videoObserver;
       }
@@ -114,12 +121,16 @@ const VideoPlayer: React.FC<VideoPlayerProps> = (props: VideoPlayerProps) => {
       //     playerRef.current = null;
       //   }
     };
-  }, [videoEl, props]);
+  }, [
+    props,
+    // videoEl,
+  ]);
 
   return (
     <div data-vjs-player>
       <video
-        ref={onVideo}
+        // ref={onVideo}
+        ref={videoRef}
         className={`video-js ${styles.videoJs} `}
         playsInline
       />

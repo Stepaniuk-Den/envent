@@ -12,14 +12,18 @@ import { handleOpenBackdrop } from "@/helpers/handleOpenAndCloseBackdrop";
 const CaregoryProjectsList: React.FC<{
   //   t: ProjectsPageT;
   filteredProjects: IPropsProjectItem[];
-  ariaLabel:string,
-}> = ({ filteredProjects,ariaLabel }) => {
+  ariaLabel: string;
+}> = ({ filteredProjects, ariaLabel }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const filteredProjectsMainImgs = filteredProjects
     .map((project) => project.mainImg)
     .filter((img): img is string => !!img);
+
+  // const filteredProjectsMainAlt = filteredProjects
+  //   .map((project) => project.mainAlt)
+  //   .filter((img): img is string => !!img);
 
   useModal(isOpen, setIsOpen);
 
@@ -36,6 +40,7 @@ const CaregoryProjectsList: React.FC<{
           const currentImg = [...ProjectItems].find(
             (item) => item.name === imgName
           );
+
           if (!currentImg) return;
           return (
             <ProjectItem
@@ -58,12 +63,14 @@ const CaregoryProjectsList: React.FC<{
       </ul>
       <Backdrop
         imgList={filteredProjectsMainImgs}
-        // imgAlt={recentImgAlt}
+        // imgAlt={filteredProjectsMainAlt}
+        // alt={filteredProjectsMainAlt}
+        alt="..."
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
-        alt="..."
+        // ariaLabel={ariaLabel}
       />
     </>
   );
