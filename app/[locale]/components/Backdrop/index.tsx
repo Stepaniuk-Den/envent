@@ -82,7 +82,7 @@ IBackdropProps) => {
   //   const imageIndex = wrap(currentIndex || 0, imgList.length, page);
   const imageIndex = (page + imgList.length) % imgList.length;
   // const imageAlt = wrap(currentIndex || 0, imgAlt.length, page);
-  const imageAlt = wrap(currentIndex || 0, alt.length, page);
+  // const imageAlt = wrap(currentIndex || 0, alt.length, page);
 
   const paginate = (newDirection: number) => {
     // setPage([page + newDirection, newDirection]);
@@ -150,10 +150,10 @@ IBackdropProps) => {
                   <Image
                     className={styles.images}
                     src={imgList[imageIndex]}
-                    // alt={imgAlt[imageAlt]}
-                    alt={alt[imageAlt]}
+                    // alt={imgAlt[imageIndex]}
+                    // alt={alt[imageIndex]}
                     // alt={imgAlt}
-                    // alt={alt}
+                    alt={alt}
                     fill={true}
                     sizes="(max-width: 767.98px) 460px, (max-width: 1023.98px) 660px, 800px"
                   />

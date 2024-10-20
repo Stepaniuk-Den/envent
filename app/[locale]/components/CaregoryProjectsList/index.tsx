@@ -21,9 +21,9 @@ const CaregoryProjectsList: React.FC<{
     .map((project) => project.mainImg)
     .filter((img): img is string => !!img);
 
-  const filteredProjectsMainAlt = filteredProjects
-    .map((project) => project.mainAlt)
-    .filter((img): img is string => !!img);
+  // const filteredProjectsMainAlt = filteredProjects
+  //   .map((project) => project.mainAlt)
+  //   .filter((img): img is string => !!img);
 
   useModal(isOpen, setIsOpen);
 
@@ -64,7 +64,8 @@ const CaregoryProjectsList: React.FC<{
       <Backdrop
         imgList={filteredProjectsMainImgs}
         // imgAlt={filteredProjectsMainAlt}
-        alt={filteredProjectsMainAlt}
+        // alt={filteredProjectsMainAlt}
+        alt="..."
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         currentIndex={currentIndex}
