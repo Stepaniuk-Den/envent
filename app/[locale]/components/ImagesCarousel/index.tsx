@@ -29,11 +29,21 @@ const ImagesCarousel: React.FC<{
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const [imagesList, setImagesList] = useState<IImageItem[]>([]);
   const [backdropImagesList, setBackdropImagesList] = useState<string[]>([]);
+  const [backdropAltList, setBackdropAltList] = useState<string[]>([]);
   let [ref, { width }] = useMeasure();
 
   const { keyImagesAbout } = useCarouselAboutStore();
 
   const aboutId = keyImagesAbout.id;
+
+  const getPropertyList = (
+    images: IImageItem[],
+    property: keyof IImageItem
+  ) => {
+    return images
+      .map((img) => img[property])
+      .filter((item): item is string => !!item);
+  };
 
   useEffect(() => {
     const fetchImagesList = () => {
@@ -41,10 +51,18 @@ const ImagesCarousel: React.FC<{
         page === "about" ? aboutId : page === "services" ? id : 0;
       if (currentId !== undefined) {
         const currentImages = Object.values(t[currentId]?.images);
-        const currentImagesList = currentImages
-          .map((img) => img.src)
-          .filter((item): item is string => !!item);
-        setBackdropImagesList(currentImagesList);
+        // const currentImagesList = currentImages
+        //   .map((img) => img.src)
+        //   .filter((item): item is string => !!item);
+        // setBackdropImagesList(currentImagesList);
+        // setImagesList(currentImages);
+
+        // const currentAltList = currentImages
+        //   .map((img) => img.alt)
+        //   .filter((item): item is string => !!item);
+        // setBackdropAltList(currentAltList);
+        setBackdropImagesList(getPropertyList(currentImages, "src"));
+        setBackdropAltList(getPropertyList(currentImages, "alt"));
         setImagesList(currentImages);
       }
       // if (page === "about") {
@@ -154,12 +172,11 @@ const ImagesCarousel: React.FC<{
       </motion.ul>
       <Backdrop
         imgList={backdropImagesList}
-        // imgAlt={recentImgAlt}
+        alt={backdropAltList}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
-        alt={[]}
       />
 
       {/* ==== BACKDROP ==== */}
