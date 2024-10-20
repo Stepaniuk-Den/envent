@@ -117,12 +117,12 @@ const ProjectSection: React.FC<{
         <Backdrop
           imgList={recentProjectsListMainImgs}
           // imgAlt={recentImgAlt}
-          // alt={recentImgAlt}
+          alt={recentImgAlt}
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           currentIndex={currentIndex}
           setCurrentIndex={setCurrentIndex}
-          alt="..."
+          // alt="..."
         />
       </div>
     </section>

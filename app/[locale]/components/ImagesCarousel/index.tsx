@@ -159,7 +159,7 @@ const ImagesCarousel: React.FC<{
         setIsOpen={setIsOpen}
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
-        alt="..."
+        alt={[]}
       />
 
       {/* ==== BACKDROP ==== */}
