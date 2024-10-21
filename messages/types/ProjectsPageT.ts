@@ -8,6 +8,7 @@ export class ProjectsPageT implements Translation {
   hero = {
     title: "",
     description: "",
+    heroBG: "",
     button: "",
     textCategory: "",
     btnBack: "",

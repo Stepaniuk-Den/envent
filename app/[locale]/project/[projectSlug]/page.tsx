@@ -15,6 +15,8 @@ import MainButton from "../../components/Buttons/MainButton";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
 // import { getBase64FromImage } from "@/helpers/getBase64FromImage";
 import Observer from "@/helpers/observer";
+import { LocaleLayoutT } from "@/messages/types/LocaleLayoutT";
+import React, { cache } from "react";
 // import { getBase64FromImage } from "@/helpers/getBase64";
 
 type Props = {
@@ -24,6 +26,10 @@ type Props = {
     locale: string;
   };
 };
+
+// export function generateStaticParams() {
+//   return locales.map((locale) => ({ locale }));
+// }
 
 // ---------------------------------------------
 // const getProjectsWithBase64 = async (projects: ProjectsPageT["projects"]) => {
@@ -37,31 +43,72 @@ type Props = {
 // };
 // ---------------------------------------------
 
+const getProject = cache(async (projectSlug: string) => {
+  const t = await localize(ProjectsPageT);
+  // const t2 = await localize(LocaleLayoutT);
+  const project = Object.values(t.projects).find(
+    (project) => project.projectSlug === projectSlug
+  ) as IPropsProjectItem | undefined;
+
+  return project;
+});
+
 export async function generateMetadata({
   params: { projectSlug },
 }: Props): Promise<Metadata> {
   const t = await localize(ProjectsPageT);
-  const projectData = Object.values(t.projects).find(
-    (project) => project.projectSlug === projectSlug
-  ) as IPropsProjectItem | undefined;
+  const t2 = await localize(LocaleLayoutT);
+
+  const projectData = await getProject(projectSlug);
 
   return {
-    title: `${projectData?.title} | Envent`,
+    // title: `${projectData?.title} | Envent`,
     // description: `Details about project ${projectData?.heroDescription}`,
-    description: `${t.projectItem.description}`,
+    title: t.projectItem.title || "Envent",
+    description: t.projectItem.description,
+    openGraph: {
+      title: projectData?.title || "Envent",
+      description: projectData?.heroDescription,
+      // url: 'https://envent.vercel.app/uk',
+      // siteName: t2.title || "Envent",
+      images: [
+        {
+          url: projectData?.mainImg || "",
+          alt: projectData?.mainAlt,
+          width: 800,
+          height: 600,
+        },
+        {
+          url: projectData?.images?.img1?.src || "",
+          alt: projectData?.images?.img1?.alt,
+          width: 536,
+          height: 324,
+        },
+        {
+          url: projectData?.images?.img3?.src || "",
+          alt: projectData?.images?.img3?.alt,
+          width: 458,
+          height: 282,
+        },
+      ],
+    },
   };
 }
 
-const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
+const ProjectItemInfo: React.FC<Props> = async ({
+  params: { projectSlug, locale },
+}) => {
   unstable_setRequestLocale(locale);
   const t = await localize(ProjectsPageT);
   const mainT = await localize(MainPageT);
   const projectsT = await localize(ProjectsPageT);
   const btnBack = t.hero.btnBack;
 
-  const projectData = Object.values(t.projects).find(
-    (project) => project.projectSlug === projectSlug
-  ) as IPropsProjectItem | undefined;
+  // const projectData = Object.values(t.projects).find(
+  //   (project) => project.projectSlug === projectSlug
+  // ) as IPropsProjectItem | undefined;
+
+  const projectData = await getProject(projectSlug);
 
   if (!projectData) {
     return <p>Project not found</p>;

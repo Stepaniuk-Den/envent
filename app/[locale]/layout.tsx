@@ -1,4 +1,3 @@
-// import type { Metadata } from "next";
 import "./globals.scss";
 import { montserrat, openSans, rubik } from "./fonts";
 import { unstable_setRequestLocale } from "next-intl/server";
@@ -33,8 +32,14 @@ export async function generateMetadata() {
   const t = await localize(LocaleLayoutT);
 
   return {
-    title: t.title,
+    title: {
+      default: t.title,
+      template: `%s - ${t.title}`,
+    },
     description: t.description,
+    twitter: {
+      card: "summary_large_image",
+    },
   };
 }
 

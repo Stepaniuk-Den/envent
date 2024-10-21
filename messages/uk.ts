@@ -120,6 +120,7 @@ const uk: FullTranslation = {
       title: "Реалізовані проєкти",
       description:
         "Об'єкти, у будівництві яких брало участь ТОВ Енерговентиляція.",
+      heroBG: "/images/projects/hero_projects_page_BG.webp",
       button: "Зробити розрахунок",
       textCategory: "Вибрати категорію",
       btnBack: "Повернутись назад",

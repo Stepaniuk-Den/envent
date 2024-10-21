@@ -107,14 +107,14 @@ export interface IPropsProjectItem {
   onClick?: () => void;
 }
 
-export interface IProjectCategory {
-  category: string;
-  linkCategory: string;
-  categorySlug: string;
-  projects: {
-    [projectId: string]: IPropsProjectItem;
-  };
-}
+// export interface IProjectCategory {
+//   category: string;
+//   linkCategory: string;
+//   categorySlug: string;
+//   projects: {
+//     [projectId: string]: IPropsProjectItem;
+//   };
+// }
 
 // export interface IProjectCollection {
 //   administrative_buildings_and_banks: IProjectCategory;
@@ -137,7 +137,7 @@ export interface ISocialItem {
   id: number;
   svg: React.ElementType;
   href: string;
-  title:string;
+  title: string;
 }
 [];
 
@@ -177,11 +177,9 @@ export interface ITestimonialItem {
 }
 
 export interface ITestimonialsProps {
-
-    title: string;
-    subtitle: string;
-    items: { [key: number]: ITestimonialItem };
-
+  title: string;
+  subtitle: string;
+  items: { [key: number]: ITestimonialItem };
 }
 
 export interface IHandleNavigationProps<T> {
@@ -255,7 +253,7 @@ export interface IServiceAboutProps {
   phone: string;
   btnForm: string;
   btnBack?: string;
-  description?:string;
+  description?: string;
 }
 
 export interface IImageItem {
@@ -274,19 +272,19 @@ export interface IImageList {
 
 export interface IAriaLabelProps {
   ariaLabel: {
-    text:string | undefined,
-    btnSwitchLang?:string,
-    btnLangCurrent?:string,
-    btnDarkSwitchTheme?:string,
-    btnLightSwitchTheme?:string,
-    btnDarkThemeCurrent?:string,
-    btnLightThemeCurrent:string,
-    btnTop?:string;
-    btnModal?:string;
-    btnPrev?:string;
-    btnNext?:string;
+    text: string | undefined;
+    btnSwitchLang?: string;
+    btnLangCurrent?: string;
+    btnDarkSwitchTheme?: string;
+    btnLightSwitchTheme?: string;
+    btnDarkThemeCurrent?: string;
+    btnLightThemeCurrent: string;
+    btnTop?: string;
+    btnModal?: string;
+    btnPrev?: string;
+    btnNext?: string;
     btnZoom?: string;
-    btnClose?:string;
-    btnBurger?:string;
-  }
+    btnClose?: string;
+    btnBurger?: string;
+  };
 }
