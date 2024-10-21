@@ -4,17 +4,20 @@ import BackdropButton from "../Buttons/BackdropButton";
 import ArrowLeft from "@/public/icons/arrow-left.svg";
 import ArrowRight from "@/public/icons/arrow-right.svg";
 import styles from "./backdropButtonsPrevNext.module.scss";
+import { IAriaLabelProps } from "@/helpers/interfaces";
 
 interface Props {
   className?: string;
   position?: "fixed" | "absolute" | "";
   paginate: (newDirection: number) => void;
+  ariaLabel:IAriaLabelProps;
 }
 
 const BackdropButtonsPrevNext = ({
   className = "",
   position = "",
   paginate,
+  ariaLabel,
 }: Props) => {
   return (
     <div className={className}>
@@ -25,7 +28,7 @@ const BackdropButtonsPrevNext = ({
           paginate(-1);
         }}
         type="button"
-        aria-label="Swipe to previous"
+        ariaLabel={ariaLabel.ariaLabel.btnPrev}
       >
         <ArrowLeft className={styles.ArrowLeftSVG} />
       </BackdropButton>
@@ -36,7 +39,7 @@ const BackdropButtonsPrevNext = ({
           paginate(1);
         }}
         type="button"
-        aria-label="Swipe to next"
+        ariaLabel={ariaLabel.ariaLabel.btnNext}
       >
         <ArrowRight className={styles.ArrowRightSVG} />
       </BackdropButton>

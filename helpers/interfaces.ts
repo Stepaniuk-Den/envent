@@ -177,11 +177,11 @@ export interface ITestimonialItem {
 }
 
 export interface ITestimonialsProps {
-  t: {
+
     title: string;
     subtitle: string;
     items: { [key: number]: ITestimonialItem };
-  };
+
 }
 
 export interface IHandleNavigationProps<T> {
@@ -281,6 +281,12 @@ export interface IAriaLabelProps {
     btnLightSwitchTheme?:string,
     btnDarkThemeCurrent?:string,
     btnLightThemeCurrent:string,
-    btnTop:string;
+    btnTop?:string;
+    btnModal?:string;
+    btnPrev?:string;
+    btnNext?:string;
+    btnZoom?: string;
+    btnClose?:string;
+    btnBurger?:string;
   }
 }

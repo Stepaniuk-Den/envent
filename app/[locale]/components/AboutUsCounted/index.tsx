@@ -41,11 +41,6 @@ const AboutUsCounted = ({ imageSrc, t }: IAboutUsCountedProps) => {
       style={{ backgroundImage: `url(${imageSrc.src})` }}
       className={styles.hero}></section>
       </div>
-    {/* <section
-     ref={ref}
-      style={{ backgroundImage: `url(${imageSrc.src})` }}
-      className={styles.hero}
-    > */}
       <div className={`${styles.wrapper} container`}>
         <h2 className={styles.title}>{t.title}</h2>
         <div className={styles.content}>

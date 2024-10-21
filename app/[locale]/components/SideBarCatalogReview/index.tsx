@@ -5,8 +5,9 @@ import styles from "./sideBarCatalogReview.module.scss";
 import { Catalog } from "@/helpers/imagesImport";
 import { useClickOutside } from "@/helpers/useClickOutside";
 import { SideBarT } from "@/messages/types/SideBarT";
+import { IAriaLabelProps } from "@/helpers/interfaces";
 
-const SideBarCatalogReview: React.FC<{ t: SideBarT }> = ({ t }) => {
+const SideBarCatalogReview: React.FC<{ t: SideBarT,ariaLabel:IAriaLabelProps }> = ({ t,ariaLabel }) => {
   const [isBtnVisible, setBtnVisible] = useState(false);
   const ref = useClickOutside(() => setBtnVisible(false));
   const catalogTitle = t.catalog.catalogTitle;
@@ -19,7 +20,8 @@ const SideBarCatalogReview: React.FC<{ t: SideBarT }> = ({ t }) => {
         // locale={false}
         rel="noopener noreferrer"
         target="_blank"
-        aria-label="View Catalog"
+        // aria-label="View Catalog"
+        aria-label={`${ariaLabel.ariaLabel.text} ${catalogTitle}`}
         className={`${styles.sideBarViewLink} ${
           isBtnVisible ? styles.visible : ""
         }`}

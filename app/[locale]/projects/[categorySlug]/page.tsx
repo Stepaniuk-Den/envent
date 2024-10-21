@@ -65,7 +65,7 @@ const Categories = async ({ params: { categorySlug, locale } }: Props) => {
     <>
       <CaregoryProjectsList
         filteredProjects={filteredProjects}
-        ariaLabel={ariaLabelT.ariaLabel.text}
+        ariaLabel={ariaLabelT}
       />
 
       {/* <ul className={styles.projectList}>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState} from "react";
-import { ITestimonialsProps } from "@/helpers/interfaces";
+import { IAriaLabelProps, ITestimonialsProps } from "@/helpers/interfaces";
 import { handleNext, handlePrev } from "@/helpers/useClickPrevAndNext";
 import Image from "next/image";
 import styles from "./testimonials.module.scss";
@@ -11,7 +11,7 @@ import ArrowRight from "@/public/icons/arrow-right.svg";
 import Line from "../Line";
 import Observer from "@/helpers/observer";
 
-const Testimonials = ({ t }: ITestimonialsProps) => {
+const Testimonials:React.FC<{ t: ITestimonialsProps,ariaLabel:IAriaLabelProps }> = ({t,ariaLabel}) => {
   const itemsList = Object.values(t.items);
 
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -51,7 +51,7 @@ const Testimonials = ({ t }: ITestimonialsProps) => {
                   })
                 }
                 type="button"
-                ariaLabel="Swipe to previous"
+                ariaLabel={ariaLabel.ariaLabel.btnPrev}
               >
                 <ArrowLeft />
               </BackdropButton>
@@ -73,7 +73,7 @@ const Testimonials = ({ t }: ITestimonialsProps) => {
                   })
                 }
                 type="button"
-                ariaLabel="Swipe to next"
+                ariaLabel={ariaLabel.ariaLabel.btnNext}
               >
                 <ArrowRight />
               </BackdropButton>

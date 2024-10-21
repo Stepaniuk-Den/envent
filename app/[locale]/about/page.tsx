@@ -12,6 +12,7 @@ import AboutBestSection from "../components/AboutBestSection";
 import AboutDescriptionsSection from "../components/AboutDescriptionsSection";
 import AboutQuoteSection from "../components/AboutQuoteSection";
 import ContactUsSection from "../components/ContactUsSection";
+import { MainPageT } from "@/messages/types/MainPageT";
 
 type Props = {
   params: { locale: string };
@@ -22,6 +23,7 @@ const About: React.FC<Props> = async ({ params: { locale } }) => {
 
   const aboutT = await localize(AboutPageT);
   const heroRightSideT = await localize(HeroRightSideT);
+  const ariaLabelT = await localize(MainPageT);
 
   return (
     <div>
@@ -32,7 +34,7 @@ const About: React.FC<Props> = async ({ params: { locale } }) => {
         <AnimatedTitle title={aboutT.about.title} />
         <Line className="yellow-center" />
         <AboutDescriptionsSection t={aboutT.about.description} />
-        <AboutBestSection t={aboutT.best} />
+        <AboutBestSection t={aboutT.best} ariaLabel={ariaLabelT} />
         <AboutQuoteSection t={aboutT.ceo} />
         <ContactUsSection params={{ locale }} />
       </div>

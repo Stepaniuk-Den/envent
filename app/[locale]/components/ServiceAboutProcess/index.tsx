@@ -1,5 +1,6 @@
 "use client";
 import {
+  IAriaLabelProps,
   IImageList,
   IServiceAboutProps,
   PropsServiceCard,
@@ -24,7 +25,8 @@ const ServiceAboutProcess: React.FC<{
   about: IServiceAboutProps;
   service: Service;
   id:number;
-}> = ({ t, about, service,id }) => {
+  ariaLabel:IAriaLabelProps;
+}> = ({ t, about, service,id,ariaLabel }) => {
 
   const { process } = t;
   const { title, phone, btnForm } = about;
@@ -49,17 +51,16 @@ const ServiceAboutProcess: React.FC<{
         </p> </Observer>
         <ul className={styles.process_list}>
           {processList.map(([key, item], idx) => (
-             <Observer y={50} key={idx} duration="300ms" threshold={0.5}>
-            <li >
+             <Observer y={50} key={idx} duration="300ms" threshold={0.5} type={true}>
               <p className={styles.process_text}>{item}</p>
-            </li></Observer>
+            </Observer>
           ))}
         </ul>
       </div>
 
       <div className={styles.right_container}>
         <div className={styles.carousel}>
-          <ImagesCarousel t={service.service} page="services" id={id} />
+          <ImagesCarousel t={service.service} page="services" id={id} ariaLabel={ariaLabel} />
         </div>
       </div>
       </div>
@@ -92,21 +93,22 @@ const ServiceAboutProcess: React.FC<{
           <AnimatedTitle title={title} />
           <Line className="yellow-left" />
         </div>
+        <Observer y={50} duration="300ms" threshold={0.5}> 
         <p className={styles.process_text} style={{ marginBottom: "20px" }}>
           {process?.text}
-        </p>
+        </p></Observer>
         <ul className={styles.process_list}>
           {processList.map(([key, item], idx) => (
-            <li key={idx}>
+            <Observer y={50} key={idx} duration="300ms" threshold={0.5} type={true}>
               <p className={styles.process_text}>{item}</p>
-            </li>
+              </Observer>
           ))}
         </ul>
       </div>
 
       <div className={styles.right_container}>
         <div className={styles.carousel}>
-          <ImagesCarousel t={service.service} page="services" id={id} />
+          <ImagesCarousel t={service.service} page="services" id={id} ariaLabel={ariaLabel} />
         </div>
         <ButtonVariableColor
           className="blue_white"

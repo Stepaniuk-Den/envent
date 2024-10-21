@@ -13,6 +13,7 @@ import { ProjectItems } from "@/data/ProjectItems";
 import { useModal } from "@/helpers/useModal";
 import { handleOpenBackdrop } from "@/helpers/handleOpenAndCloseBackdrop";
 import Backdrop from "../Backdrop";
+import { IAriaLabelProps } from "@/helpers/interfaces";
 
 // interface IPropsProjectList {
 //   projectList: IPropsProjectItem[];
@@ -25,7 +26,7 @@ const ProjectSection: React.FC<{
   t: MainPageT["projects"];
   t2: ProjectsPageT["projects"];
   className?: string;
-  ariaLabel: string;
+  ariaLabel: IAriaLabelProps;
 
   // t2: ProjectWithBase64[];
 }> = ({ t, t2, className = "", ariaLabel }) => {
@@ -121,6 +122,7 @@ const ProjectSection: React.FC<{
           setIsOpen={setIsOpen}
           currentIndex={currentIndex}
           setCurrentIndex={setCurrentIndex}
+          ariaLabel={ariaLabel}
         />
       </div>
     </section>

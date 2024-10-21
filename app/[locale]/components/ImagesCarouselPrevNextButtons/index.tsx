@@ -6,6 +6,7 @@ import ArrowLeft from "@/public/icons/arrow-left.svg";
 import ArrowRight from "@/public/icons/arrow-right.svg";
 import styles from "./imagesCarouselPrevNextButtons.module.scss";
 import { Dispatch, SetStateAction } from "react";
+import { IAriaLabelProps } from "@/helpers/interfaces";
 
 interface IPrevNextButtonsProps {
   className?: string;
@@ -13,6 +14,7 @@ interface IPrevNextButtonsProps {
   currentIndex: number;
   setCurrentIndex: Dispatch<SetStateAction<number>>;
   list: string[];
+  ariaLabel: IAriaLabelProps;
 }
 
 const PrevNextButtons = ({
@@ -21,6 +23,7 @@ const PrevNextButtons = ({
   currentIndex,
   setCurrentIndex,
   list,
+  ariaLabel,
 }: IPrevNextButtonsProps) => {
   return (
     <div className={className}>
@@ -34,7 +37,8 @@ const PrevNextButtons = ({
           })
         }
         type="button"
-        ariaLabel="Swipe to previous"
+        ariaLabel={ariaLabel.ariaLabel.btnPrev}
+        // ariaLabel="Swipe to previous"
       >
         <ArrowLeft className={styles.ArrowLeftSVG} />
       </BackdropButton>
@@ -48,7 +52,8 @@ const PrevNextButtons = ({
           })
         }
         type="button"
-        ariaLabel="Swipe to next"
+        // ariaLabel="Swipe to next"
+        ariaLabel={ariaLabel.ariaLabel.btnNext}
       >
         <ArrowRight className={styles.ArrowRightSVG} />
       </BackdropButton>
