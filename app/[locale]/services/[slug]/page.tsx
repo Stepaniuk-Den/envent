@@ -8,6 +8,7 @@ import ServiceItemDescription from "../../components/ServiceItemDescription";
 import ServiceAboutProcess from "../../components/ServiceAboutProcess";
 import QuestionsSection from "../../components/QuestionsSection";
 import ContactUsSection from "../../components/ContactUsSection";
+import { MainPageT } from "@/messages/types/MainPageT";
 
 type Props = {
   params: {
@@ -51,6 +52,7 @@ export async function generateMetadata({
 const ServiceItemPage = async ({ params: { slug, locale } }: Props) => {
   unstable_setRequestLocale(locale);
   const servicesT = await localize(ServicesPageT);
+  const ariaLabelT = await localize(MainPageT);
 
   const service = Object.values(servicesT.services.service).find(
     (service) => service.slug === slug
@@ -81,6 +83,7 @@ const ServiceItemPage = async ({ params: { slug, locale } }: Props) => {
         t={service}
         about={servicesT.about}
         service={servicesT.services}
+        ariaLabel={ariaLabelT}
         id={Number(id)}
       />
       <QuestionsSection type="faq" params={{ locale }} />

@@ -10,7 +10,7 @@ import Hero from "../components/Hero";
 import HeroRightSideList from "../components/HeroRightSideList";
 import ProjectSection from "../components/ProjectsSection";
 import ContactUsSection from "../components/ContactUsSection";
-// import { getBase64FromImage } from "@/helpers/getBase64FromImage";
+
 
 type Props = {
   params: { locale: string };
@@ -34,7 +34,7 @@ const ServicesPage: React.FC<Props> = async ({ params: { locale } }) => {
         className="withPaddingBottom"
         t={mainT.projects}
         t2={projectsT.projects}
-        ariaLabel={mainT.ariaLabel.text}
+        ariaLabel={mainT}
       />
       <ContactUsSection params={{ locale }} />
     </div>

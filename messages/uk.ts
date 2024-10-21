@@ -100,6 +100,12 @@ const uk: FullTranslation = {
       btnDarkThemeCurrent: "Поточна тема темна",
       btnLightThemeCurrent: "Поточна тема світла",
       btnTop: "Наверх",
+      btnModal:"Відчинити модальне вікно",
+      btnPrev:"Перейти до попереднього",
+      btnNext:"Перейти до наступного",
+      btnZoom: "Збільшити це зображення",
+      btnClose:"Зачинити",
+      btnBurger:"Відчинити меню налаштувань та навігації",
     },
   },
 

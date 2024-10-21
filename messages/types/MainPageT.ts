@@ -73,5 +73,11 @@ export class MainPageT implements Translation {
     btnDarkThemeCurrent: "",
     btnLightThemeCurrent: "",
     btnTop:"",
+    btnModal:"",
+    btnPrev:"",
+    btnNext:"",
+    btnZoom: "",
+    btnClose:"",
+    btnBurger:"",
   };
 }

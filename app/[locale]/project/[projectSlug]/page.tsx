@@ -206,7 +206,7 @@ const ProjectItemInfo: React.FC<Props> = async ({
         className="withPaddingBottom"
         t={mainT.projects}
         t2={projectsT.projects}
-        ariaLabel={mainT.ariaLabel.text}
+        ariaLabel={mainT}
       />
       <ContactUsSection params={{ locale }} />
     </>

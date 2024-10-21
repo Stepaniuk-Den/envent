@@ -37,8 +37,6 @@ const TotopButton: React.FC<{ ariaLabel: IAriaLabelProps }> = ({ ariaLabel }) =>
         aria-label={ariaLabel.ariaLabel.btnTop}
       >
         <ArrowTotop className={styles.ArrowTotopSVG} />
-
-        {/* <Icon iconId="scroll-to-top" ariaLabel="scroll-to-top" /> */}
       </button>
     </>
   );

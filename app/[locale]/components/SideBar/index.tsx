@@ -13,7 +13,7 @@ const SideBar: React.FC<{ t: SideBarT; ariaLabel: IAriaLabelProps }> = ({
     <div className={styles.sideBarContainer}>
       <SideBarLangSwitcher ariaLabel={ariaLabel} />
       <SideBarThemeSwitcher ariaLabel={ariaLabel} />
-      <SideBarCatalogReview t={t} />
+      <SideBarCatalogReview t={t} ariaLabel={ariaLabel} />
     </div>
   );
 };
