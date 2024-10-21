@@ -113,6 +113,7 @@ const en: FullTranslation = {
       title: "Implemented projects",
       description:
         "Objects in the construction of which Energoventilyatsiya LLC took part.",
+      heroBG: "/images/projects/hero_projects_page_BG.webp",
       button: "Get a Quote",
       textCategory: "Select a category",
       btnBack: " Go back",

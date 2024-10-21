@@ -10,19 +10,21 @@ import { ProjectsPageT } from "@/messages/types/ProjectsPageT";
 // import ContactUsSection from "../components/ContactUsSection";
 // import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: " Projects | Envent",
-  description: "Design and installation of ventilation systems",
-};
-
 type Props = {
   params: { locale: string };
 };
 
+// const t = localize(ProjectsPageT);
+
+// export const metadata: Metadata = {
+//   // title: " Projects | Envent",
+//   // description: "Design and installation of ventilation systems",
+// };
+
 const ProjectsPage: React.FC<Props> = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
 
-  const t = await localize(ProjectsPageT);
+  // const t = await localize(ProjectsPageT);
 
   return (
     <></>

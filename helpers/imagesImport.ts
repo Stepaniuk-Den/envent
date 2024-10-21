@@ -1,7 +1,7 @@
 import HeroMainBG from "../public/images/hero-main-bg.webp";
 import HeroAboutBG from "../public/images/hero-about-bg.webp";
 import HeroServicesBG from "../public/images/hero-services-bg.webp";
-import heroProjectsPageBG from "../public/images/projects/hero_projects_page_BG.png";
+// import heroProjectsPageBG from "../public/images/projects/hero_projects_page_BG.png";
 import AboutUsCountedBG from "../public/images/about_us_counted.webp";
 import HeroTermsBG from "../public/images/privacy-policy.webp";
 
@@ -102,7 +102,6 @@ export {
   LinkIcon,
   ArrowRightLinkIcon,
   ArrowRightAboutIcon,
-  heroProjectsPageBG,
   FacebookFilled,
   EmailFilled,
   PhoneFilled,
@@ -110,6 +109,7 @@ export {
   TelegramFilled,
   InstagramFilled,
   Telegram,
+  // heroProjectsPageBG,
   // ----
   sbuMain,
   presAdmMain,
