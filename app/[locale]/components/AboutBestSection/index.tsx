@@ -3,7 +3,7 @@ import AboutBestList from "../AboutBestList";
 import MainButton from "../Buttons/MainButton";
 import ImagesCarousel from "../ImagesCarousel";
 import ButtonVariableColor from "../Buttons/ButtonVariableColor";
-import { IImageList } from "@/helpers/interfaces";
+import { IAriaLabelProps, IImageList } from "@/helpers/interfaces";
 import { Link } from "@/navigation";
 
 interface IListItem extends IImageList {
@@ -23,7 +23,7 @@ interface Best {
   };
 }
 
-const AboutBestSection: React.FC<{ t: Best }> = ({ t }) => {
+const AboutBestSection: React.FC<{ t: Best,ariaLabel:IAriaLabelProps }> = ({ t,ariaLabel }) => {
   const { title, list, buttons } = t;
   return (
     <section>
@@ -37,7 +37,7 @@ const AboutBestSection: React.FC<{ t: Best }> = ({ t }) => {
             </MainButton>
           </div>
           <div className={styles.image_wrapper}>
-            <ImagesCarousel t={list} page="about" />
+            <ImagesCarousel t={list} page="about" ariaLabel={ariaLabel} />
             <ButtonVariableColor
               className="blue_dark"
               firstChildren={

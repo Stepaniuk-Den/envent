@@ -159,7 +159,7 @@ const ProjectItemInfo = async ({ params: { projectSlug, locale } }: Props) => {
         className="withPaddingBottom"
         t={mainT.projects}
         t2={projectsT.projects}
-        ariaLabel={mainT.ariaLabel.text}
+        ariaLabel={mainT}
       />
       <ContactUsSection params={{ locale }} />
     </>

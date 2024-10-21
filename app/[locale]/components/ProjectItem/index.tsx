@@ -5,7 +5,7 @@ import Image, { StaticImageData } from "next/image";
 import LinkIcon from "@/public/icons/link.svg";
 import MagnifyingGlass from "@/public/icons/magnifying-glass.svg";
 import { Link } from "@/navigation";
-import { IPropsProjectItem } from "@/helpers/interfaces";
+import { IAriaLabelProps, IPropsProjectItem } from "@/helpers/interfaces";
 // import { getPlaiceholder } from "plaiceholder";
 // import fs from "node:fs/promises";
 // import { useState } from "react";
@@ -21,7 +21,7 @@ const ProjectItem = ({
   t: IPropsProjectItem;
   currentImg: StaticImageData;
   onClick?: () => void;
-  ariaLabel: string;
+  ariaLabel: IAriaLabelProps;
   // base64: string;
   // categorySlug: string;
 }) => {
@@ -64,7 +64,7 @@ const ProjectItem = ({
             // -----------------------------------------------------
             // href={`/projects/${categorySlug}/${slug}`}
             href={`/project/${projectSlug}`}
-            aria-label={`${ariaLabel} ${title}`}
+            aria-label={`${ariaLabel.ariaLabel.text} ${title}`}
             // href={`/${projectSlug}`}
           >
             <LinkIcon className={styles.linkIcon} />
@@ -73,6 +73,7 @@ const ProjectItem = ({
             className={styles.magnifyingGlassBtn}
             type="button"
             onClick={onClick}
+            aria-label={ariaLabel.ariaLabel.btnModal}
           >
             <MagnifyingGlass className={styles.magnifyingGlassIcon} />
           </button>

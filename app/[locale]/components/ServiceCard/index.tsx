@@ -39,7 +39,6 @@ const ServiceCard = ({
       duration="700ms"
       threshold={isLandscape ? 0 : 0.3}
       rootMargin={isLandscape ? "20%" : "0px"}
-      // rootMargin="20%"
       opacity={0}
       scale={1}
       className={`${styles.service_card} ${

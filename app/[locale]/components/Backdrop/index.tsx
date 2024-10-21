@@ -1,16 +1,13 @@
 import styles from "./backdrop.module.scss";
 import { AnimatePresence, motion, wrap } from "framer-motion";
-import ArrowLeft from "@/public/icons/arrow-left.svg";
-import ArrowRight from "@/public/icons/arrow-right.svg";
 import Close from "@/public/icons/close.svg";
 import { useModal } from "@/helpers/useModal";
 import Image from "next/image";
 import BackdropButton from "../Buttons/BackdropButton";
 import ReactPortal from "@/helpers/createPortal";
 import { useEffect, useState } from "react";
-import { IPropsProjectItem } from "@/helpers/interfaces";
+import { IAriaLabelProps, IPropsProjectItem } from "@/helpers/interfaces";
 import { handleCloseBackdrop } from "@/helpers/handleOpenAndCloseBackdrop";
-import { handleNext, handlePrev } from "@/helpers/useClickPrevAndNext";
 import BackdropButtonsPrevNext from "../BackdropButtonsPrevNext";
 // import { wrap } from "popmotion";
 
@@ -24,6 +21,7 @@ interface IBackdropProps {
   setCurrentIndex: (currentIndex: number) => void;
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
+  ariaLabel: IAriaLabelProps;
   //   src: string;
   //   direction: any;
   //   page: number;
@@ -65,6 +63,7 @@ const Backdrop = ({
   setCurrentIndex,
   isOpen,
   setIsOpen,
+  ariaLabel,
 }: //   src,
 //   direction,
 //   page,
@@ -167,7 +166,8 @@ IBackdropProps) => {
                 className={styles.closeButton}
                 onClick={() => handleCloseBackdrop(setIsOpen)}
                 type="button"
-                aria-label="Close"
+                // aria-label="Close"
+                ariaLabel={ariaLabel.ariaLabel.btnClose}
               >
                 <Close className={styles.closeSVG} />
               </BackdropButton>
@@ -208,7 +208,7 @@ IBackdropProps) => {
               >
                 <ArrowRight className={styles.ArrowRightSVG} />
               </BackdropButton> */}
-              <BackdropButtonsPrevNext paginate={paginate} />
+              <BackdropButtonsPrevNext paginate={paginate} ariaLabel={ariaLabel} />
             </motion.div>
           )}
         </AnimatePresence>

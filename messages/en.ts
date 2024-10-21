@@ -99,6 +99,12 @@ const en: FullTranslation = {
       btnDarkThemeCurrent: "Current mode is dark",
       btnLightThemeCurrent: "Current mode is light",
       btnTop: "Back to top",
+      btnModal:"Open modal",
+      btnPrev:"Swipe to previous",
+      btnNext:"Swipe to next",
+      btnZoom: "Zoom in on this image",
+      btnClose:"Close",
+      btnBurger:"Open settings and navigation menu",
     },
   },
 

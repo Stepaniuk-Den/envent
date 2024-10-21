@@ -73,12 +73,12 @@ const Home: React.FC<Props> = async ({ params: { locale } }) => {
       <ProjectSection
         t={mainT.projects}
         t2={projectsT.projects}
-        ariaLabel={mainT.ariaLabel.text}
+        ariaLabel={mainT}
         // t2={base64}
         // t2={base64}
       />
       <AboutUsCounted imageSrc={AboutUsCountedBG} t={mainT.aboutUsCounted} />
-      <Testimonials t={mainT.testimonials} />
+      <Testimonials t={mainT.testimonials} ariaLabel={mainT} />
       <QuestionsSection params={{ locale }} type="slogan" />
       <VideoSection t={mainT.videoSection} />
       <PartnersCarousel t={mainT.partners} />

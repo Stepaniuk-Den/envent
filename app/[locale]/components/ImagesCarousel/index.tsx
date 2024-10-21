@@ -8,7 +8,7 @@ import Image from "next/image";
 import MagnifyingGlass from "@/public/icons/magnifying-glass.svg";
 import useMeasure from "react-use-measure";
 import PrevNextButtons from "../ImagesCarouselPrevNextButtons";
-import { IImageItem } from "@/helpers/interfaces";
+import { IAriaLabelProps, IImageItem } from "@/helpers/interfaces";
 import { useModal } from "@/helpers/useModal";
 import Backdrop from "../Backdrop";
 
@@ -22,7 +22,8 @@ const ImagesCarousel: React.FC<{
   t: IListCarouselProps;
   page: "services" | "about" | "";
   id?: number;
-}> = ({ t, page, id }) => {
+  ariaLabel: IAriaLabelProps;
+}> = ({ t, page, id,ariaLabel }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
@@ -154,6 +155,7 @@ const ImagesCarousel: React.FC<{
                   <button
                     className={styles.magnifyingGlassBtn}
                     type="button"
+                    aria-label={ariaLabel.ariaLabel.btnZoom}
                     onClick={() => handleOpenBackdrop(index)}
                   >
                     <MagnifyingGlass className={styles.magnifyingGlassIcon} />
@@ -163,6 +165,7 @@ const ImagesCarousel: React.FC<{
                     currentIndex={currentIndex}
                     setCurrentIndex={setCurrentIndex}
                     position="absolute"
+                    ariaLabel={ariaLabel}
                   />
                 </div>
               </div>
@@ -177,6 +180,7 @@ const ImagesCarousel: React.FC<{
         setIsOpen={setIsOpen}
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
+        ariaLabel={ariaLabel}
       />
 
       {/* ==== BACKDROP ==== */}

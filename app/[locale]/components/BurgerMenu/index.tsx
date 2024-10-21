@@ -46,6 +46,7 @@ const BurgerMenu: React.FC<{
             <button
               onClick={() => setIsMenuOpen(true)}
               className={styles.burger_btn}
+              aria-label={ariaLabel.ariaLabel.btnBurger}
             >
               <BurgerMenuBtn className={styles.svg} />
             </button>
@@ -55,13 +56,14 @@ const BurgerMenu: React.FC<{
             <button
               onClick={() => setIsMenuOpen(false)}
               className={`${styles.burger_btn} ${styles.close}`}
+              aria-label={ariaLabel.ariaLabel.btnClose}
             >
               <BurgerCloseBtn className={styles.svg} />
             </button>
             <div className={styles.side_bar}>
               <SideBarLangSwitcher ariaLabel={ariaLabel} />
               <SideBarThemeSwitcher ariaLabel={ariaLabel} />
-              <SideBarCatalogReview t={t} />
+              <SideBarCatalogReview t={t} ariaLabel={ariaLabel} />
             </div>
             <Navigation
               translations={navlink}

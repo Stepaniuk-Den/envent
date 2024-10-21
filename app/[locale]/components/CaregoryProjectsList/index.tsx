@@ -12,7 +12,7 @@ import { handleOpenBackdrop } from "@/helpers/handleOpenAndCloseBackdrop";
 const CaregoryProjectsList: React.FC<{
   //   t: ProjectsPageT;
   filteredProjects: IPropsProjectItem[];
-  ariaLabel: string;
+  ariaLabel: IAriaLabelProps;
 }> = ({ filteredProjects, ariaLabel }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -68,7 +68,7 @@ const CaregoryProjectsList: React.FC<{
         setIsOpen={setIsOpen}
         currentIndex={currentIndex}
         setCurrentIndex={setCurrentIndex}
-        // ariaLabel={ariaLabel}
+        ariaLabel={ariaLabel}
       />
     </>
   );
